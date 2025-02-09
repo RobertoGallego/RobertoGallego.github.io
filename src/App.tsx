@@ -1,12 +1,10 @@
-// FFE6C9 FFC785 FFA09B
-
 function App() {
+  // FFE6C9 FFC785 FFA09B
+
   return (
     <div
       style={{
         position: "relative",
-        height: "100dvh",
-        width: "100dvw",
         height: "100vh",
         width: "100vw",
         display: "flex",
@@ -25,6 +23,17 @@ function App() {
         I'm a software engineer building efficient, scalable, and user-friendly
         applications with modern web technologies. Let's create something great.
       </h2>
+
+      {["#FFE6C9", "#FFC785", "#FFA09B", "#FF6347"].map((color, index) => (
+        <div
+          key={index}
+          style={{
+            height: 100,
+            width: 100,
+            backgroundColor: color,
+          }}
+        />
+      ))}
     </div>
   )
 }
