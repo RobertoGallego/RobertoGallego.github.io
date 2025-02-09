@@ -2,6 +2,7 @@
   "name": "revestudio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://RobertoGallego.github.io/revestudio/",
   "type": "module",
   "scripts": {
     "dev": "vite",
