@@ -1,0 +1,67 @@
+img {
+  font-family: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.profile--card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+  margin-block: 50px;
+  width: 200px;
+  border: 1px solid var(--accent);
+  padding: 1rem 0.5rem;
+  background-color: var(--background);
+  color: var(--text);
+  box-shadow: 21px 21px 0px var(--accent);
+}
+
+.profile--image-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  overflow: hidden;
+  border: 5px solid var(--text);
+}
+
+.profile--image {
+  padding-top: 10px;
+  object-fit: cover;
+}
+
+.profile--title {
+  color: var(--text);
+  font-family: var(--font-title);
+}
+
+.profile--subtitle {
+  color: var(--accent);
+  font-family: var(--font-secondary);
+}
+
+.profile--social-subtitle {
+  color: var(--text);
+  font-family: var(--font-secondary);
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .profile--card {
+    margin-block: 0;
+  }
+}
+
+.profile--social {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}

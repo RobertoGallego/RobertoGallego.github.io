@@ -1,0 +1,36 @@
+:root {
+  --text: #f2edf2;
+  --background: #0d0c19;
+  --primary: #bea7c0;
+  --secondary: #574253;
+  --accent: #ca473a;
+
+  --font-title: "Playfair Display", sans-serif, Inter;
+  --font-subtitle: "Briem Hand", sans-serif, Inter;
+  --font-primary: "Sedan SC", sans-serif, Inter;
+  --font-secondary: "Ubuntu Sans", sans-serif, Inter;
+}
+
+.container {
+  display: flex;
+  background-color: #ffe6c9;
+  flex-direction: column;
+  padding-inline: 50px;
+  margin-inline: 300px;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 0;
+    margin-inline: 0;
+  }
+}

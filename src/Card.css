@@ -1,0 +1,75 @@
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 300px;
+  min-height: 200px;
+  background-color: var(--secondary);
+  background-image: url("./assets/night.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+  }
+}
+
+.blog-text-a {
+  padding: 1rem;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 1%,
+    rgba(0, 0, 0, 1) 8%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.blog-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.blog-date {
+  font-family: var(--font-secondary);
+  font-size: 0.7rem;
+  color: var(--text);
+  font-style: italic;
+}
+
+.blog-title {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.button-23 {
+  font-family: var(--font-secondary);
+  padding: 0.25rem 0.25rem;
+  color: var(--text);
+  border-radius: 50px;
+  background: transparent;
+  background: var(--background);
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.next-9182 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-block: 0.1rem;
+}
