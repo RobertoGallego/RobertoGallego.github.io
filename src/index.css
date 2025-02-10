@@ -6,13 +6,19 @@
   line-height: 1.5;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #252525;
   background-color: #ffe6c9;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #252525;
 }
 
 a {
@@ -76,6 +82,25 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
   h2 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  button {
+    padding: 0.6em 1em;
     font-size: 1em;
   }
 }

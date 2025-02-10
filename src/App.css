@@ -28,7 +28,28 @@
   text-align: center;
 }
 
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .container {
+    padding-inline: 25px;
+    margin-inline: 100px;
+  }
+}
+
 @media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
   .container {
     padding-inline: 0;
     margin-inline: 0;

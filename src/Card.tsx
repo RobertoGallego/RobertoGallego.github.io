@@ -1,21 +1,47 @@
 import "./Card.css"
-import { RiReactjsLine } from "react-icons/ri"
+import night from "./assets/night.jpg"
 
-const Card = () => {
+interface CardProps {
+  imageUrl?: string
+  createdAt?: string
+  title?: string
+  children: React.ReactNode
+}
+
+const Card: React.FC<CardProps> = ({
+  imageUrl = night,
+  children,
+  createdAt = "Jan 1988",
+  title = "Online Store Concept Vol.1",
+}) => {
   return (
-    <div className="blog-card">
-      <div className="blog-text-a">
-        <div className="blog-text">
-          {/* <p className="blog-date">#12.15</p> */}
+    <div className="card">
+      <div className="blog-card">
+        <img className="blog-img" src={imageUrl} alt="Card background" />
 
-          <button className="button-23">
-            <RiReactjsLine size={14} className="icon-chip-23" color="#00ffff" />
-            <p className="icon-text-23"></p>
-          </button>
+        <div className="blog-text" style={{ width: "100%" }}>
+          {children}
         </div>
+      </div>
 
-        <h1 className="blog-title">Zustand and React</h1>
-        <h1 className="blog-title">Context</h1>
+      <div
+        style={{
+          alignItems: "flex-end",
+          display: "flex",
+          flexDirection: "column",
+          marginTop: 10,
+          fontFamily: "Noto Serif, Roboto, Triodion, Poppins, Inter, system-ui",
+        }}
+      >
+        <h4>{title}</h4>
+        <p
+          style={{
+            fontSize: 12,
+            fontFamily: "Roboto, Poppins, Inter, system-ui",
+          }}
+        >
+          {createdAt}
+        </p>
       </div>
     </div>
   )
