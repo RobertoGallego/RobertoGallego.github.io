@@ -30,23 +30,29 @@
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
 }
 
 .home-content {
   display: flex;
   flex-direction: row;
-  margin-inline: 20px;
 }
 
 .home-title {
   text-align: end;
   text-transform: uppercase;
-  max-width: 400px;
+  /* max-width: 650px; */
+}
+
+.home-cards {
+  z-index: -1;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 650px;
 }
 
 .home-text-container {
@@ -78,23 +84,17 @@
 
 .menu {
   width: 100%;
-  /* background-color: red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #8d8d8d;
-
-  /* display: "flex", */
-  /* borderTop: "1px solid #8d8d8d", */
-  /* width: "100%", */
-  /* justifyContent: "space-between", */
-  /* alignItems: "center", */
 }
 
 .menu-logo {
   font-family: "Roboto", "Poppins", Inter, system-ui;
   font-size: 14px;
   font-weight: 500;
+  padding-block: 12px;
 }
 
 .menu-navigation {
@@ -103,9 +103,17 @@
   gap: 30px;
 }
 
+.footer {
+  display: flex;
+  border-top: 1px solid #8d8d8d;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media (max-width: 1440px) {
   .home-text-container {
-    margin-top: 6px;
+    /* margin-top: 6px; */
   }
 
   .home-title {
@@ -118,9 +126,9 @@
 }
 
 @media (max-width: 1024px) {
-  .cards {
+  /* .cards {
     flex-direction: column;
-  }
+  } */
 
   .container {
     padding-inline: 25px;
@@ -128,37 +136,25 @@
   }
 
   .home-content {
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
   }
 
   .home-title {
-    text-align: start;
+    /* text-align: start; */
   }
 
   .home-text-container {
-    align-items: start;
+    /* align-items: start;
     margin-top: 10px;
     margin-left: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 0px; */
   }
 
   .home-description {
-    margin-top: 10px;
-    /* overflow: initial; */
-
-    font-size: 14px;
+    /* margin-top: 10px; */
+    /* font-size: 14px; */
   }
-
-
-}
-
-.footer {
-  display: flex;
-  border-top: 1px solid #8d8d8d;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
 }
 
 @media (max-width: 768px) {

@@ -2,9 +2,12 @@ import "./App.css"
 import { FaQuoteRight } from "react-icons/fa"
 import Card from "./Card"
 import Chip from "./Chip"
-import macbookpro from "./assets/macbooknoir.png"
-import { AiFillHighlight } from "react-icons/ai"
-import linea from "./assets/linea.png"
+import tech from "./assets/tech.jpg"
+import back from "./assets/bak.jpg"
+import pexel from "./assets/pexel.jpg"
+import ninjaco from "./assets/ninjaco.png"
+import logo from "./assets/logos.png"
+import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md"
 
 function App() {
   return (
@@ -12,13 +15,7 @@ function App() {
       <div className="content">
         <div className="menu">
           <div className="menu-logo">
-            <p
-              style={{
-                
-              }}
-            >
-              Reve +
-            </p>
+            <img src={logo} alt="logo" style={{ width: 110 }} />
           </div>
 
           <div className="menu-navigation">
@@ -45,38 +42,87 @@ function App() {
                 >
                   {item.label}
                 </p>
-                <p
-                  style={{
-                    fontSize: 8,
-                    // paddingInline: 2,
-                    // color: "#ff6347",
-                  }}
-                >
-                  {item.number}
-                </p>
+                <p style={{ fontSize: 8 }}>{item.number}</p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="home-content">
-          <h1 className="home-title">Crafting Engaging Experiences</h1>
-
-          <div className="home-text-container">
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "flex-end",
+              padding: 10,
+            }}
+          >
             <FaQuoteRight size={42} className="home-icon" />
-            <p
+
+            <h1 className="home-title">Crafting Engaging Experiences</h1>
+          </div>
+
+          <div className="home-cards">
+            <Card
+              title="Store v1"
+              imageUrl={ninjaco}
+              width={204}
+              rotate={-5}
+              zIndex={10}
+            >
+              <Chip />
+            </Card>
+
+            <Card
+              title="My Setup Macbook"
+              imageUrl={pexel}
+              createdAt="Jun 1993"
+              width={408}
+              rotate={10}
+            >
+              <Chip />
+              <Chip />
+            </Card>
+
+            <Card
+              title="My Setup Macbook"
+              imageUrl={tech}
+              createdAt="Jun 1993"
+              width={300}
+              rotate={-10}
+              zIndex={10}
+            >
+              <Chip />
+              <Chip />
+            </Card>
+
+            <Card
+              title="My Setup Macbook"
+              imageUrl={back}
+              createdAt="Jun 1993"
+              width={272}
+              rotate={5}
+            >
+              <Chip />
+              <Chip />
+            </Card>
+          </div>
+
+          {/* <p
               className="home-description"
               style={
                 {
-                  // color: "#ff6347",
+                  zIndex: 1,
+                  color: "#ff6347",
                 }
               }
             >
               I'm a software engineer passionate about building intuitive,
               scalable, and high-performance applications with modern web
-              technologies. Let’s build something amazing.
-            </p>
-          </div>
+              technologies. Let’s build something amazing. 
+            </p> */}
+          {/* </div> */}
         </div>
 
         <div className="footer">
@@ -93,8 +139,16 @@ function App() {
             </p>
           </div>
 
-          <div style={{ display: "flex" }}>
-            {["#ffc785", "#ffe6c9", "#ffa09b", "#ff6347", "#011526"].map(
+          <div className="menu-logo">
+            <MdOutlineKeyboardDoubleArrowDown
+              size={20}
+            />
+
+            {/* <p style={{ paddingBlock: 12 }}>Reve +</p> */}
+          </div>
+
+          {/* <div style={{ display: "flex" }}>
+             {["#ffc785", "#ffe6c9", "#ffa09b", "#ff6347", "#011526"].map(
               (color) => (
                 <div
                   key={color}
@@ -105,8 +159,8 @@ function App() {
                   }}
                 />
               )
-            )}
-          </div>
+            )} 
+          </div> */}
         </div>
       </div>
 
@@ -127,94 +181,6 @@ function App() {
           State of JS State of CSS State of AI State of html
         </div> */}
       {/* 204 272 408 H325    - 204 H249 - 332 H404 */}
-
-      {/* <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          height: "100vh",
-          backgroundColor: "#f5f5f5",
-        }}
-      >
-        <h2 style={{ textAlign: "center", marginBlock: 20 }}>
-          Featured Projects
-        </h2>
-        <p style={{ textAlign: "center", marginBottom: 20 }}>
-          Here are some of my projects that I have worked on. I am always
-          looking for new opportunities to work on exciting projects.
-        </p>
-    
-        
-        <div className="cards">
-          <Card title="Store v1" width={204}>
-            <Chip />
-          </Card>
-
-          <Card
-            title="My Setup Macbook"
-            imageUrl={macbookpro}
-            createdAt="Jun 1993"
-            width={408}
-          >
-            <Chip />
-            <Chip />
-          </Card>
-
-          <Card
-            title="My Setup Macbook"
-            imageUrl={macbookpro}
-            createdAt="Jun 1993"
-            width={300}
-          >
-            <Chip />
-            <Chip />
-          </Card>
-
-          <Card
-            title="My Setup Macbook"
-            imageUrl={macbookpro}
-            createdAt="Jun 1993"
-            width={272}
-          >
-            <Chip />
-            <Chip />
-          </Card>
-
-          <Card
-            title="My Setup Macbook"
-            imageUrl={macbookpro}
-            createdAt="Jun 1993"
-            width={300}
-          >
-            <Chip />
-            <Chip />
-          </Card>
-
-          <Card
-            title="My Setup Macbook"
-            imageUrl={macbookpro}
-            createdAt="Jun 1993"
-            width={408}
-          >
-            <Chip />
-            <Chip />
-          </Card>
-
-          <Card title="Store v1" width={204}>
-            <Chip />
-          </Card>
-
-          <Card
-            title="My Setup Macbook"
-            imageUrl={macbookpro}
-            createdAt="Jun 1993"
-            width={272}
-          >
-            <Chip />
-            <Chip />
-          </Card>
-        </div>
-      </div> */}
     </div>
   )
 }

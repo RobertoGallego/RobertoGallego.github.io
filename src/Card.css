@@ -50,7 +50,7 @@
     transform-origin: right top;
   }
   100% {
-    transform: scale(1.1);
+    transform: scale(1.5);
     transform-origin: right bottom;
   }
 }

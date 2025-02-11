@@ -7,7 +7,9 @@ interface CardProps {
   title?: string
   width?: number
   height?: number
+  rotate?: number
   children: React.ReactNode
+  zIndex?: number
 }
 
 const Card: React.FC<CardProps> = ({
@@ -15,14 +17,19 @@ const Card: React.FC<CardProps> = ({
   width = 300,
   height = 321,
   children,
+  rotate = 0,
   createdAt = "Jan 1988",
   title = "Online Store Concept Vol.1",
+  zIndex = 0,
 }) => {
   // const 204 272 408 H325    - 204 H249 - 332 H404
   return (
-    <div className="card" style={{ width, height }}>
+    <div
+      className="card"
+      style={{ width, height, transform: `rotate(${rotate}deg)`, zIndex }}
+    >
       <div className="blog-card">
-        <img className="blog-img" src={imageUrl} alt="Card background" />
+        <img className="blog-img" src={imageUrl} alt="Card img" />
 
         <div className="blog-text" style={{ width: "100%" }}>
           {children}
@@ -70,7 +77,7 @@ const Card: React.FC<CardProps> = ({
           }}
         >
           Hope You Enjoy
-          </p>
+        </p>
 
         <div
           style={{
