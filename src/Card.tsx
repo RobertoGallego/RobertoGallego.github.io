@@ -5,17 +5,22 @@ interface CardProps {
   imageUrl?: string
   createdAt?: string
   title?: string
+  width?: number
+  height?: number
   children: React.ReactNode
 }
 
 const Card: React.FC<CardProps> = ({
   imageUrl = night,
+  width = 300,
+  height = 321,
   children,
   createdAt = "Jan 1988",
   title = "Online Store Concept Vol.1",
 }) => {
+  // const 204 272 408 H325    - 204 H249 - 332 H404
   return (
-    <div className="card">
+    <div className="card" style={{ width, height }}>
       <div className="blog-card">
         <img className="blog-img" src={imageUrl} alt="Card background" />
 

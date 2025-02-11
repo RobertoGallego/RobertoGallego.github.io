@@ -3,46 +3,60 @@ import { FaQuoteRight } from "react-icons/fa"
 import Card from "./Card"
 import Chip from "./Chip"
 import macbookpro from "./assets/macbooknoir.png"
+import { AiFillHighlight } from "react-icons/ai"
+import linea from "./assets/linea.png"
 
 function App() {
   return (
     <div className="container">
       <div className="content">
         <div className="menu">
-          {[
-            { label: "Home", number: "01" },
-            { label: "About", number: "02" },
-            { label: "Projects", number: "03" },
-            { label: "Contact", number: "04" },
-          ].map((item) => (
-            <div
-              key={item.number}
+          <div className="menu-logo">
+            <p
               style={{
-                display: "flex",
-                paddingBlock: 10,
+                
               }}
             >
-              <p
-                style={{
-                  fontFamily: "Roboto, Poppins, Inter, system-ui",
-                  fontSize: 14,
-                  fontWeight: "500",
-                  paddingBlock: 2,
-                }}
-              >
-                {item.label}
-              </p>
+              Reve +
+            </p>
+          </div>
 
-              <p
+          <div className="menu-navigation">
+            {[
+              { label: "Home", number: "01" },
+              { label: "About", number: "02" },
+              { label: "Projects", number: "03" },
+              { label: "Contact", number: "04" },
+            ].map((item) => (
+              <div
+                key={item.number}
                 style={{
-                  fontSize: 8,
-                  paddingInline: 2,
+                  display: "flex",
+                  paddingBlock: 10,
                 }}
               >
-                {item.number}
-              </p>
-            </div>
-          ))}
+                <p
+                  style={{
+                    fontFamily: "Roboto, Poppins, Inter, system-ui",
+                    fontSize: 14,
+                    fontWeight: "500",
+                    paddingBlock: 2,
+                  }}
+                >
+                  {item.label}
+                </p>
+                <p
+                  style={{
+                    fontSize: 8,
+                    // paddingInline: 2,
+                    // color: "#ff6347",
+                  }}
+                >
+                  {item.number}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="home-content">
@@ -50,8 +64,14 @@ function App() {
 
           <div className="home-text-container">
             <FaQuoteRight size={42} className="home-icon" />
-
-            <p className="home-description">
+            <p
+              className="home-description"
+              style={
+                {
+                  // color: "#ff6347",
+                }
+              }
+            >
               I'm a software engineer passionate about building intuitive,
               scalable, and high-performance applications with modern web
               technologies. Let’s build something amazing.
@@ -59,40 +79,38 @@ function App() {
           </div>
         </div>
 
-        <div style={{ display: "flex" }}>
-          {["#ffc785", "#ffe6c9", "#ffa09b", "#ff6347", "#011526"].map(
-            (color) => (
-              <div
-                key={color}
-                style={{
-                  height: 50,
-                  width: 50,
-                  backgroundColor: color,
-                }}
-              />
-            )
-          )}
+        <div className="footer">
+          <div>
+            <p
+              style={{
+                fontFamily: "Roboto, Poppins, Inter, system-ui",
+                fontSize: 14,
+                fontWeight: "500",
+                paddingBlock: 10,
+              }}
+            >
+              2025 © All rights reserved
+            </p>
+          </div>
+
+          <div style={{ display: "flex" }}>
+            {["#ffc785", "#ffe6c9", "#ffa09b", "#ff6347", "#011526"].map(
+              (color) => (
+                <div
+                  key={color}
+                  style={{
+                    height: 50,
+                    width: 50,
+                    backgroundColor: color,
+                  }}
+                />
+              )
+            )}
+          </div>
         </div>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          height: "100vh",
-          backgroundColor: "#f5f5f5",
-        }}
-      >
-        <h2 style={{ textAlign: "center", marginBlock: 20 }}>
-          Featured Projects
-        </h2>
-
-        <p style={{ textAlign: "center", marginBottom: 20 }}>
-          Here are some of my projects that I have worked on. I am always
-          looking for new opportunities to work on exciting projects.
-        </p>
-
-        {/* <div style={{ textAlign: "center", marginBottom: 20 }}>
+      {/* <div style={{ textAlign: "center", marginBottom: 20 }}>
           ecole 42 level 21+ France spanish french english Typescript Javascript
           Python FastAPI React React Native Node Deno Hono Expo preact tauri
           Supabase MongoDB PostgreSQL React hook form zod zustand react query
@@ -108,9 +126,27 @@ function App() {
           dev.to css-tricks frontendmasters State of React This week in react
           State of JS State of CSS State of AI State of html
         </div> */}
+      {/* 204 272 408 H325    - 204 H249 - 332 H404 */}
 
+      {/* <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          height: "100vh",
+          backgroundColor: "#f5f5f5",
+        }}
+      >
+        <h2 style={{ textAlign: "center", marginBlock: 20 }}>
+          Featured Projects
+        </h2>
+        <p style={{ textAlign: "center", marginBottom: 20 }}>
+          Here are some of my projects that I have worked on. I am always
+          looking for new opportunities to work on exciting projects.
+        </p>
+    
+        
         <div className="cards">
-          <Card>
+          <Card title="Store v1" width={204}>
             <Chip />
           </Card>
 
@@ -118,6 +154,7 @@ function App() {
             title="My Setup Macbook"
             imageUrl={macbookpro}
             createdAt="Jun 1993"
+            width={408}
           >
             <Chip />
             <Chip />
@@ -127,6 +164,7 @@ function App() {
             title="My Setup Macbook"
             imageUrl={macbookpro}
             createdAt="Jun 1993"
+            width={300}
           >
             <Chip />
             <Chip />
@@ -136,6 +174,7 @@ function App() {
             title="My Setup Macbook"
             imageUrl={macbookpro}
             createdAt="Jun 1993"
+            width={272}
           >
             <Chip />
             <Chip />
@@ -145,6 +184,7 @@ function App() {
             title="My Setup Macbook"
             imageUrl={macbookpro}
             createdAt="Jun 1993"
+            width={300}
           >
             <Chip />
             <Chip />
@@ -154,12 +194,27 @@ function App() {
             title="My Setup Macbook"
             imageUrl={macbookpro}
             createdAt="Jun 1993"
+            width={408}
+          >
+            <Chip />
+            <Chip />
+          </Card>
+
+          <Card title="Store v1" width={204}>
+            <Chip />
+          </Card>
+
+          <Card
+            title="My Setup Macbook"
+            imageUrl={macbookpro}
+            createdAt="Jun 1993"
+            width={272}
           >
             <Chip />
             <Chip />
           </Card>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
