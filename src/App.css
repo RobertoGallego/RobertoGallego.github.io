@@ -13,10 +13,9 @@
 
 .container {
   display: flex;
-  background-color: #ffe6c9;
   flex-direction: column;
   padding-inline: 50px;
-  margin-inline: 300px;
+  margin-inline: 100px;
 }
 
 .content {
@@ -29,9 +28,76 @@
 }
 
 .cards {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); 
+  justify-content: center; 
+  justify-items: start; 
+  gap: 10px;
+  padding: 10px;
+}
+
+.home-content {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  padding: 100px;
+}
+
+.home-title {
+  text-align: end;
+  text-transform: uppercase;
+  max-width: 400px;
+}
+
+.home-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.home-icon {
+  padding: 10px;
+  background-color: #ffc785;
+}
+
+.home-description {
+  font-size: 16px;
+  text-align: start;
+  font-family: "Poppins", Inter, system-ui;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+@media (max-width: 1440px) {
+  .home-text-container {
+    margin-top: 6px;
+  }
+
+  .home-title {
+    font-size: 40px;
+  }
+
+  .home-description {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -43,6 +109,29 @@
     padding-inline: 25px;
     margin-inline: 100px;
   }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-title {
+    text-align: start;
+  }
+
+  .home-text-container {
+    align-items: start;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+
+  .home-description {
+    margin-top: 10px;
+    overflow: initial;
+
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -53,5 +142,9 @@
   .container {
     padding-inline: 0;
     margin-inline: 0;
+  }
+
+  .menu {
+    margin-right: 30px;
   }
 }

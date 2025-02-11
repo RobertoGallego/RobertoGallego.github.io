@@ -29,19 +29,72 @@ const Card: React.FC<CardProps> = ({
           alignItems: "flex-end",
           display: "flex",
           flexDirection: "column",
-          marginTop: 10,
-          fontFamily: "Noto Serif, Roboto, Triodion, Poppins, Inter, system-ui",
+          textTransform: "uppercase",
         }}
       >
-        <h4>{title}</h4>
+        <div
+          style={{
+            width: "100%",
+            borderTop: "1px solid #707070",
+            marginBlock: 10,
+          }}
+        />
+
+        <h4
+          style={{
+            fontWeight: 500,
+            fontFamily: "Poppins, Inter, system-ui",
+            lineHeight: 1,
+          }}
+        >
+          {title}
+        </h4>
+
         <p
           style={{
-            fontSize: 12,
+            fontSize: 4,
             fontFamily: "Roboto, Poppins, Inter, system-ui",
           }}
         >
-          {createdAt}
+          Welcome | To My Reve | Studio
         </p>
+        <p
+          style={{
+            fontSize: 4,
+            fontFamily: "Roboto, Poppins, Inter, system-ui",
+          }}
+        >
+          Hope You Enjoy
+          </p>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: 10,
+            fontWeight: 500,
+            width: "100%",
+          }}
+        >
+          <p
+            style={{
+              fontSize: 8,
+              fontFamily: "Roboto, Poppins, Inter, system-ui",
+            }}
+          >
+            {createdAt}
+          </p>
+
+          <p
+            style={{
+              fontSize: 8,
+              fontFamily: "Roboto, Poppins, Inter, system-ui",
+              textTransform: "uppercase",
+            }}
+          >
+            5 min read
+          </p>
+        </div>
       </div>
     </div>
   )
