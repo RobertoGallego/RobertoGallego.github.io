@@ -6,7 +6,6 @@ interface CardProps {
   createdAt?: string
   title?: string
   width?: number
-  height?: number
   rotate?: number
   children: React.ReactNode
   zIndex?: number
@@ -15,7 +14,6 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({
   imageUrl = night,
   width = 300,
-  height = 321,
   children,
   rotate = 0,
   createdAt = "Jan 1988",
@@ -26,7 +24,7 @@ const Card: React.FC<CardProps> = ({
   return (
     <div
       className="card"
-      style={{ width, height, transform: `rotate(${rotate}deg)`, zIndex }}
+      style={{ width, transform: `rotate(${rotate}deg)`, zIndex }}
     >
       <div className="blog-card">
         <img className="blog-img" src={imageUrl} alt="Card img" />
@@ -52,15 +50,7 @@ const Card: React.FC<CardProps> = ({
           }}
         />
 
-        <h4
-          style={{
-            fontWeight: 500,
-            fontFamily: "Poppins, Inter, system-ui",
-            lineHeight: 1,
-          }}
-        >
-          {title}
-        </h4>
+        <h4 className="blog-title">{title}</h4>
 
         <p
           style={{
