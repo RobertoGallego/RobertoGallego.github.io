@@ -16,7 +16,7 @@
   flex-direction: column;
   padding-inline: 50px;
   margin-inline: 280px;
- 
+
   /* justify-content: space-between; */
   flex-direction: column;
   /* text-align: center; */
@@ -43,17 +43,19 @@
   flex-direction: column;
   justify-content: space-between;
   margin-left: 10px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   margin-bottom: 2px;
 }
 
 .home-icon {
-  padding: 10px;
+  /* padding: 10px; */
+  /* font-size: 32px; */
   background-color: #ffc785;
 }
 
 .home-description {
   font-size: 16px;
+  color: #ff6347;
   /* text-align: start; */
   font-family: "Poppins", Inter, system-ui;
   font-weight: 500;
@@ -92,29 +94,6 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-}
-
-@media (max-width: 1440px) {
-  /* .home-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .home-text {
-    align-items: center;
-  }
-
-  .home-title {
-    text-align: center;
-  }
-
-  .home-description {
-    text-align: center;
-    font-size: 14px;
-  } */
 }
 
 .menu-logo {
@@ -171,23 +150,39 @@
   flex: 0 0 auto;
 }
 
-@media (max-width: 768px) {
-  .home-cards-list {
-    overflow-x: auto;
-    overflow-y: hidden;
-    width: 100%;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .home-cards-list > * {
-    flex: 0 0 auto;
-    min-width: 160px;
-  }
+.home-colors {
+  display: flex;
 }
 
-@media (max-width: 768px) {
+.home-cards-mobile {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 6px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 2px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.footer-text {
+  font-family: "Roboto", Poppins, Inter, system-ui;
+  font-size: 12px;
+  font-weight: 500;
+  padding-block: 10px;
+}
+
+@media (max-width: 767px) and (max-height: 740px) {
+  .home-cards-fullsize {
+    display: none;
+  }
+
   .container {
-    padding-inline: 10px;
+    padding-inline: 0;
     margin-inline: 0;
   }
 
@@ -198,20 +193,28 @@
   .home-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .home-icon {
-    margin-bottom: 6px;
+    /* gap: 10px; */
+    /* margin-top: 10px; */
   }
 
   .home-text {
     align-items: center;
+    padding-inline: 10px;
+  }
+
+  .home-icon {
+    padding: 8px;
+    font-size: 32px;
+    margin-bottom: 6px;
   }
 
   .home-title {
     text-align: center;
+    font-size: 30px;
+  }
+
+  .home-description {
+    font-size: 13px;
   }
 
   .card {
@@ -220,17 +223,356 @@
   }
 
   .blog-card {
+    min-height: 200px !important;
+  }
+
+  .blog-title {
+    /* font-size: 12px; */
+  }
+
+  .home-cards-mobile {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .home-cards-list > * {
+    flex: 0 0 auto;
+    min-width: 160px;
+  }
+
+  .footer {
+    padding-inline: 10px;
+  }
+}
+
+@media (max-width: 767px) and (min-height: 741px) {
+  .home-cards-fullsize {
+    display: none;
+  }
+
+  .container {
+    padding-inline: 0;
+    margin-inline: 0;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    /* margin-top: 10px; */
+  }
+
+  .home-text {
+    align-items: center;
+    padding-inline: 10px;
+  }
+
+  .home-icon {
+    padding: 8px;
+    font-size: 36px;
+    margin-bottom: 6px;
+  }
+
+  .home-title {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .home-description {
+    font-size: 16px;
+  }
+
+  .card {
+    max-width: 350px !important;
+    transform: rotate(0deg) !important;
+  }
+
+  .blog-card {
+    /* min-height: 170px !important; */
+  }
+
+  .blog-title {
+    /* font-size: 12px; */
+  }
+
+  .home-cards-mobile {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .home-cards-list > * {
+    flex: 0 0 auto;
+    min-width: 160px;
+  }
+
+  .footer {
+    padding-inline: 10px;
+  }
+}
+
+/* Tablets (768px a 1024px) */
+/* @media (min-width: 768px) and (max-width: 1024px) and (max-height: 1024px) { */
+
+@media (min-width: 768px) and (max-width: 1024px) and (max-height: 1180px) {
+  .home-cards-fullsize {
+    display: flex;
+    flex-direction: row;
+    padding-block: 10px;
+  }
+
+  .home-cards-list-fullsize {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    padding-inline: 0;
+    margin-inline: 0;
+  }
+
+  .menu {
+    padding-inline: 10px;
+  }
+
+  .menu-logo {
+    width: 110;
+    object-fit: cover;
+    margin-top: 0;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-text {
+    align-items: center;
+    padding-inline: 10px;
+  }
+
+  .home-icon {
+    padding: 10px;
+    font-size: 40px;
+    margin-bottom: 6px;
+  }
+
+  .home-title {
+    text-align: center;
+    font-size: 48px;
+    max-width: 500px;
+  }
+
+  .home-description {
+    font-size: 18px;
+  }
+
+  .card {
+    max-width: 350px !important;
+    /* transform: rotate(0deg) !important; */
+  }
+
+  .blog-card {
     min-height: 170px !important;
   }
 
   .blog-title {
-    font-size: 12px;
+    /* font-size: 12px; */
+  }
+
+  .home-cards-mobile {
+    display: none;
+  }
+
+  .footer {
+    padding-inline: 10px;
   }
 }
 
-@media (max-width: 1024px) {
-  /* .container {
-    padding-inline: 25px;
-    margin-inline: 100px;
-  } */
+/* @media (min-width: 1024px) and (max-width: 1366px) and (min-height: 1366px) { */
+
+@media (min-width: 820px) and (max-width: 1366px) and (min-height: 1280px) {
+  .home-cards-fullsize {
+    display: flex;
+    flex-direction: row;
+    padding-block: 10px;
+  }
+
+  .home-cards-list-fullsize {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    /* padding-inline: 10px; */
+    margin-inline: 0;
+  }
+
+  .menu {
+    padding-inline: 10px;
+  }
+
+  .menu-logo {
+    width: 110;
+    object-fit: cover;
+    margin-top: 0;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    /* margin-top: 10px; */
+  }
+
+  .home-text {
+    align-items: center;
+    padding-inline: 10px;
+  }
+
+  .home-icon {
+    padding: 10px;
+    font-size: 50px;
+    margin-bottom: 6px;
+  }
+
+  .home-title {
+    text-align: center;
+    font-size: 70px;
+    max-width: 500px;
+  }
+
+  .home-description {
+    font-size: 24px;
+  }
+
+  .card {
+    /* max-width: 350px !important; */
+    /* transform: rotate(0deg) !important; */
+  }
+
+  .blog-card {
+    /* min-height: 170px !important; */
+  }
+
+  .blog-title {
+    /* font-size: 12px; */
+  }
+
+  .home-cards-mobile {
+    display: none;
+  }
+
+  .footer {
+    padding-inline: 10px;
+  }
+
+  .footer-text {
+    font-size: 24;
+    font-weight: 500;
+    padding-block: 20;
+  }
+}
+
+/* PC (1025px en adelante) */
+@media (min-width: 1025px) {
+  .home-cards-fullsize {
+    display: flex;
+    flex-direction: row;
+    padding-block: 10px;
+  }
+
+  .home-cards-list-fullsize {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    /* padding-inline: 10px; */
+    /* margin-inline: 0; */
+  }
+
+  .menu {
+    padding-inline: 10px;
+  }
+
+  .menu-logo {
+    width: 110;
+    object-fit: cover;
+    margin-top: 0;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: row;
+    /* gap: 10px; */
+    /* margin-top: 10px; */
+  }
+
+  .home-text {
+    align-items: end;
+    padding-inline: 10px;
+  }
+
+  .home-icon {
+    padding: 10px;
+    font-size: 50px;
+    margin-bottom: 6px;
+  }
+
+  .home-title {
+    text-align: center;
+    font-size: 70px;
+    max-width: 500px;
+  }
+
+  .home-description {
+    font-size: 24px;
+  }
+
+  .card {
+    /* max-width: 350px !important; */
+    /* transform: rotate(0deg) !important; */
+  }
+
+  .blog-card {
+    /* min-height: 170px !important; */
+  }
+
+  .blog-title {
+    /* font-size: 12px; */
+  }
+
+  .home-cards-mobile {
+    display: none;
+  }
+
+  .footer {
+    padding-inline: 10px;
+  }
+
+  .footer-text {
+    font-size: 24;
+    font-weight: 500;
+    padding-block: 20;
+  }
+
+  .home-colors {
+    display: none;
+  }
+}
+
+
+/* --- tablets horizontal --- */
+
+@media (orientation: landscape) {
+  body {
+  }
 }
