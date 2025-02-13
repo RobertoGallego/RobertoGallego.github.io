@@ -107,6 +107,10 @@ const HomeCardsMobile = () => {
   )
 }
 
+const Widget = () => {
+  return <div className="widget" />
+}
+
 function App() {
   return (
     <div className="container">
@@ -145,6 +149,8 @@ function App() {
         </div>
 
         <div className="home-content">
+          {/* <Widget /> */}
+
           <div className="home-text">
             <FaQuoteRight className="home-icon" />
 
