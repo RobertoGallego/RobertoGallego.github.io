@@ -127,6 +127,7 @@
   /* background-color: navy; */
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
 }
 
 .home-cards-list {
@@ -177,8 +178,8 @@
 .widget {
   background-color: #ff6347;
   position: absolute;
-  top: 150px;
-  left: 150px;
+  top: 120px;
+  left: 120px;
   padding: 100px;
   border-radius: 50%;
   z-index: -1;
@@ -774,8 +775,22 @@
   }
 }
 
-@media (min-width: 1025px) and (orientation: landscape) {
+@media (min-width: 1025px) and (max-width: 1680px) {
   body {
-    /* background-color: rgb(99, 41, 41); */
+    /* background-color: rgb(74, 119, 69);  */
+  }
+
+  .blog-card {
+    min-height: 180px !important;
+  }
+
+  .home-description {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1681px) {
+  body {
+    /* background-color: rgb(99, 41, 41);  */
   }
 }

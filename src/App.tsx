@@ -9,6 +9,10 @@ import ninjaco from "./assets/ninjaco.png"
 import logo from "./assets/logos.png"
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md"
 
+const Widget = () => {
+  return <div className="widget" />
+}
+
 const HomeCardsFullSize = () => {
   return (
     <div className="home-cards-fullsize">
@@ -107,10 +111,6 @@ const HomeCardsMobile = () => {
   )
 }
 
-// const Widget = () => {
-//   return <div className="widget" />
-// }
-
 function App() {
   return (
     <div className="container">
@@ -149,7 +149,7 @@ function App() {
         </div>
 
         <div className="home-content">
-          {/* <Widget /> */}
+          <Widget />
 
           <div className="home-text">
             <FaQuoteRight className="home-icon" />
