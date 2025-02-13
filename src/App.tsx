@@ -107,9 +107,9 @@ const HomeCardsMobile = () => {
   )
 }
 
-const Widget = () => {
-  return <div className="widget" />
-}
+// const Widget = () => {
+//   return <div className="widget" />
+// }
 
 function App() {
   return (

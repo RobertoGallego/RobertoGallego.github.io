@@ -186,7 +186,7 @@
 
 @media (max-width: 767px) and (max-height: 740px) {
   body {
-    background-color: #5a89ff;
+    /* background-color: #5a89ff; */
   }
 
   .home-cards-fullsize {
