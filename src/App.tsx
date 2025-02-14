@@ -8,9 +8,28 @@ import pexel from "./assets/pexel.jpg"
 import ninjaco from "./assets/ninjaco.png"
 import logo from "./assets/logos.png"
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md"
+import { BsAsterisk } from "react-icons/bs";
+import { GoIssueDraft } from "react-icons/go";
+import { LuRadar } from "react-icons/lu";
+import { GiAbstract047 } from "react-icons/gi";
+import { GiAbstract066 } from "react-icons/gi";
+import { GiAbstract069 } from "react-icons/gi";
+import { GiAbstract091 } from "react-icons/gi";
+import { GiAbstract030 } from "react-icons/gi";
+import { GiAbstract039 } from "react-icons/gi";
+import { PiAsteriskDuotone } from "react-icons/pi";
+import { PiGlobeHemisphereEastDuotone } from "react-icons/pi";
+import { FaSun } from "react-icons/fa6";
+import { PiAsteriskBold } from "react-icons/pi";
 
 const Widget = () => {
-  return <div className="widget" />
+  return (
+    // <div className="widget">
+      <PiAsteriskBold
+        className="widget-icon"
+      />
+    // </div>
+  )
 }
 
 const HomeCardsFullSize = () => {
@@ -132,27 +151,18 @@ function App() {
                   paddingBlock: 10,
                 }}
               >
-                <p
-                  style={{
-                    fontFamily: "Roboto, Poppins, Inter, system-ui",
-                    fontSize: 14,
-                    fontWeight: "500",
-                    paddingBlock: 2,
-                  }}
-                >
-                  {item.label}
-                </p>
-                <p style={{ fontSize: 8 }}>{item.number}</p>
+                <p className="header-navigation">{item.label}</p>
+                <p className={"header-navigation-number"}>{item.number}</p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="home-content">
-          <Widget />
-
           <div className="home-text">
             <FaQuoteRight className="home-icon" />
+
+            <Widget />
 
             <h1 className="home-title">Crafting </h1>
             <h1 className="home-title">Engaging</h1>
