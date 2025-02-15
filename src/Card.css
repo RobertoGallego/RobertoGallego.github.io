@@ -14,7 +14,7 @@
   flex-shrink: 0;
   width: 300px;
   max-width: 368px;
-  height: clamp(200px, 35vh, 325px);
+  height: clamp(200px, 35vh, 320px);
 }
 
 .blog-card {
