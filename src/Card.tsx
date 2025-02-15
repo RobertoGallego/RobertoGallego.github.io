@@ -24,7 +24,7 @@ const Card: React.FC<CardProps> = ({
   return (
     <div
       className="card"
-      style={{ width, transform: `rotate(${rotate}deg)`, zIndex }}
+      style={{ width, transform: `rotate(${0}deg)`, zIndex }}
     >
       <div className="blog-card">
         <img className="blog-img" src={imageUrl} alt="Card img" />
