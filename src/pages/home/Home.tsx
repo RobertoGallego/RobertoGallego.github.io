@@ -5,18 +5,16 @@ import tech from "../../assets/tech.jpg"
 import back from "../../assets/bak.jpg"
 import pexel from "../../assets/pexel.jpg"
 import ninjaco from "../../assets/ninjaco.png"
-// import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md"
-// import { PiAsteriskBold } from "react-icons/pi"
 
-// const Widget = () => {
-//   return (
-//     <PiAsteriskBold className="widget-icon" />
-//   )
-// }
+import { useRef, useState } from "react"
 
-const HomeCardsFullSize = () => {
+const HomeCardsFullSize = ({
+  containerRef,
+}: {
+  containerRef: React.RefObject<HTMLDivElement | null>
+}) => {
   return (
-    <div className="home-cards-fullsize">
+    <div ref={containerRef} className="home-cards-fullsize">
       <Card title="Store v1" imageUrl={ninjaco} width={204} rotate={-5}>
         <Chip />
       </Card>
@@ -58,6 +56,18 @@ const HomeCardsFullSize = () => {
 }
 
 const Home = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [scrollPosition, setScrollPosition] = useState(0)
+
+  const scrollToCard = (index: number) => {
+    setScrollPosition(index)
+
+    containerRef.current?.scrollTo({
+      left: index,
+      behavior: "smooth",
+    })
+  }
+
   return (
     <div
       style={{
@@ -80,8 +90,21 @@ const Home = () => {
         </div>
       </div>
 
-      {/* <HomeCardsMobile /> */}
-      <HomeCardsFullSize />
+      <div className="home-cards-container">
+        <HomeCardsFullSize containerRef={containerRef} />
+        <div style={{ display: "flex", justifyContent: "center", gap: 6 }}>
+          {[0, 400].map((e) => (
+            <div
+              key={e}
+              className="home-scroll"
+              style={{
+                backgroundColor: scrollPosition === e ? "#011526" : "#ccc",
+              }}
+              onClick={() => scrollToCard(e)}
+            />
+          ))}
+        </div>
+      </div>
 
       <div className="home-colors">
         {["#ffc785", "#ffe6c9", "#ffa09b", "#ff6347", "#011526"].map(

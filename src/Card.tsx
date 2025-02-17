@@ -6,7 +6,6 @@ interface CardProps {
   createdAt?: string
   title?: string
   width?: number
-  rotate?: number
   children: React.ReactNode
   zIndex?: number
 }
@@ -15,7 +14,6 @@ const Card: React.FC<CardProps> = ({
   imageUrl = night,
   width = 300,
   children,
-  rotate = 0,
   createdAt = "Jan 1988",
   title = "Online Store Concept Vol.1",
   zIndex = 0,
