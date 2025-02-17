@@ -15,7 +15,7 @@ const HomeCardsFullSize = ({
 }) => {
   return (
     <div ref={containerRef} className="home-cards-fullsize">
-      <Card title="Store v1" imageUrl={ninjaco} width={204} rotate={-5}>
+      <Card title="Store v1" imageUrl={ninjaco} width={204}>
         <Chip />
       </Card>
 
@@ -24,7 +24,6 @@ const HomeCardsFullSize = ({
         imageUrl={pexel}
         createdAt="Jun 1993"
         width={368}
-        rotate={10}
       >
         <Chip />
         <Chip />
@@ -35,7 +34,6 @@ const HomeCardsFullSize = ({
         imageUrl={back}
         createdAt="Jun 1993"
         width={272}
-        rotate={5}
       >
         <Chip />
         <Chip />
@@ -46,7 +44,6 @@ const HomeCardsFullSize = ({
         imageUrl={tech}
         createdAt="Jun 1993"
         width={300}
-        rotate={-7}
       >
         <Chip />
         <Chip />
