@@ -2,7 +2,7 @@ import NavItem from "./NavItem"
 
 const NavMenu = () => {
   return (
-    <div className="menu-navigation">
+    <ul className="menu-navigation">
       {[
         { label: "Home", number: "01" },
         { label: "Portfolio", number: "03" },
@@ -11,7 +11,7 @@ const NavMenu = () => {
       ].map((item) => (
         <NavItem label={item.label} number={item.number} key={item.number} />
       ))}
-    </div>
+    </ul>
   )
 }
 

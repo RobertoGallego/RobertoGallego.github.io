@@ -5,7 +5,7 @@ interface NavItemProps {
 
 const NavItem = ({ label, number }: NavItemProps) => {
   return (
-    <div
+    <li
       style={{
         display: "flex",
         paddingBlock: 10,
@@ -13,7 +13,7 @@ const NavItem = ({ label, number }: NavItemProps) => {
     >
       <p className="header-navigation">{label}</p>
       <p className="header-navigation-number">{number}</p>
-    </div>
+    </li>
   )
 }
 
