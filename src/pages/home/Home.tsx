@@ -6,7 +6,7 @@ import back from "../../assets/bak.jpg"
 import pexel from "../../assets/pexel.jpg"
 import ninjaco from "../../assets/ninjaco.png"
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const HomeCardsFullSize = ({
   containerRef,
@@ -55,15 +55,44 @@ const HomeCardsFullSize = ({
 const Home = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const [scrollPosition, setScrollPosition] = useState(0)
+  const [isManualScroll, setIsManualScroll] = useState(false)
 
   const scrollToCard = (index: number) => {
-    setScrollPosition(index)
+    if (!containerRef.current) return
+
+    setIsManualScroll(true)
+
+    setScrollPosition(index === 0 ? 0 : containerRef.current.scrollWidth)
 
     containerRef.current?.scrollTo({
       left: index,
       behavior: "smooth",
     })
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current || isManualScroll) return
+
+      const halfScrollPosition =
+        (containerRef.current.scrollWidth - containerRef.current.clientWidth) /
+        2
+
+      const isAtHalf = containerRef.current.scrollLeft >= halfScrollPosition
+
+      setScrollPosition(isAtHalf ? containerRef.current.scrollWidth : 0)
+    }
+    const ref = containerRef.current
+    if (ref) {
+      ref.addEventListener("scroll", handleScroll)
+    }
+
+    return () => {
+      if (ref) {
+        ref.removeEventListener("scroll", handleScroll)
+      }
+    }
+  }, [isManualScroll])
 
   return (
     <div
@@ -87,12 +116,16 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="home-cards-container">
+      <div
+        className="home-cards-container"
+        onWheel={() => setIsManualScroll(false)}
+      >
         <HomeCardsFullSize containerRef={containerRef} />
+
         <div style={{ display: "flex", justifyContent: "center", gap: 6 }}>
-          {[0, 400].map((e) => (
+          {[0, containerRef.current?.scrollWidth ?? 1194].map((e, index) => (
             <div
-              key={e}
+              key={index}
               className="home-scroll"
               style={{
                 backgroundColor: scrollPosition === e ? "#011526" : "#ccc",
