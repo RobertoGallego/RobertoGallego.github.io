@@ -32,7 +32,7 @@
 }
 
 .header-navigation {
-  font-family: "Roboto", "Poppins", Inter, system-ui;
+  font-family: "Poppins", Inter, system-ui;
   font-size: 14px;
   font-weight: 500;
   padding-block: 2px;
@@ -40,12 +40,17 @@
 
 .home-content {
   display: flex;
+}
+
+.home-cards-container {
+  display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .home-title {
   text-transform: uppercase;
-  font-size: clamp(40px, 4vw, 60px);
+  font-size: clamp(40px, 11vw, 60px);
 }
 
 .home-icon {
@@ -64,7 +69,7 @@
   font-size: clamp(14px, 1.5vw, 18px);
   color: #ff6347;
   font-family: "Poppins", Inter, system-ui;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 .home-text-container {
@@ -106,12 +111,6 @@
   object-fit: cover;
 }
 
-.home-cards-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .home-cards {
   display: flex;
   flex-direction: column;
@@ -141,38 +140,129 @@
 }
 
 .footer-text {
-  font-family: "Roboto", Poppins, Inter, system-ui;
-  font-size: 14px;
+  font-family: "Poppins", Inter, system-ui;
+  font-size: 12px;
   font-weight: 500;
   padding-block: 10px;
-}
-
-.widget-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  border-radius: 50%;
-  z-index: -1;
-
-  font-size: 180px;
-
-  position: absolute;
-  top: 30px;
-  left: 100px;
-  transform: translate(-50%, -50%);
-  display: flex;
-
-  animation: spin 80s linear infinite;
 }
 
 .home-cards-list > * {
   flex: 0 0 auto;
 }
 
+.home-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* .home-colors {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+  min-width: 160px;
+
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.home-colors::-webkit-scrollbar {
+  display: none;
+} */
+
+/* .home-colors-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 .home-colors {
   display: flex;
+  animation: scrollColors 20s linear infinite;
+}
+
+.color-box {
+  height: 50px;
+  width: 50px;
+  flex-shrink: 0;
+} */
+
+/* animacion frames @keyframes frameAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-700%);
+  }
+}
+
+.home-colors {
+  display: flex;
+  overflow: hidden;
+  width: 200px;
+  position: relative;
+}
+
+.home-colors-track {
+  display: flex;
+  gap: 0; 
+  animation: frameAnimation 1s steps(7) infinite;
+} */
+
+/* .home-colors-1 {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.home-colors-track-1 {
+  display: flex;
+  gap: 200px;
+  animation: scrollColors 5s linear infinite;
+  width: max-content;
+}
+
+.home-colors-track-1 img {
+  flex-shrink: 0;
+  width: 200px;
+  height: auto;
+}
+
+@keyframes scrollColors {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.3333%);
+  }
+} */
+
+@keyframes frameAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.3333%);
+  }
+}
+
+.home-colors {
+  display: flex;
+  overflow: hidden;
+  width: 100px;
+}
+
+.home-colors-track {
+  display: flex;
+  /* gap: 10px; */
+  animation: frameAnimation 1s linear infinite;
 }
 
 .home-cards-fullsize::-webkit-scrollbar {
@@ -238,6 +328,16 @@
 
   .menu-logo {
     margin-top: 8px;
+  }
+
+  .home-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-icon {
+    padding: 8px;
+    font-size: 30px;
   }
 }
 

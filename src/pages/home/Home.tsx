@@ -5,7 +5,6 @@ import tech from "../../assets/tech.jpg"
 import back from "../../assets/bak.jpg"
 import pexel from "../../assets/pexel.jpg"
 import ninjaco from "../../assets/ninjaco.png"
-
 import { useEffect, useRef, useState } from "react"
 
 const HomeCardsFullSize = ({
@@ -100,7 +99,7 @@ const Home = () => {
         flex: 1,
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-around",
+        justifyContent: "space-evenly",
         alignItems: "center",
       }}
     >
@@ -134,21 +133,6 @@ const Home = () => {
             />
           ))}
         </div>
-      </div>
-
-      <div className="home-colors">
-        {["#ffc785", "#ffe6c9", "#ffa09b", "#ff6347", "#011526"].map(
-          (color) => (
-            <div
-              key={color}
-              style={{
-                height: 50,
-                width: 50,
-                backgroundColor: color,
-              }}
-            />
-          )
-        )}
       </div>
     </div>
   )

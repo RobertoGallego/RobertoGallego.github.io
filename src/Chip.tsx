@@ -68,3 +68,24 @@ export default Chip
 {
   /* </div> */
 }
+
+{
+  /* 
+    const colors = ["#ffc785", "#ffe6c9", "#ffa09b", "#ff6347", "#011526"]
+  
+      <div className="home-colors">
+        <div className="home-colors-track">
+          {[...colors, ...colors, ...colors].map((color, index) => (
+            <div
+              key={index}
+              style={{
+                height: 10,
+                width: 10,
+                backgroundColor: color,
+                flexShrink: 0,
+              }}
+            />
+          ))}
+        </div>
+      </div> */
+}
