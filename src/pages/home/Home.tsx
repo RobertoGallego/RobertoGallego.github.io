@@ -55,6 +55,7 @@ const Home = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const [scrollPosition, setScrollPosition] = useState(0)
   const [isManualScroll, setIsManualScroll] = useState(false)
+  const colors = ["#ffc785", "#ffe6c9", "#ffa09b", "#ff6347", "#011526"]
 
   const scrollToCard = (index: number) => {
     if (!containerRef.current) return
@@ -100,18 +101,46 @@ const Home = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-evenly",
-        alignItems: "center",
+        // alignItems: "center",
+        // padding: "0 110px",
       }}
     >
       <div className="home-content">
         <div className="home-text">
-          <FaQuoteRight className="home-icon" />
+          {/* <FaQuoteRight className="home-icon" /> */}
 
           <h1 className="home-title">Crafting </h1>
           <h1 className="home-title">Engaging</h1>
           <h1 className="home-title">Experiences</h1>
 
-          <p className="home-description">Let’s build something amazing.</p>
+          {/* <p className="home-description">Let’s build something amazing.</p> */}
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-end",
+          }}
+        >
+          {/* <FaQuoteRight className="home-icon" /> */}
+
+          <div className="home-colors">
+            <div className="home-colors-track">
+              {["#011526"].map((color, index) => (
+                <div
+                  key={index}
+                  style={{
+                    height: 100,
+                    width: 200,
+                    borderRadius: 50,
+                    backgroundColor: color,
+                    flexShrink: 0,
+                  }}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 

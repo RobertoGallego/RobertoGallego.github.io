@@ -13,13 +13,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-
-  /* background-image: url("./assets/port.jpg"); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
-  
+body {
+  background: linear-gradient(135deg, #e2e2e2, #c0c0c0);
+  background-size: 200% 200%;
+  animation: moveBackground 10s linear infinite;
 }
 
 p {
@@ -71,7 +70,9 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   /* outline: 1px solid red; */
   margin: 0;
   padding: 0;
@@ -147,14 +148,22 @@ html {
 }
 
 /* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin-block-end: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -165,14 +174,21 @@ body {
 }
 
 /* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
   line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-wrap: balance;
 }
 
@@ -190,8 +206,10 @@ picture {
 }
 
 /* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
+input,
+button,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
 }
@@ -205,4 +223,3 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
-
