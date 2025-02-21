@@ -21,7 +21,7 @@ export default Chip
           cypress testing library react testing library react native testing
           library prettier eslint i18n ubuntu windows macos chrome firefox
           safari sentry vscode git github gitlab docker postman motion
-          react-spring auth0 authjs shadcn heroui d3 Recharts chartjs axios
+          tauth0 authjs shadcn heroui d3 Recharts chartjs axios
           graphql apollo swr vanilla extract tailwind ariakit css html socket.io
           redux wordpress magento shopify express miro firebase excalidraw pnpm
           slack notion photoshop illustrator adobe premiere pro obs capcut
