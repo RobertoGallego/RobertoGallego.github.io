@@ -1,4 +1,4 @@
-import { FaQuoteRight } from "react-icons/fa"
+// import { FaQuoteRight } from "react-icons/fa"
 import Card from "../../Card"
 import Chip from "../../Chip"
 import tech from "../../assets/tech.jpg"
@@ -6,7 +6,7 @@ import back from "../../assets/bak.jpg"
 import pexel from "../../assets/pexel.jpg"
 import ninjaco from "../../assets/ninjaco.png"
 import { useEffect, useRef, useState } from "react"
-import bb from "../../assets/gif/coco.gif"
+// import bb from "../../assets/gif/coco.gif"
 // import a from "../../assets/gif/1.gif"
 // import b from "../../assets/gif/2.gif"
 // import c from "../../assets/gif/3.gif"
@@ -42,12 +42,12 @@ const HomeCardsFullSize = ({
 }) => {
   return (
     <div ref={containerRef} className="home-cards-fullsize">
-      <Card title="Store v1" imageUrl={ninjaco} width={204}>
+      <Card title="Profile V1" imageUrl={ninjaco} width={204}>
         <Chip />
       </Card>
 
       <Card
-        title="My Setup Macbook"
+        title="Inspiration Vault"
         imageUrl={pexel}
         createdAt="Jun 1993"
         width={368}
@@ -57,7 +57,7 @@ const HomeCardsFullSize = ({
       </Card>
 
       <Card
-        title="My Setup Macbook"
+        title="Tech Forges"
         imageUrl={back}
         createdAt="Jun 1993"
         width={272}
@@ -67,7 +67,7 @@ const HomeCardsFullSize = ({
       </Card>
 
       <Card
-        title="My Setup Macbook"
+        title="The Atelier" 
         imageUrl={tech}
         createdAt="Jun 1993"
         width={300}

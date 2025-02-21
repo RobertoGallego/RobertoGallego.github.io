@@ -379,16 +379,16 @@
 }
 
 .home-title:hover {
-  filter: blur(2px);
+  /* filter: blur(2px); */
 }
 
 .home-title {
-  transition: transform 0.5s ease;
+  /* transition: transform 0.5s ease; */
 }
 
-.home-title:hover {
+/* .home-title:hover {
   transform: rotateY(180deg);
-}
+} */
 
 /* 
 .home-title {
