@@ -41,8 +41,8 @@
 .home-content {
   position: relative;
   display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
+  justify-content: space-between;
+  /* align-items: center; */
   /* background-color: #2e2e2e; */
   /* flex: 1; */
 }
@@ -62,12 +62,18 @@
   display: flex;
   flex-direction: column;
   /* background-color: #2e2e2e; */
-  /* align-items: center; */
+  align-items: center;
 }
 
 .home-description {
+  /* background-color: #ffc785; */
+  /* padding: 8px; */
+
   font-size: clamp(14px, 1.5vw, 16px);
   color: #ff6347;
+            
+            
+            
 
   font-family: "Poppins", Inter, system-ui;
   /* font-weight: 500; */
