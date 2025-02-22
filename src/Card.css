@@ -14,7 +14,7 @@
   /* flex-shrink: 0; */
   /* width: 300px; */
   /* max-width: 368px; */
-  height: clamp(200px, 35vh, 320px);
+  height: clamp(300px, 35vh, 320px);
 }
 
 .blog-card {
@@ -96,4 +96,37 @@
   justify-content: center;
   align-items: center;
   border: none;
+}
+
+.text-card {
+  font-size: 4px;
+  font-family: "Roboto", "Poppins", Inter, system-ui;
+}
+
+.text-card-extra {
+  font-size: 8px;
+  font-family: "Roboto", "Poppins", Inter, system-ui;
+}
+
+.text-card-extra-upper {
+  font-size: 8px;
+  font-family: "Roboto", "Poppins", Inter, system-ui;
+  text-transform: uppercase;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blog-title, .text-card, .text-card-extra, .text-card-extra-upper {
+    color: #252525;
+  }
+
+  .card {
+    /* background-color: #ffe6c9;
+    background: linear-gradient(
+      142deg,
+      #ffe6c9 0%,
+      #f0dfcb 36%,
+      #f6e2cc 60%,
+      #e3d5c5 100%
+    ); */
+  }
 }

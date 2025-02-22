@@ -223,3 +223,25 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #e2e2e2;
+    background-color: #252525;
+  }
+
+  body {
+    background: linear-gradient(135deg, #252525, #1a1a1a);
+    color: #e2e2e2;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #e2e2e2;
+  }
+}

@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa6"
 // import { IoInvertModeOutline } from "react-icons/io5"
 import { IoInvertMode } from "react-icons/io5"
 // import { MdModeStandby } from "react-icons/md"
+import "./Footer.css"
 
 const Footer = () => {
   return (
@@ -95,20 +96,10 @@ const Footer = () => {
               marginBottom: 4,
             }}
           >
-            <div
-              style={{
-                padding: "0.1rem 0.4rem",
-                backgroundColor: "#e7e4e4",
-                cursor: "pointer",
-                borderRadius: 5,
-                display: "flex",
-                border: ".8px solid #000",
-              }}
-            >
+            <div className="social-button">
               <FaLinkedinIn
                 size={12}
                 style={{
-                  // color: "#0077b5",
                   alignSelf: "center",
                   alignContent: "center",
                   textAlign: "center",
@@ -117,7 +108,6 @@ const Footer = () => {
               />
               <p
                 style={{
-                  // color: "#0077b5",
                   fontWeight: 500,
                   alignSelf: "center",
                   alignContent: "center",
@@ -127,21 +117,11 @@ const Footer = () => {
                 Linkedin
               </p>
             </div>
-            {/* <p>|</p> */}
-            <div
-              style={{
-                padding: "0.1rem 0.4rem",
-                backgroundColor: "#e7e4e4",
-                cursor: "pointer",
-                borderRadius: 5,
-                display: "flex",
-                border: ".8px solid #000",
-              }}
-            >
+
+            <div className="social-button">
               <FaGithub
                 size={12}
                 style={{
-                  // color: "#0077b5",
                   alignSelf: "center",
                   alignContent: "center",
                   textAlign: "center",
@@ -159,38 +139,6 @@ const Footer = () => {
                 Github
               </p>
             </div>
-            {/* <p>|</p> */}
-            {/* <div
-              style={{
-                padding: "0.1rem 0.4rem",
-                backgroundColor: "#e7e4e4",
-                cursor: "pointer",
-                borderRadius: 5,
-                display: "flex",
-                border: "1px solid #000",
-              }}
-            >
-              <FaXTwitter
-                size={12}
-                style={{
-                  // color: "#0077b5",
-                  alignSelf: "center",
-                  alignContent: "center",
-                  textAlign: "center",
-                  marginRight: 4,
-                }}
-              />
-              <p
-                style={{
-                  fontWeight: 500,
-                  alignSelf: "center",
-                  alignContent: "center",
-                  textAlign: "center",
-                }}
-              >
-                Twitter
-              </p>
-            </div> */}
           </div>
         </div>
       </div>

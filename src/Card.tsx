@@ -50,22 +50,8 @@ const Card: React.FC<CardProps> = ({
 
         <h4 className="blog-title">{title}</h4>
 
-        <p
-          style={{
-            fontSize: 4,
-            fontFamily: "Roboto, Poppins, Inter, system-ui",
-          }}
-        >
-          Welcome | To My Reve | Studio
-        </p>
-        <p
-          style={{
-            fontSize: 4,
-            fontFamily: "Roboto, Poppins, Inter, system-ui",
-          }}
-        >
-          Hope You Enjoy
-        </p>
+        <p className="text-card">Welcome | To My Reve | Studio</p>
+        <p className="text-card">Hope You Enjoy</p>
 
         <div
           style={{
@@ -76,21 +62,12 @@ const Card: React.FC<CardProps> = ({
             width: "100%",
           }}
         >
-          <p
-            style={{
-              fontSize: 8,
-              fontFamily: "Roboto, Poppins, Inter, system-ui",
-            }}
+          <p className="text-card-extra"
           >
             {createdAt}
           </p>
 
-          <p
-            style={{
-              fontSize: 8,
-              fontFamily: "Roboto, Poppins, Inter, system-ui",
-              textTransform: "uppercase",
-            }}
+          <p className="text-card-extra-upper"
           >
             5 min read
           </p>

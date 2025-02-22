@@ -62,7 +62,7 @@
   display: flex;
   flex-direction: column;
   /* background-color: #2e2e2e; */
-  align-items: center;
+  /* align-items: center; */
 }
 
 .home-description {
@@ -358,7 +358,7 @@
 }
 
 .home-title:hover {
-  filter: brightness(1.2);
+  /* filter: brightness(1.2); */
 }
 
 @keyframes gradientAnimation {
@@ -451,5 +451,16 @@
 
   .home-cards-fullsize {
     justify-content: center;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .home-title {
+    background: linear-gradient(45deg, #ff6347, #ffa09b, #ffc785, #ffe6c9);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+    transition: filter 0.3s ease;
   }
 }

@@ -1,0 +1,15 @@
+.social-button {
+  padding: 0.1rem 0.4rem;
+  background-color: #e7e4e4;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  border: 0.8px solid #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  .social-button {
+    background-color: #1a1a1a;
+    border: 0.8px solid #e2e2e2;
+  }
+}

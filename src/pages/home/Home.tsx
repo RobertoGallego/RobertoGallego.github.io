@@ -130,7 +130,7 @@ const Home = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-evenly",
-        alignItems: "center",
+        // alignItems: "center",
         // padding: "0 110px",
       }}
     >
@@ -142,7 +142,7 @@ const Home = () => {
           <h1 className="home-title">Engaging</h1>
           <h1 className="home-title">Experiences</h1>
 
-          <p className="home-description">Let’s build something amazing</p>
+          {/* <p className="home-description">Let’s build something amazing</p> */}
 
           {/* <img
             src={bb}
