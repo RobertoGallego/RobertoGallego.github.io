@@ -22,13 +22,37 @@ const Card: React.FC<CardProps> = ({
   return (
     <div
       className="card"
-      style={{ minWidth: width, transform: `rotate(${0}deg)`, zIndex }}
+      style={{
+        minWidth: width,
+        transform: `rotate(${0}deg)`,
+        zIndex,
+        flex: 1,
+        height: 600,
+      }}
     >
       <div className="blog-card">
         <img className="blog-img" src={imageUrl} alt="Card img" />
 
         <div className="blog-text" style={{ width: "100%" }}>
-          {children}
+          {/* {children} */}
+          <div className="home-text">
+            <h1 className="home-title">Crafting </h1>
+            <h1 className="home-title">Engaging</h1>
+            <h1 className="home-title">Experiences</h1>
+
+            {/* <img
+            src={bb}
+            style={{
+              height: 4,
+              width: 130,
+              borderRadius: 10,
+              backgroundColor: "transparent",
+              flexShrink: 0,
+              objectFit: "cover",
+              // marginRight: 20,
+            }}
+          /> */}
+          </div>
         </div>
       </div>
 
@@ -62,15 +86,9 @@ const Card: React.FC<CardProps> = ({
             width: "100%",
           }}
         >
-          <p className="text-card-extra"
-          >
-            {createdAt}
-          </p>
+          <p className="text-card-extra">{createdAt}</p>
 
-          <p className="text-card-extra-upper"
-          >
-            5 min read
-          </p>
+          <p className="text-card-extra-upper">5 min read</p>
         </div>
       </div>
     </div>

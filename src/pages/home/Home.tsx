@@ -7,34 +7,9 @@ import pexel from "../../assets/pexel.jpg"
 import ninjaco from "../../assets/ninjaco.png"
 import { useEffect, useRef, useState } from "react"
 import useDarkMode from "../../hooks/useDarkMode"
+
 // import bb from "../../assets/gif/coco.gif"
 // import a from "../../assets/gif/1.gif"
-// import b from "../../assets/gif/2.gif"
-// import c from "../../assets/gif/3.gif"
-// import d from "../../assets/gif/4.gif"
-// import e from "../../assets/gif/5.gif"
-// import f from "../../assets/gif/6.gif"
-// import g from "../../assets/gif/7.gif"
-// import h from "../../assets/gif/8.gif"
-// import i from "../../assets/gif/9.gif"
-// import j from "../../assets/gif/10.gif"
-// import k from "../../assets/gif/11.gif"
-// import l from "../../assets/gif/12.gif"
-// import m from "../../assets/gif/13.gif"
-// import n from "../../assets/gif/14.gif"
-// import o from "../../assets/gif/15.gif"
-// import p from "../../assets/gif/16.gif"
-// import q from "../../assets/gif/17.gif"
-// import r from "../../assets/gif/18.gif"
-// import s from "../../assets/gif/19.gif"
-// import t from "../../assets/gif/20.gif"
-// import u from "../../assets/gif/21.gif"
-// import v from "../../assets/gif/22.gif"
-// import w from "../../assets/gif/23.gif"
-// import x from "../../assets/gif/24.gif"
-// import y from "../../assets/gif/25.gif"
-// import z from "../../assets/gif/26.gif"
-// import aa from "../../assets/gif/27.gif"
 
 const HomeCardsFullSize = ({
   containerRef,
@@ -46,7 +21,7 @@ const HomeCardsFullSize = ({
       <Card title="Profile V1" imageUrl={ninjaco} width={204}>
         <Chip />
       </Card>
-
+{/* 
       <Card
         title="Inspiration Vault"
         imageUrl={pexel}
@@ -68,14 +43,16 @@ const HomeCardsFullSize = ({
       </Card>
 
       <Card
-        title="The Atelier" 
+        title="The Atelier"
         imageUrl={tech}
         createdAt="Jun 1993"
         width={300}
       >
         <Chip />
         <Chip />
-      </Card>
+      </Card> */}
+
+      {/* <div style={{ paddingInline: 200 }} /> */}
     </div>
   )
 }
@@ -91,7 +68,8 @@ const Home = () => {
 
     setIsManualScroll(true)
 
-    setScrollPosition(index === 0 ? 0 : containerRef.current.scrollWidth)
+    // {[0, 214, 592, containerRef.current?.scrollWidth ?? 1194].map(
+    setScrollPosition(index)
 
     containerRef.current?.scrollTo({
       left: index,
@@ -103,13 +81,15 @@ const Home = () => {
     const handleScroll = () => {
       if (!containerRef.current || isManualScroll) return
 
-      const halfScrollPosition =
-        (containerRef.current.scrollWidth - containerRef.current.clientWidth) /
-        2
+      // const halfScrollPosition =
+      //   (containerRef.current.scrollWidth - containerRef.current.clientWidth) /
+      //   2
 
-      const isAtHalf = containerRef.current.scrollLeft >= halfScrollPosition
+      // const isAtHalf = containerRef.current.scrollLeft >= halfScrollPosition
 
-      setScrollPosition(isAtHalf ? containerRef.current.scrollWidth : 0)
+      // {[0, 214, 592, containerRef.current?.scrollWidth ?? 1194].map(
+      // setScrollPosition(isAtHalf ? containerRef.current.scrollWidth : 0)
+      setScrollPosition(containerRef.current.scrollLeft);
     }
 
     const ref = containerRef.current
@@ -130,21 +110,16 @@ const Home = () => {
       style={{
         flex: 1,
         display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-        // alignItems: "center",
-        // padding: "0 110px",
+        // flexDirection: "column",
+        // justifyContent: "space-evenly",
+        alignItems: "center",
       }}
     >
       <div className="home-content">
         <div className="home-text">
-          {/* <FaQuoteRight className="home-icon" /> */}
-
-          <h1 className="home-title">Crafting </h1>
+          {/* <h1 className="home-title">Crafting </h1>
           <h1 className="home-title">Engaging</h1>
-          <h1 className="home-title">Experiences</h1>
-
-          {/* <p className="home-description">Let’s build something amazing</p> */}
+          <h1 className="home-title">Experiences</h1> */}
 
           {/* <img
             src={bb}
@@ -159,30 +134,6 @@ const Home = () => {
             }}
           /> */}
         </div>
-
-        {/* <div className="home-colors">
-          <img
-            src={bb}
-            style={{
-              height: 100,
-              width: 200,
-              borderRadius: 50,
-              backgroundColor: "transparent",
-              flexShrink: 0,
-              objectFit: "cover",
-              // marginRight: 20,
-            }}
-          />
-        </div> */}
-
-        {/* <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-end",
-          }}
-        >
-        </div> */}
       </div>
 
       <div
@@ -192,17 +143,23 @@ const Home = () => {
         <HomeCardsFullSize containerRef={containerRef} />
 
         <div style={{ display: "flex", justifyContent: "center", gap: 6 }}>
-          {[0, containerRef.current?.scrollWidth ?? 1194].map((e, index) => (
-            <div
-              key={index}
-              className="home-scroll"
-              style={{
-                backgroundColor: scrollPosition === e ? 
-                isDarkMode ? "#ffc785" : "#5e5e5e" : "#f5f5f5",
-              }}
-              onClick={() => scrollToCard(e)}
-            />
-          ))}
+          {[0, 214, 592, containerRef.current?.scrollWidth ?? 1194].map(
+            (e, index) => (
+              <div
+                key={index}
+                className="home-scroll"
+                style={{
+                  backgroundColor:
+                    scrollPosition > e - 10 || scrollPosition > 700
+                      ? isDarkMode
+                        ? "#ffc785"
+                        : "#5e5e5e"
+                      : "#f5f5f5",
+                }}
+                onClick={() => scrollToCard(e)}
+              />
+            )
+          )}
         </div>
       </div>
     </div>
