@@ -4,8 +4,12 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa6"
 import { IoInvertMode } from "react-icons/io5"
 // import { MdModeStandby } from "react-icons/md"
 import "./Footer.css"
+import logo42w from "../../assets/42logow.png"
+import useDarkMode from "../../hooks/useDarkMode"
 
 const Footer = () => {
+  const { isDarkMode } = useDarkMode()
+
   return (
     <>
       <div className="home-footer">
@@ -15,12 +19,19 @@ const Footer = () => {
             flexDirection: "column",
           }}
         >
-          <h3>Software Engineer</h3>
+          <h3
+            style={{
+              fontFamily: "roboto, Inter, system-ui",
+              fontWeight: 500,
+            }}
+          >
+            Software Engineer
+          </h3>
 
           <p
             style={{
               fontSize: 14,
-              fontFamily: "Poppins, Inter, system-ui",
+              fontFamily: "Noto Serif, Inter, system-ui",
               lineHeight: 1.4,
             }}
           >
@@ -28,7 +39,11 @@ const Footer = () => {
           </p>
 
           <div style={{ display: "flex", gap: 10, marginTop: -2 }}>
-            <img src={logo42} alt="42" style={{ width: 42 }} />
+            <img
+              src={isDarkMode ? logo42w : logo42}
+              alt="42"
+              style={{ width: 42 }}
+            />
 
             <div style={{ marginTop: 2, marginLeft: -2 }}>
               <p
@@ -54,7 +69,7 @@ const Footer = () => {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div
+          {/* <div
             style={{
               display: "flex",
               gap: 4,
@@ -83,7 +98,8 @@ const Footer = () => {
             >
               Open to work
             </p>
-          </div>
+          </div> */}
+
           <div
             style={{
               display: "flex",
@@ -137,6 +153,21 @@ const Footer = () => {
                 }}
               >
                 Github
+              </p>
+            </div>
+
+            <div className="gradient-border">
+              <div className="circular-icon" />
+
+              <p
+                style={{
+                  fontWeight: 500,
+                  alignSelf: "center",
+                  alignContent: "center",
+                  textAlign: "center",
+                }}
+              >
+                Open to work
               </p>
             </div>
           </div>

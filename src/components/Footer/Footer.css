@@ -1,15 +1,82 @@
 .social-button {
-  padding: 0.1rem 0.4rem;
+  padding: 0.1rem 0.5rem;
   background-color: #e7e4e4;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
-  border: 0.8px solid #000;
+  border: 1px solid #1a1a1a;
 }
 
 @media (prefers-color-scheme: dark) {
   .social-button {
     background-color: #1a1a1a;
-    border: 0.8px solid #e2e2e2;
+    border: 1px solid #e2e2e2;
+  }
+}
+
+.gradient-border {
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  display: flex;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#e7e4e4, #e7e4e4),
+    linear-gradient(
+      45deg,
+      rgb(95, 196, 112),
+      rgb(23, 107, 15),
+      rgb(135, 187, 131),
+      rgb(196, 216, 192),
+      rgb(0, 182, 106),
+      rgb(113, 165, 92)
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 200%;
+  animation: move-border 4s ease-in-out infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.circular-icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgb(39, 151, 58);
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  margin-right: 4px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes move-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .gradient-border {
+    background-image: linear-gradient(black, black),
+      linear-gradient(
+        45deg,
+        rgb(57, 219, 84),
+        rgb(33, 156, 21),
+        rgb(68, 199, 56),
+        rgb(85, 182, 85),
+        rgb(0, 155, 149),
+        rgb(178, 155, 168)
+      );
+  }
+
+  .circular-icon {
+    background-color: rgb(57, 219, 84);
   }
 }

@@ -6,6 +6,7 @@ import back from "../../assets/bak.jpg"
 import pexel from "../../assets/pexel.jpg"
 import ninjaco from "../../assets/ninjaco.png"
 import { useEffect, useRef, useState } from "react"
+import useDarkMode from "../../hooks/useDarkMode"
 // import bb from "../../assets/gif/coco.gif"
 // import a from "../../assets/gif/1.gif"
 // import b from "../../assets/gif/2.gif"
@@ -83,6 +84,7 @@ const Home = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const [scrollPosition, setScrollPosition] = useState(0)
   const [isManualScroll, setIsManualScroll] = useState(false)
+  const { isDarkMode } = useDarkMode()
 
   const scrollToCard = (index: number) => {
     if (!containerRef.current) return
@@ -195,7 +197,8 @@ const Home = () => {
               key={index}
               className="home-scroll"
               style={{
-                backgroundColor: scrollPosition === e ? "#011526" : "#ccc",
+                backgroundColor: scrollPosition === e ? 
+                isDarkMode ? "#ffc785" : "#5e5e5e" : "#f5f5f5",
               }}
               onClick={() => scrollToCard(e)}
             />
