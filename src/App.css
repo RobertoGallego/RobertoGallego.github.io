@@ -52,7 +52,6 @@
   font-size: clamp(40px, 11vw, 60px);
   z-index: 2;
   /* margin-left: 20px; */
-
 }
 
 .home-icon {
@@ -278,46 +277,12 @@
   /* animation: frameAnimation 10s linear infinite; */
 }
 
-.home-cards-fullsize::-webkit-scrollbar {
-  display: none;
-}
 
-.home-cards-fullsize {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
 
-  padding-bottom: 6px;
-  /* padding-right: 10px; */
-  /* padding-left: 10px; */
-  padding-top: 2px;
-
-  overflow-x: auto;
-  overflow-y: hidden;
-  width: 100%;
-  flex-wrap: nowrap;
-
-  -webkit-overflow-scrolling: touch;
-  overflow: auto;
-  scrollbar-width: none;
-
-  position: relative;
-}
-
-.home-cards-container {
-  display: flex;
-  flex-direction: column;
-  overflow-x: auto;
-  overflow-y: hidden;
-  width: 100%;
-  gap: 4px;
-  /* background-color: green; */
-}
-
-.home-cards-list > * {
+/* .home-cards-list > * {
   flex: 0 0 auto;
   min-width: 160px;
-}
+} */
 
 .home-scroll {
   width: 10px;
@@ -455,7 +420,7 @@
 
   .home-cards-fullsize {
     /* padding-right: 10px; */
-    justify-content: center;
+    /* justify-content: center; */
   }
 }
 
@@ -468,4 +433,37 @@
     animation: gradientAnimation 5s ease infinite;
     transition: filter 0.3s ease;
   }
+}
+
+.home-cards-fullsize {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  overflow: hidden;
+  scroll-snap-type: x mandatory; 
+  transition: transform 0.5s ease; 
+}
+
+.new {
+  height: 100%;
+  border: 10px solid #fafafa;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.home-cards-container {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  padding-block: 40px;
+  gap: 10px;
+}
+
+.home-cards-fullsize > * {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
 }

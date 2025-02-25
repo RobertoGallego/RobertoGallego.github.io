@@ -7,29 +7,121 @@ import pexel from "../../assets/pexel.jpg"
 import ninjaco from "../../assets/ninjaco.png"
 import { useEffect, useRef, useState } from "react"
 import useDarkMode from "../../hooks/useDarkMode"
+import useTypewriter from "../../hooks/useTypeWriter"
 
 // import bb from "../../assets/gif/coco.gif"
 // import a from "../../assets/gif/1.gif"
 
 const HomeCardsFullSize = ({
   containerRef,
+  position,
 }: {
+  position: number
   containerRef: React.RefObject<HTMLDivElement | null>
 }) => {
+  console.log(containerRef.current, position)
+  const [visible, setVisible] = useState<number>(position)
+
+  useEffect(() => {
+    // Al cambiar de posición, permite la transición
+    setVisible(position)
+  }, [position])
+
   return (
     <div ref={containerRef} className="home-cards-fullsize">
-      <Card title="Profile V1" imageUrl={ninjaco} width={204}>
-        <Chip />
+      <style>
+        {`
+          @keyframes fadeIn { 
+            0% { opacity: 0; } 
+            100% { opacity: 1; } 
+          }
+          @keyframes faceInTwo {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+          @keyframes fadeInRight {
+            0% { opacity: 0; transform: translateX(3000px); }
+            100% { opacity: 1; transform: translateX(0); }
+          }
+          @keyframes fadeInLeft {
+            0% { opacity: 0; transform: translateX(-3000px); }
+            100% { opacity: 1; transform: translateX(0); }
+          }
+          @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(3000px); }
+            100% { opacity: 1; transform: translateY(0); }
+          }
+          @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-3000px); }
+            100% { opacity: 1; transform: translateY(0); }
+          }
+        `}
+      </style>
+
+      <Card
+        title="Profile V1"
+        imageUrl={ninjaco}
+        width={204}
+        contain={"contain"}
+        position={position}
+      >
+        <h1
+          className="home-title"
+          // style={{
+          //   animation: position === 1 ? "fadeInDown 1s" : "none",
+          // }}
+        >
+          Welcome
+        </h1>
+        <h1
+          className="home-title"
+          // style={{
+          //   animation: position === 1 ? "fadeInLeft 1s" : "none",
+          // }}
+        >
+          Explore
+        </h1>
+        <h1
+          className="home-title"
+          // style={{
+          //   animation: position === 1 ? "fadeInRight 1s" : "none",
+          // }}
+        >
+          Together
+        </h1>
       </Card>
-{/* 
+
       <Card
         title="Inspiration Vault"
         imageUrl={pexel}
         createdAt="Jun 1993"
         width={368}
+        position={position}
       >
-        <Chip />
-        <Chip />
+        <h1
+          className="home-title"
+          // style={{
+          //   animation: position === 2 ? "fadeInLeft 1s" : "none",
+          // }}
+        >
+          Unlock
+        </h1>
+        <h1
+          className="home-title"
+          // style={{
+          //   animation: position === 2 ? "fadeInRight 1s" : "none",
+          // }}
+        >
+          Creative
+        </h1>
+        <h1
+          className="home-title"
+          // style={{
+          //   animation: position === 2 ? "fadeInUp 1s" : "none",
+          // }}
+        >
+          Perspectives
+        </h1>
       </Card>
 
       <Card
@@ -37,9 +129,32 @@ const HomeCardsFullSize = ({
         imageUrl={back}
         createdAt="Jun 1993"
         width={272}
+        position={position}
       >
-        <Chip />
-        <Chip />
+        <h1
+          className="home-title"
+          // style={{
+          //   animation: position === 3 ? "fadeInDown 1s" : "none",
+          // }}
+        >
+          Innovate
+        </h1>
+        <h1
+          className="home-title"
+          // style={{
+          //   animation: position === 3 ? "fadeInLeft 1s" : "none",
+          // }}
+        >
+          Limitless{" "}
+        </h1>
+        <h1
+          className="home-title"
+          // style={{
+          //   animation: position === 3 ? "fadeInUp 1s" : "none",
+          // }}
+        >
+          Solutions
+        </h1>
       </Card>
 
       <Card
@@ -47,119 +162,104 @@ const HomeCardsFullSize = ({
         imageUrl={tech}
         createdAt="Jun 1993"
         width={300}
+        position={position}
       >
-        <Chip />
-        <Chip />
-      </Card> */}
-
-      {/* <div style={{ paddingInline: 200 }} /> */}
+        <h1
+          className="home-title"
+          // style={{
+          //   animation: position === 4 ? "fadeInRight 1s" : "none",
+          // }}
+        >
+          Crafting{" "}
+        </h1>
+        <h1
+          className="home-title"
+          // style={{
+          //   animation: position === 4 ? "fadeInLeft 1s" : "none",
+          // }}
+        >
+          Engaging
+        </h1>
+        <h1
+          className="home-title"
+          // style={{
+          //   animation: position === 4 ? "fadeInUp 1s" : "none",
+          // }}
+        >
+          Experiences
+        </h1>
+      </Card>
     </div>
   )
 }
 
 const Home = () => {
   const containerRef = useRef<HTMLDivElement>(null)
-  const [scrollPosition, setScrollPosition] = useState(0)
-  const [isManualScroll, setIsManualScroll] = useState(false)
+  const [position, setPosition] = useState(1)
   const { isDarkMode } = useDarkMode()
 
   const scrollToCard = (index: number) => {
-    if (!containerRef.current) return
+    setPosition(index)
 
-    setIsManualScroll(true)
-
-    // {[0, 214, 592, containerRef.current?.scrollWidth ?? 1194].map(
-    setScrollPosition(index)
-
-    containerRef.current?.scrollTo({
-      left: index,
-      behavior: "smooth",
-    })
+    if (containerRef.current) {
+      const scrollAmount = containerRef.current.offsetWidth * (index - 1)
+      containerRef.current.scrollTo({
+        left: scrollAmount,
+        behavior: "smooth",
+      })
+    }
   }
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current || isManualScroll) return
+    const interval = setInterval(() => {
+      setPosition((prev) => {
+        const newPosition = prev === 4 ? 1 : prev + 1
 
-      // const halfScrollPosition =
-      //   (containerRef.current.scrollWidth - containerRef.current.clientWidth) /
-      //   2
+        if (containerRef.current) {
+          const scrollAmount =
+            containerRef.current.offsetWidth * (newPosition - 1)
+          containerRef.current.scrollTo({
+            left: scrollAmount,
+            behavior: "smooth",
+          })
+        }
 
-      // const isAtHalf = containerRef.current.scrollLeft >= halfScrollPosition
+        return newPosition
+      })
+    }, 500000000)
 
-      // {[0, 214, 592, containerRef.current?.scrollWidth ?? 1194].map(
-      // setScrollPosition(isAtHalf ? containerRef.current.scrollWidth : 0)
-      setScrollPosition(containerRef.current.scrollLeft);
-    }
-
-    const ref = containerRef.current
-
-    if (ref) {
-      ref.addEventListener("scroll", handleScroll)
-    }
-
-    return () => {
-      if (ref) {
-        ref.removeEventListener("scroll", handleScroll)
-      }
-    }
-  }, [isManualScroll])
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div
       style={{
         flex: 1,
         display: "flex",
-        // flexDirection: "column",
-        // justifyContent: "space-evenly",
-        alignItems: "center",
+        flexDirection: "column",
       }}
     >
-      <div className="home-content">
-        <div className="home-text">
-          {/* <h1 className="home-title">Crafting </h1>
-          <h1 className="home-title">Engaging</h1>
-          <h1 className="home-title">Experiences</h1> */}
-
-          {/* <img
-            src={bb}
-            style={{
-              height: 4,
-              width: 130,
-              borderRadius: 10,
-              backgroundColor: "transparent",
-              flexShrink: 0,
-              objectFit: "cover",
-              // marginRight: 20,
-            }}
-          /> */}
-        </div>
-      </div>
-
-      <div
-        className="home-cards-container"
-        onWheel={() => setIsManualScroll(false)}
-      >
-        <HomeCardsFullSize containerRef={containerRef} />
+      <div className="home-cards-container">
+        {/* <div className="new"> */}
+        <HomeCardsFullSize containerRef={containerRef} position={position} />
+        {/* </div> */}
 
         <div style={{ display: "flex", justifyContent: "center", gap: 6 }}>
-          {[0, 214, 592, containerRef.current?.scrollWidth ?? 1194].map(
-            (e, index) => (
-              <div
-                key={index}
-                className="home-scroll"
-                style={{
-                  backgroundColor:
-                    scrollPosition > e - 10 || scrollPosition > 700
-                      ? isDarkMode
-                        ? "#ffc785"
-                        : "#5e5e5e"
-                      : "#f5f5f5",
-                }}
-                onClick={() => scrollToCard(e)}
-              />
-            )
-          )}
+          {[1, 2, 3, 4].map((e, index) => (
+            <div
+              key={index}
+              className="home-scroll"
+              style={{
+                backgroundColor:
+                  position === e
+                    ? isDarkMode
+                      ? "#ffc785"
+                      : "#5e5e5e"
+                    : "#f5f5f5",
+              }}
+              onClick={() => scrollToCard(e)}
+            />
+          ))}
         </div>
       </div>
     </div>

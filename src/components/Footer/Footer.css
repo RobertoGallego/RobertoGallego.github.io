@@ -2,7 +2,7 @@
   padding: 0.1rem 0.5rem;
   background-color: #e7e4e4;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 50px;
   display: flex;
   border: 1px solid #1a1a1a;
 }
@@ -16,7 +16,7 @@
 
 .gradient-border {
   padding: 0.1rem 0.5rem;
-  border-radius: 10px;
+  border-radius: 50px;
   display: flex;
   cursor: pointer;
   border: 1px solid transparent;

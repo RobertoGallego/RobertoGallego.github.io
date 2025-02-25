@@ -12,6 +12,8 @@
   padding: 10px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   height: clamp(300px, 35vh, 320px);
+  height: 100%;
+  width: 100%;
 }
 
 .blog-card {
@@ -34,7 +36,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   z-index: 1;
   transition: transform 3s linear;
 }
@@ -68,8 +70,8 @@
   background: rgb(0, 0, 0);
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 1) 1%,
-    rgba(0, 0, 0, 1) 8%,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 1) 20%,
     rgba(255, 255, 255, 0) 100%
   );
 }
@@ -112,7 +114,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .blog-title, .text-card, .text-card-extra, .text-card-extra-upper {
+  .blog-title,
+  .text-card,
+  .text-card-extra,
+  .text-card-extra-upper {
     color: #252525;
   }
 
@@ -125,5 +130,26 @@
       #f6e2cc 60%,
       #e3d5c5 100%
     ); */
+  }
+}
+
+.home-title {
+  /* opacity: 0; */
+  transition: opacity 0.5s ease-out;
+}
+
+.home-title.animate {
+  /* opacity: 1;  */
+  animation: slide-in 0.5s ease-out forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
