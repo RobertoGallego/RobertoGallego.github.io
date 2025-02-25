@@ -486,4 +486,8 @@
     font-size: clamp(18px, 3vw, 24px);
     color: #ff6347;
   }
+
+  .span-title {
+    color: #ffe6c9;
+  }
 }
