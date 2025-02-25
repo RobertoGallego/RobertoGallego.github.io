@@ -42,14 +42,10 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10px;
   /* align-items: center; */
   /* background-color: #2e2e2e; */
   /* flex: 1; */
-}
-
-.home-title {
-  text-transform: uppercase;
-  font-size: clamp(40px, 11vw, 60px);
 }
 
 .home-icon {
@@ -346,36 +342,37 @@
 } */
 
 .home-title {
-  background: linear-gradient(45deg, #2e2e2e, #494949, #232323);
+  text-transform: uppercase;
+  font-size: clamp(40px, 5vw, 60px);
+  background: linear-gradient(45deg, #762d20, #252525, #6b5338, #49423b);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientAnimation 5s ease infinite;
   transition: filter 0.3s ease;
-  /* text-align: start; */
-  /* margin-bottom: 10px; */
+  margin-bottom: 10px;
+}
 
+.span-title {
+  color: #252525;
 }
 
 .home-title-2 {
-  color: #ffe6c9;
-  font-size: clamp(12px, 12vw, 18px);
+  color: #252525;
+  font-size: clamp(12px, 2vw, 18px);
   font-weight: 400;
   font-family: "Roboto", "Triodion", "Poppins", Inter, system-ui;
   line-height: 1.2;
-  /* text-align: start; */
-
 }
 
 .home-title-3 {
-  /* background-color: #ffc785; */
+  margin-bottom: 6px;
 
+  line-height: 1.2;
   font-weight: 500;
-
-  /* margin-bottom: 10px; */
   font-family: "Poppins", Inter, system-ui;
-  font-size: clamp(18px, 11vw, 24px);
-  color: #ff6347;
+  font-size: clamp(18px, 3vw, 24px);
+  color: #9a3b2a;
 }
 
 @keyframes gradientAnimation {
@@ -388,19 +385,6 @@
   100% {
     background-position: 0% 50%;
   }
-}
-
-.home-title {
-  filter: blur(0px);
-  transition: filter 0.5s ease;
-}
-
-.home-title:hover {
-  /* filter: blur(2px); */
-}
-
-.home-title {
-  /* transition: transform 0.5s ease; */
 }
 
 /* .home-title:hover {
@@ -482,24 +466,24 @@
     -webkit-text-fill-color: transparent;
     animation: gradientAnimation 5s ease infinite;
     transition: filter 0.3s ease;
+    z-index: 10;
   }
 
   .home-title-2 {
-    /* color: #ff6347; */
-    /* background: linear-gradient(45deg, #ff6347, #ffa09b, #ffc785, #ffe6c9); */
-    /* background-size: 200% 200%; */
-    /* -webkit-background-clip: text; */
-    /* -webkit-text-fill-color: transparent; */
-    /* animation: gradientAnimation 5s ease infinite; */
-    /* transition: filter 0.3s ease; */
+    color: #ffe6c9;
+    font-size: clamp(12px, 2vw, 18px);
+    font-weight: 400;
+    font-family: "Roboto", "Triodion", "Poppins", Inter, system-ui;
+    line-height: 1.2;
   }
 
   .home-title-3 {
-    /* background: linear-gradient(45deg, #ff6347, #ffa09b, #ffc785, #ffe6c9);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientAnimation 5s ease infinite;
-    transition: filter 0.3s ease; */
+    margin-bottom: 6px;
+
+    line-height: 1.2;
+    font-weight: 500;
+    font-family: "Poppins", Inter, system-ui;
+    font-size: clamp(18px, 3vw, 24px);
+    color: #ff6347;
   }
 }

@@ -133,7 +133,6 @@ const Home = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-evenly",
-        // alignItems: "center",
       }}
     >
       <div className="home-content">
@@ -141,32 +140,10 @@ const Home = () => {
           className="home-text"
           // style={{ textAlign: "center" }}
         >
-          <div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: 20,
-              }}
-            >
-              <h1 className="home-title">Welcome to my journey</h1>
+          <h1 className="home-title">Welcome</h1>
 
-              {/* <img
-                src={bb}
-                alt="gif"
-                style={{
-                  width: 50,
-                  height: 50,
-                  borderRadius: "50%",
-                  border: "1px solid #000",
-                }}
-              /> */}
-            </div>
-          </div>
           <p className="home-title-3">
-            I'm <span style={{ color: "#ffe6c9" }}>Roberto</span> and it's a
+            I'm <span className="span-title">Roberto</span> and it's a
             pleasure to have you here.
           </p>
           <p className="home-title-2">
