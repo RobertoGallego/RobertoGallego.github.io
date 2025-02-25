@@ -7,34 +7,35 @@ import pexel from "../../assets/pexel.jpg"
 import ninjaco from "../../assets/ninjaco.png"
 import { useEffect, useRef, useState } from "react"
 import useDarkMode from "../../hooks/useDarkMode"
-// import bb from "../../assets/gif/coco.gif"
-// import a from "../../assets/gif/1.gif"
-// import b from "../../assets/gif/2.gif"
-// import c from "../../assets/gif/3.gif"
-// import d from "../../assets/gif/4.gif"
-// import e from "../../assets/gif/5.gif"
-// import f from "../../assets/gif/6.gif"
-// import g from "../../assets/gif/7.gif"
-// import h from "../../assets/gif/8.gif"
-// import i from "../../assets/gif/9.gif"
-// import j from "../../assets/gif/10.gif"
-// import k from "../../assets/gif/11.gif"
-// import l from "../../assets/gif/12.gif"
-// import m from "../../assets/gif/13.gif"
-// import n from "../../assets/gif/14.gif"
-// import o from "../../assets/gif/15.gif"
-// import p from "../../assets/gif/16.gif"
-// import q from "../../assets/gif/17.gif"
-// import r from "../../assets/gif/18.gif"
-// import s from "../../assets/gif/19.gif"
-// import t from "../../assets/gif/20.gif"
-// import u from "../../assets/gif/21.gif"
-// import v from "../../assets/gif/22.gif"
-// import w from "../../assets/gif/23.gif"
-// import x from "../../assets/gif/24.gif"
-// import y from "../../assets/gif/25.gif"
-// import z from "../../assets/gif/26.gif"
-// import aa from "../../assets/gif/27.gif"
+import bb from "../../assets/gif/coco.gif"
+import { FaQuoteRight } from "react-icons/fa6"
+import a from "../../assets/gif/1.gif"
+import b from "../../assets/gif/2.gif"
+import c from "../../assets/gif/3.gif"
+import d from "../../assets/gif/4.gif"
+import e from "../../assets/gif/5.gif"
+import f from "../../assets/gif/6.gif"
+import g from "../../assets/gif/7.gif"
+import h from "../../assets/gif/8.gif"
+import i from "../../assets/gif/9.gif"
+import j from "../../assets/gif/10.gif"
+import k from "../../assets/gif/11.gif"
+import l from "../../assets/gif/12.gif"
+import m from "../../assets/gif/13.gif"
+import n from "../../assets/gif/14.gif"
+import o from "../../assets/gif/15.gif"
+import p from "../../assets/gif/16.gif"
+import q from "../../assets/gif/17.gif"
+import r from "../../assets/gif/18.gif"
+import s from "../../assets/gif/19.gif"
+import t from "../../assets/gif/20.gif"
+import u from "../../assets/gif/21.gif"
+import v from "../../assets/gif/22.gif"
+import w from "../../assets/gif/23.gif"
+import x from "../../assets/gif/24.gif"
+import y from "../../assets/gif/25.gif"
+import z from "../../assets/gif/26.gif"
+import aa from "../../assets/gif/27.gif"
 
 const HomeCardsFullSize = ({
   containerRef,
@@ -68,7 +69,7 @@ const HomeCardsFullSize = ({
       </Card>
 
       <Card
-        title="The Atelier" 
+        title="The Atelier"
         imageUrl={tech}
         createdAt="Jun 1993"
         width={300}
@@ -133,56 +134,51 @@ const Home = () => {
         flexDirection: "column",
         justifyContent: "space-evenly",
         // alignItems: "center",
-        // padding: "0 110px",
       }}
     >
       <div className="home-content">
-        <div className="home-text">
-          {/* <FaQuoteRight className="home-icon" /> */}
-
-          <h1 className="home-title">Crafting </h1>
-          <h1 className="home-title">Engaging</h1>
-          <h1 className="home-title">Experiences</h1>
-
-          {/* <p className="home-description">Let’s build something amazing</p> */}
-
-          {/* <img
-            src={bb}
-            style={{
-              height: 4,
-              width: 130,
-              borderRadius: 10,
-              backgroundColor: "transparent",
-              flexShrink: 0,
-              objectFit: "cover",
-              // marginRight: 20,
-            }}
-          /> */}
-        </div>
-
-        {/* <div className="home-colors">
-          <img
-            src={bb}
-            style={{
-              height: 100,
-              width: 200,
-              borderRadius: 50,
-              backgroundColor: "transparent",
-              flexShrink: 0,
-              objectFit: "cover",
-              // marginRight: 20,
-            }}
-          />
-        </div> */}
-
-        {/* <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-end",
-          }}
+        <div
+          className="home-text"
+          // style={{ textAlign: "center" }}
         >
-        </div> */}
+          <div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: 20,
+              }}
+            >
+              <h1 className="home-title">Welcome to my journey</h1>
+
+              {/* <img
+                src={bb}
+                alt="gif"
+                style={{
+                  width: 50,
+                  height: 50,
+                  borderRadius: "50%",
+                  border: "1px solid #000",
+                }}
+              /> */}
+            </div>
+          </div>
+          <p className="home-title-3">
+            I'm <span style={{ color: "#ffe6c9" }}>Roberto</span> and it's a
+            pleasure to have you here.
+          </p>
+          <p className="home-title-2">
+            In this space, you can explore my projects, enjoy clean code,
+            optimized performance, and web trends.
+          </p>
+
+          <p className="home-title-2">
+            Here you'll find everything that motivates me and captures my
+            attention in the present day.
+          </p>
+        </div>
       </div>
 
       <div
@@ -197,8 +193,12 @@ const Home = () => {
               key={index}
               className="home-scroll"
               style={{
-                backgroundColor: scrollPosition === e ? 
-                isDarkMode ? "#ffc785" : "#5e5e5e" : "#f5f5f5",
+                backgroundColor:
+                  scrollPosition === e
+                    ? isDarkMode
+                      ? "#ffc785"
+                      : "#5e5e5e"
+                    : "#f5f5f5",
               }}
               onClick={() => scrollToCard(e)}
             />

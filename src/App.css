@@ -62,7 +62,6 @@
   display: flex;
   flex-direction: column;
   /* background-color: #2e2e2e; */
-  /* align-items: center; */
 }
 
 .home-description {
@@ -258,6 +257,7 @@
 }
 
 .home-colors {
+  flex: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -352,10 +352,30 @@
   -webkit-text-fill-color: transparent;
   animation: gradientAnimation 5s ease infinite;
   transition: filter 0.3s ease;
+  /* text-align: start; */
+  /* margin-bottom: 10px; */
+
 }
 
-.home-title:hover {
-  /* filter: brightness(1.2); */
+.home-title-2 {
+  color: #ffe6c9;
+  font-size: clamp(12px, 12vw, 18px);
+  font-weight: 400;
+  font-family: "Roboto", "Triodion", "Poppins", Inter, system-ui;
+  line-height: 1.2;
+  /* text-align: start; */
+
+}
+
+.home-title-3 {
+  /* background-color: #ffc785; */
+
+  font-weight: 500;
+
+  /* margin-bottom: 10px; */
+  font-family: "Poppins", Inter, system-ui;
+  font-size: clamp(18px, 11vw, 24px);
+  color: #ff6347;
 }
 
 @keyframes gradientAnimation {
@@ -462,5 +482,24 @@
     -webkit-text-fill-color: transparent;
     animation: gradientAnimation 5s ease infinite;
     transition: filter 0.3s ease;
+  }
+
+  .home-title-2 {
+    /* color: #ff6347; */
+    /* background: linear-gradient(45deg, #ff6347, #ffa09b, #ffc785, #ffe6c9); */
+    /* background-size: 200% 200%; */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    /* animation: gradientAnimation 5s ease infinite; */
+    /* transition: filter 0.3s ease; */
+  }
+
+  .home-title-3 {
+    /* background: linear-gradient(45deg, #ff6347, #ffa09b, #ffc785, #ffe6c9);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+    transition: filter 0.3s ease; */
   }
 }
