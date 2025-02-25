@@ -7,6 +7,7 @@ import pexel from "../../assets/pexel.jpg"
 import ninjaco from "../../assets/ninjaco.png"
 import { useEffect, useRef, useState } from "react"
 import useDarkMode from "../../hooks/useDarkMode"
+import { useTranslation } from "react-i18next"
 
 const HomeCardsFullSize = ({
   containerRef,
@@ -57,6 +58,7 @@ const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0)
   const [isManualScroll, setIsManualScroll] = useState(false)
   const { isDarkMode } = useDarkMode()
+  const { t } = useTranslation()
 
   const scrollToCard = (index: number) => {
     if (!containerRef.current) return
@@ -111,11 +113,11 @@ const Home = () => {
           className="home-text"
           // style={{ textAlign: "center" }}
         >
-          <h1 className="home-title">Welcome</h1>
+          <h1 className="home-title">{t('welcome')}</h1>
 
           <p className="home-title-3">
-            I'm <span className="span-title">Roberto</span> and it's a
-            pleasure to have you here.
+            I'm <span className="span-title">Roberto</span> and it's a pleasure
+            to have you here.
           </p>
           <p className="home-title-2">
             In this space, you can explore my projects, enjoy clean code,

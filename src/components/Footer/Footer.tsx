@@ -1,14 +1,27 @@
 import logo42 from "../../assets/42logo.png"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6"
-// import { IoInvertModeOutline } from "react-icons/io5"
+import { IoInvertModeOutline } from "react-icons/io5"
 import { IoInvertMode } from "react-icons/io5"
 // import { MdModeStandby } from "react-icons/md"
 import "./Footer.css"
 import logo42w from "../../assets/42logow.png"
 import useDarkMode from "../../hooks/useDarkMode"
+import { useTranslation } from "react-i18next"
+import { useState } from "react"
 
 const Footer = () => {
   const { isDarkMode } = useDarkMode()
+
+  const {
+    i18n: { changeLanguage, language },
+  } = useTranslation()
+  const [currentLanguage, setCurrentLanguage] = useState(language)
+
+  const handleChangeLanguage = () => {
+    const newLanguage = currentLanguage === "en" ? "fr" : "en"
+    setCurrentLanguage(newLanguage)
+    changeLanguage(newLanguage)
+  }
 
   return (
     <>
@@ -178,7 +191,13 @@ const Footer = () => {
           <p className="footer-text">2025 © All rights reserved</p>
         </div>
 
-        <IoInvertMode size={16} />
+        <button type="button" onClick={handleChangeLanguage}>
+          {currentLanguage === "en" ? (
+            <IoInvertMode size={16} />
+          ) : (
+            <IoInvertModeOutline size={16} />
+          )}
+        </button>
       </div>
     </>
   )

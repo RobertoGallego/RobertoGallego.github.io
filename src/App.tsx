@@ -3,6 +3,7 @@ import Footer from "./components/Footer/Footer"
 
 import Header from "./components/Header/Header"
 import Home from "./pages/home/Home"
+import './i18n/config';
 
 function App() {
   return (
