@@ -16,7 +16,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #e2e2e2, #c0c0c0);
+  background: #e2e2e2;
   background-size: 200% 200%;
   animation: moveBackground 10s linear infinite;
 }
@@ -222,7 +222,7 @@ textarea:not([rows]) {
   }
 
   body {
-    background: linear-gradient(135deg, #252525, #1a1a1a);
+    background-color: #252525;
     color: #e2e2e2;
   }
 
@@ -244,7 +244,7 @@ textarea:not([rows]) {
   }
 
   body {
-    background: linear-gradient(135deg, #252525, #1a1a1a);
+    background-color: #252525;
     color: #e2e2e2;
   }
 
@@ -262,11 +262,11 @@ textarea:not([rows]) {
 [data-theme="light"] {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #e2e2e2;
   }
 
   body {
-    background: linear-gradient(135deg, #e2e2e2, #c0c0c0);
+    background-color: #e2e2e2;
     color: #213547;
   }
 

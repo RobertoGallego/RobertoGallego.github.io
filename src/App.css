@@ -21,8 +21,8 @@
 
 .content {
   display: flex;
-  height: 100dvh;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -343,7 +343,7 @@
 
 .home-title {
   text-transform: uppercase;
-  font-size: clamp(40px, 5vw, 60px);
+  font-size: clamp(40px, 6vw, 60px);
   background: linear-gradient(45deg, #762d20, #252525, #6b5338, #49423b);
   background-size: 200% 200%;
   -webkit-background-clip: text;
@@ -481,7 +481,6 @@
 
   .home-title-2 {
     color: #ffe6c9;
-    font-size: clamp(12px, 2vw, 18px);
     font-weight: 400;
     font-family: "Roboto", "Triodion", "Poppins", Inter, system-ui;
     line-height: 1.2;
@@ -493,7 +492,6 @@
     line-height: 1.2;
     font-weight: 500;
     font-family: "Poppins", Inter, system-ui;
-    font-size: clamp(18px, 3vw, 24px);
     color: #ff6347;
   }
 
@@ -515,7 +513,6 @@
 
   .home-title-2 {
     color: #ffe6c9;
-    font-size: clamp(12px, 2vw, 18px);
     font-weight: 400;
     font-family: "Roboto", "Triodion", "Poppins", Inter, system-ui;
     line-height: 1.2;
@@ -527,7 +524,6 @@
     line-height: 1.2;
     font-weight: 500;
     font-family: "Poppins", Inter, system-ui;
-    font-size: clamp(18px, 3vw, 24px);
     color: #ff6347;
   }
 
@@ -549,7 +545,6 @@
 
   .home-title-2 {
     color: #252525;
-    font-size: clamp(12px, 2vw, 18px);
     font-weight: 400;
     font-family: "Roboto", "Triodion", "Poppins", Inter, system-ui;
     line-height: 1.2;
@@ -561,11 +556,24 @@
     line-height: 1.2;
     font-weight: 500;
     font-family: "Poppins", Inter, system-ui;
-    font-size: clamp(18px, 3vw, 24px);
     color: #9a3b2a;
   }
 
   .span-title {
     color: #49423b;
+  }
+}
+
+@media (min-height: 1300px) {
+  .home-title {
+    font-size: clamp(40px, 6vw, 80px);
+  }
+
+  .home-title-2 {
+    font-size: clamp(12px, 2vw, 20px);
+  }
+
+  .home-title-3 {
+    font-size: clamp(18px, 3vw, 30px);
   }
 }
