@@ -1,14 +1,26 @@
 .social-button {
   padding: 0.1rem 0.5rem;
-  background-color: #e7e4e4;
+  /* background-color: #e7e4e4; */
   cursor: pointer;
   border-radius: 10px;
   display: flex;
   border: 1px solid #1a1a1a;
 }
 
+.select-button {
+  border-radius: 10px;
+  padding: 0.1rem 0.3rem;
+  cursor: pointer;
+  display: flex;
+  font-weight: 500;
+  font-family: "roboto", Inter, system-ui;
+  font-size: 12px;
+  border: 1px solid #1a1a1a;
+}
+
 @media (prefers-color-scheme: dark) {
-  .social-button {
+  .social-button,
+  .select-button {
     background-color: #1a1a1a;
     border: 1px solid #e2e2e2;
   }
@@ -78,5 +90,57 @@
 
   .circular-icon {
     background-color: rgb(57, 219, 84);
+  }
+}
+
+[data-theme="dark"] {
+  .gradient-border {
+    background-image: linear-gradient(black, black),
+      linear-gradient(
+        45deg,
+        rgb(57, 219, 84),
+        rgb(33, 156, 21),
+        rgb(68, 199, 56),
+        rgb(85, 182, 85),
+        rgb(0, 155, 149),
+        rgb(178, 155, 168)
+      );
+  }
+
+  .circular-icon {
+    background-color: rgb(57, 219, 84);
+  }
+
+  .social-button,
+  .select-button {
+    background-color: #1a1a1a;
+    border: 1px solid #e2e2e2;
+    color: #e2e2e2;
+  }
+}
+
+[data-theme="light"] {
+  .gradient-border {
+    background-image: linear-gradient(#e7e4e4, #e7e4e4),
+      linear-gradient(
+        45deg,
+        rgb(95, 196, 112),
+        rgb(23, 107, 15),
+        rgb(135, 187, 131),
+        rgb(196, 216, 192),
+        rgb(0, 182, 106),
+        rgb(113, 165, 92)
+      );
+  }
+
+  .circular-icon {
+    background-color: rgb(39, 151, 58);
+  }
+
+  .social-button,
+  .select-button {
+    background-color: #e7e4e4;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
   }
 }

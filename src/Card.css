@@ -115,19 +115,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .blog-title, .text-card, .text-card-extra, .text-card-extra-upper {
+  .blog-title,
+  .text-card,
+  .text-card-extra,
+  .text-card-extra-upper {
     color: #252525;
-  }
-
-  .card {
-    /* background-color: #ffe6c9;
-    background: linear-gradient(
-      142deg,
-      #ffe6c9 0%,
-      #f0dfcb 36%,
-      #f6e2cc 60%,
-      #e3d5c5 100%
-    ); */
   }
 }
 
@@ -137,4 +129,16 @@
     min-width: 300px !important;
     max-width: 368px !important;
   }
+}
+
+[data-theme="dark"] {
+  .blog-title,
+  .text-card,
+  .text-card-extra,
+  .text-card-extra-upper {
+    color: #252525;
+  }
+}
+
+[data-theme="light"] {
 }

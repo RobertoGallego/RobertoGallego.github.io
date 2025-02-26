@@ -61,15 +61,6 @@ button {
   transition: border-color 0.25s;
 }
 
-button:hover {
-  /* border-color: #646cff; */
-}
-
-button:focus,
-button:focus-visible {
-  /* outline: 4px auto -webkit-focus-ring-color; */
-}
-
 *,
 *::before,
 *::after {
@@ -243,5 +234,49 @@ textarea:not([rows]) {
   h5,
   h6 {
     color: #e2e2e2;
+  }
+}
+
+[data-theme="dark"] {
+  :root {
+    color: #e2e2e2;
+    background-color: #252525;
+  }
+
+  body {
+    background: linear-gradient(135deg, #252525, #1a1a1a);
+    color: #e2e2e2;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #e2e2e2;
+  }
+}
+
+[data-theme="light"] {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  body {
+    background: linear-gradient(135deg, #e2e2e2, #c0c0c0);
+    color: #213547;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #213547;
   }
 }

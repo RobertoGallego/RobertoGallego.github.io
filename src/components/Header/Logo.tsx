@@ -1,17 +1,20 @@
 import logo from "../../assets/logos.png"
 import logoDark from "../../assets/logoDark.png"
 import useDarkMode from "../../hooks/useDarkMode"
+import { useTheme } from "../../useTheme"
 
 const Logo = () => {
   const { isDarkMode } = useDarkMode()
+  const { theme } = useTheme()
 
-  return (
-    <img
-      src={isDarkMode ? logoDark : logo}
-      alt="reve logo"
-      className="menu-logo"
-    />
-  )
+  const logoSrc =
+    theme === "light"
+      ? logo
+      : theme === "dark" || (theme === "system" && isDarkMode)
+      ? logoDark
+      : logo
+
+  return <img src={logoSrc} alt="reve logo" className="menu-logo" />
 }
 
 export default Logo

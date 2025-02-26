@@ -8,7 +8,7 @@ const lng = localStorage.getItem("language") || "en"
 
 i18next.use(initReactI18next).init({
   lng,
-  debug: true,
+  debug: false,
   resources: {
     en: { translation: en },
     fr: { translation: fr },

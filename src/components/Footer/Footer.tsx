@@ -4,8 +4,9 @@ import "./Footer.css"
 import logo42w from "../../assets/42logow.png"
 import useDarkMode from "../../hooks/useDarkMode"
 import { useTranslation } from "react-i18next"
-import useTheme from "../../hooks/useTheme"
 import useLanguage from "../../hooks/useLanguage"
+import { useTheme } from "../../useTheme"
+import { Theme } from "../../ThemeContext"
 
 const Footer = () => {
   const { isDarkMode } = useDarkMode()
@@ -24,15 +25,12 @@ const Footer = () => {
     setLanguage(selectedLanguage)
   }
 
-  const handleThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedTheme = e.target.value
-    setTheme(selectedTheme)
-    if (selectedTheme === "dark") {
-      document.body.classList.add("dark")
-    } else {
-      document.body.classList.remove("dark")
-    }
-  }
+  const logoSrc =
+    theme === "light"
+      ? logo42
+      : theme === "dark" || (theme === "system" && isDarkMode)
+      ? logo42w
+      : logo42
 
   return (
     <>
@@ -63,11 +61,7 @@ const Footer = () => {
           </p>
 
           <div style={{ display: "flex", gap: 10, marginTop: -2 }}>
-            <img
-              src={isDarkMode ? logo42w : logo42}
-              alt="42"
-              style={{ width: 42 }}
-            />
+            <img src={logoSrc} alt="42" style={{ width: 42 }} />
 
             <div style={{ marginTop: 2, marginLeft: -2 }}>
               <p
@@ -176,22 +170,7 @@ const Footer = () => {
             onChange={handleChangeLanguage}
             value={language}
             name="lang"
-            id="cars"
-            style={{
-              fontFamily: "roboto",
-              fontSize: 14,
-              border: "1px solid #e7e4e4",
-              textAlign: "center",
-              justifyContent: "center",
-              alignItems: "center",
-              borderRadius: 10,
-              fontWeight: 500,
-              alignSelf: "center",
-              alignContent: "center",
-              padding: "0.1rem 0.3rem",
-              cursor: "pointer",
-              display: "flex",
-            }}
+            className="select-button"
           >
             <option value="fr">🇫🇷 Fr</option>
             <option value="en">🇬🇧 En</option>
@@ -200,17 +179,8 @@ const Footer = () => {
 
           <select
             value={theme}
-            onChange={handleThemeChange}
-            style={{
-              fontFamily: "roboto",
-              fontSize: 14,
-              border: "1px solid #e7e4e4",
-              textAlign: "center",
-              borderRadius: 10,
-              fontWeight: 500,
-              padding: "0.1rem 0.3rem",
-              cursor: "pointer",
-            }}
+            onChange={(e) => setTheme(e.target.value as Theme)}
+            className="select-button"
           >
             <option value="system">System</option>
             <option value="light">Light</option>
