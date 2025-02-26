@@ -6,5 +6,30 @@
   },
   "userMessagesUnread_one": "You have {{count}} unread message.",
   "userMessagesUnread_other": "You have {{count}} unread messages.",
-  "welcome": "Welcome"
+  "Welcome": "Welcome",
+  "Home": "Home",
+  "Projects": "Projects",
+  "Contact": "Contact",
+  "Motivation": "Here you'll find everything that motivates me and captures my attention in the present day.",
+  "Software_Engineer": "Software Engineer",
+  "Clean_Code": "Clean code and thoughtful design.",
+  "Location": "Living in France 🇫🇷, always exploring new ideas and challenges.",
+  "Open_To_Work": "Open to work",
+  "Copyright": "2025 © All rights reserved",
+  "Profile_V1": "Profile V1",
+  "Inspiration_Vault": "Inspiration Vault",
+  "Tech_Forges": "Tech Forges",
+  "The_Atelier": "The Atelier",
+  "Welcome_Reve_Studio": "Welcome | To Reve | Studio",
+  "Hope_Enjoy": "Hope You Enjoy",
+  "Read_Time": "5 min read",
+  "Introduction": {
+    "part1": "I'm",
+    "name": "Roberto",
+    "part2": "and it's a pleasure to have you here."
+  },
+  "Explore": {
+    "part1": "In this space, you can explore my projects.",
+    "part2": "Optimized performance, clean code and web trends." 
+  }
 }

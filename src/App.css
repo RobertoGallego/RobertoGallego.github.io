@@ -446,6 +446,16 @@
     align-items: flex-start;
     gap: 4px;
   }
+
+  .home-cards-fullsize {
+    flex-wrap: wrap;
+    /* align-items: center;
+    justify-content: center; */
+  }
+
+  .home-scroll {
+    display: none;
+  }
 }
 
 @media (min-width: 1194px) {

@@ -14,14 +14,16 @@ const HomeCardsFullSize = ({
 }: {
   containerRef: React.RefObject<HTMLDivElement | null>
 }) => {
+  const { t } = useTranslation()
+
   return (
     <div ref={containerRef} className="home-cards-fullsize">
-      <Card title="Profile V1" imageUrl={ninjaco} width={204}>
+      <Card title={t("Profile_V1")} imageUrl={ninjaco} width={204}>
         <Chip />
       </Card>
 
       <Card
-        title="Inspiration Vault"
+        title={t("Inspiration_Vault")}
         imageUrl={pexel}
         createdAt="Jun 1993"
         width={368}
@@ -31,7 +33,7 @@ const HomeCardsFullSize = ({
       </Card>
 
       <Card
-        title="Tech Forges"
+        title={t("Tech_Forges")}
         imageUrl={back}
         createdAt="Jun 1993"
         width={272}
@@ -41,7 +43,7 @@ const HomeCardsFullSize = ({
       </Card>
 
       <Card
-        title="The Atelier"
+        title={t("The_Atelier")}
         imageUrl={tech}
         createdAt="Jun 1993"
         width={300}
@@ -111,23 +113,21 @@ const Home = () => {
       <div className="home-content">
         <div
           className="home-text"
-          // style={{ textAlign: "center" }}
+          // style={{ width: "80%" }}
         >
-          <h1 className="home-title">{t('welcome')}</h1>
+          <h1 className="home-title">{t("Welcome")}</h1>
 
           <p className="home-title-3">
-            I'm <span className="span-title">Roberto</span> and it's a pleasure
-            to have you here.
-          </p>
-          <p className="home-title-2">
-            In this space, you can explore my projects, enjoy clean code,
-            optimized performance, and web trends.
+            {t("Introduction.part1")}{" "}
+            <span className="span-title">{t("Introduction.name")}</span>{" "}
+            {t("Introduction.part2")}
           </p>
 
-          <p className="home-title-2">
-            Here you'll find everything that motivates me and captures my
-            attention in the present day.
-          </p>
+          <p className="home-title-2">{t("Explore.part1")}</p>
+
+          <p className="home-title-2">{t("Explore.part2")}</p>
+
+          <p className="home-title-2">{t("Motivation")}</p>
         </div>
       </div>
 

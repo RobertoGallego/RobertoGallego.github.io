@@ -130,3 +130,11 @@
     ); */
   }
 }
+
+@media (max-width: 601px) {
+  .card {
+    flex-basis: 100%;
+    min-width: 300px !important;
+    max-width: 368px !important;
+  }
+}

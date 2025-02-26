@@ -1,26 +1,37 @@
 import logo42 from "../../assets/42logo.png"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6"
-import { IoInvertModeOutline } from "react-icons/io5"
-import { IoInvertMode } from "react-icons/io5"
-// import { MdModeStandby } from "react-icons/md"
 import "./Footer.css"
 import logo42w from "../../assets/42logow.png"
 import useDarkMode from "../../hooks/useDarkMode"
 import { useTranslation } from "react-i18next"
-import { useState } from "react"
+import useTheme from "../../hooks/useTheme"
+import useLanguage from "../../hooks/useLanguage"
 
 const Footer = () => {
   const { isDarkMode } = useDarkMode()
+  const { theme, setTheme } = useTheme()
+  const { language, setLanguage } = useLanguage()
 
   const {
-    i18n: { changeLanguage, language },
+    t,
+    i18n: { changeLanguage },
   } = useTranslation()
-  const [currentLanguage, setCurrentLanguage] = useState(language)
 
-  const handleChangeLanguage = () => {
-    const newLanguage = currentLanguage === "en" ? "fr" : "en"
-    setCurrentLanguage(newLanguage)
-    changeLanguage(newLanguage)
+  const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedLanguage = e.target.value
+
+    changeLanguage(selectedLanguage)
+    setLanguage(selectedLanguage)
+  }
+
+  const handleThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedTheme = e.target.value
+    setTheme(selectedTheme)
+    if (selectedTheme === "dark") {
+      document.body.classList.add("dark")
+    } else {
+      document.body.classList.remove("dark")
+    }
   }
 
   return (
@@ -38,7 +49,7 @@ const Footer = () => {
               fontWeight: 500,
             }}
           >
-            Software Engineer
+            {t("Software_Engineer")}
           </h3>
 
           <p
@@ -48,7 +59,7 @@ const Footer = () => {
               lineHeight: 1.4,
             }}
           >
-            Clean code and thoughtful design.
+            {t("Clean_Code")}
           </p>
 
           <div style={{ display: "flex", gap: 10, marginTop: -2 }}>
@@ -77,42 +88,11 @@ const Footer = () => {
               marginTop: -6,
             }}
           >
-            Living in France 🇫🇷, always exploring new ideas and challenges.
+            {t("Location")}
           </p>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
-          {/* <div
-            style={{
-              display: "flex",
-              gap: 4,
-              alignItems: "center",
-              justifyContent: "flex-end",
-              textAlign: "center",
-              marginBottom: 4,
-            }}
-          >
-            <div
-              style={{
-                width: 8,
-                height: 8,
-                borderRadius: 50,
-                backgroundColor: "green",
-              }}
-            ></div>
-            <p
-              style={{
-                fontSize: 12,
-                fontFamily: "roboto, Poppins, Inter, system-ui",
-                fontWeight: 500,
-                lineHeight: 1,
-                textAlign: "center",
-              }}
-            >
-              Open to work
-            </p>
-          </div> */}
-
           <div
             style={{
               display: "flex",
@@ -180,7 +160,7 @@ const Footer = () => {
                   textAlign: "center",
                 }}
               >
-                Open to work
+                {t("Open_To_Work")}
               </p>
             </div>
           </div>
@@ -188,16 +168,55 @@ const Footer = () => {
       </div>
       <div className="footer">
         <div>
-          <p className="footer-text">2025 © All rights reserved</p>
+          <p className="footer-text">{t("Copyright")}</p>
         </div>
 
-        <button type="button" onClick={handleChangeLanguage}>
-          {currentLanguage === "en" ? (
-            <IoInvertMode size={16} />
-          ) : (
-            <IoInvertModeOutline size={16} />
-          )}
-        </button>
+        <div style={{ display: "flex", gap: 10 }}>
+          <select
+            onChange={handleChangeLanguage}
+            value={language}
+            name="lang"
+            id="cars"
+            style={{
+              fontFamily: "roboto",
+              fontSize: 14,
+              border: "1px solid #e7e4e4",
+              textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: 10,
+              fontWeight: 500,
+              alignSelf: "center",
+              alignContent: "center",
+              padding: "0.1rem 0.3rem",
+              cursor: "pointer",
+              display: "flex",
+            }}
+          >
+            <option value="fr">🇫🇷 Fr</option>
+            <option value="en">🇬🇧 En</option>
+            <option value="es">🇪🇸 Es</option>
+          </select>
+
+          <select
+            value={theme}
+            onChange={handleThemeChange}
+            style={{
+              fontFamily: "roboto",
+              fontSize: 14,
+              border: "1px solid #e7e4e4",
+              textAlign: "center",
+              borderRadius: 10,
+              fontWeight: 500,
+              padding: "0.1rem 0.3rem",
+              cursor: "pointer",
+            }}
+          >
+            <option value="system">System</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
       </div>
     </>
   )

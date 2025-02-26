@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"
 import "./Card.css"
 import night from "./assets/night.jpg"
 
@@ -18,6 +19,8 @@ const Card: React.FC<CardProps> = ({
   title = "Online Store Concept Vol.1",
   zIndex = 0,
 }) => {
+  const { t } = useTranslation()
+
   // const 204 272 408 H325    - 204 H249 - 332 H404
   return (
     <div
@@ -50,8 +53,8 @@ const Card: React.FC<CardProps> = ({
 
         <h4 className="blog-title">{title}</h4>
 
-        <p className="text-card">Welcome | To My Reve | Studio</p>
-        <p className="text-card">Hope You Enjoy</p>
+        <p className="text-card">{t("Welcome_Reve_Studio")}</p>
+        <p className="text-card">{t("Hope_Enjoy")}</p>
 
         <div
           style={{
@@ -62,15 +65,9 @@ const Card: React.FC<CardProps> = ({
             width: "100%",
           }}
         >
-          <p className="text-card-extra"
-          >
-            {createdAt}
-          </p>
+          <p className="text-card-extra">{createdAt}</p>
 
-          <p className="text-card-extra-upper"
-          >
-            5 min read
-          </p>
+          <p className="text-card-extra-upper">{t("Read_Time")}</p>
         </div>
       </div>
     </div>
