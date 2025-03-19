@@ -12,7 +12,7 @@ const NavItem = ({ label, number }: NavItemProps) => {
       }}
     >
       <p className="header-navigation">{label}</p>
-      <p className="header-navigation-number">{number}</p>
+      {/* <p className="header-navigation-number">{number}</p> */}
     </li>
   )
 }

@@ -32,6 +32,10 @@ const Footer = () => {
       ? logo42w
       : logo42
 
+  const handleThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setTheme(e.target.value as Theme)
+  }
+
   return (
     <>
       <div className="home-footer">
@@ -86,7 +90,13 @@ const Footer = () => {
           </p>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "end",
+          }}
+        >
           <div
             style={{
               display: "flex",
@@ -99,51 +109,21 @@ const Footer = () => {
               marginBottom: 4,
             }}
           >
-            <div className="social-button">
-              <FaLinkedinIn
-                size={12}
-                style={{
-                  alignSelf: "center",
-                  alignContent: "center",
-                  textAlign: "center",
-                  marginRight: 4,
-                }}
-              />
-              <p
-                style={{
-                  fontWeight: 500,
-                  alignSelf: "center",
-                  alignContent: "center",
-                  textAlign: "center",
-                }}
-              >
-                Linkedin
-              </p>
-            </div>
-
-            <div className="social-button">
-              <FaGithub
-                size={12}
-                style={{
-                  alignSelf: "center",
-                  alignContent: "center",
-                  textAlign: "center",
-                  marginRight: 4,
-                }}
-              />
-              <p
-                style={{
-                  fontWeight: 500,
-                  alignSelf: "center",
-                  alignContent: "center",
-                  textAlign: "center",
-                }}
-              >
-                Github
-              </p>
-            </div>
-
-            <div className="gradient-border">
+            <a
+              href="https://www.linkedin.com/in/roberto-gallego-905753190/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="gradient-border"
+              style={{
+                display: "flex",
+                // gap: 6,
+                alignItems: "end",
+                textAlign: "end",
+                fontFamily: "roboto, Poppins, Inter, system-ui",
+                fontSize: 12,
+                fontWeight: 500,
+              }}
+            >
               <div className="circular-icon" />
 
               <p
@@ -156,7 +136,63 @@ const Footer = () => {
               >
                 {t("Open_To_Work")}
               </p>
-            </div>
+            </a>
+
+            <a
+              className="social-button"
+              href="https://www.linkedin.com/in/roberto-gallego-905753190/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn
+                size={12}
+                style={{
+                  alignSelf: "center",
+                  alignContent: "center",
+                  textAlign: "center",
+                  marginRight: 4,
+                  color: "black",
+                }}
+              />
+              <p
+                style={{
+                  fontWeight: 500,
+                  alignSelf: "center",
+                  alignContent: "center",
+                  textAlign: "center",
+                }}
+              >
+                Linkedin
+              </p>
+            </a>
+
+            <a
+              className="social-button"
+              href="https://github.com/RobertoGallego"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub
+                size={12}
+                style={{
+                  alignSelf: "center",
+                  alignContent: "center",
+                  textAlign: "center",
+                  marginRight: 4,
+                  color: "black",
+                }}
+              />
+              <p
+                style={{
+                  fontWeight: 500,
+                  alignSelf: "center",
+                  alignContent: "center",
+                  textAlign: "center",
+                }}
+              >
+                Github
+              </p>
+            </a>
           </div>
         </div>
       </div>
@@ -171,6 +207,21 @@ const Footer = () => {
             value={language}
             name="lang"
             className="select-button"
+            id="cars"
+            style={{
+              fontFamily: "roboto",
+              fontSize: 12,
+              textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: 10,
+              fontWeight: 500,
+              alignSelf: "center",
+              alignContent: "center",
+              padding: "0.1rem 0.3rem",
+              cursor: "pointer",
+              display: "flex",
+            }}
           >
             <option value="fr">🇫🇷 Fr</option>
             <option value="en">🇬🇧 En</option>
@@ -179,8 +230,17 @@ const Footer = () => {
 
           <select
             value={theme}
-            onChange={(e) => setTheme(e.target.value as Theme)}
             className="select-button"
+            onChange={handleThemeChange}
+            style={{
+              fontFamily: "roboto",
+              fontSize: 12,
+              textAlign: "center",
+              borderRadius: 10,
+              fontWeight: 500,
+              padding: "0.1rem 0.3rem",
+              cursor: "pointer",
+            }}
           >
             <option value="system">System</option>
             <option value="light">Light</option>
