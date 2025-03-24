@@ -151,7 +151,7 @@ const Footer = () => {
                   alignContent: "center",
                   textAlign: "center",
                   marginRight: 4,
-                  color: "black",
+                  color: theme === "light" ? "black" : "white",
                 }}
               />
               <p
@@ -179,7 +179,7 @@ const Footer = () => {
                   alignContent: "center",
                   textAlign: "center",
                   marginRight: 4,
-                  color: "black",
+                  color: theme === "light" ? "black" : "white",
                 }}
               />
               <p

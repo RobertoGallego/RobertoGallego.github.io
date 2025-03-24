@@ -3,7 +3,34 @@ interface NavItemProps {
   number: string
 }
 
-const NavItem = ({ label, number }: NavItemProps) => {
+const NavItem = ({ label }: NavItemProps) => {
+  const handleClick = () => {
+    window.location.href = "mailto:rvgallego@hotmail.com"
+  }
+
+  if (label === "Contact")
+    return (
+      <button onClick={handleClick} className="header-navigation">
+        {label}
+      </button>
+    )
+
+  if (label === "Home")
+    return (
+      <button>
+        <a
+          href="/"
+          className="header-navigation"
+          style={{
+            textDecoration: "none",
+            cursor: "pointer",
+          }}
+        >
+          {label}
+        </a>
+      </button>
+    )
+
   return (
     <li
       style={{

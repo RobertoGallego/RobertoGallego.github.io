@@ -50,15 +50,8 @@ h2 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  all: unset; 
   cursor: pointer;
-  transition: border-color 0.25s;
 }
 
 *,
@@ -78,9 +71,9 @@ button {
   a:hover {
     color: #747bff;
   }
-  button {
+  /* button {
     background-color: #f9f9f9;
-  }
+  } */
   h2 {
     font-size: 1em;
   }
@@ -99,10 +92,10 @@ button {
     font-size: 1.8em;
   }
 
-  button {
+  /* button {
     padding: 0.6em 1em;
     font-size: 1em;
-  }
+  } */
 }
 
 @media (max-width: 768px) {
@@ -118,10 +111,10 @@ button {
     font-size: 1.5em;
   }
 
-  button {
+  /* button {
     padding: 0.5em 1em;
     font-size: 0.9em;
-  }
+  } */
 }
 
 /* Box sizing rules */
