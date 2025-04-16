@@ -1,5 +1,4 @@
 import logo42 from "../../assets/42logo.png"
-import { FaGithub, FaLinkedinIn } from "react-icons/fa6"
 import "./Footer.css"
 import logo42w from "../../assets/42logow.png"
 import useDarkMode from "../../hooks/useDarkMode"
@@ -109,11 +108,11 @@ const Footer = () => {
               marginBottom: 4,
             }}
           >
-            <a
+            {/* <a
               href="https://www.linkedin.com/in/roberto-gallego-905753190/"
               target="_blank"
               rel="noopener noreferrer"
-              className="gradient-border"
+              // className="gradient-border"
               style={{
                 display: "flex",
                 // gap: 6,
@@ -136,9 +135,9 @@ const Footer = () => {
               >
                 {t("Open_To_Work")}
               </p>
-            </a>
+            </a> */}
 
-            <a
+            {/* <a
               className="social-button"
               href="https://www.linkedin.com/in/roberto-gallego-905753190/"
               target="_blank"
@@ -164,9 +163,9 @@ const Footer = () => {
               >
                 Linkedin
               </p>
-            </a>
+            </a> */}
 
-            <a
+            {/* <a
               className="social-button"
               href="https://github.com/RobertoGallego"
               target="_blank"
@@ -192,9 +191,9 @@ const Footer = () => {
               >
                 Github
               </p>
-            </a>
+            </a> */}
           </div>
-        </div>
+        </div> 
       </div>
       <div className="footer">
         <div>
@@ -229,6 +228,7 @@ const Footer = () => {
           </select>
 
           <select
+            
             value={theme}
             className="select-button"
             onChange={handleThemeChange}

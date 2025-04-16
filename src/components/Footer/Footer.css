@@ -4,25 +4,25 @@
   cursor: pointer;
   border-radius: 10px;
   display: flex;
-  border: 1px solid #1a1a1a;
+  border: 0.8px solid #1a1a1a;
 }
 
 .select-button {
   border-radius: 10px;
-  padding: 0.1rem 0.3rem;
+  /* padding: 0.1rem 0.3rem; */
   cursor: pointer;
   display: flex;
   font-weight: 500;
   font-family: "roboto", Inter, system-ui;
   font-size: 12px;
-  border: 1px solid #1a1a1a;
+  border: 0.8px solid #1a1a1a;
 }
 
 @media (prefers-color-scheme: dark) {
   .social-button,
   .select-button {
     background-color: #1a1a1a;
-    border: 1px solid #e2e2e2;
+    border: 0.8px solid #e2e2e2;
   }
 }
 
@@ -31,7 +31,7 @@
   border-radius: 10px;
   display: flex;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 0.8px solid transparent;
   background-image: linear-gradient(#e7e4e4, #e7e4e4),
     linear-gradient(
       45deg,
@@ -114,7 +114,7 @@
   .social-button,
   .select-button {
     background-color: #1a1a1a;
-    border: 1px solid #e2e2e2;
+    border: 0.8px solid #e2e2e2;
     color: #e2e2e2;
   }
 }
@@ -140,7 +140,7 @@
   .social-button,
   .select-button {
     background-color: #e7e4e4;
-    border: 1px solid #1a1a1a;
+    border: 0.8px solid #1a1a1a;
     color: #1a1a1a;
   }
 }

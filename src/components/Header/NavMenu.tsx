@@ -1,18 +1,62 @@
-import { useTranslation } from "react-i18next"
-import NavItem from "./NavItem"
+import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa6"
+import { MdAlternateEmail } from "react-icons/md";
 
 const NavMenu = () => {
-  const { t } = useTranslation()
-  
   return (
     <ul className="menu-navigation">
-      {[
-        { label: t("Home"),number: "01" },
-        { label: t( "Projects"), number: "02" },
-        { label: t( "Contact"), number: "03" },
-      ].map((item) => (
-        <NavItem label={item.label} number={item.number} key={item.number} />
-      ))}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "end",
+          gap: 10,
+          padding: 10,
+        }}
+      >
+        <a
+          href="https://www.linkedin.com/in/roberto-gallego-905753190/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedinIn
+            size={14}
+            style={{
+              alignSelf: "center",
+              alignContent: "center",
+              textAlign: "center",
+            }}
+          />
+        </a>
+
+        <a
+          href="https://github.com/RobertoGallego"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithubAlt
+            size={14}
+            style={{
+              alignSelf: "center",
+              alignContent: "center",
+              textAlign: "center",
+            }}
+          />
+        </a>
+
+        <a
+          href="mailto:rvgallego@hotmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <MdAlternateEmail
+            size={14}
+            style={{
+              alignSelf: "center",
+              alignContent: "center",
+              textAlign: "center",
+            }}
+          />
+        </a>
+      </div>
     </ul>
   )
 }
