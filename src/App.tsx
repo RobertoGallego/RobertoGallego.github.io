@@ -19,11 +19,11 @@ function AppContent() {
 
   return (
     <div className="container" data-theme={theme}>
-      <div className="content">
-        <Header />
-        <Home />
-        <Footer />
-      </div>
+      <Header />
+
+      <Home />
+      
+      {/* <Footer /> */}
     </div>
   )
 }

@@ -19,34 +19,12 @@
   padding: 0 10px;
 }
 
-.content {
-  display: flex;
-  min-height: 100vh;
-  min-height: 100vh;
-  flex-direction: column;
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
 }
 
-.header-navigation-number {
-  font-size: 10px;
-  margin-left: 2px;
-}
-
-.header-navigation {
-  font-family: "Poppins", Inter, system-ui;
-  font-size: 14px;
-  font-weight: 500;
-  padding-block: 2px;
-}
-
-.home-content {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  /* align-items: center; */
-  /* background-color: #2e2e2e; */
-  /* flex: 1; */
-}
 
 .home-icon {
   background-color: #ffc785;
@@ -57,18 +35,12 @@
 .home-text {
   display: flex;
   flex-direction: column;
-  /* background-color: #2e2e2e; */
 }
 
 .home-description {
-  /* background-color: #ffc785; */
-  /* padding: 8px; */
-
   font-size: clamp(14px, 1.5vw, 16px);
   color: #ff6347;
-
   font-family: "Poppins", Inter, system-ui;
-  /* font-weight: 500; */
 }
 
 .home-text-container {
@@ -79,23 +51,6 @@
   margin-bottom: 2px;
 }
 
-.menu {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #8d8d8d;
-  flex-wrap: wrap;
-}
-
-.menu-navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-  padding-left: 10px;
-}
-
 .footer {
   display: flex;
   border-top: 1px solid #8d8d8d;
@@ -103,11 +58,6 @@
   justify-content: space-between;
   align-items: center;
   padding-block: 2px;
-}
-
-.menu-logo {
-  width: 110;
-  object-fit: cover;
 }
 
 .home-cards {
@@ -156,118 +106,18 @@
   align-items: flex-end;
 }
 
-/* .home-colors {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-  overflow-x: auto;
-  flex-wrap: nowrap;
-  flex: 0 0 auto;
-  min-width: 160px;
-
-  -webkit-overflow-scrolling: touch;
-  overflow: auto;
-  scrollbar-width: none;
-}
-
-.home-colors::-webkit-scrollbar {
-  display: none;
-} */
-
-/* .home-colors-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.home-colors {
-  display: flex;
-  animation: scrollColors 20s linear infinite;
-}
-
-.color-box {
-  height: 50px;
-  width: 50px;
-  flex-shrink: 0;
-} */
-
-/* animacion frames @keyframes frameAnimation {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-700%);
-  }
-}
-
-.home-colors {
-  display: flex;
-  overflow: hidden;
-  width: 200px;
-  position: relative;
-}
-
-.home-colors-track {
-  display: flex;
-  gap: 0; 
-  animation: frameAnimation 1s steps(7) infinite;
-} */
-
-/* .home-colors-1 {
-  display: flex;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  position: relative;
-}
-
-.home-colors-track-1 {
-  display: flex;
-  gap: 200px;
-  animation: scrollColors 5s linear infinite;
-  width: max-content;
-}
-
-.home-colors-track-1 img {
-  flex-shrink: 0;
-  width: 200px;
-  height: auto;
-}
-
-@keyframes scrollColors {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-33.3333%);
-  }
-} */
-
-@keyframes frameAnimation {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-33.3333%);
-  }
-}
 
 .home-colors {
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  /* width: 100px; */
 }
 
 .home-colors-track {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  /* max-width: 30px */
-  /* flex-direction: column; */
-
-  /* animation: frameAnimation 10s linear infinite; */
 }
 
 .home-cards-fullsize::-webkit-scrollbar {
@@ -280,8 +130,6 @@
   gap: 10px;
 
   padding-bottom: 6px;
-  /* padding-right: 10px; */
-  /* padding-left: 10px; */
   padding-top: 2px;
 
   overflow-x: auto;
@@ -303,7 +151,6 @@
   overflow-y: hidden;
   width: 100%;
   gap: 4px;
-  /* background-color: green; */
 }
 
 .home-cards-list > * {
@@ -318,122 +165,14 @@
   cursor: pointer;
 }
 
-/* @keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 
-.home-title {
-  background: linear-gradient(45deg, #ff6347, #ffa09b, #ffc785, #ffe6c9);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientAnimation 5s ease infinite;
-} */
-
-/* .home-title {
-  transform: perspective(500px) rotateX(20deg);
-  transition: transform 0.5s ease;
-}
-
-.home-title:hover {
-  transform: perspective(500px) rotateX(0deg) translateY(-10px);
-} */
-
-.home-title {
-  text-transform: uppercase;
-  font-size: clamp(40px, 6vw, 60px);
-  background: linear-gradient(45deg, #762d20, #252525, #6b5338, #49423b);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientAnimation 5s ease infinite;
-  transition: filter 0.3s ease;
-  margin-bottom: 10px;
-}
 
 .span-title {
   color: #49423b;
 }
 
-.home-title-2 {
-  color: #252525;
-  font-size: clamp(12px, 2vw, 18px);
-  font-weight: 400;
-  font-family: "Roboto", "Triodion", "Poppins", Inter, system-ui;
-  line-height: 1.2;
-}
-
-.home-title-3 {
-  margin-bottom: 6px;
-
-  line-height: 1.2;
-  font-weight: 500;
-  font-family: "Poppins", Inter, system-ui;
-  font-size: clamp(18px, 3vw, 24px);
-  color: #9a3b2a;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* .home-title:hover {
-  transform: rotateY(180deg);
-} */
-
-/* 
-.home-title {
-  opacity: 0;
-  transform: translateX(20px);
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.home-title:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.home-title:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-} */
-
-@keyframes spin {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
 
 @media (max-width: 447px) {
-  .menu {
-    justify-content: center;
-  }
-
-  .menu-logo {
-    margin-top: 8px;
-  }
-
   .home-icon {
     padding: 8px;
     font-size: 30px;
@@ -449,8 +188,6 @@
 
   .home-cards-fullsize {
     flex-wrap: wrap;
-    /* align-items: center;
-    justify-content: center; */
   }
 
   .home-scroll {
@@ -469,111 +206,19 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .home-title {
-    background: linear-gradient(45deg, #ff6347, #ffa09b, #ffc785, #ffe6c9);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientAnimation 5s ease infinite;
-    transition: filter 0.3s ease;
-    z-index: 10;
-  }
-
-  .home-title-2 {
-    color: #ffe6c9;
-    font-weight: 400;
-    font-family: "Roboto", "Triodion", "Poppins", Inter, system-ui;
-    line-height: 1.2;
-  }
-
-  .home-title-3 {
-    margin-bottom: 6px;
-
-    line-height: 1.2;
-    font-weight: 500;
-    font-family: "Poppins", Inter, system-ui;
-    color: #ff6347;
-  }
-
   .span-title {
     color: #ffe6c9;
   }
 }
 
 [data-theme="dark"] {
-  .home-title {
-    background: linear-gradient(45deg, #ff6347, #ffa09b, #ffc785, #ffe6c9);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientAnimation 5s ease infinite;
-    transition: filter 0.3s ease;
-    z-index: 10;
-  }
-
-  .home-title-2 {
-    color: #ffe6c9;
-    font-weight: 400;
-    font-family: "Roboto", "Triodion", "Poppins", Inter, system-ui;
-    line-height: 1.2;
-  }
-
-  .home-title-3 {
-    margin-bottom: 6px;
-
-    line-height: 1.2;
-    font-weight: 500;
-    font-family: "Poppins", Inter, system-ui;
-    color: #ff6347;
-  }
-
   .span-title {
     color: #ffe6c9;
   }
 }
 
 [data-theme="light"] {
-  .home-title {
-    background: linear-gradient(45deg, #762d20, #252525, #6b5338, #49423b);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientAnimation 5s ease infinite;
-    transition: filter 0.3s ease;
-    z-index: 10;
-  }
-
-  .home-title-2 {
-    color: #252525;
-    font-weight: 400;
-    font-family: "Roboto", "Triodion", "Poppins", Inter, system-ui;
-    line-height: 1.2;
-  }
-
-  .home-title-3 {
-    margin-bottom: 6px;
-
-    line-height: 1.2;
-    font-weight: 500;
-    font-family: "Poppins", Inter, system-ui;
-    color: #9a3b2a;
-  }
-
   .span-title {
     color: #49423b;
-  }
-}
-
-@media (min-height: 1300px) {
-  .home-title {
-    font-size: clamp(40px, 6vw, 80px);
-  }
-
-  .home-title-2 {
-    font-size: clamp(12px, 2vw, 20px);
-  }
-
-  .home-title-3 {
-    font-size: clamp(18px, 3vw, 30px);
   }
 }

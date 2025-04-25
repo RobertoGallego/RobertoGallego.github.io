@@ -1,9 +1,10 @@
 import Logo from "./Logo"
 import NavMenu from "./NavMenu"
+import "./Header.css"
 
 const Header = () => {
   return (
-    <div className="menu">
+    <div className="header">
       <Logo />
 
       <NavMenu />

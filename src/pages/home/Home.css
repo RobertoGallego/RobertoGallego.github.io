@@ -1,0 +1,61 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-presentation {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+  }
+  50% {
+    background-position: 100% 50%;
+    -webkit-background-clip: text;
+  }
+  100% {
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+  }
+}
+
+.home-title {
+  text-transform: uppercase;
+  font-size: 50px;
+  background: linear-gradient(45deg, #762d20, #252525, #6b5338, #49423b);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+[data-theme="dark"] {
+  .home-title {
+    background: linear-gradient(45deg, #ff6347, #ffa09b, #ffc785, #ffe6c9);
+    background-size: 200% 200%;
+  }
+}
+
+[data-theme="light"] {
+  .home-title {
+    background: linear-gradient(45deg, #762d20, #252525, #6b5338, #49423b);
+    background-size: 200% 200%;
+  }
+}
+
+@media (min-height: 1300px) {
+  .home-title {
+    font-size: 30px;
+  }
+}

@@ -14,7 +14,7 @@ const Logo = () => {
       ? logoDark
       : logo
 
-  return <img src={logoSrc} alt="reve logo" className="menu-logo" />
+  return <img src={logoSrc} alt="reve logo" />
 }
 
 export default Logo
