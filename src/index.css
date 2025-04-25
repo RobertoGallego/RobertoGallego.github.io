@@ -38,13 +38,13 @@ a:hover {
 }
 
 h1 {
-  font-size: 3.2em;
+  /* font-size: 3.2em; */
   line-height: 1.1;
   color: #252525;
 }
 
 h2 {
-  font-size: 2.4em;
+  /* font-size: 2.4em; */
   line-height: 1.1;
   color: #252525;
 }
@@ -84,13 +84,13 @@ button {
     flex-direction: column;
   }
 
-  h1 {
+  /* h1 {
     font-size: 2.5em;
   }
 
   h2 {
     font-size: 1.8em;
-  }
+  } */
 
   /* button {
     padding: 0.6em 1em;
@@ -103,13 +103,13 @@ button {
     flex-direction: column;
   }
 
-  h1 {
+  /* h1 {
     font-size: 2em;
   }
 
   h2 {
     font-size: 1.5em;
-  }
+  } */
 
   /* button {
     padding: 0.5em 1em;

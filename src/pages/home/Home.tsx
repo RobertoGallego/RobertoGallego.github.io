@@ -1,6 +1,6 @@
 // import { FaQuoteRight } from "react-icons/fa"
 import Card from "../../Card"
-import Chip from "../../Chip"
+import Chip from "../../components/Chip/Chip"
 import tech from "../../assets/tech.jpg"
 import back from "../../assets/bak.jpg"
 import pexel from "../../assets/pexel.jpg"
@@ -13,11 +13,31 @@ import { FaMapMarkerAlt } from "react-icons/fa"
 import { FaArrowRight } from "react-icons/fa"
 import logo42 from "../../assets/42logo.png"
 import logo42w from "../../assets/42logow.png"
-import gif from "../../assets/7979.gif"
+import gif from "../../assets/wallo.png"
 
 import { useTheme } from "../../useTheme"
 import { FaAngleRight } from "react-icons/fa"
 import { CgAdd } from "react-icons/cg"
+import { MdLightbulbOutline } from "react-icons/md"
+import { VscServerProcess } from "react-icons/vsc"
+import { TbDeviceDesktopCode } from "react-icons/tb"
+import { MdArrowOutward } from "react-icons/md"
+import { IoMdCloudOutline } from "react-icons/io"
+import { FaMasksTheater } from "react-icons/fa6"
+import { MdOutlineDesignServices } from "react-icons/md"
+import { VscTools } from "react-icons/vsc"
+import { LiaPenNibSolid } from "react-icons/lia"
+import { PiBinocularsFill } from "react-icons/pi"
+import { MdOutlineRoomService } from "react-icons/md"
+import { BsGraphUpArrow } from "react-icons/bs"
+import { FaArrowTrendUp } from "react-icons/fa6"
+
+import { FaReact } from "react-icons/fa"
+import { SiReactquery } from "react-icons/si"
+import { SiMui } from "react-icons/si"
+import { BiLogoTypescript } from "react-icons/bi"
+import { TbBrandJavascript, TbBrandHtml5, TbBrandCss3 } from "react-icons/tb"
+
 const HomeCardsFullSize = ({
   containerRef,
 }: {
@@ -121,35 +141,25 @@ const Home = () => {
   return (
     <div className="home">
       <div className="home-presentation">
-        {/* <div
+        <div
+          className="home-presentation-image"
           style={{
             borderRadius: 100,
             overflow: "hidden",
-            backgroundColor: "#a16969",
-            width: 100,
-            height: 100,
+            width: 120,
+            height: 120,
             marginBottom: 20,
             textAlign: "center",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            backgroundColor: "#fff",
           }}
-        >
-          <img
-            src={gif}
-            alt="Profile"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              borderRadius: 100,
-            }}
-          />
-        </div> */}
+        ></div>
 
         <h1 className="home-title">{t("ReveCraft")}</h1>
 
-        <h3>Explore my journey in app engineering</h3>
+        <h2>Explore my journey in app engineering</h2>
 
         <p style={{ maxWidth: 500, textAlign: "center", marginTop: 10 }}>
           An evolving portfolio collection that reflects my work with modern
@@ -201,10 +211,9 @@ const Home = () => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          marginTop: 100,
-          backgroundColor: "#0f0f0e",
+          backgroundColor: "#181816",
           width: "100%",
-          marginBottom: 200,
+          marginBottom: 100,
           padding: 60,
         }}
       >
@@ -270,12 +279,353 @@ const Home = () => {
         </div>
       </div>
 
-      <h2>Tech Stack · 2025</h2>
+      <div
+        style={{
+          display: "flex",
+          gap: 20,
+          flexDirection: "column",
+          maxWidth: 700,
+          marginBottom: 200,
+          alignItems: "flex-start",
+        }}
+      >
+        {/* <p>Core Values</p> */}
+
+        <h1>Tech Stack · 2025</h1>
+
+        <p>
+          Our values aren't just words on a wall—they're the principles that
+          guide our daily actions and long-term vision, shaping our culture and
+          driving our success.
+        </p>
+
+        <div
+          style={{
+            display: "flex",
+            gap: 4,
+            flexWrap: "wrap",
+            flexDirection: "column",
+            alignItems: "flex-start",
+          }}
+        >
+          <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
+            <Chip
+              Icon={TbDeviceDesktopCode}
+              label="Frontend"
+              iconColor="DarkOrange"
+              status="active"
+            />
+
+            <Chip Icon={VscServerProcess} label="Backend" iconColor="Green" />
+
+            <Chip
+              Icon={FaMasksTheater}
+              label="Testing & QA"
+              iconColor="DeepSkyBlue"
+            />
+
+            <Chip Icon={IoMdCloudOutline} label="Cloud" iconColor="Gold" />
+
+            <Chip Icon={LiaPenNibSolid} label="Design & UX" iconColor="Olive" />
+
+            <Chip
+              Icon={VscTools}
+              label="Productivity Tools"
+              iconColor="purple"
+            />
+
+            <Chip Icon={PiBinocularsFill} label="R&D" iconColor="brown" />
+
+            <Chip
+              Icon={FaArrowTrendUp}
+              label="Currently Improving"
+              iconColor="Teal"
+            />
+
+            <Chip
+              Icon={MdOutlineRoomService}
+              label="Services"
+              iconColor="Salmon"
+            />
+          </div>
+
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              // alignItems: "center",
+              justifyContent: "space-between",
+              marginTop: 40,
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  gap: 10,
+                  alignItems: "center",
+                }}
+              >
+                <TbDeviceDesktopCode
+                  style={{
+                    backgroundColor: "#1b1b1b",
+                    borderRadius: 10,
+                    padding: 10,
+                  }}
+                  color="DarkOrange"
+                  size={50}
+                />
+
+                <h1>Frontend</h1>
+              </div>
+              <p
+                style={{
+                  fontSize: 16,
+                  color: "grey",
+                  marginBlock: 10,
+                  maxWidth: 450,
+                }}
+              >
+                reactjs tanstack vitejs State Management redux react-query
+                zustand context react-router tanstack router virtual
+              </p>
+              <h4>Key Principles:</h4>
+
+              <div
+                style={{
+                  display: "flex",
+                  gap: 4,
+                  alignItems: "center",
+                  marginTop: 10,
+                }}
+              >
+                <MdArrowOutward color={"DarkOrange"} />
+                <p>Embrace experimentation and calculated risk-taking</p>
+              </div>
+
+              <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
+                <MdArrowOutward color={"DarkOrange"} />
+                <p>Challenge assumptions and existing processes</p>
+              </div>
+
+              <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
+                <MdArrowOutward color={"DarkOrange"} />
+                <p>Dedicate time and resources to exploring new ideas</p>
+              </div>
+
+              <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
+                <MdArrowOutward color={"DarkOrange"} />
+                <p>Learn from failures and iterate quickly</p>
+              </div>
+
+              <div style={{ display: "flex", gap: 30, alignItems: "center" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 10,
+                    marginTop: 50,
+                    // backgroundColor: "#1b1b1b",
+                    borderRadius: 10,
+                    // border: "1px solid #505050",
+                  }}
+                >
+                  <BiLogoTypescript size={50} color={"#3178c6"} />
+
+                  <h5 style={{ color: "white" }}>Typescript</h5>
+                </div>
+
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 10,
+                    marginTop: 50,
+                    // backgroundColor: "#1b1b1b",
+                    borderRadius: 10,
+                    // border: "1px solid #505050",
+                  }}
+                >
+                  <FaReact size={50} color={"#61dbfb"} />
+
+                  <h5 style={{ color: "white" }}>React JS</h5>
+                </div>
+
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 10,
+                    marginTop: 50,
+                    // backgroundColor: "#1b1b1b",
+                    borderRadius: 10,
+                    // border: "1px solid #505050",
+                  }}
+                >
+                  <SiReactquery size={50} color={"rgb(239 68 68)"} />
+
+                  <h5 style={{ color: "white" }}>React Query</h5>
+                </div>
+
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 10,
+                    marginTop: 50,
+                    // backgroundColor: "#1b1b1b",
+                    borderRadius: 10,
+                    // border: "1px solid #505050",
+                  }}
+                >
+                  <SiMui size={50} color={"#569bbe"} />
+
+                  <h5 style={{ color: "white" }}>Material UI</h5>
+                </div>
+              </div>
+            </div>
+
+            {/* <div
+              style={{
+                position: "relative",
+                width: 200,
+                height: 200,
+                borderRadius: 10,
+                overflow: "hidden",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                background: "#1b1b1b",
+                border: "1px solid #505050",
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  width: "100%",
+                  height: "100%",
+                  backgroundImage: `url(${gif})`,
+                  backgroundSize: "cover",
+                  filter: "blur(1px)",
+                  opacity: 0.8,
+                  zIndex: 0,
+                }}
+              />
+
+              <div
+                style={{
+                  zIndex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 20,
+                }}
+              >
+                <FaReact size={60} color={"skyblue"} />
+                <h4 style={{ color: "white", margin: 0, textAlign: "center" }}>
+                  React JS
+                </h4>
+              </div>
+            </div> */}
+          </div>
+
+          {/* <Chip Icon={VscServerProcess} label="Backend" iconColor="orange" />
+          hono express nodejs bun mysql mongodb */}
+          {/* <Chip Icon={MdLightbulbOutline} label="Mobile" iconColor="orange" />
+          react native expo
+          
+          <Chip Icon={MdLightbulbOutline} label="Cloud" iconColor="orange" />
+          gcp heroku github cloudflare worker pages
+          <Chip Icon={MdLightbulbOutline} label="API" iconColor="orange" />
+          restAPI graphql tRPC websocket pusher 
+          <Chip Icon={MdLightbulbOutline} label="Microservices" iconColor="orange" />
+          yarn pnpm 
+          <Chip Icon={MdLightbulbOutline} label="Serverless" iconColor="orange" />
+          superbase firebase
+          <Chip Icon={MdLightbulbOutline} label="GraphQL" iconColor="orange" />
+          apollo graphql 
+       
+
+          <Chip Icon={MdLightbulbOutline} label="Testing" iconColor="orange" />
+          react-testing-library cypress jest 
+          <Chip Icon={MdLightbulbOutline} label="Design" iconColor="orange" />
+          figma photoshop illustrator
+          <Chip Icon={MdLightbulbOutline} label="Utility" iconColor="orange" />
+          tailwind css shadcn/ui
+          <Chip Icon={MdLightbulbOutline} label="Version Control" iconColor="orange" />
+          git github gitlab
+          <Chip Icon={MdLightbulbOutline} label="CI/CD" iconColor="orange" />
+          github actions vercel netlify
+          <Chip Icon={MdLightbulbOutline} label="Containerization" iconColor="orange" />
+          docker
+          <Chip Icon={MdLightbulbOutline} label="Monitoring" iconColor="orange" />
+          sentry logrocket
+          <Chip Icon={MdLightbulbOutline} label="Collaboration" iconColor="orange" />
+          notion slack discord
+          <Chip Icon={MdLightbulbOutline} label="Project Management" iconColor="orange" />
+          jira trello
+          <Chip Icon={MdLightbulbOutline} label="Design Systems" iconColor="orange" />
+          storybook
+          <Chip Icon={MdLightbulbOutline} label="Code Quality" iconColor="orange" />
+          eslint prettier
+          <Chip Icon={MdLightbulbOutline} label="Documentation" iconColor="orange" />
+          markdown
+          <Chip Icon={MdLightbulbOutline} label="Deployment" iconColor="orange" />
+          vercel netlify
+          <Chip Icon={MdLightbulbOutline} label="Performance" iconColor="orange" />
+          lighthouse
+          <Chip Icon={MdLightbulbOutline} label="Security" iconColor="orange" />
+          eslint prettier
+          <Chip Icon={MdLightbulbOutline} label="Accessibility" iconColor="orange" />
+          axe lighthouse
+          <Chip Icon={MdLightbulbOutline} label="SEO" iconColor="orange" />
+          react helmet
+          <Chip Icon={MdLightbulbOutline} label="Analytics" iconColor="orange" />
+          google analytics segment
+          <Chip Icon={MdLightbulbOutline} label="Payment" iconColor="orange" />
+          stripe paypal
+          <Chip Icon={MdLightbulbOutline} label="Authentication" iconColor="orange" />
+          auth0 clerk better-auth
+          <Chip Icon={MdLightbulbOutline} label="DevOps" iconColor="orange" />
+          terraform ansible
+          <Chip Icon={MdLightbulbOutline} label="Security" iconColor="orange" />
+          jwt oauth2 openid
+          
+          <Chip Icon={MdLightbulbOutline} label="Documentation" iconColor="orange" />
+
+          <Chip Icon={MdLightbulbOutline} label="Code Quality" iconColor="orange" />
+          clean code atomic design 
+
+          <Chip Icon={MdLightbulbOutline} label="Collaboration" iconColor="orange" />
+          agile scrum kanban
+          <Chip Icon={MdLightbulbOutline} label="Agile" iconColor="orange" />
+
+          <Chip Icon={MdLightbulbOutline} label="Continuous Learning" iconColor="orange" />
+             adaptive learning
+          <Chip Icon={MdLightbulbOutline} label="Innovation" iconColor="orange" />
+          hono go sentry segment twilio stonly Tailwind CSS · shadcn/ui */}
+        </div>
+      </div>
+
+      {/* <h2>Tech Stack · 2025</h2>
       <p>React.js · Storybook · Jest · Vite · MUI</p>
       <h2>This Year I'm Into / Currently Improving</h2>
       <p>TanStack · Hono · Go</p>
       <h2>Exploring / Giving a Chance To</h2>
-      <p>Tailwind CSS · shadcn/ui</p>
+      <p>Tailwind CSS · shadcn/ui</p> */}
       <h2>My Latest Project</h2>
       <p>
         Currently working on a visual learning tool for array methods in

@@ -23,7 +23,7 @@ function AppContent() {
 
       <Home />
       
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
