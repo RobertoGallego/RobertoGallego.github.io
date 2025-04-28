@@ -10,12 +10,17 @@ import { SiMui, SiReactquery } from "react-icons/si"
 import { FaArrowTrendUp, FaMasksTheater, FaReact } from "react-icons/fa6"
 import { MdArrowOutward, MdOutlineRoomService } from "react-icons/md"
 import zustand from "../assets/zustand.svg"
+import hono from "../assets/hono.svg"
+import expressDark from "../assets/Express.js_dark.svg"
+import expressLight from "../assets/Express.js_light.svg"
+import afterEffects from "../assets/after-effects.svg"
+
 import { VscServerProcess, VscTools } from "react-icons/vsc"
 import { IoMdCloudOutline } from "react-icons/io"
 import { PiBinocularsFill } from "react-icons/pi"
 
 interface TechStackProps {
-  src?: string
+  src?: string | { light: string; dark: string }
   label: string
   Icon?: React.ElementType
   iconColor?: string
@@ -99,6 +104,16 @@ const StackCategoryData = [
       "Dedicate time and resources to exploring new ideas",
       "Learn from failures and iterate quickly",
     ],
+    techStack: [
+      {
+        src: hono,
+        label: "Hono",
+      },
+      {
+        src: { light: expressLight, dark: expressDark },
+        label: "Express",
+      },
+    ],
   },
   {
     id: 3,
@@ -141,6 +156,12 @@ const StackCategoryData = [
       "Dedicate time and resources to exploring new ideas",
       "Learn from failures and iterate quickly",
     ],
+    techStack: [
+      {
+        src: afterEffects,
+        label: "After Effects",
+      },
+    ]
   },
   {
     id: 6,

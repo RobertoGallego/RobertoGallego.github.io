@@ -1,11 +1,17 @@
+import useDarkMode from "../../hooks/useDarkMode"
+
 interface TechCardProps {
   label: string
   Icon?: React.ElementType
   iconColor?: string
-  src?: string
+  src?: string | { light: string; dark: string }
 }
 
 const TechCard = ({ label, Icon, iconColor, src }: TechCardProps) => {
+  const { isDarkMode } = useDarkMode()
+
+  const srcImg =  typeof src === "string" ? src : isDarkMode ? src?.dark : src?.light
+
   return (
     <div
       style={{
@@ -24,7 +30,7 @@ const TechCard = ({ label, Icon, iconColor, src }: TechCardProps) => {
 
       {src && (
         <img
-          src={src}
+          src={srcImg}
           alt={label}
           style={{
             width: 50,
