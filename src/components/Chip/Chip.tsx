@@ -4,19 +4,24 @@ interface ChipProps {
   label: string
   Icon: ElementType
   iconColor: string
-  status?: "active" | "inactive"
+  status?: boolean
+  onClick?: () => void
 }
 
-const Chip: React.FC<ChipProps> = ({ label, Icon, iconColor, status }) => {
+const Chip: React.FC<ChipProps> = ({
+  label,
+  Icon,
+  iconColor,
+  status,
+  onClick,
+}) => {
   return (
     <button
       type="button"
       className="chip"
-      onClick={() => {
-        console.log("Chip clicked")
-      }}
+      onClick={onClick}
       style={{
-        border: status && "1px solid #696969" ,
+        border: status ? "1px solid #696969" : undefined,
         borderRadius: "10px",
         padding: "4px 10px",
         cursor: "pointer",

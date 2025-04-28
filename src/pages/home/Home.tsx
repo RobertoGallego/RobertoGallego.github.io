@@ -1,11 +1,7 @@
 // import { FaQuoteRight } from "react-icons/fa"
-import Card from "../../Card"
 import Chip from "../../components/Chip/Chip"
-import tech from "../../assets/tech.jpg"
-import back from "../../assets/bak.jpg"
-import pexel from "../../assets/pexel.jpg"
 import ninjaco from "../../assets/ninjaco.png"
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 import useDarkMode from "../../hooks/useDarkMode"
 import { useTranslation } from "react-i18next"
 import "./Home.css"
@@ -13,123 +9,25 @@ import { FaMapMarkerAlt } from "react-icons/fa"
 import { FaArrowRight } from "react-icons/fa"
 import logo42 from "../../assets/42logo.png"
 import logo42w from "../../assets/42logow.png"
-import gif from "../../assets/wallo.png"
 
 import { useTheme } from "../../useTheme"
-import { FaAngleRight } from "react-icons/fa"
-import { CgAdd } from "react-icons/cg"
-import { MdLightbulbOutline } from "react-icons/md"
 import { VscServerProcess } from "react-icons/vsc"
 import { TbDeviceDesktopCode } from "react-icons/tb"
-import { MdArrowOutward } from "react-icons/md"
 import { IoMdCloudOutline } from "react-icons/io"
 import { FaMasksTheater } from "react-icons/fa6"
-import { MdOutlineDesignServices } from "react-icons/md"
 import { VscTools } from "react-icons/vsc"
 import { LiaPenNibSolid } from "react-icons/lia"
 import { PiBinocularsFill } from "react-icons/pi"
 import { MdOutlineRoomService } from "react-icons/md"
-import { BsGraphUpArrow } from "react-icons/bs"
 import { FaArrowTrendUp } from "react-icons/fa6"
 
-import { FaReact } from "react-icons/fa"
-import { SiReactquery } from "react-icons/si"
-import { SiMui } from "react-icons/si"
-import { BiLogoTypescript } from "react-icons/bi"
-import { TbBrandJavascript, TbBrandHtml5, TbBrandCss3 } from "react-icons/tb"
-
-const HomeCardsFullSize = ({
-  containerRef,
-}: {
-  containerRef: React.RefObject<HTMLDivElement | null>
-}) => {
-  const { t } = useTranslation()
-
-  return (
-    <div ref={containerRef} className="home-cards-fullsize">
-      <Card title={t("Profile_V1")} imageUrl={ninjaco} width={204}>
-        <Chip />
-      </Card>
-
-      <Card
-        title={t("Inspiration_Vault")}
-        imageUrl={pexel}
-        createdAt="Jun 1993"
-        width={204}
-      >
-        <Chip />
-        <Chip />
-      </Card>
-
-      <Card
-        title={t("Tech_Forges")}
-        imageUrl={back}
-        createdAt="Jun 1993"
-        width={204}
-      >
-        <Chip />
-        <Chip />
-      </Card>
-
-      <Card
-        title={t("The_Atelier")}
-        imageUrl={tech}
-        createdAt="Jun 1993"
-        width={204}
-      >
-        <Chip />
-        <Chip />
-      </Card>
-    </div>
-  )
-}
+import StackCategoryContent from "../../components/StackCategory"
 
 const Home = () => {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [scrollPosition, setScrollPosition] = useState(0)
-  const [isManualScroll, setIsManualScroll] = useState(false)
   const { isDarkMode } = useDarkMode()
   const { t } = useTranslation()
-  const { theme, setTheme } = useTheme()
-
-  const scrollToCard = (index: number) => {
-    if (!containerRef.current) return
-
-    setIsManualScroll(true)
-
-    setScrollPosition(index === 0 ? 0 : containerRef.current.scrollWidth)
-
-    containerRef.current?.scrollTo({
-      left: index,
-      behavior: "smooth",
-    })
-  }
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current || isManualScroll) return
-
-      const halfScrollPosition =
-        (containerRef.current.scrollWidth - containerRef.current.clientWidth) /
-        2
-
-      const isAtHalf = containerRef.current.scrollLeft >= halfScrollPosition
-
-      setScrollPosition(isAtHalf ? containerRef.current.scrollWidth : 0)
-    }
-
-    const ref = containerRef.current
-
-    if (ref) {
-      ref.addEventListener("scroll", handleScroll)
-    }
-
-    return () => {
-      if (ref) {
-        ref.removeEventListener("scroll", handleScroll)
-      }
-    }
-  }, [isManualScroll])
+  const { theme } = useTheme()
+  const [categoryNumber, setCategory] = useState(1)
 
   const logoSrc =
     theme === "light"
@@ -181,7 +79,6 @@ const Home = () => {
               alignItems: "center",
               gap: 6,
             }}
-            onClick={() => scrollToCard(0)}
           >
             <p>Available For Work</p> <FaArrowRight size={12} />
           </button>
@@ -198,7 +95,6 @@ const Home = () => {
               fontSize: "14px",
               fontWeight: "bold",
             }}
-            onClick={() => scrollToCard(0)}
           >
             Contact Me
           </button>
@@ -313,193 +209,158 @@ const Home = () => {
               Icon={TbDeviceDesktopCode}
               label="Frontend"
               iconColor="DarkOrange"
-              status="active"
+              status={categoryNumber === 1}
+              onClick={() => {
+                console.log(1)
+                setCategory(1)
+              }}
             />
 
-            <Chip Icon={VscServerProcess} label="Backend" iconColor="Green" />
+            <Chip
+              Icon={VscServerProcess}
+              label="Backend"
+              iconColor="Green"
+              status={categoryNumber === 2}
+              onClick={() => {
+                console.log(2)
+                setCategory(2)
+              }}
+            />
 
             <Chip
               Icon={FaMasksTheater}
               label="Testing & QA"
               iconColor="DeepSkyBlue"
+              status={categoryNumber === 3}
+              onClick={() => {
+                console.log(3)
+                setCategory(3)
+              }}
             />
 
-            <Chip Icon={IoMdCloudOutline} label="Cloud" iconColor="Gold" />
+            <Chip
+              Icon={IoMdCloudOutline}
+              status={categoryNumber === 4}
+              label="Cloud"
+              onClick={() => setCategory(4)}
+              iconColor="Gold"
+            />
 
-            <Chip Icon={LiaPenNibSolid} label="Design & UX" iconColor="Olive" />
+            <Chip
+              Icon={LiaPenNibSolid}
+              status={categoryNumber === 5}
+              label="Design & UX"
+              onClick={() => {
+                setCategory(5)
+              }}
+              iconColor="Olive"
+            />
 
             <Chip
               Icon={VscTools}
+              status={categoryNumber === 6}
               label="Productivity Tools"
               iconColor="purple"
+              onClick={() => {
+                setCategory(6)
+              }}
             />
 
-            <Chip Icon={PiBinocularsFill} label="R&D" iconColor="brown" />
+            <Chip
+              Icon={PiBinocularsFill}
+              status={categoryNumber === 7}
+              label="R&D"
+              onClick={() => {
+                setCategory(7)
+              }}
+              iconColor="brown"
+            />
 
             <Chip
               Icon={FaArrowTrendUp}
+              status={categoryNumber === 8}
               label="Currently Improving"
               iconColor="Teal"
+              onClick={() => {
+                setCategory(8)
+              }}
             />
 
             <Chip
               Icon={MdOutlineRoomService}
+              status={categoryNumber === 9}
               label="Services"
               iconColor="Salmon"
+              onClick={() => {
+                setCategory(9)
+              }}
             />
           </div>
 
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              // alignItems: "center",
-              justifyContent: "space-between",
-              marginTop: 40,
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  gap: 10,
-                  alignItems: "center",
-                }}
-              >
-                <TbDeviceDesktopCode
-                  style={{
-                    backgroundColor: "#1b1b1b",
-                    borderRadius: 10,
-                    padding: 10,
-                  }}
-                  color="DarkOrange"
-                  size={50}
-                />
+          <StackCategoryContent categoryNumber={categoryNumber} />
 
-                <h1>Frontend</h1>
-              </div>
-              <p
-                style={{
-                  fontSize: 16,
-                  color: "grey",
-                  marginBlock: 10,
-                  maxWidth: 450,
-                }}
-              >
-                reactjs tanstack vitejs State Management redux react-query
-                zustand context react-router tanstack router virtual
-              </p>
-              <h4>Key Principles:</h4>
+          {/* <TechCard Icon={SiTailwindcss} label="Tailwind CSS" iconColor="#38bdf8" /> */}
+          {/* <TechCard Icon={SiStyledcomponents} label="Styled Components" iconColor="#db7093" /> */}
+          {/* <TechCard Icon={SiFigma} label="Figma" iconColor="#f24e1e" /> */}
+          {/* <TechCard Icon={SiAdobephotoshop} label="Photoshop" iconColor="#31a8ff" /> */}
+          {/* <TechCard Icon={SiAdobeillustrator} label="Illustrator" iconColor="#ff9a00" /> */}
+          {/* <TechCard Icon={SiAdobeaftereffects} label="After Effects" iconColor="#9999ff" /> */}
+          {/* <TechCard Icon={SiAdobexd} label="Adobe XD" iconColor="#ff61f6" /> */}
+          {/* <TechCard Icon={SiSketch} label="Sketch" iconColor="#f7b500" /> */}
+          {/* <TechCard Icon={SiInvision} label="InVision" iconColor="#ff3366" /> */}
+          {/* <TechCard Icon={SiFramer} label="Framer" iconColor="#0acf83" /> */}
+          {/* <TechCard Icon={SiWebflow} label="Webflow" iconColor="#00c4cc" /> */}
+          {/* <TechCard Icon={SiZeplin} label="Zeplin" iconColor="#e9e9e9" /> */}
+          {/* <TechCard Icon={SiNotion} label="Notion" iconColor="#000000" /> */}
+          {/* <TechCard Icon={SiSlack} label="Slack" iconColor="#4a154b" /> */}
+          {/* <TechCard Icon={SiDiscord} label="Discord" iconColor="#7289da" /> */}
+          {/* <TechCard Icon={SiTrello} label="Trello" iconColor="#0079bf" /> */}
+          {/* <TechCard Icon={SiJira} label="Jira" iconColor="#0052cc" /> */}
+          {/* <TechCard Icon={SiGithub} label="GitHub" iconColor="#181717" /> */}
+          {/* <TechCard Icon={SiGitlab} label="GitLab" iconColor="#fc6d26" /> */}
+          {/* <TechCard Icon={SiBitbucket} label="Bitbucket" iconColor="#0052cc" /> */}
+          {/* <TechCard Icon={SiPostman} label="Postman" iconColor="#ff6c37" /> */}
+          {/* <TechCard Icon={SiInsomnia} label="Insomnia" iconColor="#4f5b93" /> */}
 
-              <div
-                style={{
-                  display: "flex",
-                  gap: 4,
-                  alignItems: "center",
-                  marginTop: 10,
-                }}
-              >
-                <MdArrowOutward color={"DarkOrange"} />
-                <p>Embrace experimentation and calculated risk-taking</p>
-              </div>
+          {/* 
+            twilio mailgun looker new reliq
+            segment amplitude stonly Notion
+            Trello
 
-              <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
-                <MdArrowOutward color={"DarkOrange"} />
-                <p>Challenge assumptions and existing processes</p>
-              </div>
+            sentry slack trello miro skalydraw  
 
-              <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
-                <MdArrowOutward color={"DarkOrange"} />
-                <p>Dedicate time and resources to exploring new ideas</p>
-              </div>
 
-              <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
-                <MdArrowOutward color={"DarkOrange"} />
-                <p>Learn from failures and iterate quickly</p>
-              </div>
+            microservices  DesignSystem
 
-              <div style={{ display: "flex", gap: 30, alignItems: "center" }}>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: 10,
-                    marginTop: 50,
-                    // backgroundColor: "#1b1b1b",
-                    borderRadius: 10,
-                    // border: "1px solid #505050",
-                  }}
-                >
-                  <BiLogoTypescript size={50} color={"#3178c6"} />
+            apollo typescript es6 react html 5  js typescrip webpack eslint lodash context 
+            react native HTMLCSS Preact
+            tamstack query Table Router Zod i18n
+            Prettier ReactHookForm StyledComponents
+            Motion Storybook Material-UI(MUI)
+            Expo Vite
+            
+            yarn workspace pnpm  k3s  git gitlab docker compose docker cloudflare herioku github pages
+            
+            electron
 
-                  <h5 style={{ color: "white" }}>Typescript</h5>
-                </div>
+            node graphql restAPI Express Supabase
+            postgresql mysql mongodb redis Hono Go
 
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: 10,
-                    marginTop: 50,
-                    // backgroundColor: "#1b1b1b",
-                    borderRadius: 10,
-                    // border: "1px solid #505050",
-                  }}
-                >
-                  <FaReact size={50} color={"#61dbfb"} />
+            wordpress magento prestashop
+            Shopify drupal
 
-                  <h5 style={{ color: "white" }}>React JS</h5>
-                </div>
+            Photoshop ilustrator adobe premier pro Figma 
+            
+            Cypress Jest TestingLibrary playwright
+            
+            vscode AndroidStudio 
+            
+            Tailwind CSS · shadcn
 
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: 10,
-                    marginTop: 50,
-                    // backgroundColor: "#1b1b1b",
-                    borderRadius: 10,
-                    // border: "1px solid #505050",
-                  }}
-                >
-                  <SiReactquery size={50} color={"rgb(239 68 68)"} />
+            Postman Insomnia Monorepo
+            Obsidian   */}
 
-                  <h5 style={{ color: "white" }}>React Query</h5>
-                </div>
-
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: 10,
-                    marginTop: 50,
-                    // backgroundColor: "#1b1b1b",
-                    borderRadius: 10,
-                    // border: "1px solid #505050",
-                  }}
-                >
-                  <SiMui size={50} color={"#569bbe"} />
-
-                  <h5 style={{ color: "white" }}>Material UI</h5>
-                </div>
-              </div>
-            </div>
-
-            {/* <div
+          {/* <div
               style={{
                 position: "relative",
                 width: 200,
@@ -540,7 +401,6 @@ const Home = () => {
                 </h4>
               </div>
             </div> */}
-          </div>
 
           {/* <Chip Icon={VscServerProcess} label="Backend" iconColor="orange" />
           hono express nodejs bun mysql mongodb */}
@@ -584,8 +444,8 @@ const Home = () => {
           <Chip Icon={MdLightbulbOutline} label="Documentation" iconColor="orange" />
           markdown
           <Chip Icon={MdLightbulbOutline} label="Deployment" iconColor="orange" />
-          vercel netlify
           <Chip Icon={MdLightbulbOutline} label="Performance" iconColor="orange" />
+          vercel netlify
           lighthouse
           <Chip Icon={MdLightbulbOutline} label="Security" iconColor="orange" />
           eslint prettier
@@ -620,12 +480,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* <h2>Tech Stack · 2025</h2>
-      <p>React.js · Storybook · Jest · Vite · MUI</p>
-      <h2>This Year I'm Into / Currently Improving</h2>
-      <p>TanStack · Hono · Go</p>
-      <h2>Exploring / Giving a Chance To</h2>
-      <p>Tailwind CSS · shadcn/ui</p> */}
       <h2>My Latest Project</h2>
       <p>
         Currently working on a visual learning tool for array methods in

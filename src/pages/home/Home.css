@@ -42,7 +42,7 @@
   }
 }
 
-/* @keyframes gradientAnimation {
+ @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
     -webkit-background-clip: text;
@@ -55,7 +55,7 @@
     background-position: 0% 50%;
     -webkit-background-clip: text;
   }
-} */
+} 
 
 .home-title {
   text-transform: uppercase;
