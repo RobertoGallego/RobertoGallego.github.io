@@ -5,22 +5,12 @@ import { useTheme } from "../../useTheme"
 import { Theme } from "../../ThemeContext"
 import { IoMdArrowUp } from "react-icons/io"
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
-import useDarkMode from "../../hooks/useDarkMode"
-import { MdModeStandby } from "react-icons/md"
-import { MdOutlineModeStandby } from "react-icons/md"
-import { IoInvertMode } from "react-icons/io5"
-import { IoInvertModeOutline } from "react-icons/io5"
-import { LuSettings } from "react-icons/lu"
-import { CiSettings } from "react-icons/ci"
-import { MdOutlineSettings } from "react-icons/md"
 import { RiSettings2Line } from "react-icons/ri"
-import { RiSettings4Line } from "react-icons/ri"
 import { FranceFlag, SpainFlag, UKFlag } from "../../assets"
 
 const Footer = () => {
   const { theme, setTheme } = useTheme()
   const { language, setLanguage } = useLanguage()
-  const { isDarkMode } = useDarkMode()
 
   const {
     t,
