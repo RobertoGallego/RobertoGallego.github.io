@@ -1,251 +1,132 @@
-import logo42 from "../../assets/42logo.png"
 import "./Footer.css"
-import logo42w from "../../assets/42logow.png"
-import useDarkMode from "../../hooks/useDarkMode"
 import { useTranslation } from "react-i18next"
 import useLanguage from "../../hooks/useLanguage"
 import { useTheme } from "../../useTheme"
 import { Theme } from "../../ThemeContext"
+import { IoMdArrowUp } from "react-icons/io"
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
+import useDarkMode from "../../hooks/useDarkMode"
+import { MdModeStandby } from "react-icons/md"
+import { MdOutlineModeStandby } from "react-icons/md"
+import { IoInvertMode } from "react-icons/io5"
+import { IoInvertModeOutline } from "react-icons/io5"
+import { LuSettings } from "react-icons/lu"
+import { CiSettings } from "react-icons/ci"
+import { MdOutlineSettings } from "react-icons/md"
+import { RiSettings2Line } from "react-icons/ri"
+import { RiSettings4Line } from "react-icons/ri"
+import { FranceFlag, SpainFlag, UKFlag } from "../../assets"
 
 const Footer = () => {
-  const { isDarkMode } = useDarkMode()
   const { theme, setTheme } = useTheme()
   const { language, setLanguage } = useLanguage()
+  const { isDarkMode } = useDarkMode()
 
   const {
     t,
     i18n: { changeLanguage },
   } = useTranslation()
 
-  const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedLanguage = e.target.value
-
-    changeLanguage(selectedLanguage)
-    setLanguage(selectedLanguage)
+  const handleThemeToggle = () => {
+    const themes: Theme[] = ["auto", "light", "dark"]
+    const nextTheme = themes[(themes.indexOf(theme) + 1) % themes.length]
+    setTheme(nextTheme)
   }
 
-  const logoSrc =
-    theme === "light"
-      ? logo42
-      : theme === "dark" || (theme === "system" && isDarkMode)
-      ? logo42w
-      : logo42
+  const handleLanguageToggle = () => {
+    const languages = ["fr", "en", "es"]
+    const nextLanguage =
+      languages[(languages.indexOf(language) + 1) % languages.length]
+    changeLanguage(nextLanguage)
+    setLanguage(nextLanguage)
+  }
 
-  const handleThemeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setTheme(e.target.value as Theme)
+  const handleBackToTopClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   return (
     <>
-      <div className="home-footer">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <h3
-            style={{
-              fontFamily: "roboto, Inter, system-ui",
-              fontWeight: 500,
-            }}
-          >
-            {t("Software_Engineer")}
-          </h3>
-
-          <p
-            style={{
-              fontSize: 14,
-              fontFamily: "Noto Serif, Inter, system-ui",
-              lineHeight: 1.4,
-            }}
-          >
-            {t("Clean_Code")}
-          </p>
-
-          <div style={{ display: "flex", gap: 10, marginTop: -2 }}>
-            <img src={logoSrc} alt="42" style={{ width: 42 }} />
-
-            <div style={{ marginTop: 2, marginLeft: -2 }}>
-              <p
-                style={{
-                  fontSize: 12,
-                  fontFamily: "Poppins, Inter, system-ui",
-                  fontWeight: 500,
-                }}
-              >
-                | Paris | Alumni
-              </p>
-            </div>
-          </div>
-          <p
-            style={{
-              fontSize: 12,
-              fontFamily: "roboto, Inter, system-ui",
-              marginTop: -6,
-            }}
-          >
-            {t("Location")}
-          </p>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "end",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              gap: 6,
-              alignItems: "end",
-              textAlign: "end",
-              fontFamily: "roboto, Poppins, Inter, system-ui",
-              fontSize: 12,
-              fontWeight: 500,
-              marginBottom: 4,
-            }}
-          >
-            {/* <a
-              href="https://www.linkedin.com/in/roberto-gallego-905753190/"
-              target="_blank"
-              rel="noopener noreferrer"
-              // className="gradient-border"
-              style={{
-                display: "flex",
-                // gap: 6,
-                alignItems: "end",
-                textAlign: "end",
-                fontFamily: "roboto, Poppins, Inter, system-ui",
-                fontSize: 12,
-                fontWeight: 500,
-              }}
-            >
-              <div className="circular-icon" />
-
-              <p
-                style={{
-                  fontWeight: 500,
-                  alignSelf: "center",
-                  alignContent: "center",
-                  textAlign: "center",
-                }}
-              >
-                {t("Open_To_Work")}
-              </p>
-            </a> */}
-
-            {/* <a
-              className="social-button"
-              href="https://www.linkedin.com/in/roberto-gallego-905753190/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedinIn
-                size={12}
-                style={{
-                  alignSelf: "center",
-                  alignContent: "center",
-                  textAlign: "center",
-                  marginRight: 4,
-                  color: theme === "light" ? "black" : "white",
-                }}
-              />
-              <p
-                style={{
-                  fontWeight: 500,
-                  alignSelf: "center",
-                  alignContent: "center",
-                  textAlign: "center",
-                }}
-              >
-                Linkedin
-              </p>
-            </a> */}
-
-            {/* <a
-              className="social-button"
-              href="https://github.com/RobertoGallego"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub
-                size={12}
-                style={{
-                  alignSelf: "center",
-                  alignContent: "center",
-                  textAlign: "center",
-                  marginRight: 4,
-                  color: theme === "light" ? "black" : "white",
-                }}
-              />
-              <p
-                style={{
-                  fontWeight: 500,
-                  alignSelf: "center",
-                  alignContent: "center",
-                  textAlign: "center",
-                }}
-              >
-                Github
-              </p>
-            </a> */}
-          </div>
-        </div> 
-      </div>
       <div className="footer">
         <div>
           <p className="footer-text">{t("Copyright")}</p>
         </div>
 
         <div style={{ display: "flex", gap: 10 }}>
-          <select
-            onChange={handleChangeLanguage}
-            value={language}
-            name="lang"
-            className="select-button"
-            id="cars"
+          <button
+            onClick={handleLanguageToggle}
             style={{
-              fontFamily: "roboto",
-              fontSize: 12,
-              textAlign: "center",
-              justifyContent: "center",
-              alignItems: "center",
-              borderRadius: 10,
-              fontWeight: 500,
-              alignSelf: "center",
-              alignContent: "center",
-              padding: "0.1rem 0.3rem",
+              width: 40,
+              padding: "0px 8px",
+              borderRadius: "8px",
               cursor: "pointer",
               display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              background: "var(--button-bg, #252525)",
+              border: "1px solid var(--button-bg, #535353)",
+              color: "var(--button-text, #b8b8b8)",
             }}
+            aria-label="toggle-language"
           >
-            <option value="fr">🇫🇷 Fr</option>
-            <option value="en">🇬🇧 En</option>
-            <option value="es">🇪🇸 Es</option>
-          </select>
+            {language === "fr" && (
+              <img src={FranceFlag} alt="French" style={{ width: 12 }} />
+            )}
+            {language === "en" && (
+              <img src={UKFlag} alt="English" style={{ width: 12 }} />
+            )}
+            {language === "es" && (
+              <img src={SpainFlag} alt="Spanish" style={{ width: 12 }} />
+            )}
 
-          <select
-            
-            value={theme}
-            className="select-button"
-            onChange={handleThemeChange}
+            <p style={{ textTransform: "capitalize" }}>{language}</p>
+          </button>
+
+          <button
+            onClick={handleThemeToggle}
             style={{
-              fontFamily: "roboto",
-              fontSize: 12,
-              textAlign: "center",
-              borderRadius: 10,
-              fontWeight: 500,
-              padding: "0.1rem 0.3rem",
+              padding: "0px 8px",
+              borderRadius: "8px",
               cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: "4px",
+              background: "var(--button-bg, #252525)",
+              border: "1px solid var(--button-bg, #535353)",
+              color: "var(--button-text, #b8b8b8)",
             }}
+            aria-label="toggle-theme"
           >
-            <option value="system">System</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-          </select>
+            {theme === "light" && (
+              <MdOutlineDarkMode size={18} color={"#b8b8b8"} />
+            )}
+            {theme === "dark" && (
+              <MdOutlineLightMode size={18} color={"#b8b8b8"} />
+            )}
+            {theme === "auto" && (
+              <RiSettings2Line size={18} color={"#b8b8b8"} />
+            )}
+            <p style={{ textTransform: "capitalize" }}>{theme}</p>
+          </button>
+
+          <button
+            onClick={handleBackToTopClick}
+            style={{
+              padding: "4px 8px",
+              borderRadius: "8px",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: 4,
+              background: "var(--button-bg, #252525)",
+              border: "1px solid var(--button-bg, #535353)",
+              color: "var(--button-text, #b8b8b8)",
+            }}
+            aria-label="back-to-top"
+          >
+            <p>{t("Back To Top")}</p>
+            <IoMdArrowUp size={18} color={"white"} />
+          </button>
         </div>
       </div>
     </>

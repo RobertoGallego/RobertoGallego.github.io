@@ -7,33 +7,42 @@ const BlogCard = () => {
     style={{
       display: "flex",
       gap: 20,
-      alignItems: "flex-start",
-      flexDirection: "row",
-      flexGrow: 1,
+      // alignItems: "flex-start",
+      // flexDirection: "row",
+      // flexGrow: 1,
       // flexBasis: "calc(50% - 20px)",
       // maxWidth: "calc(50% - 20px)",
-      boxSizing: "border-box",
+      // boxSizing: "border-box",
+
     }}
   >
     <img
       src={rob}
       alt="Ninjaco"
       style={{
+        // width: 150,
+        // height: 100,
+        // background: "blue",
+        // objectFit: "cover",
+        // borderRadius: 10,
+
         width: 150,
-        height: 100,
-        background: "blue",
+        aspectRatio: "2 / 1",
         objectFit: "cover",
         borderRadius: 10,
+        backgroundColor: "#1b1b1b",
+        minHeight: 80,
+        height: "auto",
       }}
     />
 
     <div
       style={{
-        flex: 1,
+        // flex: 1,
         display: "flex",
         flexDirection: "column",
         gap: 6,
-        height: 100,
+        // height: 100,
         justifyContent: "space-between",
       }}
     >
@@ -80,7 +89,7 @@ const BlogCard = () => {
           alignSelf: "flex-end",
         }}
       > */}
-      <div
+      {/* <div
         style={{
           display: "flex",
           gap: 6,
@@ -90,11 +99,10 @@ const BlogCard = () => {
       >
         <FaRegClock size={12} color="#818181" />
         <p style={{ fontSize: 12, color: "#818181" }}>8 min read</p>
-      </div>
+      </div> */}
       <p style={{ fontSize: 12, color: "#fff", fontWeight: 500 }}>
         Read More
       </p>
-      {/* </div> */}
     </div>
   </div>
   

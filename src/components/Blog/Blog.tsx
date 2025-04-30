@@ -1,28 +1,39 @@
 import BlogCard from "./BlogCard"
 
-
 const Blog = () => {
   return (
-    <div
+    <div style={{ width: "100%"  }}>
+      <h1>
+        <span style={{ color: "#fff" }}> Posts</span>
+        <span style={{ color: "#fff" }}> & Articles</span>
+      </h1>
+
+      <p style={{ color: "#818181", fontSize: 14 }}>
+        I write about my learnings, projects, and other interesting stuff.
+      </p>
+
+      <p style={{ color: "#818181", fontSize: 14 }}>
+        I also share articles that I find interesting and worth reading.
+      </p>
+
+      <div
         style={{
-          width: "100%",
-          marginTop: 60,
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "space-between",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
+          marginTop: 20,
+          marginBottom: 60,
           gap: 20,
-          marginBottom: 200,
-          alignItems: "flex-start",
+          justifyItems: "start",
         }}
       >
         <BlogCard />
         <BlogCard />
         <BlogCard />
         <BlogCard />
-        <BlogCard />
+
         {/* <BlogCard />         */}
       </div>
+    </div>
   )
 }
 

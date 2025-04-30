@@ -12,7 +12,7 @@ const About = () => {
   const logoSrc =
     theme === "light"
       ? logo42
-      : theme === "dark" || (theme === "system" && isDarkMode)
+      : theme === "dark" || (theme === "auto" && isDarkMode)
       ? logo42w
       : logo42
 
@@ -25,7 +25,7 @@ const About = () => {
         justifyContent: "center",
         backgroundColor: "#181816",
         width: "100%",
-        marginBottom: 100,
+        marginBottom: 80,
         padding: 60,
       }}
     >

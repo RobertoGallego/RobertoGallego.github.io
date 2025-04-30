@@ -1,7 +1,7 @@
 // ThemeContext.tsx
 import { createContext, useEffect, useState } from "react"
 
-export type Theme = "light" | "dark" | "system"
+export type Theme = "light" | "dark" | "auto"
 
 interface ThemeContextType {
   theme: Theme
@@ -17,7 +17,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState<Theme>(getInitialTheme)
 
   useEffect(() => {
-    if (theme === "system") {
+    if (theme === "auto") {
       document.documentElement.removeAttribute("data-theme")
 
       localStorage.removeItem("theme")

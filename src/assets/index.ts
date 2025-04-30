@@ -95,3 +95,6 @@ export { default as Yarn } from './yarn.svg';
 export { default as ZenBrowserDark } from './zen-browser-dark.svg';
 export { default as Zod } from './zod.svg';
 export { default as Zustand } from './zustand.svg';
+export { default as FranceFlag } from './france-flag-circular.svg';
+export { default as UKFlag } from './uk-flag-circular.svg';
+export { default as SpainFlag } from './spain-flag-circular.svg';

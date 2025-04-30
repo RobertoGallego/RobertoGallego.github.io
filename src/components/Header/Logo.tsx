@@ -10,7 +10,7 @@ const Logo = () => {
   const logoSrc =
     theme === "light"
       ? logo
-      : theme === "dark" || (theme === "system" && isDarkMode)
+      : theme === "dark" || (theme === "auto" && isDarkMode)
       ? logoDark
       : logo
 
