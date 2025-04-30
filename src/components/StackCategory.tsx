@@ -1,29 +1,108 @@
 import TechCard from "./TechCard/TechCard"
-import {
-  TbBrandCss3,
-  TbBrandHtml5,
-  TbBrandJavascript,
-  TbDeviceDesktopCode,
-} from "react-icons/tb"
-import { BiLogoTypescript } from "react-icons/bi"
-import { SiMui, SiReactquery } from "react-icons/si"
-import { FaArrowTrendUp, FaMasksTheater, FaReact } from "react-icons/fa6"
+import { TbDeviceDesktopCode } from "react-icons/tb"
+import { FaArrowTrendUp, FaMasksTheater } from "react-icons/fa6"
 import { MdArrowOutward, MdOutlineRoomService } from "react-icons/md"
-import zustand from "../assets/zustand.svg"
-import hono from "../assets/hono.svg"
-import expressDark from "../assets/Express.js_dark.svg"
-import expressLight from "../assets/Express.js_light.svg"
-import afterEffects from "../assets/after-effects.svg"
 
 import { VscServerProcess, VscTools } from "react-icons/vsc"
 import { IoMdCloudOutline } from "react-icons/io"
 import { PiBinocularsFill } from "react-icons/pi"
+import {
+  AppleDark,
+  AppleLight,
+  BetterAuthLight,
+  Bitwarden,
+  Bun,
+  ChartJS,
+  Chrome,
+  Cloudflare,
+  CloudflareWorkers,
+  CSSOld,
+  Cypress,
+  Deepseek,
+  DigitalOcean,
+  Discord,
+  Docker,
+  Hono,
+  Drizzle,
+  Electron,
+  Expo,
+  ExpressDark,
+  ExpressLight,
+  Figma,
+  Firebase,
+  Firefox,
+  GoDark,
+  GoLight,
+  GraphQL,
+  HTML5,
+  JavaScript,
+  JWT,
+  MaterialUI,
+  Million,
+  MongoDB,
+  Neon,
+  NodeJS,
+  PostgreSQL,
+  Preact,
+  PrismaDark,
+  PrismaLight,
+  ReactQuery,
+  ReactRouter,
+  Redis,
+  SocketIOLight,
+  SolidJS,
+  Storybook,
+  StyledComponents,
+  Supabase,
+  TailwindCSS,
+  TanStack,
+  TypeScript,
+  ViteJS,
+  Zod,
+  Zustand,
+  Jest,
+  Vitest,
+  Playwright,
+  Sentry,
+  Heroku,
+  Ubuntu,
+  Premiere,
+  Photoshop,
+  Illustrator,
+  VSCode,
+  Neovim,
+  Notion,
+  Obsidian,
+  Linear,
+  Postman,
+  Slack,
+  GitHubLight,
+  GitHubDark,
+  Git,
+  GitLab,
+  MarkdownLight,
+  PnpmLight,
+  Yarn,
+  Homebrew,
+  Windows,
+  ZenBrowserDark,
+  Shopify,
+  Stripe,
+  Twilio,
+  OBS,
+  WordPress,
+  HuggingFace,
+  DotenvX,
+  OpenAILight,
+  Pilot,
+  OXC,
+  PrettierDark,
+  MotionDark,
+} from "../assets"
 
 interface TechStackProps {
   src?: string | { light: string; dark: string }
   label: string
-  Icon?: React.ElementType
-  iconColor?: string
 }
 
 interface StackCategoryProps {
@@ -50,45 +129,27 @@ const StackCategoryData = [
       "Learn from failures and iterate quickly",
     ],
     techStack: [
-      {
-        src: zustand,
-        label: "Zustand",
-      },
-      {
-        Icon: TbBrandHtml5,
-        label: "HTML5",
-        iconColor: "#e34c26",
-      },
-      {
-        Icon: TbBrandCss3,
-        label: "CSS3",
-        iconColor: "#1572b6",
-      },
-      {
-        Icon: TbBrandJavascript,
-        label: "JavaScript",
-        iconColor: "#f7df1e",
-      },
-      {
-        Icon: BiLogoTypescript,
-        label: "TypeScript",
-        iconColor: "#3178c6",
-      },
-      {
-        Icon: FaReact,
-        label: "React",
-        iconColor: "#61dbfb",
-      },
-      {
-        Icon: SiMui,
-        label: "Material UI",
-        iconColor: "#569bbe",
-      },
-      {
-        Icon: SiReactquery,
-        label: "React Query",
-        iconColor: "rgb(239 68 68)",
-      },
+      { src: ChartJS, label: "ChartJS" },
+      { src: Electron, label: "Electron" },
+      { src: Expo, label: "Expo" },
+      { src: HTML5, label: "HTML5" },
+      { src: CSSOld, label: "CSS" },
+      { src: JavaScript, label: "JavaScript" },
+      { src: TypeScript, label: "TypeScript" },
+      { src: Zustand, label: "Zustand" },
+      { src: ReactQuery, label: "React Query" },
+      { src: ReactRouter, label: "React Router" },
+      { src: MaterialUI, label: "Material UI" },
+      { src: StyledComponents, label: "Styled" },
+      { src: TailwindCSS, label: "Tailwind CSS" },
+      { src: ViteJS, label: "Vite" },
+      { src: Zod, label: "Zod" },
+      { src: TanStack, label: "TanStack" },
+      { src: Preact, label: "Preact" },
+      { src: SolidJS, label: "SolidJS" },
+      { src: Storybook, label: "Storybook" },
+      { src: Million, label: "Million.js" },
+      { src: MotionDark, label: "Motion" },
     ],
   },
   {
@@ -105,14 +166,23 @@ const StackCategoryData = [
       "Learn from failures and iterate quickly",
     ],
     techStack: [
-      {
-        src: hono,
-        label: "Hono",
-      },
-      {
-        src: { light: expressLight, dark: expressDark },
-        label: "Express",
-      },
+      { src: { light: ExpressLight, dark: ExpressDark }, label: "Express" },
+      { src: SocketIOLight, label: "Socket.IO" },
+      { src: JWT, label: "JWT" },
+      { src: { light: PrismaLight, dark: PrismaDark }, label: "Prisma" },
+      { src: GraphQL, label: "GraphQL" },
+      { src: MongoDB, label: "MongoDB" },
+      { src: PostgreSQL, label: "PostgreSQL" },
+      { src: Redis, label: "Redis" },
+      { src: Supabase, label: "Supabase" },
+      { src: Drizzle, label: "Drizzle" },
+      { src: Bun, label: "Bun" },
+      { src: Firebase, label: "Firebase" },
+      { src: Neon, label: "Neon" },
+      { src: { light: GoLight, dark: GoDark }, label: "Go" },
+      { src: Hono, label: "Hono" },
+      { src: NodeJS, label: "Node.js" },
+      { src: BetterAuthLight, label: "BetterAuth" },
     ],
   },
   {
@@ -128,6 +198,13 @@ const StackCategoryData = [
       "Dedicate time and resources to exploring new ideas",
       "Learn from failures and iterate quickly",
     ],
+    techStack: [
+      { src: Cypress, label: "Cypress" },
+      { src: Jest, label: "Jest" },
+      { src: Vitest, label: "Vitest" },
+      { src: Playwright, label: "Playwright" },
+      { src: Sentry, label: "Sentry" },
+    ],
   },
   {
     id: 4,
@@ -141,6 +218,14 @@ const StackCategoryData = [
       "Challenge assumptions and existing processes",
       "Dedicate time and resources to exploring new ideas",
       "Learn from failures and iterate quickly",
+    ],
+    techStack: [
+      { src: Docker, label: "Docker" },
+      { src: Firebase, label: "Firebase" },
+      { src: DigitalOcean, label: "DigitalOcean" },
+      { src: Cloudflare, label: "Cloudflare" },
+      { src: CloudflareWorkers, label: "Cloudflare Workers" },
+      { src: Heroku, label: "Heroku" },
     ],
   },
   {
@@ -157,11 +242,11 @@ const StackCategoryData = [
       "Learn from failures and iterate quickly",
     ],
     techStack: [
-      {
-        src: afterEffects,
-        label: "After Effects",
-      },
-    ]
+      { src: Photoshop, label: "Photoshop" },
+      { src: Premiere, label: "Premiere" },
+      { src: Illustrator, label: "Illustrator" },
+      { src: Figma, label: "Figma" },
+    ],
   },
   {
     id: 6,
@@ -175,6 +260,30 @@ const StackCategoryData = [
       "Challenge assumptions and existing processes",
       "Dedicate time and resources to exploring new ideas",
       "Learn from failures and iterate quickly",
+    ],
+    techStack: [
+      { src: VSCode, label: "VSCode" },
+      { src: Neovim, label: "Neovim" },
+      { src: Notion, label: "Notion" },
+      { src: Obsidian, label: "Obsidian" },
+      { src: Linear, label: "Linear" },
+      { src: Postman, label: "Postman" },
+      { src: Slack, label: "Slack" },
+      { src: Discord, label: "Discord" },
+      { src: Chrome, label: "Chrome" },
+      { src: Firefox, label: "Firefox" },
+      { src: { light: GitHubLight, dark: GitHubDark }, label: "GitHub" },
+      { src: Git, label: "Git" },
+      { src: GitLab, label: "GitLab" },
+      { src: MarkdownLight, label: "Markdown" },
+      { src: PnpmLight, label: "PNPM" },
+      { src: Yarn, label: "Yarn" },
+      { src: Homebrew, label: "Homebrew" },
+      { src: { light: AppleLight, dark: AppleDark }, label: "Apple" },
+      { src: Windows, label: "Windows" },
+      { src: ZenBrowserDark, label: "Zen Browser" },
+      { src: Ubuntu, label: "Ubuntu" },
+      { src: DotenvX, label: "Dotenv" },
     ],
   },
   {
@@ -218,6 +327,26 @@ const StackCategoryData = [
       "Dedicate time and resources to exploring new ideas",
       "Learn from failures and iterate quickly",
     ],
+    techStack: [
+      {
+        src: Bitwarden,
+        label: "Bitwarden",
+      },
+      {
+        src: Deepseek,
+        label: "Deepseek",
+      },
+      { src: Shopify, label: "Shopify" },
+      { src: Stripe, label: "Stripe" },
+      { src: Twilio, label: "Twilio" },
+      { src: OBS, label: "OBS" },
+      { src: HuggingFace, label: "Hugging Face" },
+      { src: WordPress, label: "WordPress" },
+      { src: OpenAILight, label: "OpenAI" },
+      { src: Pilot, label: "Pilot" },
+      { src: OXC, label: "OXC" },
+      { src: PrettierDark, label: "Prettier" },
+    ],
   },
 ]
 
@@ -258,6 +387,8 @@ const StackCategory = ({
         display: "flex",
         justifyContent: "space-between",
         marginTop: 40,
+        flexWrap: "wrap",
+        // maxWidth: 800
       }}
     >
       <div
@@ -326,15 +457,17 @@ const StackCategory = ({
           <p>{categoryKeys[3]}</p>
         </div>
 
-        <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: 20,
+            alignItems: "center",
+            flexWrap: "wrap",
+            marginTop: 20,
+          }}
+        >
           {techStack.map((tech) => (
-            <TechCard
-              key={tech.label}
-              src={tech.src}
-              label={tech.label}
-              Icon={tech.Icon}
-              iconColor={tech.iconColor}
-            />
+            <TechCard key={tech.label} src={tech.src} label={tech.label} />
           ))}
         </div>
       </div>
