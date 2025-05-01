@@ -2,11 +2,8 @@ import BlogCard from "./BlogCard"
 
 const Blog = () => {
   return (
-    <div style={{ width: "100%"  }}>
-      <h1>
-        <span style={{ color: "#fff" }}> Posts</span>
-        <span style={{ color: "#fff" }}> & Articles</span>
-      </h1>
+    <div style={{ width: "100%" }}>
+      <h1>Posts & Articles</h1>
 
       <p style={{ color: "#818181", fontSize: 14 }}>
         I write about my learnings, projects, and other interesting stuff.

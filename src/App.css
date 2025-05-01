@@ -89,7 +89,6 @@
 }
 
 .footer-text {
-  font-family: "Poppins", Inter, system-ui;
   font-size: 12px;
   font-weight: 500;
   padding-block: 10px;
@@ -202,23 +201,5 @@
 
   .home-cards-fullsize {
     justify-content: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .span-title {
-    color: #ffe6c9;
-  }
-}
-
-[data-theme="dark"] {
-  .span-title {
-    color: #ffe6c9;
-  }
-}
-
-[data-theme="light"] {
-  .span-title {
-    color: #49423b;
   }
 }

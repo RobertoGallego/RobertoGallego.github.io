@@ -11,9 +11,6 @@
   );
   padding: 10px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  /* flex-shrink: 0; */
-  /* width: 300px; */
-  /* max-width: 368px; */
   height: clamp(300px, 35vh, 320px);
 }
 
@@ -139,7 +136,4 @@
   .text-card-extra-upper {
     color: #252525;
   }
-}
-
-[data-theme="light"] {
 }

@@ -88,10 +88,10 @@ const Footer = () => {
             aria-label="toggle-theme"
           >
             {theme === "light" && (
-              <MdOutlineDarkMode size={18} color={"#b8b8b8"} />
+              <MdOutlineLightMode size={18} color={"#b8b8b8"} />
             )}
             {theme === "dark" && (
-              <MdOutlineLightMode size={18} color={"#b8b8b8"} />
+              <MdOutlineDarkMode size={18} color={"#b8b8b8"} />
             )}
             {theme === "auto" && (
               <RiSettings2Line size={18} color={"#b8b8b8"} />
@@ -108,7 +108,7 @@ const Footer = () => {
               display: "flex",
               alignItems: "center",
               gap: 4,
-              background: "var(--button-bg, #252525)",
+              // background: "var(--button-bg, #252525)",
               border: "1px solid var(--button-bg, #535353)",
               color: "var(--button-text, #b8b8b8)",
             }}
