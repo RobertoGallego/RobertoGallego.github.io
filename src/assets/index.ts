@@ -98,3 +98,7 @@ export { default as Zustand } from './zustand.svg';
 export { default as FranceFlag } from './france-flag-circular.svg';
 export { default as UKFlag } from './uk-flag-circular.svg';
 export { default as SpainFlag } from './spain-flag-circular.svg';
+export { default as Noop } from './noop.png';
+export { default as Klarys } from './klarys.png';
+export { default as Tecnostrike } from './tecnostrike.png';
+export { default as Taste } from './taste.jpg';

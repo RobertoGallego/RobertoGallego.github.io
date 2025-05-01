@@ -1,9 +1,14 @@
 import rob from "../../assets/rob.jpg"
 import { FaArrowRight, FaRegClock } from "react-icons/fa6"
 import { IoCalendarNumber } from "react-icons/io5"
-import tech from "../../assets/tech.jpg"
 
-const JournalCard = () => {
+interface JournalCardProps {
+  srcImage?: string
+}
+
+const JournalCard = ({
+  srcImage = rob,
+}: JournalCardProps) => {
   return (
     <div
           style={{
@@ -18,10 +23,10 @@ const JournalCard = () => {
         >
           <div style={{ display: "flex", gap: 10, flex: 1 }}>
             <img
-              src={rob}
+              src={srcImage}
               alt="Ninjaco"
               style={{
-                width: 100,
+                width: 120,
                 aspectRatio: "2 / 1",
                 objectFit: "cover",
                 borderRadius: 10,
@@ -34,7 +39,6 @@ const JournalCard = () => {
             <div
               style={{
                 display: "flex",
-                // height: 80,
                 justifyContent: "space-between",
                 flexDirection: "column",
                 width: "100%",
@@ -52,7 +56,6 @@ const JournalCard = () => {
                 <h3
                   style={{
                     display: "-webkit-box",
-                    // WebkitLineClamp: 1,
                     WebkitBoxOrient: "vertical",
                     overflow: "hidden",
                   }}
@@ -66,7 +69,6 @@ const JournalCard = () => {
                     gap: 6,
                     alignItems: "center",
                     flexWrap: "wrap",
-                    // maxWidth: 100,
                     justifyContent: "flex-end",
                   }}
                 >
