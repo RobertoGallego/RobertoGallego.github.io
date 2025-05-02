@@ -1,17 +1,24 @@
 import BlogCard from "./BlogCard"
+import {
+  Rncp6a,
+  Rncp7a,
+  Level21,
+  Thpdark,
+  AccessDark,
+  ClpsDark,
+} from "../../assets"
+import { FranceFlag, Ausflag } from "../../assets"
 
 const Blog = () => {
   return (
     <div style={{ width: "100%" }}>
-      <h1>Posts & Articles</h1>
+      <h1>Diplome & Certificate</h1>
 
       <p style={{ color: "#818181", fontSize: 14 }}>
-        I write about my learnings, projects, and other interesting stuff.
+        professional achievements and certifications
       </p>
 
-      <p style={{ color: "#818181", fontSize: 14 }}>
-        I also share articles that I find interesting and worth reading.
-      </p>
+      <p style={{ color: "#818181", fontSize: 14 }}></p>
 
       <div
         style={{
@@ -23,12 +30,62 @@ const Blog = () => {
           justifyItems: "start",
         }}
       >
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        <BlogCard
+          srcImage={Rncp7a}
+          title={"RNCP 7, It Expert en Architecture Informatique"}
+          date={"2019 - 2023"}
+          chip={"Ecole 42"}
+          srcFlag={FranceFlag}
+          chipFlag={"Paris, France"}
+        />
 
-        {/* <BlogCard />         */}
+        <BlogCard
+          srcImage={Level21}
+          title={"Certificate of Completion 42, Computer Architect"}
+          date={"2019 - 2023"}
+          chip={"Ecole 42"}
+          srcFlag={FranceFlag}
+          chipFlag={"Paris, France"}
+        />
+
+        <BlogCard
+          srcImage={Rncp6a}
+          title={"RNCP 6, It Solution Designer and Developer Web and Mobile"}
+          date={"2019 - 2021"}
+          chip={"Ecole 42"}
+          srcFlag={FranceFlag}
+          chipFlag={"Paris, France"}
+        />
+
+        <BlogCard
+          srcImage={Thpdark}
+          title={"Formation Fullstack Web"}
+          date={"2018"}
+          chip={"The Hacking Project"}
+          srcFlag={FranceFlag}
+          chipFlag={"Paris, France"}
+        />
+        
+        <BlogCard
+          srcImage={ClpsDark}
+          title={"Formation linguistique FLE, Francais Langue Etrangere"}
+          date={"2017"}
+          chip={"CLPS FLE"}
+          srcFlag={FranceFlag}
+          chipFlag={"Paris, France"}
+        />
+        
+        <BlogCard
+          srcImage={AccessDark}
+          title={"Diplome d'Acces Langue Anglais"}
+          date={"2015"}
+          chip={"Access"}
+          srcFlag={Ausflag}
+          chipFlag={"Sydney, Australia"}
+        />
+
+        {/* <BlogCard blogTitle={"Unab"}/> */}
+        {/* <BlogCard blogTitle={"Epic react"}/> */}
       </div>
     </div>
   )
