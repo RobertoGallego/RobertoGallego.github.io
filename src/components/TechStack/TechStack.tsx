@@ -16,23 +16,27 @@ const TechStack = () => {
     <div
       style={{
         display: "flex",
-        gap: 20,
+        // gap: 10,
         flexDirection: "column",
+        fontSize: 16,
         // maxWidth: 800,
-        marginBottom: 60,
         alignItems: "flex-start",
         width: "100%",
-        marginTop: 60,
+        marginTop: 100,
+        paddingInline: 10,
+        backgroundColor: "#181816",
+        padding: 60,
+        borderRadius: 10,
       }}
     >
       {/* <p>Core Values</p> */}
 
       <h1>Tech Stack · 2025</h1>
 
-      <p style={{ maxWidth: 700 }}>
-        Our values aren't just words on a wall—they're the principles that guide
-        our daily actions and long-term vision, shaping our culture and driving
-        our success.
+      <p style={{ maxWidth: 700, fontSize: 16, marginTop: 5 }}>
+        My stack includes technologies I truly enjoy working with—tools I'm
+        passionate about, that I believe in long-term. It also features
+        frameworks and platforms I've used professionally and projects.
       </p>
 
       <div
@@ -45,7 +49,13 @@ const TechStack = () => {
         }}
       >
         <div
-          style={{ display: "flex", gap: 4, flexWrap: "wrap", maxWidth: 800 }}
+          style={{
+            display: "flex",
+            gap: 4,
+            flexWrap: "wrap",
+            maxWidth: 800,
+            marginTop: 15,
+          }}
         >
           <Chip
             Icon={TbDeviceDesktopCode}

@@ -114,3 +114,5 @@ export { default as ClpsDark } from './clpslangdark.png';
 export { default as Access } from './accesslang.png';
 export { default as AccessDark } from './accesslangdark.png';
 export { default as Ausflag } from './aussie-flag.svg';
+export { default as ChileFlag } from './chileflag.svg';
+export { default as Switzerlandflag } from './switzerlandflag.svg';

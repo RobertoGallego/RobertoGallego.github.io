@@ -4,6 +4,7 @@ import useDarkMode from "../../hooks/useDarkMode"
 import logo42 from "../../assets/42logo.png"
 import logo42w from "../../assets/42logow.png"
 import ninjaco from "../../assets/ninjaco.png"
+import { FranceFlag } from "../../assets"
 
 const About = () => {
   const { isDarkMode } = useDarkMode()
@@ -25,8 +26,10 @@ const About = () => {
         justifyContent: "center",
         backgroundColor: "#181816",
         width: "100%",
-        marginBottom: 80,
+        marginBottom: 100,
+        marginTop: 100,
         padding: 60,
+        borderRadius: 10,
       }}
     >
       <div
@@ -54,7 +57,7 @@ const About = () => {
               width: 80,
               height: 80,
               border: "4px solid #0f0f0e",
-              outline: "1px solid #fff",
+              outline: "2px solid #3d3834",
             }}
           >
             <img src={ninjaco} alt="Profile" />
@@ -65,15 +68,26 @@ const About = () => {
             <p>Digital Craftsman ( Artist / Developer / Designer )</p>
           </div>
         </div>
-        <p style={{ maxWidth: 700 }}>
-        
+        <p
+          style={{
+            maxWidth: 700,
+            fontSize: 16,
+            textAlign: "justify",
+          }}
+        >
           I am a seasoned graphic designer with over 14 years of experience in
           creating visually appealing and user-centric designs. My expertise
           spans across UI design, design systems, and custom illustrations,
           helping clients bring their digital visions to life.
         </p>
-        
-        <p style={{ maxWidth: 700 }}>
+
+        <p
+          style={{
+            maxWidth: 700,
+            fontSize: 16,
+            textAlign: "justify",
+          }}
+        >
           Currently, I work remotely for Notion, where I design template UIs,
           convert them into HTML and CSS, and provide comprehensive support to
           our users. I am passionate about crafting elegant and functional
@@ -81,9 +95,18 @@ const About = () => {
         </p>
 
         <div style={{ display: "flex", gap: 20 }}>
-          <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              gap: 6,
+              alignItems: "center",
+              flexDirection: "row",
+            }}
+          >
             <FaMapMarkerAlt />
-            <p>Rennes, France 🇫🇷 </p>
+            <p>Rennes, France</p>
+
+            <img src={FranceFlag} alt="Spanish" style={{ width: 12 }} />
           </div>
 
           <div style={{ display: "flex", gap: 6, alignItems: "center" }}>

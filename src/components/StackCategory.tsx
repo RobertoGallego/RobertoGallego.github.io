@@ -407,7 +407,7 @@ const StackCategory = ({
         >
           <CategoryIcon
             style={{
-              backgroundColor: "#1b1b1b",
+              backgroundColor: "#000000",
               borderRadius: 10,
               padding: 10,
             }}
@@ -422,7 +422,8 @@ const StackCategory = ({
           style={{
             fontSize: 16,
             color: "grey",
-            marginBlock: 10,
+            marginTop: 10,
+            marginBottom: 20,
             maxWidth: 450,
           }}
         >
@@ -460,7 +461,7 @@ const StackCategory = ({
         <div
           style={{
             display: "flex",
-            gap: 20,
+            gap: 10,
             alignItems: "center",
             flexWrap: "wrap",
             marginTop: 20,

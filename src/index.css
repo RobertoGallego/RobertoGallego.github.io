@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Triodion&display=swap");
 
-
 :root {
   font-family: "Roboto", "Triodion", "Noto Serif", "Poppins", Inter, system-ui,
     Avenir, Helvetica, Arial, sans-serif;
 
   color-scheme: light dark;
-
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -49,7 +47,7 @@ h2 {
 }
 
 button {
-  all: unset; 
+  all: unset;
   cursor: pointer;
 }
 
@@ -181,18 +179,35 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+/* #45437a, */
+
 @media (prefers-color-scheme: dark) {
   :root {
     color: #e2e2e2;
-    background-color: #252525;
+    background-color: #1d1d1d;
+    background: linear-gradient(
+      -45deg,
+      #232236,
+      #1d1d1d,
+      #232236,
+      #1d1d1d,
+      #232236
+    );
   }
 
   body {
-    background-color: #252525;
+    background-color: #1d1d1d;
+    background: linear-gradient(
+      -45deg,
+      #232236,
+      #1d1d1d,
+      #232236,
+      #1d1d1d,
+      #232236
+    );
     color: #e2e2e2;
   }
 
-  
   p,
   h1,
   h2,
@@ -207,11 +222,27 @@ textarea:not([rows]) {
 [data-theme="dark"] {
   :root {
     color: #e2e2e2;
-    background-color: #252525;
+    background-color: #1d1d1d;
+    background: linear-gradient(
+      -45deg,
+      #232236,
+      #1d1d1d,
+      #232236,
+      #1d1d1d,
+      #232236
+    );
   }
 
   body {
-    background-color: #252525;
+    background-color: #1d1d1d;
+    background: linear-gradient(
+      -45deg,
+      #232236,
+      #1d1d1d,
+      #232236,
+      #1d1d1d,
+      #232236
+    );
     color: #e2e2e2;
   }
 
@@ -230,11 +261,27 @@ textarea:not([rows]) {
   :root {
     color: #213547;
     background-color: #e2e2e2;
+    background: linear-gradient(
+      -45deg,
+      #e2e2e2,
+      #e2e2e2,
+      #f7d8c4,
+      #e2e2e2,
+      #e2e2e2
+    );
   }
 
   body {
     background-color: #e2e2e2;
     color: #213547;
+    background: linear-gradient(
+      -45deg,
+      #e2e2e2,
+      #e2e2e2,
+      #f7d8c4,
+      #e2e2e2,
+      #e2e2e2
+    );
   }
 
   p,

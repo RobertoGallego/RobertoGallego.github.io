@@ -21,7 +21,7 @@ const Chip: React.FC<ChipProps> = ({
       className="chip"
       onClick={onClick}
       style={{
-        border: status ? "1px solid #696969" : undefined,
+        outline: status ? "1px solid #696969" : undefined,
         borderRadius: "10px",
         padding: "4px 10px",
         cursor: "pointer",
@@ -29,7 +29,8 @@ const Chip: React.FC<ChipProps> = ({
         display: "flex",
         alignItems: "center",
         gap: 8,
-        backgroundColor: "#1b1b1b",
+        // backgroundColor: "#1b1b1b"
+        backgroundColor: status ? "#383838" : "#0a0a0a",
       }}
     >
       <Icon color={iconColor} size={18} />

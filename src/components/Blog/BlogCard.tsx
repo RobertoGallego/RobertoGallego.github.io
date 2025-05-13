@@ -1,5 +1,6 @@
 import rob from "../../assets/rob.jpg"
 import { SpainFlag } from "../../assets"
+import { FiExternalLink } from "react-icons/fi"
 
 interface BlogCardProps {
   srcImage?: string
@@ -33,9 +34,11 @@ const BlogCard = ({
           aspectRatio: "2 / 1",
           objectFit: "contain",
           borderRadius: 10,
-          backgroundColor: "#1b1b1b",
+          backgroundColor: "#181816",
           minHeight: 80,
           height: "auto",
+          border: "1px solid #2e2e2e",
+          padding: 4,
         }}
       />
 
@@ -78,7 +81,7 @@ const BlogCard = ({
             }}
           >
             <img src={srcFlag} alt="Spanish" style={{ width: 12 }} />
-            
+
             {chipFlag}
           </p>
 
@@ -95,9 +98,20 @@ const BlogCard = ({
           {title}
         </h3>
 
-        <p style={{ fontSize: 12, color: "#fff", fontWeight: 500 }}>
-          Read More
-        </p>
+        <div
+          style={{
+            display: "flex",
+            gap: 4,
+            alignItems: "center",
+          }}
+        >
+          <p style={{ fontSize: 12, color: "#fff", fontWeight: 500 }}>
+            Read More
+          </p>
+
+          <FiExternalLink size={12} color="#fff" />
+        </div>
+        {/* <FiExternalLink size={12} color="#fff" /> */}
       </div>
     </div>
   )
