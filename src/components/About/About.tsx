@@ -65,7 +65,7 @@ const About = () => {
           <div>
             <h3>Roberto GALLEGO</h3>
             <p>Software Engineer</p>
-            <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+            <p>Digital Craftsman</p>
           </div>
         </div>
         <p
@@ -75,10 +75,12 @@ const About = () => {
             textAlign: "justify",
           }}
         >
-          I am a seasoned graphic designer with over 14 years of experience in
-          creating visually appealing and user-centric designs. My expertise
-          spans across UI design, design systems, and custom illustrations,
-          helping clients bring their digital visions to life.
+          I'm a software engineer with a strong focus on frontend development
+          and user experience. My career has been shaped by a mix of hands-on
+          experience, continuous learning, and a genuine passion for creating
+          thoughtful digital solutions. I care about writing clean, efficient
+          code and building interfaces that are both functional, elegant, and
+          performance-oriented.
         </p>
 
         <p
@@ -88,13 +90,14 @@ const About = () => {
             textAlign: "justify",
           }}
         >
-          Currently, I work remotely for Notion, where I design template UIs,
-          convert them into HTML and CSS, and provide comprehensive support to
-          our users. I am passionate about crafting elegant and functional
-          designs that enhance user experiences.
+          After studying at École 42 in Paris, I deepened my technical and
+          collaborative skills through intensive, project-based learning. Today,
+          I enjoy working on modern web technologies, improving UI architecture,
+          and contributing to products that deliver high-quality user
+          experiences.
         </p>
 
-        <div style={{ display: "flex", gap: 20 }}>
+        <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
           <div
             style={{
               display: "flex",

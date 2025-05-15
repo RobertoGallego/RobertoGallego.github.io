@@ -67,7 +67,7 @@ const Blog = () => {
           srcImage={Thpdark}
           title={"Formation fullstack web"}
           date={"2018"}
-          chip={"The Hacking Project"}
+          chip={"THP"}
           srcFlag={FranceFlag}
           chipFlag={"Paris, France"}
         />

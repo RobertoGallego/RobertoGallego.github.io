@@ -52,9 +52,9 @@ const Footer = () => {
             display: "flex",
             alignItems: "center",
             gap: "8px",
-            background: "var(--button-bg, #252525)",
+            // background: "var(--button-bg, #252525)",
             border: "1px solid var(--button-bg, #535353)",
-            color: "var(--button-text, #b8b8b8)",
+            // color: "var(--button-text, #b8b8b8)",
           }}
           aria-label="toggle-language"
         >
@@ -80,19 +80,15 @@ const Footer = () => {
             display: "flex",
             alignItems: "center",
             gap: "4px",
-            background: "var(--button-bg, #252525)",
+            // background: "var(--button-bg, #252525)",
             border: "1px solid var(--button-bg, #535353)",
-            color: "var(--button-text, #b8b8b8)",
+            // color: "var(--button-text, #b8b8b8)",
           }}
           aria-label="toggle-theme"
         >
-          {theme === "light" && (
-            <MdOutlineLightMode size={18} color={"#b8b8b8"} />
-          )}
-          {theme === "dark" && (
-            <MdOutlineDarkMode size={18} color={"#b8b8b8"} />
-          )}
-          {theme === "auto" && <RiSettings2Line size={18} color={"#b8b8b8"} />}
+          {theme === "light" && <MdOutlineLightMode size={18} />}
+          {theme === "dark" && <MdOutlineDarkMode size={18} />}
+          {theme === "auto" && <RiSettings2Line size={18} />}
           <p style={{ textTransform: "capitalize" }}>{theme}</p>
         </button>
 
@@ -105,14 +101,12 @@ const Footer = () => {
             display: "flex",
             alignItems: "center",
             gap: 4,
-            // background: "var(--button-bg, #252525)",
             border: "1px solid var(--button-bg, #535353)",
-            color: "var(--button-text, #b8b8b8)",
           }}
           aria-label="back-to-top"
         >
           <p>{t("Back To Top")}</p>
-          <IoMdArrowUp size={18} color={"white"} />
+          <IoMdArrowUp size={18} />
         </button>
       </div>
     </div>

@@ -20,7 +20,6 @@ const useDarkMode = () => {
     }
   }, [])
 
-  console.log("isDarkMode", isDarkMode)
   return { isDarkMode }
 }
 

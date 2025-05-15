@@ -85,8 +85,8 @@ const HeroSection = () => {
       <div style={{ marginTop: 20, display: "flex" }}>
         <button
           style={{
-            color: "#fff",
-            border: "1px solid #fff",
+            color: isDarkMode ? "#fff" : "#000",
+            border: isDarkMode ? "1px solid #fff" : "1px solid #000",
             borderRadius: "5px",
             padding: "6px 12px",
             cursor: "pointer",
