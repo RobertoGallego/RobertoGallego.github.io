@@ -1,0 +1,33 @@
+.chip {
+  border-radius: 10px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--chip-bg);
+  outline: none;
+}
+
+.chip.status {
+  outline: 1px solid var(--chip-outline);
+}
+
+[data-theme="light"] .chip {
+  --chip-bg: #eeeeee;
+  --chip-outline: #bbbbbb;
+}
+
+[data-theme="light"] .chip.status {
+  --chip-bg: #dbdbdb;
+}
+
+[data-theme="dark"] .chip {
+  --chip-bg: #0a0a0a;
+  --chip-outline: #696969;
+}
+
+[data-theme="dark"] .chip.status {
+  --chip-bg: #383838;
+}

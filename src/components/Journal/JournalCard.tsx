@@ -2,6 +2,7 @@ import rob from "../../assets/rob.jpg"
 import { IoCalendarNumber } from "react-icons/io5"
 import { FiExternalLink } from "react-icons/fi"
 import { MdOutlineWorkOutline } from "react-icons/md"
+import useDarkMode from "../../hooks/useDarkMode"
 
 type Flag = { src: string; label: string }
 
@@ -23,15 +24,17 @@ const JournalCard = ({
   flags = [],
   workPosition = "",
 }: JournalCardProps) => {
+  const { isDarkMode } = useDarkMode()
+
   return (
     <div
       style={{
         display: "flex",
         justifyContent: "space-between",
-        border: "1px solid #2e2e2e",
+        border: isDarkMode ? "1px solid #2e2e2e" : "1px solid #eaeaea",
         padding: 10,
         borderRadius: 10,
-        backgroundColor: "#181816",
+        backgroundColor: isDarkMode ? "#181816" : "#fff",
         marginBottom: 10,
       }}
     >
@@ -144,11 +147,10 @@ const JournalCard = ({
                   style={{
                     alignSelf: "center",
                     fontSize: 12,
-                    backgroundColor: "#383838",
+                    backgroundColor: isDarkMode ? "#383838" : "#eeeeee",
                     paddingBlock: 2,
                     paddingInline: 8,
                     borderRadius: 8,
-                    color: "#fff",
                     fontWeight: 500,
                     display: "flex",
                     gap: 4,
@@ -170,7 +172,6 @@ const JournalCard = ({
               <p
                 style={{
                   fontSize: 12,
-                  color: "#fff",
                   fontWeight: 500,
                   whiteSpace: "nowrap",
                 }}
@@ -178,7 +179,7 @@ const JournalCard = ({
                 Read more
               </p>
 
-              <FiExternalLink size={12} color="#fff" />
+              <FiExternalLink size={12} />
             </div>
           </div>
         </div>

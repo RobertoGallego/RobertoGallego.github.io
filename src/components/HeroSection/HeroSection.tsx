@@ -103,7 +103,7 @@ const HeroSection = () => {
 
         <button
           style={{
-            backgroundColor: isDarkMode ? "#fff" : "#000",
+            backgroundColor: isDarkMode ? "#ff6347" : "#762d20",
             color: isDarkMode ? "#000" : "#fff",
             border: "none",
             borderRadius: "5px",

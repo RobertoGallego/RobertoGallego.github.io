@@ -8,8 +8,10 @@ import { PiBinocularsFill } from "react-icons/pi"
 import { MdOutlineRoomService } from "react-icons/md"
 import StackCategoryContent from "../StackCategory"
 import { useState } from "react"
+import useDarkMode from "../../hooks/useDarkMode"
 
 const TechStack = () => {
+  const { isDarkMode } = useDarkMode()
   const [categoryNumber, setCategory] = useState(1)
 
   return (
@@ -24,7 +26,7 @@ const TechStack = () => {
         width: "100%",
         marginTop: 100,
         paddingInline: 10,
-        backgroundColor: "#181816",
+        backgroundColor: isDarkMode ? "#181816" : "#f8f8f8",
         padding: 60,
         borderRadius: 10,
       }}

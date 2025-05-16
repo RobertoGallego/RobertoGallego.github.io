@@ -18,9 +18,9 @@ const TechCard = ({ label, src }: TechCardProps) => {
         alignItems: "center",
         justifyContent: "center",
         gap: 10,
-        backgroundColor: "#333333",
+        backgroundColor: isDarkMode ? "#333333" : "#dbdbdb",
         borderRadius: 10,
-        border: "1px solid #505050",
+        border: isDarkMode ? "1px solid #505050" : "1px solid #aaaaaa",
         width: 80,
         height: 80,
       }}
@@ -38,7 +38,6 @@ const TechCard = ({ label, src }: TechCardProps) => {
 
       <h5
         style={{
-          color: "white",
           fontSize: 12,
           fontWeight: 500,
           textAlign: "center",

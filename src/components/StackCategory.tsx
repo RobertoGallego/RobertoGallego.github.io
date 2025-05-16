@@ -99,6 +99,7 @@ import {
   PrettierDark,
   MotionDark,
 } from "../assets"
+import useDarkMode from "../hooks/useDarkMode"
 
 interface TechStackProps {
   src?: string | { light: string; dark: string }
@@ -380,6 +381,8 @@ const StackCategory = ({
   categoryKeys,
   techStack = [],
 }: StackCategoryProps) => {
+  const { isDarkMode } = useDarkMode()
+
   return (
     <div
       style={{
@@ -407,7 +410,7 @@ const StackCategory = ({
         >
           <CategoryIcon
             style={{
-              backgroundColor: "#000000",
+              backgroundColor: isDarkMode ? "#000000": "#eeeeee",
               borderRadius: 10,
               padding: 10,
             }}

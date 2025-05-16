@@ -1,24 +1,36 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import ThemeContext from "../ThemeContext"
 
 const useDarkMode = () => {
-  const [isDarkMode, setIsDarkMode] = useState(
-    () =>
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-  )
+  const context = useContext(ThemeContext)
+
+  if (!context) {
+    throw new Error("useDarkMode must be used within a ThemeProvider")
+  }
+
+  const { theme } = context
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    if (theme === "dark") return true
+    if (theme === "light") return false
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+  })
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
-    const handleChange = (e: MediaQueryListEvent) => {
-      setIsDarkMode(e.matches)
-    }
+    if (theme === "auto") {
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
 
-    mediaQuery.addEventListener("change", handleChange)
+      const handleChange = (e: MediaQueryListEvent) => {
+        setIsDarkMode(e.matches)
+      }
 
-    return () => {
-      mediaQuery.removeEventListener("change", handleChange)
+      setIsDarkMode(mediaQuery.matches)
+      mediaQuery.addEventListener("change", handleChange)
+
+      return () => mediaQuery.removeEventListener("change", handleChange)
+    } else {
+      setIsDarkMode(theme === "dark")
     }
-  }, [])
+  }, [theme])
 
   return { isDarkMode }
 }

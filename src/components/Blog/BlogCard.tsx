@@ -1,6 +1,7 @@
 import rob from "../../assets/rob.jpg"
 import { SpainFlag } from "../../assets"
 import { FiExternalLink } from "react-icons/fi"
+import useDarkMode from "../../hooks/useDarkMode"
 
 interface BlogCardProps {
   srcImage?: string
@@ -19,6 +20,8 @@ const BlogCard = ({
   srcFlag = SpainFlag,
   chipFlag = "Spanish",
 }: BlogCardProps) => {
+  const { isDarkMode } = useDarkMode()
+
   return (
     <div
       style={{
@@ -34,10 +37,10 @@ const BlogCard = ({
           aspectRatio: "2 / 1",
           objectFit: "contain",
           borderRadius: 10,
-          backgroundColor: "#181816",
+          backgroundColor: isDarkMode ? "#181816" : "#eeeeee",
           minHeight: 80,
           height: "auto",
-          border: "1px solid #2e2e2e",
+          border: isDarkMode ? "1px solid #2e2e2e" : "1px solid #dddddd",
           padding: 4,
         }}
       />
@@ -55,11 +58,10 @@ const BlogCard = ({
             style={{
               alignSelf: "center",
               fontSize: 12,
-              backgroundColor: "#383838",
+              backgroundColor: isDarkMode ? "#383838" : "#eeeeee",
               paddingBlock: 2,
               paddingInline: 8,
               borderRadius: 8,
-              color: "#fff",
               fontWeight: 500,
             }}
           >
@@ -70,11 +72,10 @@ const BlogCard = ({
             style={{
               alignSelf: "center",
               fontSize: 12,
-              backgroundColor: "#383838",
+              backgroundColor: isDarkMode ? "#383838" : "#eeeeee",
               paddingBlock: 2,
               paddingInline: 8,
               borderRadius: 8,
-              color: "#fff",
               fontWeight: 500,
               display: "flex",
               gap: 4,
@@ -105,11 +106,9 @@ const BlogCard = ({
             alignItems: "center",
           }}
         >
-          <p style={{ fontSize: 12, color: "#fff", fontWeight: 500 }}>
-            Read More
-          </p>
+          <p style={{ fontSize: 12, fontWeight: 500 }}>Read More</p>
 
-          <FiExternalLink size={12} color="#fff" />
+          <FiExternalLink size={12} />
         </div>
         {/* <FiExternalLink size={12} color="#fff" /> */}
       </div>

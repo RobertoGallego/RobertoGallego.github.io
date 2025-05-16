@@ -24,7 +24,7 @@ const About = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#181816",
+        backgroundColor: isDarkMode ? "#181816" : "#f8f8f8",
         width: "100%",
         marginBottom: 100,
         marginTop: 100,
@@ -113,7 +113,11 @@ const About = () => {
           </div>
 
           <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
-            <img src={logoSrc} alt="42" style={{ width: 21 }} />
+            <img
+              src={isDarkMode ? logoSrc : logo42}
+              alt="42"
+              style={{ width: 21 }}
+            />
             <p>École 42 Paris | Alumni</p>
           </div>
         </div>

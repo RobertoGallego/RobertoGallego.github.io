@@ -4,12 +4,18 @@ import {
   Rncp7a,
   Level21,
   Thpdark,
+  Thp,
   AccessDark,
+  Access,
   ClpsDark,
+  Clps,
 } from "../../assets"
 import { FranceFlag, Ausflag } from "../../assets"
+import useDarkMode from "../../hooks/useDarkMode"
 
 const Blog = () => {
+  const { isDarkMode } = useDarkMode()
+
   return (
     <div style={{ width: "100%", marginTop: 100, paddingInline: 10 }}>
       <div
@@ -17,7 +23,6 @@ const Blog = () => {
           display: "flex",
           flexDirection: "column",
           marginBottom: 20,
-          // gap: 5,
         }}
       >
         <h1>Diplome & Certificate</h1>
@@ -64,7 +69,7 @@ const Blog = () => {
         />
 
         <BlogCard
-          srcImage={Thpdark}
+          srcImage={isDarkMode ? Thpdark : Thp}
           title={"Formation fullstack web"}
           date={"2018"}
           chip={"THP"}
@@ -73,7 +78,7 @@ const Blog = () => {
         />
         
         <BlogCard
-          srcImage={ClpsDark}
+          srcImage={isDarkMode ? ClpsDark : Clps}
           title={"Formation linguistique francais langue etrangere"}
           date={"2017"}
           chip={"CLPS FLE"}
@@ -82,7 +87,7 @@ const Blog = () => {
         />
         
         <BlogCard
-          srcImage={AccessDark}
+          srcImage={isDarkMode ? AccessDark : Access}
           title={"Diplome d'anglais professionnel"}
           date={"2015"}
           chip={"Access"}
