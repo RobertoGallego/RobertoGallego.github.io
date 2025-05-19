@@ -3,6 +3,7 @@ import { IoCalendarNumber } from "react-icons/io5"
 import { FiExternalLink } from "react-icons/fi"
 import { MdOutlineWorkOutline } from "react-icons/md"
 import useDarkMode from "../../hooks/useDarkMode"
+import "./WorkCard.css"
 
 type Flag = { src: string; label: string }
 
@@ -28,6 +29,7 @@ const JournalCard = ({
 
   return (
     <div
+      className="journal-card-wrapper"
       style={{
         display: "flex",
         justifyContent: "space-between",
@@ -38,22 +40,11 @@ const JournalCard = ({
         marginBottom: 10,
       }}
     >
-      <div style={{ display: "flex", gap: 10, flex: 1, 
-        // flexWrap: "wrap"
-         }}>
-        <img
-          src={srcImage}
-          alt="Ninjaco"
-          style={{
-            width: 120,
-            aspectRatio: "2 / 1",
-            objectFit: "cover",
-            borderRadius: 10,
-            backgroundColor: "#1b1b1b",
-            minHeight: 80,
-            height: "auto",
-          }}
-        />
+      <div
+        className="work-card-content"
+        style={{ display: "flex", gap: 10, flex: 1 }}
+      >
+        <img className="work-card-image" src={srcImage} alt="Ninjaco" />
 
         <div
           style={{
@@ -61,7 +52,6 @@ const JournalCard = ({
             justifyContent: "space-between",
             flexDirection: "column",
             width: "100%",
-            // flex: 1,
           }}
         >
           <div
@@ -121,7 +111,6 @@ const JournalCard = ({
               color: "gray",
               maxWidth: 700,
               display: "-webkit-box",
-              WebkitLineClamp: 1,
               WebkitBoxOrient: "vertical",
               overflow: "hidden",
             }}
@@ -135,7 +124,6 @@ const JournalCard = ({
               gap: 6,
               alignItems: "flex-end",
               justifyContent: "space-between",
-              flexWrap: "wrap",
             }}
           >
             <div

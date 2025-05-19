@@ -18,10 +18,8 @@ const TechStack = () => {
     <div
       style={{
         display: "flex",
-        // gap: 10,
         flexDirection: "column",
         fontSize: 16,
-        // maxWidth: 800,
         alignItems: "flex-start",
         width: "100%",
         marginTop: 100,
@@ -31,8 +29,6 @@ const TechStack = () => {
         borderRadius: 10,
       }}
     >
-      {/* <p>Core Values</p> */}
-
       <h1>Tech Stack · 2025</h1>
 
       <p style={{ maxWidth: 700, fontSize: 16, marginTop: 5 }}>

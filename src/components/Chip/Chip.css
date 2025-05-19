@@ -6,28 +6,27 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--chip-bg);
+  background-color: #0a0a0a;
   outline: none;
 }
 
 .chip.status {
-  outline: 1px solid var(--chip-outline);
+  outline: 1px solid #bbbbbb;
+  background-color: #383838;
 }
 
 [data-theme="light"] .chip {
-  --chip-bg: #eeeeee;
-  --chip-outline: #bbbbbb;
+  background-color: #eeeeee;
 }
 
 [data-theme="light"] .chip.status {
-  --chip-bg: #dbdbdb;
+  background-color: #dbdbdb;
 }
 
 [data-theme="dark"] .chip {
-  --chip-bg: #0a0a0a;
-  --chip-outline: #696969;
+  background-color: #0a0a0a;
 }
 
 [data-theme="dark"] .chip.status {
-  --chip-bg: #383838;
+  background-color: #383838;
 }

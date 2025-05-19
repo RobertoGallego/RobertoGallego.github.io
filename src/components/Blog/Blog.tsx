@@ -18,7 +18,7 @@ const Blog = () => {
 
   return (
     <div style={{ width: "100%", marginTop: 100, paddingInline: 10 }}>
-      {/* <div
+      <div
         style={{
           display: "flex",
           flexDirection: "column",
@@ -29,19 +29,13 @@ const Blog = () => {
         <p style={{ maxWidth: 700, fontSize: 16, marginTop: 5 }}>
         professional achievements and certifications
         </p>
-      </div> */}
+      </div>
 
 
       <div
         style={{
-          // display: "grid",
-          // gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
-          // justifyItems: "start",
-          // backgroundColor: "red",
           display: "flex",
-          // flexDirection: "row",
           flexWrap: "wrap",
-          // width: 400,
           marginTop: 20,
           gap: 20,
         }}
