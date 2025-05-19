@@ -27,6 +27,7 @@ const BlogCard = ({
       style={{
         display: "flex",
         gap: 20,
+        flex: "1 1 400px",
       }}
     >
       <img
@@ -53,7 +54,14 @@ const BlogCard = ({
           justifyContent: "space-between",
         }}
       >
-        <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: 6,
+            alignItems: "center",
+            flexWrap: "wrap-reverse",
+          }}
+        >
           <p
             style={{
               alignSelf: "center",

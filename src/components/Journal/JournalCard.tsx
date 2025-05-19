@@ -38,7 +38,9 @@ const JournalCard = ({
         marginBottom: 10,
       }}
     >
-      <div style={{ display: "flex", gap: 10, flex: 1 }}>
+      <div style={{ display: "flex", gap: 10, flex: 1, 
+        // flexWrap: "wrap"
+         }}>
         <img
           src={srcImage}
           alt="Ninjaco"
@@ -59,6 +61,7 @@ const JournalCard = ({
             justifyContent: "space-between",
             flexDirection: "column",
             width: "100%",
+            // flex: 1,
           }}
         >
           <div
@@ -86,7 +89,7 @@ const JournalCard = ({
                 gap: 6,
                 alignItems: "center",
                 flexWrap: "wrap",
-                justifyContent: "flex-end",
+                // justifyContent: "flex-end",
               }}
             >
               <div
@@ -132,6 +135,7 @@ const JournalCard = ({
               gap: 6,
               alignItems: "flex-end",
               justifyContent: "space-between",
+              flexWrap: "wrap",
             }}
           >
             <div
@@ -144,6 +148,7 @@ const JournalCard = ({
             >
               {flags.map(({ src, label }) => (
                 <p
+                  key={label}
                   style={{
                     alignSelf: "center",
                     fontSize: 12,
@@ -154,6 +159,7 @@ const JournalCard = ({
                     fontWeight: 500,
                     display: "flex",
                     gap: 4,
+                    whiteSpace: "nowrap",
                   }}
                 >
                   <img src={src} alt="Spanish" style={{ width: 12 }} />

@@ -48,22 +48,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* <div
-        className="home-presentation-image"
-        style={{
-          borderRadius: 100,
-          overflow: "hidden",
-          width: 200,
-          height: 30,
-          marginBottom: 10,
-          textAlign: "center",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#fff",
-        }}
-      /> */}
-
       <h1 className="home-title">{t("Roberto Gallego")}</h1>
 
       <h2 style={{ marginTop: 15, textAlign: "center" }}>
@@ -72,11 +56,11 @@ const HeroSection = () => {
 
       <p
         style={{
-          maxWidth: 500,
+          maxWidth: 450,
           textAlign: "center",
           marginTop: 5,
           fontSize: 16,
-        }}
+          }}
       >
         An evolving portfolio collection that reflects my work with modern
         tools, scalable architecture, and clean design
@@ -110,7 +94,7 @@ const HeroSection = () => {
             padding: "6px 12px",
             cursor: "pointer",
             margin: "0 10px",
-            fontSize: "14px",
+            fontSize: "16px",
             fontWeight: "bold",
           }}
         >

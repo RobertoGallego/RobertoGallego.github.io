@@ -11,7 +11,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const getInitialTheme = (): Theme =>
-    (localStorage.getItem("theme") as Theme)
+    (localStorage.getItem("theme") as Theme) ?? "auto"
 
   const [theme, setTheme] = useState<Theme>(getInitialTheme)
 
@@ -21,7 +21,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
       localStorage.removeItem("theme")
     } else {
-      document.documentElement.setAttribute("data-theme", theme)
+      document.documentElement.setAttribute("data-theme", theme || "light")
     }
     localStorage.setItem("theme", theme)
   }, [theme])

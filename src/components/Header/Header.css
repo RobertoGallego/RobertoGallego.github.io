@@ -18,9 +18,3 @@
 .navbar-item {
   list-style: none;
 }
-
-@media (max-width: 447px) {
-  .header {
-    justify-content: center;
-  }
-}

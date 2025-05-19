@@ -14,8 +14,9 @@
 }
 
 .home-presentation {
-  margin-top: 100px;
+  margin-top: 80px;
   padding-block: 100px;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
