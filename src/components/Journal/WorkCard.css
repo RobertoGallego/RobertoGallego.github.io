@@ -8,7 +8,7 @@
   height: auto;
 }
 
-@media (max-width: 601px) {
+@media (max-width: 500px) {
   .work-card-content {
     flex-wrap: wrap;
   }

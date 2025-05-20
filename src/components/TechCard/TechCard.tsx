@@ -18,11 +18,12 @@ const TechCard = ({ label, src }: TechCardProps) => {
         alignItems: "center",
         justifyContent: "center",
         gap: 10,
-        backgroundColor: isDarkMode ? "#333333" : "#dbdbdb",
         borderRadius: 10,
         border: isDarkMode ? "1px solid #505050" : "1px solid #aaaaaa",
+        padding: 4,
         width: 80,
         height: 80,
+        // cursor: "pointer",
       }}
     >
       {src && (
@@ -30,8 +31,8 @@ const TechCard = ({ label, src }: TechCardProps) => {
           src={srcImg}
           alt={label}
           style={{
-            width: 30,
-            height: 30,
+            width: 20,
+            height: 20,
           }}
         />
       )}

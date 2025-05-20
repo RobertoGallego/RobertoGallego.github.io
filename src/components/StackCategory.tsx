@@ -391,7 +391,6 @@ const StackCategory = ({
         justifyContent: "space-between",
         marginTop: 40,
         flexWrap: "wrap",
-        // maxWidth: 800
       }}
     >
       <div
