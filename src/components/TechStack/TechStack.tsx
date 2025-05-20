@@ -44,6 +44,7 @@ const TechStack = () => {
           flexWrap: "wrap",
           flexDirection: "column",
           alignItems: "flex-start",
+          width: "100%",
         }}
       >
         <div

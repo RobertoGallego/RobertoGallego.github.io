@@ -31,7 +31,7 @@ const Journal = () => {
         srcImage={Klarys}
         title={"Klarys the fresh food platform"}
         subtitle={
-          "The first eProcurement platform adapted to the specific challenges of fresh food."
+          "The first e-procurement platform adapted to the specific challenges of fresh food."
         }
         date={"2021 - 2024"}
         chip={"React"}

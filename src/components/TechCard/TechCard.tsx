@@ -1,4 +1,6 @@
 import useDarkMode from "../../hooks/useDarkMode"
+import { FaHeart, FaStar } from "react-icons/fa"
+import { AiOutlineFileSearch } from "react-icons/ai";
 
 interface TechCardProps {
   label: string
@@ -8,45 +10,76 @@ interface TechCardProps {
 const TechCard = ({ label, src }: TechCardProps) => {
   const { isDarkMode } = useDarkMode()
 
-  const srcImg =  typeof src === "string" ? src : isDarkMode ? src?.dark : src?.light
+  const srcImg =
+    typeof src === "string" ? src : isDarkMode ? src?.dark : src?.light
 
   return (
     <div
       style={{
         display: "flex",
-        flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-between",
         gap: 10,
-        borderRadius: 10,
-        border: isDarkMode ? "1px solid #505050" : "1px solid #aaaaaa",
+        border: isDarkMode ? "1px solid #333333" : "1px solid #dddddd",
         padding: 4,
-        width: 80,
-        height: 80,
-        // cursor: "pointer",
+        flex: 1,
+        flexGrow: 1,
+        flexShrink: 1,
+        flexBasis: 100,
+        flexWrap: "wrap",
       }}
     >
-      {src && (
-        <img
-          src={srcImg}
-          alt={label}
+      <div style={{ display: "flex", alignItems: "center" }}>
+        {src && (
+          <img
+            src={srcImg}
+            alt={label}
+            style={{
+              width: 20,
+              height: 20,
+              marginLeft: 10,
+            }}
+          />
+        )}
+        <h5
           style={{
-            width: 20,
-            height: 20,
+            fontSize: 12,
+            fontWeight: 500,
+            textAlign: "center",
+            marginLeft: 10,
+          }}
+        >
+          {label}
+        </h5>
+      </div>
+
+      <div>
+        <FaHeart
+          style={{
+            color: isDarkMode ? "#FF6347" : "#FF6347",
+            fontSize: 14,
+            alignSelf: "center",
+            marginRight: 10,
           }}
         />
-      )}
+        <FaStar
+          style={{
+            color: isDarkMode ? "#FFD700" : "#FFD700",
+            fontSize: 14,
+            alignSelf: "center",
+            marginRight: 10,
+          }}
+        />
 
-      <h5
-        style={{
-          fontSize: 12,
-          fontWeight: 500,
-          textAlign: "center",
-          margin: 0,
-        }}
-      >
-        {label}
-      </h5>
+        <AiOutlineFileSearch
+          style={{
+            color: isDarkMode ? "#00BFFF" : "#00BFFF",
+            fontSize: 14,
+            alignSelf: "center",
+            marginRight: 10,
+          }}
+        />
+      </div>
     </div>
   )
 }

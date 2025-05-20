@@ -398,6 +398,7 @@ const StackCategory = ({
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
+          width: "100%",
         }}
       >
         <div
@@ -409,7 +410,7 @@ const StackCategory = ({
         >
           <CategoryIcon
             style={{
-              backgroundColor: isDarkMode ? "#000000": "#eeeeee",
+              backgroundColor: isDarkMode ? "#000000" : "#eeeeee",
               borderRadius: 10,
               padding: 10,
             }}
@@ -425,20 +426,18 @@ const StackCategory = ({
             fontSize: 16,
             color: "grey",
             marginTop: 10,
-            marginBottom: 20,
+            marginBottom: 10,
             maxWidth: 450,
           }}
         >
           {categoryDescription}
         </p>
-        <h4>Key Principles:</h4>
 
         <div
           style={{
             display: "flex",
             gap: 4,
             alignItems: "center",
-            marginTop: 10,
           }}
         >
           <MdArrowOutward color={categoryColor} />
@@ -462,10 +461,9 @@ const StackCategory = ({
 
         <div
           style={{
-            display: "flex",
-            gap: 10,
-            alignItems: "center",
-            flexWrap: "wrap",
+            width: "100%",
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
             marginTop: 20,
           }}
         >
