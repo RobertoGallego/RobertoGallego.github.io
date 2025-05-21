@@ -1,6 +1,4 @@
 import useDarkMode from "../../hooks/useDarkMode"
-import { FaHeart, FaStar } from "react-icons/fa"
-import { AiOutlineFileSearch } from "react-icons/ai";
 
 interface TechCardProps {
   label: string
@@ -20,7 +18,7 @@ const TechCard = ({ label, src }: TechCardProps) => {
         alignItems: "center",
         justifyContent: "space-between",
         gap: 10,
-        border: isDarkMode ? "1px solid #333333" : "1px solid #dddddd",
+        border: isDarkMode ? "0.5px solid #333333" : "0.5px solid #dddddd",
         padding: 4,
         flex: 1,
         flexGrow: 1,
@@ -53,7 +51,7 @@ const TechCard = ({ label, src }: TechCardProps) => {
         </h5>
       </div>
 
-      <div>
+      {/* <div>
         <FaHeart
           style={{
             color: isDarkMode ? "#FF6347" : "#FF6347",
@@ -62,6 +60,7 @@ const TechCard = ({ label, src }: TechCardProps) => {
             marginRight: 10,
           }}
         />
+
         <FaStar
           style={{
             color: isDarkMode ? "#FFD700" : "#FFD700",
@@ -79,7 +78,7 @@ const TechCard = ({ label, src }: TechCardProps) => {
             marginRight: 10,
           }}
         />
-      </div>
+      </div> */}
     </div>
   )
 }

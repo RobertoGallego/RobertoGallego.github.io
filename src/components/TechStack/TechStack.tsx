@@ -31,7 +31,7 @@ const TechStack = () => {
     >
       <h1>Tech Stack · 2025</h1>
 
-      <p style={{ maxWidth: 700, fontSize: 16, marginTop: 5 }}>
+      <p style={{ maxWidth: 700, fontSize: 16, marginTop: 5, color: "grey" }}>
         My stack includes technologies I truly enjoy working with—tools I'm
         passionate about, that I believe in long-term. It also features
         frameworks and platforms I've used professionally and projects.
