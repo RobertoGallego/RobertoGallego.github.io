@@ -4,6 +4,7 @@ import { FiExternalLink } from "react-icons/fi"
 import { MdOutlineWorkOutline } from "react-icons/md"
 import useDarkMode from "../../hooks/useDarkMode"
 import "./WorkCard.css"
+import { useTranslation } from "react-i18next"
 
 type Flag = { src: string; label: string }
 
@@ -26,6 +27,7 @@ const JournalCard = ({
   workPosition = "",
 }: JournalCardProps) => {
   const { isDarkMode } = useDarkMode()
+  const { t } = useTranslation()
 
   return (
     <div
@@ -79,7 +81,6 @@ const JournalCard = ({
                 gap: 6,
                 alignItems: "center",
                 flexWrap: "wrap",
-                // justifyContent: "flex-end",
               }}
             >
               <div
@@ -170,7 +171,7 @@ const JournalCard = ({
                   whiteSpace: "nowrap",
                 }}
               >
-                Read more
+                {t("Button.Read_More")}
               </p>
 
               <FiExternalLink size={12} />

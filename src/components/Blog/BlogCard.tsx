@@ -2,6 +2,7 @@ import rob from "../../assets/rob.jpg"
 import { SpainFlag } from "../../assets"
 import { FiExternalLink } from "react-icons/fi"
 import useDarkMode from "../../hooks/useDarkMode"
+import { useTranslation } from "react-i18next"
 
 interface BlogCardProps {
   srcImage?: string
@@ -21,6 +22,7 @@ const BlogCard = ({
   chipFlag = "Spanish",
 }: BlogCardProps) => {
   const { isDarkMode } = useDarkMode()
+  const { t } = useTranslation()
 
   return (
     <div
@@ -114,11 +116,12 @@ const BlogCard = ({
             alignItems: "center",
           }}
         >
-          <p style={{ fontSize: 12, fontWeight: 500 }}>Read More</p>
+          <p style={{ fontSize: 12, fontWeight: 500 }}>
+            {t("Button.Read_More")}
+          </p>
 
           <FiExternalLink size={12} />
         </div>
-        {/* <FiExternalLink size={12} color="#fff" /> */}
       </div>
     </div>
   )

@@ -9,10 +9,12 @@ import { MdOutlineRoomService } from "react-icons/md"
 import StackCategoryContent from "../StackCategory"
 import { useState } from "react"
 import useDarkMode from "../../hooks/useDarkMode"
+import { useTranslation } from "react-i18next"
 
 const TechStack = () => {
   const { isDarkMode } = useDarkMode()
   const [categoryNumber, setCategory] = useState(1)
+  const { t } = useTranslation()
 
   return (
     <div
@@ -29,12 +31,10 @@ const TechStack = () => {
         borderRadius: 10,
       }}
     >
-      <h1>Tech Stack · 2025</h1>
+      <h1>{t("TechStack.Title")}</h1>
 
       <p style={{ maxWidth: 700, fontSize: 16, marginTop: 5, color: "grey" }}>
-        My stack includes technologies I truly enjoy working with—tools I'm
-        passionate about, that I believe in long-term. It also features
-        frameworks and platforms I've used professionally and projects.
+        {t("TechStack.Description")}
       </p>
 
       <div
@@ -97,7 +97,7 @@ const TechStack = () => {
           <Chip
             Icon={LiaPenNibSolid}
             status={categoryNumber === 5}
-            label="Design & UX"
+            label={t("TechStack.Design")}
             onClick={() => {
               setCategory(5)
             }}
@@ -107,7 +107,7 @@ const TechStack = () => {
           <Chip
             Icon={VscTools}
             status={categoryNumber === 6}
-            label="Productivity Tools"
+            label={t("TechStack.Productivity")}
             iconColor="purple"
             onClick={() => {
               setCategory(6)
@@ -127,7 +127,7 @@ const TechStack = () => {
           <Chip
             Icon={FaArrowTrendUp}
             status={categoryNumber === 8}
-            label="Currently Improving"
+            label={t("TechStack.Improving")}
             iconColor="Teal"
             onClick={() => {
               setCategory(8)
@@ -137,7 +137,7 @@ const TechStack = () => {
           <Chip
             Icon={MdOutlineRoomService}
             status={categoryNumber === 9}
-            label="Services"
+            label={t("TechStack.Services")}
             iconColor="Salmon"
             onClick={() => {
               setCategory(9)

@@ -30,6 +30,161 @@
   },
   "Explore": {
     "part1": "In this space, you can explore my projects.",
-    "part2": "Optimized performance, clean code and web trends." 
+    "part2": "Optimized performance, clean code and web trends."
+  },
+  "HeroSection": {
+    "Title": "Welcome explore my journey in app engineering",
+    "Description": "An evolving portfolio collection that reflects my work with modern tools, scalable architecture, and clean design",
+    "Button_Primary": "Available for work",
+    "Button_Secondary": "Contact me"
+  },
+  "TechStack": {
+    "Title": "Tech Stack · 2025",
+    "Description": "My stack includes technologies I truly enjoy working with—tools I'm passionate about, that I believe in long-term. It also features frameworks and platforms I've used professionally and projects.",
+    "Productivity": "Productivity Tools",
+    "Design": "Design & UX",
+    "Improving": "Currently Improving",
+    "Services": "Services"
+  },
+  "CategoryContent": {
+    "Title": "Responsive and accessible interfaces modern web tech.",
+    "frontend": {
+      "Title": "Frontend",
+      "Description": "Responsive and accessible interfaces modern web tech.",
+      "Description_A": "Responsive UI design and accessibility",
+      "Description_B": "Component-based architecture with React and Preact",
+      "Description_C": "Responsive UI design and accessibility",
+      "Description_D": "Responsive UI design and accessibility"
+    },
+    "backend": {
+      "Title": "Backend",
+      "Description": "Creating efficient APIs and scalable server-side architectures.",
+      "Description_A": "API design and RESTful/GraphQL services",
+      "Description_B": "Database modeling and ORM usage (Prisma, Drizzle)",
+      "Description_C": "Authentication and authorization (JWT, BetterAuth)",
+      "Description_D": "Scalable, event-driven architecture"
+    },
+    "Testing": {
+      "Title": "Testing",
+      "Description": "Ensuring reliability through automated testing and quality checks.",
+      "Description_A": "Automated end-to-end and unit testing",
+      "Description_B": "End-to-end testing with Playwright",
+      "Description_C": "Integration testing with Cypress",
+      "Description_D": "Continuous integration and delivery pipelines"
+    },
+    "Cloud": {
+      "Title": "Cloud",
+      "Description": "Leveraging cloud services for scalable and efficient applications.",
+      "Description_A": "Containerization and orchestration (Docker, Docker Compose)",
+      "Description_B": "Serverless architecture and microservices",
+      "Description_C": "Serverless functions and edge computing",
+      "Description_D": "CI/CD pipelines for automated deployments"
+    },
+    "Design": {
+      "Title": "Design",
+      "Description": "Creating visually appealing and user-friendly interfaces.",
+      "Description_A": "UI/UX design principles and best practices",
+      "Description_B": "Prototyping and wireframing tools",
+      "Description_C": "Design systems and component libraries",
+      "Description_D": "Responsive design and mobile-first approach"
+    },
+    "Productivity": {
+      "Title": "Productivity Tools",
+      "Description": "Streamlining workflows with the right development tools.",
+      "Description_A": "Version control workflows (Git, GitHub, GitLab)",
+      "Description_B": "Project management and documentation (Notion, Linear)",
+      "Description_C": "Code editors and IDE customization (VSCode, Neovim)",
+      "Description_D": "Communication and collaboration platforms (Slack, Discord)"
+    },
+    "R&D": {
+      "Title": "R&D",
+      "Description": "Experimenting with cutting-edge technologies and ideas.",
+      "Description_A": "Exploration of emerging technologies",
+      "Description_B": "Proof of concept and experimental prototyping",
+      "Description_C": "Data analysis and user behavior research",
+      "Description_D": "Iterative innovation and feedback incorporation"
+    },
+    "Improving": {
+      "Title": "Currently Improving",
+      "Description": "Continuously leveling up my technical skills.",
+      "Description_A": "Learning new frameworks and tools",
+      "Description_B": "Refactoring and code quality improvement",
+      "Description_C": "Performance benchmarking",
+      "Description_D": "Keeping up-to-date with industry trends"
+    },
+    "Service": {
+      "Title": "Service",
+      "Description": "Integrating third-party solutions seamlessly and securely.",
+      "Description_A": "Integration of third-party APIs and SaaS tools",
+      "Description_B": "Automation and workflow optimization",
+      "Description_C": "Security and compliance considerations",
+      "Description_D": "User support and incident monitoring"
+    }
+  },
+  "Works": {
+    "Title": "Work Experience",
+    "Description": "Here are some highlights of my last work experiences, showcasing the projects and roles I've been a part of.",
+    "Klarys": {
+      "Title": "Klarys the fresh food platform",
+      "Description": "The first e-procurement platform adapted to the specific challenges of fresh food.",
+      "Role": "Frontend Engineer",
+      "Duration": "2021 - 2024"
+    },
+    "Noop": {
+      "Title": "Noop solution vod plug and play",
+      "Description": "Specializes in video on demand solutions, developing customizable platforms for streaming and content management.",
+      "Role": "Mobile Developer",
+      "Duration": "2020"
+    },
+    "Taste": {
+      "Title": "Taste and baguette",
+      "Role": "Bartender & Barista",
+      "Duration": "2015",
+      "Description": "Focused on delivering exceptional customer service, managing orders, and ensuring a smooth experience while gaining international experience in Australia."
+    },
+    "Tecnostrike": {
+      "Title": "Tecnostrike tecnogps",
+      "Role": "Co Founder",
+      "Duration": "2010 - 2014",
+      "Description": "GPS fleet management platform using real-time tracking, route control, and device sales."
+    }
+  },
+  "Career": {
+    "Title": "Diplome & Certificate",
+    "Description": "professional achievements and certifications.",
+    "Rncp7": {
+      "Title": "RNCP 7, It expert en architecture informatique",
+      "Duration": "2019 - 2023"
+    },
+    "Rncp6": {
+      "Title": "RNCP 6, It solution designer and developer web and mobile",
+      "Duration": "2019 - 2021"
+    },
+    "Certificate": {
+      "Title": "Certificate of completion 42, computer architect",
+      "Duration": "2019 - 2023"
+    },
+    "Thp": {
+      "Title": "The Hacking Project, Fullstack developer",
+      "Duration": "2018"
+    },
+    "Clps": {
+      "Title": "Formation linguistique francais langue etrangere",
+      "Duration": "2017"
+    },
+    "Access": {
+      "Title": "Diplome d'anglais professionnel",
+      "Duration": "2015"
+    }
+  },
+  "About": {
+    "Title": "Software Engineer",
+    "Subtitle": "Digital Craftsman",
+    "Description_A": "I'm a software engineer with a strong focus on frontend development and user experience. My career has been shaped by a mix of hands-on experience, continuous learning, and a genuine passion for creating thoughtful digital solutions. I care about writing clean, efficient code and building interfaces that are both functional, elegant, and performance-oriented.",
+    "Description_B": "After studying at École 42 in Paris, I deepened my technical and collaborative skills through intensive, project-based learning. Today, I enjoy working on modern web technologies, improving UI architecture, and contributing to products that deliver high-quality user experiences."
+  },
+  "Button": {
+    "Back_To_Top": "Back To Top",
+    "Read_More": "Read More"
   }
 }

@@ -51,7 +51,7 @@ const HeroSection = () => {
       <h1 className="home-title">{t("Roberto Gallego")}</h1>
 
       <h2 style={{ marginTop: 15, textAlign: "center" }}>
-        Welcome explore my journey in app engineering
+        {t("HeroSection.Title")}
       </h2>
 
       <p
@@ -62,8 +62,7 @@ const HeroSection = () => {
           fontSize: 16,
         }}
       >
-        An evolving portfolio collection that reflects my work with modern
-        tools, scalable architecture, and clean design
+        {t("HeroSection.Description")}
       </p>
 
       <div style={{ marginTop: 20, display: "flex" }}>
@@ -82,7 +81,7 @@ const HeroSection = () => {
             gap: 6,
           }}
         >
-          <p>Available For Work</p> <FaArrowRight size={12} />
+          <p> {t("HeroSection.Button_Primary")}</p> <FaArrowRight size={12} />
         </button>
 
         <button
@@ -98,7 +97,7 @@ const HeroSection = () => {
             fontWeight: 600,
           }}
         >
-          Contact Me
+          {t("HeroSection.Button_Secondary")}
         </button>
       </div>
     </div>

@@ -5,10 +5,12 @@ import logo42 from "../../assets/42logo.png"
 import logo42w from "../../assets/42logow.png"
 import ninjaco from "../../assets/ninjaco.png"
 import { FranceFlag } from "../../assets"
+import { useTranslation } from "react-i18next"
 
 const About = () => {
   const { isDarkMode } = useDarkMode()
   const { theme } = useTheme()
+  const { t } = useTranslation()
 
   const logoSrc =
     theme === "light"
@@ -37,7 +39,6 @@ const About = () => {
           display: "flex",
           gap: 20,
           flexDirection: "column",
-          // maxWidth: 800,
           width: "100%",
           borderRadius: 5,
         }}
@@ -64,8 +65,8 @@ const About = () => {
           </div>
           <div>
             <h3>Roberto GALLEGO</h3>
-            <p>Software Engineer</p>
-            <p>Digital Craftsman</p>
+            <p>{t("About.Title")}</p>
+            <p>{t("About.Subtitle")}</p>
           </div>
         </div>
         <p
@@ -75,12 +76,7 @@ const About = () => {
             textAlign: "justify",
           }}
         >
-          I'm a software engineer with a strong focus on frontend development
-          and user experience. My career has been shaped by a mix of hands-on
-          experience, continuous learning, and a genuine passion for creating
-          thoughtful digital solutions. I care about writing clean, efficient
-          code and building interfaces that are both functional, elegant, and
-          performance-oriented.
+          {t("About.Description_A")}
         </p>
 
         <p
@@ -90,11 +86,7 @@ const About = () => {
             textAlign: "justify",
           }}
         >
-          After studying at École 42 in Paris, I deepened my technical and
-          collaborative skills through intensive, project-based learning. Today,
-          I enjoy working on modern web technologies, improving UI architecture,
-          and contributing to products that deliver high-quality user
-          experiences.
+          {t("About.Description_B")}
         </p>
 
         <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>

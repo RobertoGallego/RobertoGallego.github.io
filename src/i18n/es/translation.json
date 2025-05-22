@@ -30,6 +30,161 @@
   },
   "Explore": {
     "part1": "En este espacio, puedes explorar mis proyectos.",
-    "part2": "Rendimiento optimizado, código limpio y tendencias web." 
+    "part2": "Rendimiento optimizado, código limpio y tendencias web."
+  },
+  "HeroSection": {
+    "Title": "Bienvenido, explora mi trayectoria en ingeniería de aplicaciones",
+    "Description": "Una colección de portafolio en evolución que refleja mi trabajo con herramientas modernas, arquitectura escalable y diseño limpio",
+    "Button_Primary": "Disponible para trabajar",
+    "Button_Secondary": "Contáctame"
+  },
+  "TechStack": {
+    "Title": "Tech Stack · 2025",
+    "Description": "Mi stack incluye tecnologías que realmente disfruto usar—herramientas que me apasionan y en las que creo a largo plazo. También incluye frameworks y plataformas que he usado profesionalmente en proyectos.",
+    "Productivity": "Herramientas de productividad",
+    "Design": "Diseño & UX",
+    "Improving": "Actualmente mejorando",
+    "Services": "Servicios"
+  },
+  "CategoryContent": {
+    "Title": "Interfaces responsivas y accesibles con tecnología web moderna.",
+    "frontend": {
+      "Title": "Frontend",
+      "Description": "Interfaces responsivas y accesibles con tecnología web moderna.",
+      "Description_A": "Diseño de UI responsiva y accesibilidad",
+      "Description_B": "Arquitectura basada en componentes con React y Preact",
+      "Description_C": "Diseño de UI responsiva y accesibilidad",
+      "Description_D": "Diseño de UI responsiva y accesibilidad"
+    },
+    "backend": {
+      "Title": "Backend",
+      "Description": "Creación de APIs eficientes y arquitecturas escalables del lado del servidor.",
+      "Description_A": "Diseño de APIs y servicios RESTful/GraphQL",
+      "Description_B": "Modelado de bases de datos y uso de ORMs (Prisma, Drizzle)",
+      "Description_C": "Autenticación y autorización (JWT, BetterAuth)",
+      "Description_D": "Arquitectura escalable basada en eventos"
+    },
+    "Testing": {
+      "Title": "Testing",
+      "Description": "Asegurando confiabilidad mediante pruebas automatizadas y controles de calidad.",
+      "Description_A": "Pruebas automatizadas end-to-end y unitarias",
+      "Description_B": "Pruebas end-to-end con Playwright",
+      "Description_C": "Pruebas de integración con Cypress",
+      "Description_D": "Pipelines de integración y entrega continua"
+    },
+    "Cloud": {
+      "Title": "Cloud",
+      "Description": "Aprovechando servicios en la nube para aplicaciones escalables y eficientes.",
+      "Description_A": "Contenerización y orquestación (Docker, Docker Compose)",
+      "Description_B": "Arquitectura serverless y microservicios",
+      "Description_C": "Funciones serverless y edge computing",
+      "Description_D": "Pipelines CI/CD para despliegues automatizados"
+    },
+    "Design": {
+      "Title": "Diseño",
+      "Description": "Creando interfaces visualmente atractivas y fáciles de usar.",
+      "Description_A": "Principios y mejores prácticas de UI/UX",
+      "Description_B": "Herramientas de prototipado y wireframing",
+      "Description_C": "Sistemas de diseño y librerías de componentes",
+      "Description_D": "Diseño responsivo y enfoque mobile-first"
+    },
+    "Productivity": {
+      "Title": "Herramientas de productividad",
+      "Description": "Optimizando flujos de trabajo con las herramientas adecuadas.",
+      "Description_A": "Flujos de control de versiones (Git, GitHub, GitLab)",
+      "Description_B": "Gestión de proyectos y documentación (Notion, Linear)",
+      "Description_C": "Editores de código y personalización de IDEs (VSCode, Neovim)",
+      "Description_D": "Plataformas de comunicación y colaboración (Slack, Discord)"
+    },
+    "R&D": {
+      "Title": "I+D",
+      "Description": "Experimentando con tecnologías punteras e ideas innovadoras.",
+      "Description_A": "Exploración de tecnologías emergentes",
+      "Description_B": "Pruebas de concepto y prototipado experimental",
+      "Description_C": "Análisis de datos e investigación de comportamiento de usuarios",
+      "Description_D": "Innovación iterativa e incorporación de feedback"
+    },
+    "Improving": {
+      "Title": "Actualmente mejorando",
+      "Description": "Mejorando continuamente mis habilidades técnicas.",
+      "Description_A": "Aprendiendo nuevos frameworks y herramientas",
+      "Description_B": "Refactorización y mejora de calidad de código",
+      "Description_C": "Benchmarking de rendimiento",
+      "Description_D": "Manteniéndome al día con tendencias de la industria"
+    },
+    "Service": {
+      "Title": "Servicio",
+      "Description": "Integrando soluciones de terceros de forma segura y sin problemas.",
+      "Description_A": "Integración de APIs de terceros y herramientas SaaS",
+      "Description_B": "Automatización y optimización de flujos de trabajo",
+      "Description_C": "Consideraciones de seguridad y cumplimiento",
+      "Description_D": "Soporte al usuario y monitorización de incidencias"
+    }
+  },
+  "Works": {
+    "Title": "Experiencia laboral",
+    "Description": "Aquí hay algunos destacados de mis últimas experiencias laborales, mostrando los proyectos y roles en los que he participado.",
+    "Klarys": {
+      "Title": "Klarys la plataforma de comida fresca",
+      "Description": "La primera plataforma de e-procurement adaptada a los desafíos específicos de la comida fresca.",
+      "Role": "Ingeniero Frontend",
+      "Duration": "2021 - 2024"
+    },
+    "Noop": {
+      "Title": "Noop solución vod plug and play",
+      "Description": "Especializada en soluciones de video bajo demanda, desarrollando plataformas personalizables para streaming y gestión de contenido.",
+      "Role": "Desarrollador Mobile",
+      "Duration": "2020"
+    },
+    "Taste": {
+      "Title": "Taste and baguette",
+      "Role": "Bartender & Barista",
+      "Duration": "2015",
+      "Description": "Enfocado en ofrecer un servicio excepcional al cliente, gestionando pedidos y asegurando una experiencia fluida mientras ganaba experiencia internacional en Australia."
+    },
+    "Tecnostrike": {
+      "Title": "Tecnostrike tecnogps",
+      "Role": "Co Fundador",
+      "Duration": "2010 - 2014",
+      "Description": "Plataforma de gestión de flotas con GPS usando seguimiento en tiempo real, control de rutas y venta de dispositivos."
+    }
+  },
+  "Career": {
+    "Title": "Diplomas & Certificados",
+    "Description": "logros profesionales y certificaciones.",
+    "Rncp7": {
+      "Title": "RNCP 7, Experto IT en arquitectura informática",
+      "Duration": "2019 - 2023"
+    },
+    "Rncp6": {
+      "Title": "RNCP 6, Diseñador y desarrollador IT de soluciones web y móviles",
+      "Duration": "2019 - 2021"
+    },
+    "Certificate": {
+      "Title": "Certificado de completitud 42, arquitecto informático",
+      "Duration": "2019 - 2023"
+    },
+    "Thp": {
+      "Title": "The Hacking Project, Desarrollador Fullstack",
+      "Duration": "2018"
+    },
+    "Clps": {
+      "Title": "Formación lingüística francés lengua extranjera",
+      "Duration": "2017"
+    },
+    "Access": {
+      "Title": "Diploma de inglés profesional",
+      "Duration": "2015"
+    }
+  },
+  "About": {
+    "Title": "Ingeniero de Software",
+    "Subtitle": "Artesano Digital",
+    "Description_A": "Soy un ingeniero de software con un fuerte enfoque en desarrollo frontend y experiencia de usuario. Mi carrera ha sido moldeada por una combinación de experiencia práctica, aprendizaje continuo y una genuina pasión por crear soluciones digitales bien pensadas. Me importa escribir código limpio y eficiente, y construir interfaces que sean funcionales, elegantes y orientadas al rendimiento.",
+    "Description_B": "Después de estudiar en École 42 en París, profundicé mis habilidades técnicas y colaborativas mediante un aprendizaje intensivo basado en proyectos. Hoy disfruto trabajando con tecnologías web modernas, mejorando arquitecturas UI y contribuyendo a productos que ofrecen experiencias de usuario de alta calidad."
+  },
+  "Button": {
+    "Back_To_Top": "Volver arriba",
+    "Read_More": "Leer más"
   }
 }

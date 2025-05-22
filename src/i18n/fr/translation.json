@@ -28,8 +28,159 @@
     "name": "Roberto",
     "part2": "et c'est un plaisir de vous avoir ici."
   },
-  "Explore": {
-    "part1": "Dans cet espace, vous pouvez explorer mes projets.",
-    "part2": "Une performance optimisée, clean code et les tendances du web." 
+  "HeroSection": {
+    "Title": "Bienvenue, explorez mon parcours en ingénierie applicative",
+    "Description": "Une collection de projets en constante évolution reflétant mon travail avec des outils modernes, une architecture évolutive et un design soigné",
+    "Button_Primary": "Disponible pour travailler",
+    "Button_Secondary": "Contactez-moi"
+  },
+  "TechStack": {
+    "Title": "Tech Stack · 2025",
+    "Description": "Ma stack comprend des technologies avec lesquelles j'aime vraiment travailler—des outils qui me passionnent et en lesquels je crois à long terme. Elle inclut aussi des frameworks et plateformes utilisés dans un cadre professionnel ou personnel.",
+    "Productivity": "Outils de productivité",
+    "Design": "Design & UX",
+    "Improving": "En amélioration",
+    "Services": "Services"
+  },
+  "CategoryContent": {
+    "Title": "Interfaces modernes, accessibles et responsives.",
+    "frontend": {
+      "Title": "Frontend",
+      "Description": "Interfaces modernes, accessibles et responsives.",
+      "Description_A": "Design d'interface responsive et accessibilité",
+      "Description_B": "Architecture basée sur des composants avec React et Preact",
+      "Description_C": "Design d'interface responsive et accessibilité",
+      "Description_D": "Design d'interface responsive et accessibilité"
+    },
+    "backend": {
+      "Title": "Backend",
+      "Description": "Création d'APIs efficaces et d'architectures serveur évolutives.",
+      "Description_A": "Conception d'API et services RESTful/GraphQL",
+      "Description_B": "Modélisation de base de données et utilisation d'ORM (Prisma, Drizzle)",
+      "Description_C": "Authentification et autorisation (JWT, BetterAuth)",
+      "Description_D": "Architecture évolutive et orientée événements"
+    },
+    "Testing": {
+      "Title": "Tests",
+      "Description": "Assurer la fiabilité grâce aux tests automatisés et aux contrôles qualité.",
+      "Description_A": "Tests unitaires et end-to-end automatisés",
+      "Description_B": "Tests end-to-end avec Playwright",
+      "Description_C": "Tests d'intégration avec Cypress",
+      "Description_D": "Pipelines d'intégration et de déploiement continus"
+    },
+    "Cloud": {
+      "Title": "Cloud",
+      "Description": "Exploiter les services cloud pour des applications évolutives et efficaces.",
+      "Description_A": "Conteneurisation et orchestration (Docker, Docker Compose)",
+      "Description_B": "Architecture serverless et microservices",
+      "Description_C": "Fonctions serverless et edge computing",
+      "Description_D": "Pipelines CI/CD pour les déploiements automatisés"
+    },
+    "Design": {
+      "Title": "Design",
+      "Description": "Création d'interfaces esthétiques et conviviales.",
+      "Description_A": "Principes de design UI/UX et bonnes pratiques",
+      "Description_B": "Outils de prototypage et de wireframing",
+      "Description_C": "Systèmes de design et bibliothèques de composants",
+      "Description_D": "Design responsive et approche mobile-first"
+    },
+    "Productivity": {
+      "Title": "Outils de productivité",
+      "Description": "Optimisation du flux de travail avec les bons outils de développement.",
+      "Description_A": "Workflows de gestion de versions (Git, GitHub, GitLab)",
+      "Description_B": "Gestion de projet et documentation (Notion, Linear)",
+      "Description_C": "Éditeurs de code et personnalisation d'IDE (VSCode, Neovim)",
+      "Description_D": "Plateformes de communication et de collaboration (Slack, Discord)"
+    },
+    "R&D": {
+      "Title": "R&D",
+      "Description": "Expérimentations avec des technologies et idées de pointe.",
+      "Description_A": "Exploration des technologies émergentes",
+      "Description_B": "Proof of concept et prototypage expérimental",
+      "Description_C": "Analyse de données et étude du comportement utilisateur",
+      "Description_D": "Innovation itérative et intégration de retours"
+    },
+    "Improving": {
+      "Title": "En amélioration",
+      "Description": "Amélioration continue de mes compétences techniques.",
+      "Description_A": "Apprentissage de nouveaux frameworks et outils",
+      "Description_B": "Refactoring et amélioration de la qualité du code",
+      "Description_C": "Évaluation des performances",
+      "Description_D": "Veille technologique et tendances du secteur"
+    },
+    "Service": {
+      "Title": "Service",
+      "Description": "Intégration fluide et sécurisée de solutions tierces.",
+      "Description_A": "Intégration d'API tierces et outils SaaS",
+      "Description_B": "Automatisation et optimisation des flux de travail",
+      "Description_C": "Sécurité et conformité",
+      "Description_D": "Support utilisateur et surveillance des incidents"
+    }
+  },
+  "Works": {
+    "Title": "Expérience professionnelle",
+    "Description": "Voici quelques temps forts de mes expériences récentes, mettant en valeur les projets et rôles que j'ai occupés.",
+    "Klarys": {
+      "Title": "Klarys la plateforme des produits frais",
+      "Description": "Première plateforme d'e-procurement adaptée aux enjeux spécifiques des produits frais.",
+      "Role": "Ingénieur Frontend",
+      "Duration": "2021 - 2024"
+    },
+    "Noop": {
+      "Title": "Noop solution VOD clé en main",
+      "Description": "Spécialisée dans les solutions de vidéo à la demande, avec des plateformes personnalisables de streaming et de gestion de contenu.",
+      "Role": "Développeur Mobile",
+      "Duration": "2020"
+    },
+    "Taste": {
+      "Title": "Taste and baguette",
+      "Role": "Barman & Barista",
+      "Duration": "2015",
+      "Description": "Service client exceptionnel, gestion des commandes et expérience fluide — expérience internationale en Australie."
+    },
+    "Tecnostrike": {
+      "Title": "Tecnostrike / TecnoGPS",
+      "Role": "Cofondateur",
+      "Duration": "2010 - 2014",
+      "Description": "Plateforme de gestion de flotte GPS avec suivi en temps réel, contrôle des itinéraires et vente d'appareils."
+    }
+  },
+  "Career": {
+    "Title": "Diplômes & Certificats",
+    "Description": "Réalisations professionnelles et certifications.",
+    "Rncp7": {
+      "Title": "RNCP 7, Expert en architecture informatique",
+      "Duration": "2019 - 2023"
+    },
+    "Rncp6": {
+      "Title": "RNCP 6, Concepteur développeur de solutions web et mobile",
+      "Duration": "2019 - 2021"
+    },
+    "Certificate": {
+      "Title": "Certificat de fin d'études École 42, architecte informatique",
+      "Duration": "2019 - 2023"
+    },
+    "Thp": {
+      "Title": "The Hacking Project, Développeur Fullstack",
+      "Duration": "2018"
+    },
+    "Clps": {
+      "Title": "Formation linguistique FLE (français langue étrangère)",
+      "Duration": "2017"
+    },
+    "Access": {
+      "Title": "Diplôme d'anglais professionnel",
+      "Duration": "2015"
+    }
+  },
+  "About": {
+    "Title": "Ingénieur logiciel",
+    "Subtitle": "Artisan numérique",
+    "Description_A": "Je suis un ingénieur logiciel spécialisé en développement frontend et en expérience utilisateur. Mon parcours a été façonné par une expérience pratique, un apprentissage constant et une vraie passion pour les solutions numériques réfléchies. J'attache de l'importance à un code propre, efficace, et à des interfaces fonctionnelles, élégantes et performantes.",
+    "Description_B": "Après mes études à l'École 42 à Paris, j'ai approfondi mes compétences techniques et collaboratives via un apprentissage intensif basé sur des projets. Aujourd'hui, j'aime travailler avec les technologies web modernes, améliorer l'architecture des interfaces, et contribuer à des produits offrant une expérience utilisateur de haute qualité."
+  },
+  "Button": {
+    "Back_To_Top": "Retour en haut",
+    "Read_More": "En savoir plus"
   }
 }

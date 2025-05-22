@@ -105,7 +105,7 @@ const Footer = () => {
           }}
           aria-label="back-to-top"
         >
-          <p>{t("Back To Top")}</p>
+          <p>{t("Button.Back_To_Top")}</p>
           <IoMdArrowUp size={18} />
         </button>
       </div>
