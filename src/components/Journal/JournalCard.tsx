@@ -4,7 +4,6 @@ import { FiExternalLink } from "react-icons/fi"
 import { MdOutlineWorkOutline } from "react-icons/md"
 import useDarkMode from "../../hooks/useDarkMode"
 import "./WorkCard.css"
-import { useTranslation } from "react-i18next"
 
 type Flag = { src: string; label: string }
 
@@ -27,7 +26,6 @@ const JournalCard = ({
   workPosition = "",
 }: JournalCardProps) => {
   const { isDarkMode } = useDarkMode()
-  const { t } = useTranslation()
 
   return (
     <div
@@ -90,8 +88,8 @@ const JournalCard = ({
                   alignItems: "center",
                 }}
               >
-                <MdOutlineWorkOutline size={14} color="#818181" />
-                <p style={{ fontSize: 14, color: "#818181" }}>{workPosition}</p>
+                <MdOutlineWorkOutline size={14} color="#eeeeee" />
+                <p style={{ fontSize: 14, color: "#eeeeee" }}>{workPosition}</p>
               </div>
 
               <div
@@ -101,8 +99,8 @@ const JournalCard = ({
                   alignItems: "center",
                 }}
               >
-                <IoCalendarNumber size={14} color="#818181" />
-                <p style={{ fontSize: 14, color: "#818181" }}>{date}</p>
+                <IoCalendarNumber size={14} color="#eeeeee" />
+                <p style={{ fontSize: 14, color: "#eeeeee" }}>{date}</p>
               </div>
             </div>
           </div>
@@ -110,10 +108,6 @@ const JournalCard = ({
           <p
             style={{
               color: "gray",
-              maxWidth: 700,
-              display: "-webkit-box",
-              WebkitBoxOrient: "vertical",
-              overflow: "hidden",
             }}
           >
             {subtitle}
@@ -171,7 +165,7 @@ const JournalCard = ({
                   whiteSpace: "nowrap",
                 }}
               >
-                {t("Button.Read_More")}
+                Read more
               </p>
 
               <FiExternalLink size={12} />

@@ -6,6 +6,7 @@
   background-color: #1b1b1b;
   min-height: 80px;
   height: auto;
+  max-height: 100px;
 }
 
 @media (max-width: 500px) {
