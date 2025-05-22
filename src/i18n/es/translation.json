@@ -48,15 +48,15 @@
   },
   "CategoryContent": {
     "Title": "Interfaces responsivas y accesibles con tecnología web moderna.",
-    "frontend": {
+    "Frontend": {
       "Title": "Frontend",
       "Description": "Interfaces responsivas y accesibles con tecnología web moderna.",
       "Description_A": "Diseño de UI responsiva y accesibilidad",
       "Description_B": "Arquitectura basada en componentes con React y Preact",
-      "Description_C": "Diseño de UI responsiva y accesibilidad",
-      "Description_D": "Diseño de UI responsiva y accesibilidad"
+      "Description_C": "Patrones de gestión de estado (Redux, Zustand, React Query)",
+      "Description_D": "Optimización de rendimiento y code splitting"
     },
-    "backend": {
+    "Backend": {
       "Title": "Backend",
       "Description": "Creación de APIs eficientes y arquitecturas escalables del lado del servidor.",
       "Description_A": "Diseño de APIs y servicios RESTful/GraphQL",
@@ -112,8 +112,8 @@
       "Description_C": "Benchmarking de rendimiento",
       "Description_D": "Manteniéndome al día con tendencias de la industria"
     },
-    "Service": {
-      "Title": "Servicio",
+    "Services": {
+      "Title": "Servicios",
       "Description": "Integrando soluciones de terceros de forma segura y sin problemas.",
       "Description_A": "Integración de APIs de terceros y herramientas SaaS",
       "Description_B": "Automatización y optimización de flujos de trabajo",

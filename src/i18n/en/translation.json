@@ -48,15 +48,15 @@
   },
   "CategoryContent": {
     "Title": "Responsive and accessible interfaces modern web tech.",
-    "frontend": {
+    "Frontend": {
       "Title": "Frontend",
       "Description": "Responsive and accessible interfaces modern web tech.",
-      "Description_A": "Responsive UI design and accessibility",
-      "Description_B": "Component-based architecture with React and Preact",
-      "Description_C": "Responsive UI design and accessibility",
-      "Description_D": "Responsive UI design and accessibility"
+      "Description_A": "Component-based architecture with React and Preact",
+      "Description_B": "Responsive UI design and accessibility",
+      "Description_C": "State management patterns (Redux, Zustand, React Query)",
+      "Description_D": "Performance optimization and code splitting"
     },
-    "backend": {
+    "Backend": {
       "Title": "Backend",
       "Description": "Creating efficient APIs and scalable server-side architectures.",
       "Description_A": "API design and RESTful/GraphQL services",
@@ -66,7 +66,7 @@
     },
     "Testing": {
       "Title": "Testing",
-      "Description": "Ensuring reliability through automated testing and quality checks.",
+      "Description": "Ensuring reliability and automated testing and quality checks.",
       "Description_A": "Automated end-to-end and unit testing",
       "Description_B": "End-to-end testing with Playwright",
       "Description_C": "Integration testing with Cypress",
@@ -112,8 +112,8 @@
       "Description_C": "Performance benchmarking",
       "Description_D": "Keeping up-to-date with industry trends"
     },
-    "Service": {
-      "Title": "Service",
+    "Services": {
+      "Title": "Services",
       "Description": "Integrating third-party solutions seamlessly and securely.",
       "Description_A": "Integration of third-party APIs and SaaS tools",
       "Description_B": "Automation and workflow optimization",

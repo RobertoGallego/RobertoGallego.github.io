@@ -100,6 +100,7 @@ import {
   MotionDark,
 } from "../assets"
 import useDarkMode from "../hooks/useDarkMode"
+import { useTranslation } from "react-i18next"
 
 interface TechStackProps {
   src?: string | { light: string; dark: string }
@@ -120,14 +121,13 @@ const StackCategoryData = [
     id: 1,
     CategoyIcon: TbDeviceDesktopCode,
     categoryColor: "DarkOrange",
-    CategoryTitle: "Frontend",
-    categoryDescription:
-      "Responsive and accessible interfaces modern web tech.",
+    CategoryTitle: "CategoryContent.Frontend.Title",
+    categoryDescription: "CategoryContent.Frontend.Description",
     categoryKeys: [
-      "Responsive UI design and accessibility",
-      "Component-based architecture with React and Preact",
-      "State management patterns (Redux, Zustand, React Query)",
-      "Performance optimization and code splitting",
+      "CategoryContent.Frontend.Description_A",
+      "CategoryContent.Frontend.Description_B",
+      "CategoryContent.Frontend.Description_C",
+      "CategoryContent.Frontend.Description_D",
     ],
     techStack: [
       { src: HTML5, label: "HTML5" },
@@ -158,14 +158,13 @@ const StackCategoryData = [
     id: 2,
     CategoyIcon: VscServerProcess,
     categoryColor: "green",
-    CategoryTitle: "Backend",
-    categoryDescription:
-      "Creating efficient APIs and scalable server-side architectures.",
+    CategoryTitle: "CategoryContent.Backend.Title",
+    categoryDescription: "CategoryContent.Backend.Description",
     categoryKeys: [
-      "API design and RESTful/GraphQL services",
-      "Database modeling and ORM usage (Prisma, Drizzle)",
-      "Authentication and authorization (JWT, BetterAuth)",
-      "Scalable, event-driven architecture",
+      "CategoryContent.Backend.Description_A",
+      "CategoryContent.Backend.Description_B",
+      "CategoryContent.Backend.Description_C",
+      "CategoryContent.Backend.Description_D",
     ],
     techStack: [
       { src: NodeJS, label: "Node.js" },
@@ -191,14 +190,13 @@ const StackCategoryData = [
     id: 3,
     CategoyIcon: FaMasksTheater,
     categoryColor: "DeepSkyBlue",
-    CategoryTitle: "Testing & QA",
-    categoryDescription:
-      "Ensuring reliability through automated testing and quality checks.",
+    CategoryTitle: "CategoryContent.Testing.Title",
+    categoryDescription: "CategoryContent.Testing.Description",
     categoryKeys: [
-      "Automated end-to-end and unit testing",
-      "Test-driven development (TDD)",
-      "Continuous integration and delivery pipelines",
-      "Cross-browser and compatibility testing",
+      "CategoryContent.Testing.Description_A",
+      "CategoryContent.Testing.Description_B",
+      "CategoryContent.Testing.Description_C",
+      "CategoryContent.Testing.Description_D",
     ],
     techStack: [
       { src: Cypress, label: "Cypress" },
@@ -211,14 +209,13 @@ const StackCategoryData = [
     id: 4,
     CategoyIcon: IoMdCloudOutline,
     categoryColor: "Gold",
-    CategoryTitle: "Cloud",
-    categoryDescription:
-      "Deploying and managing scalable cloud-native applications.",
+    CategoryTitle: "CategoryContent.Cloud.Title",
+    categoryDescription: "CategoryContent.Cloud.Description",
     categoryKeys: [
-      "Containerization and orchestration (Docker, Kubernetes)",
-      "Cloud provider management and deployment (AWS, DigitalOcean)",
-      "Serverless functions and edge computing",
-      "Infrastructure as Code (Terraform)",
+      "CategoryContent.Cloud.Description_A",
+      "CategoryContent.Cloud.Description_B",
+      "CategoryContent.Cloud.Description_C",
+      "CategoryContent.Cloud.Description_D",
     ],
     techStack: [
       { src: Docker, label: "Docker" },
@@ -233,14 +230,13 @@ const StackCategoryData = [
     id: 5,
     CategoyIcon: TbDeviceDesktopCode,
     categoryColor: "Olive",
-    CategoryTitle: "Design & UX",
-    categoryDescription:
-      "Crafting intuitive user experiences with a focus on usability.",
+    CategoryTitle: "CategoryContent.Design.Title",
+    categoryDescription: "CategoryContent.Design.Description",
     categoryKeys: [
-      "User-centered design and prototyping",
-      "Collaboration with developers via design systems",
-      "Accessibility standards and guidelines",
-      "Visual storytelling and branding consistency",
+      "CategoryContent.Design.Description_A",
+      "CategoryContent.Design.Description_B",
+      "CategoryContent.Design.Description_C",
+      "CategoryContent.Design.Description_D",
     ],
     techStack: [
       { src: Photoshop, label: "Photoshop" },
@@ -253,14 +249,13 @@ const StackCategoryData = [
     id: 6,
     CategoyIcon: VscTools,
     categoryColor: "purple",
-    CategoryTitle: "Productivity Tools",
-    categoryDescription:
-      "Streamlining workflows with the right development tools.",
+    CategoryTitle: "CategoryContent.Productivity.Title",
+    categoryDescription: "CategoryContent.Productivity.Description",
     categoryKeys: [
-      "Version control workflows (Git, GitHub, GitLab)",
-      "Project management and documentation (Notion, Linear)",
-      "Code editors and IDE customization (VSCode, Neovim)",
-      "Communication and collaboration platforms (Slack, Discord)",
+      "CategoryContent.Productivity.Description_A",
+      "CategoryContent.Productivity.Description_B",
+      "CategoryContent.Productivity.Description_C",
+      "CategoryContent.Productivity.Description_D",
     ],
     techStack: [
       { src: VSCode, label: "VSCode" },
@@ -291,41 +286,39 @@ const StackCategoryData = [
     id: 7,
     CategoyIcon: PiBinocularsFill,
     categoryColor: "brown",
-    CategoryTitle: "R&D",
-    categoryDescription:
-      "Experimenting with cutting-edge technologies and ideas.",
+    CategoryTitle: "CategoryContent.R&D.Title",
+    categoryDescription: "CategoryContent.R&D.Description",
     categoryKeys: [
-      "Exploration of emerging technologies",
-      "Proof of concept and experimental prototyping",
-      "Data analysis and user behavior research",
-      "Iterative innovation and feedback incorporation",
+      "CategoryContent.R&D.Description_A",
+      "CategoryContent.R&D.Description_B",
+      "CategoryContent.R&D.Description_C",
+      "CategoryContent.R&D.Description_D",
     ],
   },
   {
     id: 8,
     CategoyIcon: FaArrowTrendUp,
     categoryColor: "Teal",
-    CategoryTitle: "Currently Improving",
-    categoryDescription: "Continuously leveling up my technical skills.",
+    CategoryTitle: "CategoryContent.Improving.Title",
+    categoryDescription: "CategoryContent.Improving.Description",
     categoryKeys: [
-      "Learning new frameworks and tools",
-      "Refactoring and code quality improvement",
-      "Performance benchmarking",
-      "Keeping up-to-date with industry trends",
+      "CategoryContent.Improving.Description_A",
+      "CategoryContent.Improving.Description_B",
+      "CategoryContent.Improving.Description_C",
+      "CategoryContent.Improving.Description_D",
     ],
   },
   {
     id: 9,
     CategoyIcon: MdOutlineRoomService,
     categoryColor: "Salmon",
-    CategoryTitle: "Service",
-    categoryDescription:
-      "Integrating third-party solutions seamlessly and securely.",
+    CategoryTitle: "CategoryContent.Services.Title",
+    categoryDescription: "CategoryContent.Services.Description",
     categoryKeys: [
-      "Integration of third-party APIs and SaaS tools",
-      "Automation and workflow optimization",
-      "Security and compliance considerations",
-      "User support and incident monitoring",
+      "CategoryContent.Services.Description_A",
+      "CategoryContent.Services.Description_B",
+      "CategoryContent.Services.Description_C",
+      "CategoryContent.Services.Description_D",
     ],
     techStack: [
       {
@@ -380,6 +373,7 @@ const StackCategory = ({
   categoryKeys,
   techStack = [],
 }: StackCategoryProps) => {
+  const { t } = useTranslation()
   const { isDarkMode } = useDarkMode()
 
   return (
@@ -417,7 +411,7 @@ const StackCategory = ({
             size={50}
           />
 
-          <h1>{CategoryTitle}</h1>
+          <h1>{t(CategoryTitle)}</h1>
         </div>
 
         <p
@@ -429,7 +423,7 @@ const StackCategory = ({
             maxWidth: 450,
           }}
         >
-          {categoryDescription}
+          {t(categoryDescription)}
         </p>
 
         <div
@@ -440,22 +434,22 @@ const StackCategory = ({
           }}
         >
           <MdArrowOutward color={categoryColor} />
-          <p>{categoryKeys[0]}</p>
+          <p>{t(categoryKeys[0])}</p>
         </div>
 
         <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
           <MdArrowOutward color={categoryColor} />
-          <p>{categoryKeys[1]}</p>
+          <p>{t(categoryKeys[1])}</p>
         </div>
 
         <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
           <MdArrowOutward color={categoryColor} />
-          <p>{categoryKeys[2]}</p>
+          <p>{t(categoryKeys[2])}</p>
         </div>
 
         <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
           <MdArrowOutward color={categoryColor} />
-          <p>{categoryKeys[3]}</p>
+          <p>{t(categoryKeys[3])}</p>
         </div>
 
         <div

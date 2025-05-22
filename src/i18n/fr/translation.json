@@ -44,15 +44,15 @@
   },
   "CategoryContent": {
     "Title": "Interfaces modernes, accessibles et responsives.",
-    "frontend": {
+    "Frontend": {
       "Title": "Frontend",
       "Description": "Interfaces modernes, accessibles et responsives.",
-      "Description_A": "Design d'interface responsive et accessibilité",
+      "Description_A": "Conception d'interface réactive et accessibilité",
       "Description_B": "Architecture basée sur des composants avec React et Preact",
-      "Description_C": "Design d'interface responsive et accessibilité",
-      "Description_D": "Design d'interface responsive et accessibilité"
+      "Description_C": "Gestion d'état (Redux, Zustand, React Query)",
+      "Description_D": "Optimisation des performances et découpage du code"
     },
-    "backend": {
+    "Backend": {
       "Title": "Backend",
       "Description": "Création d'APIs efficaces et d'architectures serveur évolutives.",
       "Description_A": "Conception d'API et services RESTful/GraphQL",
@@ -108,8 +108,8 @@
       "Description_C": "Évaluation des performances",
       "Description_D": "Veille technologique et tendances du secteur"
     },
-    "Service": {
-      "Title": "Service",
+    "Services": {
+      "Title": "Services",
       "Description": "Intégration fluide et sécurisée de solutions tierces.",
       "Description_A": "Intégration d'API tierces et outils SaaS",
       "Description_B": "Automatisation et optimisation des flux de travail",
