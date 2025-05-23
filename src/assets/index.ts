@@ -105,7 +105,7 @@ export { default as Taste } from './taste.jpg';
 export { default as Level21 } from './level21.png';
 export { default as Rncp6 } from './rncp6.png';
 export { default as Rncp7 } from './rncp7.png';
-export { default as Thp } from './thp.png';
+export { default as Thp } from './thpa.png';
 export { default as Rncp6a } from './rncp6a.png';
 export { default as Rncp7a } from './rncp7a.png';
 export { default as Thpdark } from './thpdark.png';

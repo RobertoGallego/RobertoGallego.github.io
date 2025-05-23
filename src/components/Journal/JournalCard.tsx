@@ -4,6 +4,7 @@ import { FiExternalLink } from "react-icons/fi"
 import { MdOutlineWorkOutline } from "react-icons/md"
 import useDarkMode from "../../hooks/useDarkMode"
 import "./WorkCard.css"
+import { useTranslation } from "react-i18next"
 
 type Flag = { src: string; label: string }
 
@@ -26,6 +27,7 @@ const JournalCard = ({
   workPosition = "",
 }: JournalCardProps) => {
   const { isDarkMode } = useDarkMode()
+  const { t } = useTranslation()
 
   return (
     <div
@@ -86,10 +88,11 @@ const JournalCard = ({
                   display: "flex",
                   gap: 6,
                   alignItems: "center",
+                  color: isDarkMode ? "#eeeeee" : "#181818",
                 }}
               >
-                <MdOutlineWorkOutline size={14} color="#eeeeee" />
-                <p style={{ fontSize: 14, color: "#eeeeee" }}>{workPosition}</p>
+                <MdOutlineWorkOutline size={14} />
+                <p style={{ fontSize: 14 }}>{workPosition}</p>
               </div>
 
               <div
@@ -97,10 +100,11 @@ const JournalCard = ({
                   display: "flex",
                   gap: 6,
                   alignItems: "center",
+                  color: isDarkMode ? "#eeeeee" : "#181818",
                 }}
               >
-                <IoCalendarNumber size={14} color="#eeeeee" />
-                <p style={{ fontSize: 14, color: "#eeeeee" }}>{date}</p>
+                <IoCalendarNumber size={14} />
+                <p style={{ fontSize: 14 }}>{date}</p>
               </div>
             </div>
           </div>
@@ -165,7 +169,7 @@ const JournalCard = ({
                   whiteSpace: "nowrap",
                 }}
               >
-                Read more
+                {t("Button.Read_More")}
               </p>
 
               <FiExternalLink size={12} />

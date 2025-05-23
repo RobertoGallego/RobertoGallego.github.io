@@ -153,28 +153,22 @@
     "Title": "Diplome & Certificate",
     "Description": "professional achievements and certifications.",
     "Rncp7": {
-      "Title": "RNCP 7, It expert en architecture informatique",
-      "Duration": "2019 - 2023"
+      "Title": "RNCP 7, It expert en architecture informatique"
     },
     "Rncp6": {
-      "Title": "RNCP 6, It solution designer and developer web and mobile",
-      "Duration": "2019 - 2021"
+      "Title": "RNCP 6, It solution designer and developer web and mobile"
     },
     "Certificate": {
-      "Title": "Certificate of completion 42, computer architect",
-      "Duration": "2019 - 2023"
+      "Title": "Certificate of completion 42, computer architect"
     },
     "Thp": {
-      "Title": "The Hacking Project, Fullstack developer",
-      "Duration": "2018"
+      "Title": "The Hacking Project, Fullstack developer"
     },
     "Clps": {
-      "Title": "Formation linguistique francais langue etrangere",
-      "Duration": "2017"
+      "Title": "Formation linguistique francais langue etrangere"
     },
     "Access": {
-      "Title": "Diplome d'anglais professionnel",
-      "Duration": "2015"
+      "Title": "Diplome d'anglais professionnel"
     }
   },
   "About": {

@@ -18,7 +18,7 @@ const TechCard = ({ label, src }: TechCardProps) => {
         alignItems: "center",
         justifyContent: "space-between",
         gap: 10,
-        border: isDarkMode ? "0.5px solid #333333" : "0.5px solid #dddddd",
+        // border: isDarkMode ? "0.5px solid #333333" : "0.5px solid #dddddd",
         padding: 4,
         flex: 1,
         flexGrow: 1,

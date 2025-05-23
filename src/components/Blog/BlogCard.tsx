@@ -40,7 +40,7 @@ const BlogCard = ({
           aspectRatio: "2 / 1",
           objectFit: "contain",
           borderRadius: 10,
-          backgroundColor: isDarkMode ? "#181816" : "#eeeeee",
+          backgroundColor: isDarkMode ? "#181816" : "#f8f8f8",
           minHeight: 80,
           height: "auto",
           border: isDarkMode ? "1px solid #2e2e2e" : "1px solid #dddddd",

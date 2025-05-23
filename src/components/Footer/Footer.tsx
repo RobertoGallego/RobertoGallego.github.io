@@ -51,10 +51,8 @@ const Footer = () => {
             cursor: "pointer",
             display: "flex",
             alignItems: "center",
-            gap: "8px",
-            // background: "var(--button-bg, #252525)",
+            gap: 8,
             border: "1px solid var(--button-bg, #535353)",
-            // color: "var(--button-text, #b8b8b8)",
           }}
           aria-label="toggle-language"
         >
@@ -80,9 +78,7 @@ const Footer = () => {
             display: "flex",
             alignItems: "center",
             gap: "4px",
-            // background: "var(--button-bg, #252525)",
             border: "1px solid var(--button-bg, #535353)",
-            // color: "var(--button-text, #b8b8b8)",
           }}
           aria-label="toggle-theme"
         >

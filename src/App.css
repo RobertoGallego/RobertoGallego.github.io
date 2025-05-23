@@ -88,10 +88,11 @@
   align-items: center;
   border-top: 1px solid #8d8d8d;
   flex-wrap: wrap;
+  gap: 4px;
 }
 
 .footer-text {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
 }
 

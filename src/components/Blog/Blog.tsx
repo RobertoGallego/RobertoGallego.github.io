@@ -12,9 +12,11 @@ import {
 } from "../../assets"
 import { FranceFlag, Ausflag } from "../../assets"
 import useDarkMode from "../../hooks/useDarkMode"
+import { useTranslation } from "react-i18next"
 
 const Blog = () => {
   const { isDarkMode } = useDarkMode()
+  const { t } = useTranslation()
 
   return (
     <div style={{ width: "100%", marginTop: 100, paddingInline: 10 }}>
@@ -25,12 +27,11 @@ const Blog = () => {
           marginBottom: 20,
         }}
       >
-        <h1>Diplome & Certificate</h1>
+        <h1>{t("Career.Title")}</h1>
         <p style={{ maxWidth: 700, fontSize: 16, marginTop: 5 }}>
-        professional achievements and certifications
+          {t("Career.Description")}
         </p>
       </div>
-
 
       <div
         style={{
@@ -42,7 +43,7 @@ const Blog = () => {
       >
         <BlogCard
           srcImage={Rncp7a}
-          title={"RNCP 7, It expert en architecture informatique"}
+          title={t("Career.Rncp7.Title")}
           date={"2019 - 2023"}
           chip={"Ecole 42"}
           srcFlag={FranceFlag}
@@ -51,7 +52,7 @@ const Blog = () => {
 
         <BlogCard
           srcImage={Level21}
-          title={"Certificate of completion 42, computer architect"}
+          title={t("Career.Certificate.Title")}
           date={"2019 - 2023"}
           chip={"Ecole 42"}
           srcFlag={FranceFlag}
@@ -60,7 +61,7 @@ const Blog = () => {
 
         <BlogCard
           srcImage={Rncp6a}
-          title={"RNCP 6, It solution designer and developer web and mobile"}
+          title={t("Career.Rncp6.Title")}
           date={"2019 - 2021"}
           chip={"Ecole 42"}
           srcFlag={FranceFlag}
@@ -69,25 +70,25 @@ const Blog = () => {
 
         <BlogCard
           srcImage={isDarkMode ? Thpdark : Thp}
-          title={"Formation fullstack web"}
+          title={t("Career.Thp.Title")}
           date={"2018"}
           chip={"THP"}
           srcFlag={FranceFlag}
           chipFlag={"Paris, France"}
         />
-        
+
         <BlogCard
           srcImage={isDarkMode ? ClpsDark : Clps}
-          title={"Formation linguistique francais langue etrangere"}
+          title={t("Career.Clps.Title")}
           date={"2017"}
           chip={"CLPS FLE"}
           srcFlag={FranceFlag}
           chipFlag={"Paris, France"}
         />
-        
+
         <BlogCard
           srcImage={isDarkMode ? AccessDark : Access}
-          title={"Diplome d'anglais professionnel"}
+          title={t("Career.Access.Title")}
           date={"2015"}
           chip={"Access"}
           srcFlag={Ausflag}
