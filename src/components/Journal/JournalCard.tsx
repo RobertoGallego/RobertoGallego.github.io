@@ -112,6 +112,7 @@ const JournalCard = ({
           <p
             style={{
               color: "gray",
+              maxWidth: 700,
             }}
           >
             {subtitle}
