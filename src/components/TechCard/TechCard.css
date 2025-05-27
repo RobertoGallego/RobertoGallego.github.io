@@ -1,0 +1,42 @@
+.tech-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 4px;
+  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100px;
+  flex-wrap: wrap;
+}
+
+.tech-card-empty {
+  width: 20px;
+  height: 20px;
+}
+
+/* Ocultar los tech-card vacíos en pantallas menores a 768px */
+@media (max-width: 768px) {
+  .tech-card.empty-placeholder {
+    display: none;
+  }
+}
+
+.tech-card-content {
+  display: flex;
+  align-items: center;
+}
+
+.tech-card-label {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.tech-card-img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}

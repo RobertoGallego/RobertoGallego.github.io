@@ -51,31 +51,31 @@
     "Frontend": {
       "Title": "Frontend",
       "Description": "Responsive and accessible interfaces modern web tech.",
-      "Description_A": "Component-based architecture with React and Preact",
+      "Description_A": "Component-based architecture",
       "Description_B": "Responsive UI design and accessibility",
-      "Description_C": "State management patterns (Redux, Zustand, React Query)",
+      "Description_C": "State management patterns",
       "Description_D": "Performance optimization and code splitting"
     },
     "Backend": {
       "Title": "Backend",
       "Description": "Creating efficient APIs and scalable server-side architectures.",
       "Description_A": "API design and RESTful/GraphQL services",
-      "Description_B": "Database modeling and ORM usage (Prisma, Drizzle)",
-      "Description_C": "Authentication and authorization (JWT, BetterAuth)",
+      "Description_B": "Database modeling and ORM usage",
+      "Description_C": "Authentication and authorization",
       "Description_D": "Scalable, event-driven architecture"
     },
     "Testing": {
       "Title": "Testing",
       "Description": "Ensuring reliability and automated testing and quality checks.",
       "Description_A": "Automated end-to-end and unit testing",
-      "Description_B": "End-to-end testing with Playwright",
-      "Description_C": "Integration testing with Cypress",
-      "Description_D": "Continuous integration and delivery pipelines"
+      "Description_B": "End-to-end testing",
+      "Description_C": "Integration testing",
+      "Description_D": "Integration and delivery pipelines"
     },
     "Cloud": {
       "Title": "Cloud",
       "Description": "Leveraging cloud services for scalable and efficient applications.",
-      "Description_A": "Containerization and orchestration (Docker, Docker Compose)",
+      "Description_A": "Containerization and orchestration",
       "Description_B": "Serverless architecture and microservices",
       "Description_C": "Serverless functions and edge computing",
       "Description_D": "CI/CD pipelines for automated deployments"
@@ -91,10 +91,10 @@
     "Productivity": {
       "Title": "Productivity Tools",
       "Description": "Streamlining workflows with the right development tools.",
-      "Description_A": "Version control workflows (Git, GitHub, GitLab)",
-      "Description_B": "Project management and documentation (Notion, Linear)",
-      "Description_C": "Code editors and IDE customization (VSCode, Neovim)",
-      "Description_D": "Communication and collaboration platforms (Slack, Discord)"
+      "Description_A": "Version control workflows",
+      "Description_B": "Project management and doc",
+      "Description_C": "Code editors and IDE customization",
+      "Description_D": "Communication platforms"
     },
     "R&D": {
       "Title": "R&D",

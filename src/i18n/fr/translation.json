@@ -48,16 +48,16 @@
       "Title": "Frontend",
       "Description": "Interfaces modernes, accessibles et responsives.",
       "Description_A": "Conception d'interface réactive et accessibilité",
-      "Description_B": "Architecture basée sur des composants avec React et Preact",
-      "Description_C": "Gestion d'état (Redux, Zustand, React Query)",
-      "Description_D": "Optimisation des performances et découpage du code"
+      "Description_B": "Architecture basée sur des composants",
+      "Description_C": "Gestion d'état",
+      "Description_D": "Optimisation des performances"
     },
     "Backend": {
       "Title": "Backend",
       "Description": "Création d'APIs efficaces et d'architectures serveur évolutives.",
       "Description_A": "Conception d'API et services RESTful/GraphQL",
-      "Description_B": "Modélisation de base de données et utilisation d'ORM (Prisma, Drizzle)",
-      "Description_C": "Authentification et autorisation (JWT, BetterAuth)",
+      "Description_B": "Modélisation de base de données et utilisation d'ORM",
+      "Description_C": "Authentification et autorisation",
       "Description_D": "Architecture évolutive et orientée événements"
     },
     "Testing": {
@@ -71,7 +71,7 @@
     "Cloud": {
       "Title": "Cloud",
       "Description": "Exploiter les services cloud pour des applications évolutives et efficaces.",
-      "Description_A": "Conteneurisation et orchestration (Docker, Docker Compose)",
+      "Description_A": "Conteneurisation et orchestration",
       "Description_B": "Architecture serverless et microservices",
       "Description_C": "Fonctions serverless et edge computing",
       "Description_D": "Pipelines CI/CD pour les déploiements automatisés"
@@ -87,17 +87,17 @@
     "Productivity": {
       "Title": "Outils de productivité",
       "Description": "Optimisation du flux de travail avec les bons outils de développement.",
-      "Description_A": "Workflows de gestion de versions (Git, GitHub, GitLab)",
-      "Description_B": "Gestion de projet et documentation (Notion, Linear)",
-      "Description_C": "Éditeurs de code et personnalisation d'IDE (VSCode, Neovim)",
-      "Description_D": "Plateformes de communication et de collaboration (Slack, Discord)"
+      "Description_A": "Workflows de gestion de versions",
+      "Description_B": "Gestion de projet et documentation",
+      "Description_C": "Éditeurs de code et personnalisation d'IDE",
+      "Description_D": "Plateformes de communication et de collab"
     },
     "R&D": {
       "Title": "R&D",
       "Description": "Expérimentations avec des technologies et idées de pointe.",
       "Description_A": "Exploration des technologies émergentes",
       "Description_B": "Proof of concept et prototypage expérimental",
-      "Description_C": "Analyse de données et étude du comportement utilisateur",
+      "Description_C": "Analyse de données et étude",
       "Description_D": "Innovation itérative et intégration de retours"
     },
     "Improving": {

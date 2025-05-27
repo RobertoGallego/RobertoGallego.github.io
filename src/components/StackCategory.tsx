@@ -430,7 +430,7 @@ const StackCategory = ({
             color: "grey",
             marginTop: 10,
             marginBottom: 10,
-            maxWidth: 450,
+            // maxWidth: 450,
           }}
         >
           {t(categoryDescription)}

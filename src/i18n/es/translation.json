@@ -52,30 +52,30 @@
       "Title": "Frontend",
       "Description": "Interfaces responsivas y accesibles con tecnología web moderna.",
       "Description_A": "Diseño de UI responsiva y accesibilidad",
-      "Description_B": "Arquitectura basada en componentes con React y Preact",
-      "Description_C": "Patrones de gestión de estado (Redux, Zustand, React Query)",
+      "Description_B": "Arquitectura basada en componentes",
+      "Description_C": "Patrones de gestión de estado",
       "Description_D": "Optimización de rendimiento y code splitting"
     },
     "Backend": {
       "Title": "Backend",
       "Description": "Creación de APIs eficientes y arquitecturas escalables del lado del servidor.",
       "Description_A": "Diseño de APIs y servicios RESTful/GraphQL",
-      "Description_B": "Modelado de bases de datos y uso de ORMs (Prisma, Drizzle)",
-      "Description_C": "Autenticación y autorización (JWT, BetterAuth)",
+      "Description_B": "Modelado de bases de datos y uso de ORMs",
+      "Description_C": "Autenticación y autorización",
       "Description_D": "Arquitectura escalable basada en eventos"
     },
     "Testing": {
       "Title": "Testing",
       "Description": "Asegurando confiabilidad mediante pruebas automatizadas y controles de calidad.",
-      "Description_A": "Pruebas automatizadas end-to-end y unitarias",
-      "Description_B": "Pruebas end-to-end con Playwright",
-      "Description_C": "Pruebas de integración con Cypress",
+      "Description_A": "Pruebas automatizadas",
+      "Description_B": "Pruebas end-to-end",
+      "Description_C": "Pruebas de integración",
       "Description_D": "Pipelines de integración y entrega continua"
     },
     "Cloud": {
       "Title": "Cloud",
       "Description": "Aprovechando servicios en la nube para aplicaciones escalables y eficientes.",
-      "Description_A": "Contenerización y orquestación (Docker, Docker Compose)",
+      "Description_A": "Contenerización y orquestación",
       "Description_B": "Arquitectura serverless y microservicios",
       "Description_C": "Funciones serverless y edge computing",
       "Description_D": "Pipelines CI/CD para despliegues automatizados"
@@ -91,18 +91,18 @@
     "Productivity": {
       "Title": "Herramientas de productividad",
       "Description": "Optimizando flujos de trabajo con las herramientas adecuadas.",
-      "Description_A": "Flujos de control de versiones (Git, GitHub, GitLab)",
-      "Description_B": "Gestión de proyectos y documentación (Notion, Linear)",
-      "Description_C": "Editores de código y personalización de IDEs (VSCode, Neovim)",
-      "Description_D": "Plataformas de comunicación y colaboración (Slack, Discord)"
+      "Description_A": "Flujos de control de versiones",
+      "Description_B": "Gestión de proyectos y documentación",
+      "Description_C": "Editores de código y personalización de IDEs",
+      "Description_D": "Plataformas de comunicación y colaboración"
     },
     "R&D": {
       "Title": "I+D",
       "Description": "Experimentando con tecnologías punteras e ideas innovadoras.",
       "Description_A": "Exploración de tecnologías emergentes",
-      "Description_B": "Pruebas de concepto y prototipado experimental",
-      "Description_C": "Análisis de datos e investigación de comportamiento de usuarios",
-      "Description_D": "Innovación iterativa e incorporación de feedback"
+      "Description_B": "Pruebas de concepto y prototipado",
+      "Description_C": "Análisis e investigación",
+      "Description_D": "Innovación e incorporación de feedback"
     },
     "Improving": {
       "Title": "Actualmente mejorando",

@@ -1,3 +1,4 @@
+import "./TechCard.css"
 import useDarkMode from "../../hooks/useDarkMode"
 
 interface TechCardProps {
@@ -16,22 +17,8 @@ const TechCard = ({ label = "", src, empty = 0 }: TechCardProps) => {
     return (
       <>
         {Array.from({ length: empty }).map((_, index) => (
-          <div
-            key={`empty-${index}`}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 10,
-              padding: 4,
-              flex: 1,
-              flexGrow: 1,
-              flexShrink: 1,
-              flexBasis: 100,
-              flexWrap: "wrap",
-            }}
-          >
-            <div style={{ width: 20, height: 20 }}></div>
+          <div key={index} className="tech-card empty-placeholder">
+            <div className="tech-card-empty" />
           </div>
         ))}
       </>
@@ -39,43 +26,10 @@ const TechCard = ({ label = "", src, empty = 0 }: TechCardProps) => {
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        gap: 10,
-        padding: 4,
-        flex: 1,
-        flexGrow: 1,
-        flexShrink: 1,
-        flexBasis: 100,
-        flexWrap: "wrap",
-      }}
-    >
-      <div style={{ display: "flex", alignItems: "center" }}>
-        {src && (
-          <img
-            src={srcImg}
-            alt={label}
-            style={{
-              width: 20,
-              height: 20,
-              marginLeft: 10,
-            }}
-          />
-        )}
-
-        <h5
-          style={{
-            fontSize: 12,
-            fontWeight: 500,
-            textAlign: "center",
-            marginLeft: 10,
-          }}
-        >
-          {label}
-        </h5>
+    <div className="tech-card">
+      <div className="tech-card-content">
+        {src && <img src={srcImg} alt={label} className="tech-card-img" />}
+        <h5 className="tech-card-label">{label}</h5>
       </div>
     </div>
   )
