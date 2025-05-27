@@ -10,12 +10,28 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+    -45deg,
+    #e2e2e2,
+    #e2e2e2,
+    #f7d8c4,
+    #e2e2e2,
+    #e2e2e2
+  );
 }
 
 body {
   background: #e2e2e2;
   background-size: 200% 200%;
   animation: moveBackground 10s linear infinite;
+  background: linear-gradient(
+    -45deg,
+    #e2e2e2,
+    #e2e2e2,
+    #f7d8c4,
+    #e2e2e2,
+    #e2e2e2
+  );
 }
 
 p {
