@@ -1,7 +1,7 @@
 import { TbDeviceDesktopCode } from "react-icons/tb"
 import Chip from "../Chip/Chip"
 import { VscServerProcess, VscTools } from "react-icons/vsc"
-import { FaArrowTrendUp, FaMasksTheater } from "react-icons/fa6"
+import { FaMasksTheater } from "react-icons/fa6"
 import { IoMdCloudOutline } from "react-icons/io"
 import { LiaPenNibSolid } from "react-icons/lia"
 import { PiBinocularsFill } from "react-icons/pi"
@@ -124,7 +124,7 @@ const TechStack = () => {
             iconColor="brown"
           />
 
-          <Chip
+          {/* <Chip
             Icon={FaArrowTrendUp}
             status={categoryNumber === 8}
             label={t("TechStack.Improving")}
@@ -132,7 +132,7 @@ const TechStack = () => {
             onClick={() => {
               setCategory(8)
             }}
-          />
+          /> */}
 
           <Chip
             Icon={MdOutlineRoomService}

@@ -29,7 +29,6 @@ import {
   ExpressDark,
   ExpressLight,
   Figma,
-  Firebase,
   Firefox,
   GoDark,
   GoLight,
@@ -44,8 +43,6 @@ import {
   NodeJS,
   PostgreSQL,
   Preact,
-  PrismaDark,
-  PrismaLight,
   ReactQuery,
   ReactRouter,
   Redis,
@@ -98,13 +95,15 @@ import {
   OXC,
   PrettierDark,
   MotionDark,
+  React,
 } from "../assets"
 import useDarkMode from "../hooks/useDarkMode"
 import { useTranslation } from "react-i18next"
 
 interface TechStackProps {
   src?: string | { light: string; dark: string }
-  label: string
+  label?: string
+  empty?: number
 }
 
 interface StackCategoryProps {
@@ -134,24 +133,23 @@ const StackCategoryData = [
       { src: CSSOld, label: "CSS" },
       { src: JavaScript, label: "JavaScript" },
       { src: TypeScript, label: "TypeScript" },
+      { src: React, label: "React" },
       { src: Expo, label: "Expo" },
       { src: ReactQuery, label: "TanStack Query" },
       { src: TanStack, label: "TanStack Table" },
       { src: ReactRouter, label: "React Router" },
       { src: Storybook, label: "Storybook" },
       { src: Zustand, label: "Zustand" },
-      { src: Electron, label: "Electron" },
       { src: ViteJS, label: "Vite" },
       { src: MaterialUI, label: "Material UI" },
       { src: StyledComponents, label: "Styled Component" },
-      { src: TailwindCSS, label: "Tailwind CSS" },
       { src: Zod, label: "Zod" },
       { src: ChartJS, label: "ChartJS" },
-      { src: Preact, label: "Preact" },
-      { src: Million, label: "Million" },
       { src: MotionDark, label: "Motion" },
-      { src: SolidJS, label: "SolidJS" },
       { src: PrettierDark, label: "Prettier" },
+      { src: Preact, label: "Preact" },
+      { src: Electron, label: "Electron" },
+
     ],
   },
   {
@@ -172,18 +170,18 @@ const StackCategoryData = [
       { src: Supabase, label: "Supabase" },
       { src: SocketIOLight, label: "Socket.IO" },
       { src: JWT, label: "JWT" },
-      { src: { light: PrismaLight, dark: PrismaDark }, label: "Prisma" },
       { src: GraphQL, label: "GraphQL" },
       { src: MongoDB, label: "MongoDB" },
       { src: PostgreSQL, label: "PostgreSQL" },
       { src: Redis, label: "Redis" },
       { src: Drizzle, label: "Drizzle" },
       { src: Bun, label: "Bun" },
-      { src: Firebase, label: "Firebase" },
       { src: Neon, label: "Neon" },
       { src: { light: GoLight, dark: GoDark }, label: "Go" },
       { src: Hono, label: "Hono" },
       { src: BetterAuthLight, label: "BetterAuth" },
+      { src: DotenvX, label: "Dotenv" },
+      { empty: 4 },
     ],
   },
   {
@@ -203,6 +201,7 @@ const StackCategoryData = [
       { src: Jest, label: "Jest" },
       { src: Vitest, label: "Vitest" },
       { src: Playwright, label: "Playwright" },
+      { empty: 16 },
     ],
   },
   {
@@ -219,11 +218,12 @@ const StackCategoryData = [
     ],
     techStack: [
       { src: Docker, label: "Docker" },
-      { src: Firebase, label: "Firebase" },
       { src: DigitalOcean, label: "DigitalOcean" },
+      { src: { light: GitHubLight, dark: GitHubDark }, label: "GitHub Page" },
       { src: Cloudflare, label: "Cloudflare" },
       { src: CloudflareWorkers, label: "Cloudflare Workers" },
       { src: Heroku, label: "Heroku" },
+      { empty: 14 },
     ],
   },
   {
@@ -243,6 +243,7 @@ const StackCategoryData = [
       { src: Premiere, label: "Premiere" },
       { src: Illustrator, label: "Illustrator" },
       { src: Figma, label: "Figma" },
+      { empty: 16 },
     ],
   },
   {
@@ -262,7 +263,6 @@ const StackCategoryData = [
       { src: Notion, label: "Notion" },
       { src: Neovim, label: "Neovim" },
       { src: Obsidian, label: "Obsidian" },
-      { src: Linear, label: "Linear" },
       { src: Postman, label: "Postman" },
       { src: Slack, label: "Slack" },
       { src: Discord, label: "Discord" },
@@ -279,7 +279,6 @@ const StackCategoryData = [
       { src: Windows, label: "Windows" },
       { src: ZenBrowserDark, label: "Zen Browser" },
       { src: Ubuntu, label: "Ubuntu" },
-      { src: DotenvX, label: "Dotenv" },
     ],
   },
   {
@@ -293,6 +292,15 @@ const StackCategoryData = [
       "CategoryContent.R&D.Description_B",
       "CategoryContent.R&D.Description_C",
       "CategoryContent.R&D.Description_D",
+    ],
+    techStack: [
+      { src: Million, label: "Million" },
+      { src: SolidJS, label: "SolidJS" },
+      { src: TailwindCSS, label: "Tailwind CSS" },
+      { src: TanStack, label: "TanStack Router" },
+      { src: { light: GoLight, dark: GoDark }, label: "Go" },
+      { src: Hono, label: "Hono" },
+      { empty: 14 },
     ],
   },
   {
@@ -332,6 +340,7 @@ const StackCategoryData = [
       { src: Shopify, label: "Shopify" },
       { src: Stripe, label: "Stripe" },
       { src: Twilio, label: "Twilio" },
+      { src: Linear, label: "Linear" },
       { src: OBS, label: "OBS" },
       { src: HuggingFace, label: "Hugging Face" },
       { src: WordPress, label: "WordPress" },
@@ -339,6 +348,7 @@ const StackCategoryData = [
       { src: Pilot, label: "Pilot" },
       { src: OXC, label: "OXC" },
       { src: Sentry, label: "Sentry" },
+      { empty: 9 },
     ],
   },
 ]
@@ -464,7 +474,7 @@ const StackCategory = ({
           }}
         >
           {techStack.map((tech) => (
-            <TechCard key={tech.label} src={tech.src} label={tech.label} />
+            <TechCard key={tech.label} src={tech.src} label={tech.label} empty={tech.empty} />
           ))}
         </div>
       </div>

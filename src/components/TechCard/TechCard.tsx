@@ -1,15 +1,42 @@
 import useDarkMode from "../../hooks/useDarkMode"
 
 interface TechCardProps {
-  label: string
+  label?: string
   src?: string | { light: string; dark: string }
+  empty?: number
 }
 
-const TechCard = ({ label, src }: TechCardProps) => {
+const TechCard = ({ label = "", src, empty = 0 }: TechCardProps) => {
   const { isDarkMode } = useDarkMode()
 
   const srcImg =
     typeof src === "string" ? src : isDarkMode ? src?.dark : src?.light
+
+  if (empty > 0) {
+    return (
+      <>
+        {Array.from({ length: empty }).map((_, index) => (
+          <div
+            key={`empty-${index}`}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: 10,
+              padding: 4,
+              flex: 1,
+              flexGrow: 1,
+              flexShrink: 1,
+              flexBasis: 100,
+              flexWrap: "wrap",
+            }}
+          >
+            <div style={{ width: 20, height: 20 }}></div>
+          </div>
+        ))}
+      </>
+    )
+  }
 
   return (
     <div
@@ -18,7 +45,6 @@ const TechCard = ({ label, src }: TechCardProps) => {
         alignItems: "center",
         justifyContent: "space-between",
         gap: 10,
-        // border: isDarkMode ? "0.5px solid #333333" : "0.5px solid #dddddd",
         padding: 4,
         flex: 1,
         flexGrow: 1,
@@ -39,6 +65,7 @@ const TechCard = ({ label, src }: TechCardProps) => {
             }}
           />
         )}
+
         <h5
           style={{
             fontSize: 12,
@@ -50,35 +77,6 @@ const TechCard = ({ label, src }: TechCardProps) => {
           {label}
         </h5>
       </div>
-
-      {/* <div>
-        <FaHeart
-          style={{
-            color: isDarkMode ? "#FF6347" : "#FF6347",
-            fontSize: 14,
-            alignSelf: "center",
-            marginRight: 10,
-          }}
-        />
-
-        <FaStar
-          style={{
-            color: isDarkMode ? "#FFD700" : "#FFD700",
-            fontSize: 14,
-            alignSelf: "center",
-            marginRight: 10,
-          }}
-        />
-
-        <AiOutlineFileSearch
-          style={{
-            color: isDarkMode ? "#00BFFF" : "#00BFFF",
-            fontSize: 14,
-            alignSelf: "center",
-            marginRight: 10,
-          }}
-        />
-      </div> */}
     </div>
   )
 }
