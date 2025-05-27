@@ -348,7 +348,7 @@ const StackCategoryData = [
       { src: Pilot, label: "Pilot" },
       { src: OXC, label: "OXC" },
       { src: Sentry, label: "Sentry" },
-      { empty: 9 },
+      { empty: 7 },
     ],
   },
 ]
