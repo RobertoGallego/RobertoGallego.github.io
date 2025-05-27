@@ -16,7 +16,6 @@
   height: 20px;
 }
 
-/* Ocultar los tech-card vacíos en pantallas menores a 768px */
 @media (max-width: 768px) {
   .tech-card.empty-placeholder {
     display: none;
