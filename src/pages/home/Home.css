@@ -16,7 +16,7 @@
 .home-presentation {
   margin-top: 80px;
   padding-block: 100px;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,25 +78,17 @@
   font-size: 60px;
   font-weight: 900;
   text-align: center;
-  background: linear-gradient(45deg, #762d20, #252525, #6b5338, #49423b);
-  background-size: 200% 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientAnimation 5s ease infinite;
 }
 
 [data-theme="dark"] {
   .home-title {
-    background: linear-gradient(45deg, #ff6347, #ffa09b, #ffc785, #ffe6c9);
-    background-size: 200% 200%;
+    color: #ff6347;
   }
 }
 
 [data-theme="light"] {
   .home-title {
-    background: linear-gradient(45deg, #762d20, #252525, #6b5338, #49423b);
-    background-size: 200% 200%;
+    color: #762d20;
   }
 }
 

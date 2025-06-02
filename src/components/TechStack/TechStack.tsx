@@ -10,6 +10,7 @@ import StackCategoryContent from "../StackCategory"
 import { useState } from "react"
 import useDarkMode from "../../hooks/useDarkMode"
 import { useTranslation } from "react-i18next"
+import "./TechStack.css"
 
 const TechStack = () => {
   const { isDarkMode } = useDarkMode()
@@ -18,17 +19,9 @@ const TechStack = () => {
 
   return (
     <div
+      className="tech-stack"
       style={{
-        display: "flex",
-        flexDirection: "column",
-        fontSize: 16,
-        alignItems: "flex-start",
-        width: "100%",
-        marginTop: 100,
-        paddingInline: 10,
         backgroundColor: isDarkMode ? "#181816" : "#f8f8f8",
-        padding: 60,
-        borderRadius: 10,
       }}
     >
       <h1>{t("TechStack.Title")}</h1>

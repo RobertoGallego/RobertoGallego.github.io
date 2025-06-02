@@ -48,6 +48,7 @@ const Blog = () => {
           chip={"Ecole 42"}
           srcFlag={FranceFlag}
           chipFlag={"Paris, France"}
+          href="https://42.fr/le-campus-de-paris/diplome-informatique/expert-en-architecture-informatique/"
         />
 
         <BlogCard
@@ -57,6 +58,7 @@ const Blog = () => {
           chip={"Ecole 42"}
           srcFlag={FranceFlag}
           chipFlag={"Paris, France"}
+          href="https://42.fr/le-campus-de-paris/diplome-informatique/#:~:text=Le%20certificat%2042,un%20premier%20poste%20en%20CDI."
         />
 
         <BlogCard
@@ -66,6 +68,7 @@ const Blog = () => {
           chip={"Ecole 42"}
           srcFlag={FranceFlag}
           chipFlag={"Paris, France"}
+          href="https://42.fr/le-campus-de-paris/diplome-informatique/concepteur-developpeur-solutions-informatiques/"
         />
 
         <BlogCard
@@ -75,6 +78,7 @@ const Blog = () => {
           chip={"THP"}
           srcFlag={FranceFlag}
           chipFlag={"Paris, France"}
+          href="https://www.thehackingproject.org/parcours/developpeur-web-fullstack"
         />
 
         <BlogCard
@@ -84,6 +88,7 @@ const Blog = () => {
           chip={"CLPS FLE"}
           srcFlag={FranceFlag}
           chipFlag={"Paris, France"}
+          href="https://www.clps.net/formation/formation-linguistique-fle-francais-langue-etrangere/"
         />
 
         <BlogCard
@@ -93,6 +98,7 @@ const Blog = () => {
           chip={"Access"}
           srcFlag={Ausflag}
           chipFlag={"Sydney, Australia"}
+          href="https://studyinaustralia.tv/en/institution/28692-Access-Language-Centre"
         />
 
         {/* <BlogCard blogTitle={"Unab"}/> */}

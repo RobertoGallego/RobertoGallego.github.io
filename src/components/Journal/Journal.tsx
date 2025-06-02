@@ -40,6 +40,7 @@ const Journal = () => {
           { src: Switzerlandflag, label: "Lausanne, Switzerland" },
         ]}
         workPosition={t("Works.Klarys.Role")}
+        href="https://www.klarys.io"
       />
 
       <JournalCard
@@ -50,6 +51,7 @@ const Journal = () => {
         chip={"React Native"}
         flags={[{ src: FranceFlag, label: "Rennes, France" }]}
         workPosition={t("Works.Noop.Role")}
+        href="https://www.noop.fr"
       />
 
       <JournalCard
@@ -60,6 +62,7 @@ const Journal = () => {
         chip={"Restaurant"}
         flags={[{ src: Ausflag, label: "Sydney, Australia" }]}
         workPosition={t("Works.Taste.Role")}
+        href="https://tastebaguette.com/"
       />
 
       <JournalCard
@@ -70,6 +73,7 @@ const Journal = () => {
         chip={"IT Support"}
         flags={[{ src: ChileFlag, label: "Santiago, Chile" }]}
         workPosition={t("Works.Tecnostrike.Role")}
+        href="https://www.tecnostrike.cl"
       />
     </div>
   )

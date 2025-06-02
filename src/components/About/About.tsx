@@ -6,6 +6,7 @@ import logo42w from "../../assets/42logow.png"
 import ninjaco from "../../assets/ninjaco.png"
 import { FranceFlag } from "../../assets"
 import { useTranslation } from "react-i18next"
+import "./About.css"
 
 const About = () => {
   const { isDarkMode } = useDarkMode()
@@ -21,17 +22,9 @@ const About = () => {
 
   return (
     <div
+      className="about-wrapper"
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
         backgroundColor: isDarkMode ? "#181816" : "#f8f8f8",
-        width: "100%",
-        marginBottom: 100,
-        marginTop: 100,
-        padding: 60,
-        borderRadius: 10,
       }}
     >
       <div
@@ -74,6 +67,9 @@ const About = () => {
             maxWidth: 700,
             fontSize: 16,
             textAlign: "justify",
+            hyphens: "auto",
+            wordBreak: "break-word",
+            overflowWrap: "break-word",
           }}
         >
           {t("About.Description_A")}
@@ -84,6 +80,9 @@ const About = () => {
             maxWidth: 700,
             fontSize: 16,
             textAlign: "justify",
+            hyphens: "auto",
+            wordBreak: "break-word",
+            overflowWrap: "break-word",
           }}
         >
           {t("About.Description_B")}

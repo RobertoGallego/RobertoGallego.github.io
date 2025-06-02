@@ -11,6 +11,7 @@ interface BlogCardProps {
   chip?: string
   srcFlag?: string
   chipFlag?: string
+  href?: string
 }
 
 const BlogCard = ({
@@ -20,6 +21,7 @@ const BlogCard = ({
   chip = "Social Media",
   srcFlag = SpainFlag,
   chipFlag = "Spanish",
+  href = "",
 }: BlogCardProps) => {
   const { isDarkMode } = useDarkMode()
   const { t } = useTranslation()
@@ -116,9 +118,18 @@ const BlogCard = ({
             alignItems: "center",
           }}
         >
-          <p style={{ fontSize: 12, fontWeight: 500 }}>
+          <a
+            style={{
+              fontSize: 12,
+              fontWeight: 500,
+              whiteSpace: "nowrap",
+            }}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {t("Button.Read_More")}
-          </p>
+          </a>
 
           <FiExternalLink size={12} />
         </div>

@@ -16,6 +16,7 @@ interface JournalCardProps {
   chip?: string
   flags?: Flag[]
   workPosition?: string
+  href?: string
 }
 
 const JournalCard = ({
@@ -25,6 +26,7 @@ const JournalCard = ({
   date = "",
   flags = [],
   workPosition = "",
+  href = "",
 }: JournalCardProps) => {
   const { isDarkMode } = useDarkMode()
   const { t } = useTranslation()
@@ -113,6 +115,7 @@ const JournalCard = ({
             style={{
               color: "gray",
               maxWidth: 700,
+              marginBlock: 4,
             }}
           >
             {subtitle}
@@ -163,15 +166,18 @@ const JournalCard = ({
                 alignItems: "center",
               }}
             >
-              <p
+              <a
                 style={{
                   fontSize: 12,
                   fontWeight: 500,
                   whiteSpace: "nowrap",
                 }}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {t("Button.Read_More")}
-              </p>
+              </a>
 
               <FiExternalLink size={12} />
             </div>
