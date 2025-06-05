@@ -54,7 +54,6 @@ const HeroSection = () => {
 
       <h3
         style={{
-          backgroundColor: isDarkMode ? "#181816" : "#f8f8f8",
           marginTop: 15,
           textAlign: "center",
           fontFamily: "Poppins",
