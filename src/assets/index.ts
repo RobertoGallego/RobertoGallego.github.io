@@ -117,3 +117,4 @@ export { default as Ausflag } from './aussie-flag.svg';
 export { default as ChileFlag } from './chileflag.svg';
 export { default as Switzerlandflag } from './switzerlandflag.svg';
 export { default as React } from './react.svg';
+export { default as Profile } from "./profile.png"

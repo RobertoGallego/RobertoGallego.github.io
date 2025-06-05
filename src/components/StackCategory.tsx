@@ -1,7 +1,7 @@
 import TechCard from "./TechCard/TechCard"
 import { TbDeviceDesktopCode } from "react-icons/tb"
 import { FaArrowTrendUp, FaMasksTheater } from "react-icons/fa6"
-import { MdArrowOutward, MdOutlineRoomService } from "react-icons/md"
+import { MdOutlineRoomService } from "react-icons/md"
 
 import { VscServerProcess, VscTools } from "react-icons/vsc"
 import { IoMdCloudOutline } from "react-icons/io"
@@ -149,7 +149,6 @@ const StackCategoryData = [
       { src: PrettierDark, label: "Prettier" },
       { src: Preact, label: "Preact" },
       { src: Electron, label: "Electron" },
-
     ],
   },
   {
@@ -379,7 +378,6 @@ const StackCategory = ({
   CategoryTitle,
   categoryColor,
   CategoryIcon,
-  categoryDescription,
   categoryKeys,
   techStack = [],
 }: StackCategoryProps) => {
@@ -392,7 +390,7 @@ const StackCategory = ({
         width: "100%",
         display: "flex",
         justifyContent: "space-between",
-        marginTop: 40,
+        marginTop: 20,
         flexWrap: "wrap",
       }}
     >
@@ -421,10 +419,22 @@ const StackCategory = ({
             size={50}
           />
 
-          <h1>{t(CategoryTitle)}</h1>
+          <div>
+            <h2>{t(CategoryTitle)}</h2>
+            <div
+              style={{
+                display: "flex",
+                // gap: 4,
+                alignItems: "center",
+              }}
+            >
+              {/* <MdArrowOutward color={categoryColor} /> */}
+              <p>{t(categoryKeys[0])}</p>
+            </div>
+          </div>
         </div>
 
-        <p
+        {/* <p
           style={{
             fontSize: 16,
             color: "grey",
@@ -434,9 +444,9 @@ const StackCategory = ({
           }}
         >
           {t(categoryDescription)}
-        </p>
+        </p> */}
 
-        <div
+        {/* <div
           style={{
             display: "flex",
             gap: 4,
@@ -460,7 +470,7 @@ const StackCategory = ({
         <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
           <MdArrowOutward color={categoryColor} />
           <p>{t(categoryKeys[3])}</p>
-        </div>
+        </div> */}
 
         <div
           style={{
@@ -474,7 +484,12 @@ const StackCategory = ({
           }}
         >
           {techStack.map((tech) => (
-            <TechCard key={tech.label} src={tech.src} label={tech.label} empty={tech.empty} />
+            <TechCard
+              key={tech.label}
+              src={tech.src}
+              label={tech.label}
+              empty={tech.empty}
+            />
           ))}
         </div>
       </div>

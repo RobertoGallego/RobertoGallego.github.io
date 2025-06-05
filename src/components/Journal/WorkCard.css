@@ -1,5 +1,5 @@
 .work-card-image {
-  width: 120px;
+  min-width: 100px;
   aspect-ratio: 2 / 1;
   object-fit: cover;
   border-radius: 10px;

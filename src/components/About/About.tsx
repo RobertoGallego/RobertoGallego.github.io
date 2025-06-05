@@ -3,8 +3,7 @@ import { useTheme } from "../../useTheme"
 import useDarkMode from "../../hooks/useDarkMode"
 import logo42 from "../../assets/42logo.png"
 import logo42w from "../../assets/42logow.png"
-import ninjaco from "../../assets/ninjaco.png"
-import { FranceFlag } from "../../assets"
+import { FranceFlag, Profile } from "../../assets"
 import { useTranslation } from "react-i18next"
 import "./About.css"
 
@@ -32,7 +31,6 @@ const About = () => {
           display: "flex",
           gap: 20,
           flexDirection: "column",
-          width: "100%",
           borderRadius: 5,
         }}
       >
@@ -41,6 +39,7 @@ const About = () => {
             display: "flex",
             gap: 20,
             alignItems: "center",
+            justifyContent: "flex-start",
           }}
         >
           <div
@@ -54,7 +53,7 @@ const About = () => {
               outline: "2px solid #3d3834",
             }}
           >
-            <img src={ninjaco} alt="Profile" />
+            <img src={Profile} alt="Profile" />
           </div>
           <div>
             <h3>Roberto GALLEGO</h3>
