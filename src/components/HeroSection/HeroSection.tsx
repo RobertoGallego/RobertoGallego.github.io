@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next"
 import { FaArrowRight } from "react-icons/fa6"
 import useDarkMode from "../../hooks/useDarkMode"
+import coco  from "../../assets/gif/30.gif"
 
 const HeroSection = () => {
   const { isDarkMode } = useDarkMode()
@@ -27,8 +28,8 @@ const HeroSection = () => {
           style={{
             borderRadius: 100,
             overflow: "hidden",
-            width: 130,
-            height: 130,
+            width: 140,
+            height: 140,
             textAlign: "center",
             display: "flex",
             alignItems: "center",
@@ -36,7 +37,8 @@ const HeroSection = () => {
           }}
         >
           <img
-            src="https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_22.png"
+            src={coco}
+            // src="https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_22.png"
             alt="Profile"
             style={{
               width: "100%",
@@ -50,13 +52,20 @@ const HeroSection = () => {
 
       <h1 className="home-title">{t("Roberto Gallego")}</h1>
 
-      <h2 style={{ marginTop: 15, textAlign: "center" }}>
+      <h3
+        style={{
+          backgroundColor: isDarkMode ? "#181816" : "#f8f8f8",
+          marginTop: 15,
+          textAlign: "center",
+          fontFamily: "Poppins",
+        }}
+      >
         {t("HeroSection.Title")}
-      </h2>
+      </h3>
 
       <p
         style={{
-          maxWidth: 450,
+          maxWidth: 500,
           textAlign: "center",
           marginTop: 5,
           fontSize: 16,

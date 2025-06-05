@@ -47,8 +47,8 @@ const About = () => {
               borderRadius: 100,
               overflow: "hidden",
               backgroundColor: "#3d3834",
-              width: 80,
-              height: 80,
+              width: 120,
+              height: 120,
               border: "4px solid #0f0f0e",
               outline: "2px solid #3d3834",
             }}
