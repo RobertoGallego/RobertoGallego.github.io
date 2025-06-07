@@ -47,7 +47,7 @@ const Footer = () => {
           style={{
             width: 40,
             padding: "0px 8px",
-            borderRadius: "8px",
+            borderRadius: 10,
             cursor: "pointer",
             display: "flex",
             alignItems: "center",
@@ -73,7 +73,7 @@ const Footer = () => {
           onClick={handleThemeToggle}
           style={{
             padding: "0px 8px",
-            borderRadius: "8px",
+            borderRadius: 10,
             cursor: "pointer",
             display: "flex",
             alignItems: "center",
@@ -92,7 +92,7 @@ const Footer = () => {
           onClick={handleBackToTopClick}
           style={{
             padding: "4px 8px",
-            borderRadius: "8px",
+            borderRadius: 10,
             cursor: "pointer",
             display: "flex",
             alignItems: "center",

@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next"
 import { FaArrowRight } from "react-icons/fa6"
 import useDarkMode from "../../hooks/useDarkMode"
-import coco  from "../../assets/gif/30.gif"
+import coco from "../../assets/gif/30.gif"
+import "./HeroSection.css"
 
 const HeroSection = () => {
   const { isDarkMode } = useDarkMode()
@@ -38,7 +39,6 @@ const HeroSection = () => {
         >
           <img
             src={coco}
-            // src="https://cdn.jsdelivr.net/gh/alohe/avatars/png/memo_22.png"
             alt="Profile"
             style={{
               width: "100%",
@@ -75,29 +75,22 @@ const HeroSection = () => {
 
       <div style={{ marginTop: 20, display: "flex" }}>
         <button
+          className="button-primary"
           style={{
             color: isDarkMode ? "#fff" : "#000",
             border: isDarkMode ? "1px solid #fff" : "1px solid #000",
-            borderRadius: "5px",
-            padding: "6px 12px",
-            cursor: "pointer",
-            margin: "0 10px",
-            fontSize: "16px",
-            fontWeight: 600,
-            display: "flex",
-            alignItems: "center",
-            gap: 6,
           }}
         >
           <p> {t("HeroSection.Button_Primary")}</p> <FaArrowRight size={12} />
         </button>
 
         <button
+          className="button-secondary"
           style={{
             backgroundColor: isDarkMode ? "#ff6347" : "#762d20",
             color: isDarkMode ? "#000" : "#fff",
             border: isDarkMode ? "1px solid #ff6347" : "1px solid #762d20",
-            borderRadius: "5px",
+            borderRadius: 10,
             padding: "6px 12px",
             cursor: "pointer",
             margin: "0 10px",
