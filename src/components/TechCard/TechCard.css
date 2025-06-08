@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 4px;
+  padding-block: 4px;
   flex: 1;
   flex-grow: 1;
   flex-shrink: 1;

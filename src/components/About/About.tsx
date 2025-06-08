@@ -49,8 +49,8 @@ const About = () => {
               backgroundColor: "#3d3834",
               width: 120,
               height: 120,
-              border: "4px solid #0f0f0e",
-              outline: "2px solid #3d3834",
+              border: isDarkMode ? "4px solid #0f0f0e" : "4px solid #f8f8f8",
+              outline: isDarkMode ? "2px solid #3d3834" : "2px solid #d7d7d7",
             }}
           >
             <img src={Profile} alt="Profile" />

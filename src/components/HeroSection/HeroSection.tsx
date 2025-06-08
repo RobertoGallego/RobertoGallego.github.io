@@ -74,7 +74,10 @@ const HeroSection = () => {
       </p>
 
       <div style={{ marginTop: 20, display: "flex" }}>
-        <button
+        <a
+          href="https://www.linkedin.com/in/roberto-g-905753190/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="button-primary"
           style={{
             color: isDarkMode ? "#fff" : "#000",
@@ -82,24 +85,21 @@ const HeroSection = () => {
           }}
         >
           <p> {t("HeroSection.Button_Primary")}</p> <FaArrowRight size={12} />
-        </button>
+        </a>
 
-        <button
+        <a
           className="button-secondary"
           style={{
             backgroundColor: isDarkMode ? "#ff6347" : "#762d20",
             color: isDarkMode ? "#000" : "#fff",
             border: isDarkMode ? "1px solid #ff6347" : "1px solid #762d20",
-            borderRadius: 10,
-            padding: "6px 12px",
-            cursor: "pointer",
-            margin: "0 10px",
-            fontSize: "16px",
-            fontWeight: 600,
           }}
+          href="https://www.linkedin.com/in/roberto-g-905753190/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {t("HeroSection.Button_Secondary")}
-        </button>
+        </a>
       </div>
     </div>
   )

@@ -390,7 +390,7 @@ const StackCategory = ({
         width: "100%",
         display: "flex",
         justifyContent: "space-between",
-        marginTop: 20,
+        marginTop: 40,
         flexWrap: "wrap",
       }}
     >
@@ -434,53 +434,12 @@ const StackCategory = ({
           </div>
         </div>
 
-        {/* <p
-          style={{
-            fontSize: 16,
-            color: "grey",
-            marginTop: 10,
-            marginBottom: 10,
-            // maxWidth: 450,
-          }}
-        >
-          {t(categoryDescription)}
-        </p> */}
-
-        {/* <div
-          style={{
-            display: "flex",
-            gap: 4,
-            alignItems: "center",
-          }}
-        >
-          <MdArrowOutward color={categoryColor} />
-          <p>{t(categoryKeys[0])}</p>
-        </div>
-
-        <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
-          <MdArrowOutward color={categoryColor} />
-          <p>{t(categoryKeys[1])}</p>
-        </div>
-
-        <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
-          <MdArrowOutward color={categoryColor} />
-          <p>{t(categoryKeys[2])}</p>
-        </div>
-
-        <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
-          <MdArrowOutward color={categoryColor} />
-          <p>{t(categoryKeys[3])}</p>
-        </div> */}
-
         <div
           style={{
             width: "100%",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
             marginTop: 20,
-            border: isDarkMode
-              ? "0l.5px solid #333333"
-              : "0l.5px solid #dddddd",
           }}
         >
           {techStack.map((tech) => (

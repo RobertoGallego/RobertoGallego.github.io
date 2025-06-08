@@ -45,7 +45,6 @@ const TechStack = () => {
             display: "flex",
             gap: 4,
             flexWrap: "wrap",
-            maxWidth: 800,
             marginTop: 15,
           }}
         >
