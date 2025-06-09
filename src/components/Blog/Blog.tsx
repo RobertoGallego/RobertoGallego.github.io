@@ -9,8 +9,9 @@ import {
   Access,
   ClpsDark,
   Clps,
+  FranceFlag,
+  Ausflag,
 } from "../../assets"
-import { FranceFlag, Ausflag } from "../../assets"
 import useDarkMode from "../../hooks/useDarkMode"
 import { useTranslation } from "react-i18next"
 
@@ -38,7 +39,7 @@ const Blog = () => {
           display: "flex",
           flexWrap: "wrap",
           marginTop: 20,
-          gap: 20,
+          gap: 10,
         }}
       >
         <BlogCard

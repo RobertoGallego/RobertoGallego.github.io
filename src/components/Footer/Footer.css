@@ -148,3 +148,10 @@
     padding: 10px;
   }
 }
+
+.language-toggle-button:hover,
+.theme-toggle-button:hover,
+.back-to-top-button:hover {
+  transform: scale(1.01);
+  filter: brightness(1.2);
+}

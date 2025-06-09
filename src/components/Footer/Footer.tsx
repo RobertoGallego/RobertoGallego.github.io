@@ -43,6 +43,7 @@ const Footer = () => {
 
       <div style={{ display: "flex", gap: 10 }}>
         <button
+          className="language-toggle-button"
           onClick={handleLanguageToggle}
           style={{
             width: 40,
@@ -53,6 +54,7 @@ const Footer = () => {
             alignItems: "center",
             gap: 8,
             border: "1px solid var(--button-bg, #535353)",
+            transition: "all 0.3s ease-in-out",
           }}
           aria-label="toggle-language"
         >
@@ -70,6 +72,7 @@ const Footer = () => {
         </button>
 
         <button
+          className="theme-toggle-button"
           onClick={handleThemeToggle}
           style={{
             padding: "0px 8px",
@@ -79,6 +82,7 @@ const Footer = () => {
             alignItems: "center",
             gap: "4px",
             border: "1px solid var(--button-bg, #535353)",
+            transition: "all 0.3s ease-in-out",
           }}
           aria-label="toggle-theme"
         >
@@ -89,6 +93,7 @@ const Footer = () => {
         </button>
 
         <button
+          className="back-to-top-button"
           onClick={handleBackToTopClick}
           style={{
             padding: "4px 8px",
@@ -98,6 +103,7 @@ const Footer = () => {
             alignItems: "center",
             gap: 4,
             border: "1px solid var(--button-bg, #535353)",
+            transition: "all 0.3s ease-in-out",
           }}
           aria-label="back-to-top"
         >

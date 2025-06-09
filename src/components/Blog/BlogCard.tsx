@@ -3,6 +3,8 @@ import { SpainFlag } from "../../assets"
 import { FiExternalLink } from "react-icons/fi"
 import useDarkMode from "../../hooks/useDarkMode"
 import { useTranslation } from "react-i18next"
+import "./Blog.css"
+import { IoCalendarNumber } from "react-icons/io5"
 
 interface BlogCardProps {
   srcImage?: string
@@ -28,10 +30,10 @@ const BlogCard = ({
 
   return (
     <div
+      className="blog-card"
       style={{
-        display: "flex",
-        gap: 20,
-        flex: "1 1 400px",
+        backgroundColor: isDarkMode ? "#181816" : "#fff",
+        border: isDarkMode ? "1px solid #2e2e2e" : "1px solid #eaeaea",
       }}
     >
       <img
@@ -42,26 +44,25 @@ const BlogCard = ({
           aspectRatio: "2 / 1",
           objectFit: "contain",
           borderRadius: 10,
-          backgroundColor: isDarkMode ? "#181816" : "#f8f8f8",
+          backgroundColor: isDarkMode ? "#1a1a1a" : "#f9f9f9",
           minHeight: 80,
           height: "auto",
-          border: isDarkMode ? "1px solid #2e2e2e" : "1px solid #dddddd",
-          padding: 4,
         }}
       />
 
       <div
         style={{
+          width: "100%",
           display: "flex",
           flexDirection: "column",
-          gap: 6,
+          gap: 4,
           justifyContent: "space-between",
         }}
       >
         <div
           style={{
             display: "flex",
-            gap: 6,
+            gap: 4,
             alignItems: "center",
             flexWrap: "wrap-reverse",
           }}
@@ -98,10 +99,22 @@ const BlogCard = ({
             {chipFlag}
           </p>
 
-          <p style={{ fontSize: 12, color: "#818181" }}>{date}</p>
+          <div
+            style={{
+              display: "flex",
+              gap: 4,
+              alignItems: "center",
+              color: isDarkMode ? "#eeeeee" : "#181818",
+            }}
+          >
+            <IoCalendarNumber size={12} />
+            <p style={{ fontSize: 12 }}>{date}</p>
+          </div>
         </div>
+
         <h3
           style={{
+            maxWidth: 350,
             display: "-webkit-box",
             WebkitLineClamp: 2,
             WebkitBoxOrient: "vertical",
@@ -116,6 +129,7 @@ const BlogCard = ({
             display: "flex",
             gap: 4,
             alignItems: "center",
+            alignSelf: "flex-end",
           }}
         >
           <a

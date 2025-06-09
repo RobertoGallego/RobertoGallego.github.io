@@ -17,4 +17,10 @@
 
 .navbar-item {
   list-style: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-item:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }

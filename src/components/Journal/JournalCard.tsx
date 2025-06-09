@@ -5,6 +5,7 @@ import { MdOutlineWorkOutline } from "react-icons/md"
 import useDarkMode from "../../hooks/useDarkMode"
 import "./WorkCard.css"
 import { useTranslation } from "react-i18next"
+import "./WorkCard.css"
 
 type Flag = { src: string; label: string }
 
@@ -33,15 +34,17 @@ const JournalCard = ({
 
   return (
     <div
-      className="journal-card-wrapper"
+      className="work-card-wrapper"
       style={{
+        border: isDarkMode ? "1px solid #2e2e2e" : "1px solid #eaeaea",
+        backgroundColor: isDarkMode ? "#181816" : "#fff",
         display: "flex",
         justifyContent: "space-between",
-        border: isDarkMode ? "1px solid #2e2e2e" : "1px solid #eaeaea",
         padding: 10,
         borderRadius: 10,
-        backgroundColor: isDarkMode ? "#181816" : "#fff",
         marginBottom: 10,
+        transition: "all 0.3s ease-in-out",
+        cursor: "pointer",
       }}
     >
       <div
