@@ -125,6 +125,7 @@ const BlogCard = ({
         </h3>
 
         <div
+          className="blog-card-read"
           style={{
             display: "flex",
             gap: 4,

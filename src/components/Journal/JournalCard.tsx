@@ -43,7 +43,7 @@ const JournalCard = ({
         padding: 10,
         borderRadius: 10,
         marginBottom: 10,
-        transition: "all 0.3s ease-in-out",
+        transition: "transform 0.2s ease",
         cursor: "pointer",
       }}
     >
@@ -97,6 +97,7 @@ const JournalCard = ({
                 }}
               >
                 <MdOutlineWorkOutline size={14} />
+
                 <p style={{ fontSize: 14 }}>{workPosition}</p>
               </div>
 
@@ -119,6 +120,10 @@ const JournalCard = ({
               color: "gray",
               maxWidth: 700,
               marginBlock: 4,
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
             }}
           >
             {subtitle}
@@ -163,6 +168,7 @@ const JournalCard = ({
             </div>
 
             <div
+              className="work-card-read-more"
               style={{
                 display: "flex",
                 gap: 4,

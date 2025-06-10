@@ -79,12 +79,8 @@ const HeroSection = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="button-primary"
-          style={{
-            color: isDarkMode ? "#fff" : "#000",
-            border: isDarkMode ? "1px solid #fff" : "1px solid #000",
-          }}
         >
-          <p> {t("HeroSection.Button_Primary")}</p> <FaArrowRight size={12} />
+          {t("HeroSection.Button_Primary")} <FaArrowRight size={12} />
         </a>
 
         <a

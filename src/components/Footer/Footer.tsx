@@ -45,17 +45,6 @@ const Footer = () => {
         <button
           className="language-toggle-button"
           onClick={handleLanguageToggle}
-          style={{
-            width: 40,
-            padding: "0px 8px",
-            borderRadius: 10,
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
-            border: "1px solid var(--button-bg, #535353)",
-            transition: "all 0.3s ease-in-out",
-          }}
           aria-label="toggle-language"
         >
           {language === "fr" && (
@@ -74,16 +63,6 @@ const Footer = () => {
         <button
           className="theme-toggle-button"
           onClick={handleThemeToggle}
-          style={{
-            padding: "0px 8px",
-            borderRadius: 10,
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            gap: "4px",
-            border: "1px solid var(--button-bg, #535353)",
-            transition: "all 0.3s ease-in-out",
-          }}
           aria-label="toggle-theme"
         >
           {theme === "light" && <MdOutlineLightMode size={18} />}
@@ -95,16 +74,6 @@ const Footer = () => {
         <button
           className="back-to-top-button"
           onClick={handleBackToTopClick}
-          style={{
-            padding: "4px 8px",
-            borderRadius: 10,
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            gap: 4,
-            border: "1px solid var(--button-bg, #535353)",
-            transition: "all 0.3s ease-in-out",
-          }}
           aria-label="back-to-top"
         >
           <p>{t("Button.Back_To_Top")}</p>

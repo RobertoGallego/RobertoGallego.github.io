@@ -4,11 +4,29 @@
   flex: 1 1 400px;
   border-radius: 14px;
   padding: 8px;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.2s ease;
   cursor: pointer;
 }
 
 .blog-card:hover {
   transform: scale(1.01);
-  filter: brightness(0.98);
+}
+
+.blog-card-read {
+  transition: color 0.2s ease;
+}
+
+.blog-card-read:hover {
+  color: #737373;
+}
+
+@media (prefers-color-scheme: light) {
+  .blog-card-read:hover {
+    color: #737373;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .blog-card-read:hover {
+    color: #737373;
+  }
 }
