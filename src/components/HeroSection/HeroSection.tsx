@@ -78,18 +78,25 @@ const HeroSection = () => {
           href="https://www.linkedin.com/in/roberto-g-905753190/"
           target="_blank"
           rel="noopener noreferrer"
-          className="button-primary"
+          className={`button-primary ${
+            isDarkMode ? "button-primary-dark" : "button-primary-light"
+          }`}
+          // style={{
+          //   color: isDarkMode ? "#fff" : "#000",
+          //   border: isDarkMode ? "1px solid #fff" : "1px solid #000",
+          // }}
         >
           {t("HeroSection.Button_Primary")} <FaArrowRight size={12} />
         </a>
 
         <a
-          className="button-secondary"
-          style={{
-            backgroundColor: isDarkMode ? "#ff6347" : "#762d20",
-            color: isDarkMode ? "#000" : "#fff",
-            border: isDarkMode ? "1px solid #ff6347" : "1px solid #762d20",
-          }}
+          className={`button-secondary ${
+            isDarkMode ? "button-secondary-dark" : "button-secondary-light"
+          }`} // style={{
+          //   backgroundColor: isDarkMode ? "#ff6347" : "#762d20",
+          //   color: isDarkMode ? "#000" : "#fff",
+          //   border: isDarkMode ? "1px solid #ff6347" : "1px solid #762d20",
+          // }}
           href="https://www.linkedin.com/in/roberto-g-905753190/"
           target="_blank"
           rel="noopener noreferrer"
