@@ -22,7 +22,7 @@
   font-weight: 600;
   text-decoration: none;
 
-  transition: border 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .button-primary-light {
@@ -36,37 +36,32 @@
 }
 
 .button-primary-dark {
-  background-color: #000;
   color: #fff;
   border: 1px solid #fff;
 }
 
 .button-primary-dark:hover {
   border: 1px solid #fff;
-  background-color: #333;
+  background-color: #272727;
   color: #fff;
 }
 
 .button-secondary-light {
   background-color: #762d20;
   color: #fff;
-  border: 1px solid #762d20;
 }
 
 .button-secondary-light:hover {
-  background-color: #b02107;
+  background: #b02107;
   color: #fff;
-  border: 1px solid #b02107;
 }
 
 .button-secondary-dark {
   background-color: #ff6347;
   color: #000;
-  border: 1px solid #ff6347;
 }
 
 .button-secondary-dark:hover {
   background-color: #ff3f1d;
   color: #000;
-  border: 1px solid #ff3f1d;
 }

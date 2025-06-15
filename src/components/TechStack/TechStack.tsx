@@ -116,16 +116,6 @@ const TechStack = () => {
             iconColor="brown"
           />
 
-          {/* <Chip
-            Icon={FaArrowTrendUp}
-            status={categoryNumber === 8}
-            label={t("TechStack.Improving")}
-            iconColor="Teal"
-            onClick={() => {
-              setCategory(8)
-            }}
-          /> */}
-
           <Chip
             Icon={MdOutlineRoomService}
             status={categoryNumber === 9}

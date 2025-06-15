@@ -1,4 +1,5 @@
-.chip {
+.chip-dark,
+.chip-light {
   border-radius: 10px;
   padding: 4px 10px;
   cursor: pointer;
@@ -8,25 +9,13 @@
   gap: 8px;
   background-color: #0a0a0a;
   outline: none;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.chip.status {
-  outline: 1px solid #bbbbbb;
-  background-color: #383838;
+.chip-light:hover {
+  background-color: #dbdbdb !important;
 }
 
-[data-theme="light"] .chip {
-  background-color: #eeeeee;
-}
-
-[data-theme="light"] .chip.status {
-  background-color: #dbdbdb;
-}
-
-[data-theme="dark"] .chip {
-  background-color: #0a0a0a;
-}
-
-[data-theme="dark"] .chip.status {
-  background-color: #383838;
+.chip-dark:hover {
+  background-color: #333 !important;
 }

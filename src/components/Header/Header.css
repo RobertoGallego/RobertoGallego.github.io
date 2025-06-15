@@ -15,11 +15,24 @@
   gap: 10px;
 }
 
-.navbar-item {
+.navbar-item-light,
+.navbar-item-dark {
   list-style: none;
-  transition: filter 0.2s ease;
+  transition: color 0.2s ease-in-out;
 }
 
-.navbar-item:hover {
-  filter: brightness(1.5);
+.navbar-item-light {
+  color: #000;
+}
+
+.navbar-item-light:hover {
+  color: #762d20;
+}
+
+.navbar-item-dark {
+  color: #fff;
+}
+
+.navbar-item-dark:hover {
+  color: #ff6347;
 }

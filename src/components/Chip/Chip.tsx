@@ -22,18 +22,18 @@ const Chip: React.FC<ChipProps> = ({
   return (
     <button
       type="button"
-      className={`chip ${status ? "status" : ""}`}
+      className={`chip-${isDarkMode ? "dark" : "light"}`}
       style={{
         backgroundColor: isDarkMode
           ? status
-            ? "#383838"
+            ? "#333"
             : "#0a0a0a"
           : status
           ? "#dbdbdb"
           : "#eeeeee",
         outline: status
           ? isDarkMode
-            ? "1px solid #535353"
+            ? "1px solid #ffffff"
             : "1px solid #bbbbbb"
           : "none",
       }}
@@ -41,7 +41,9 @@ const Chip: React.FC<ChipProps> = ({
     >
       <Icon color={iconColor} size={18} />
 
-      <p>{label}</p>
+      <p
+        className={`chip-label-${isDarkMode ? "dark" : "light"}`}
+      >{label}</p>
     </button>
   )
 }
