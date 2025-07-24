@@ -29,12 +29,15 @@ const BlogCard = ({
   const { t } = useTranslation()
 
   return (
-    <div
+    <a
       className="blog-card"
       style={{
         backgroundColor: isDarkMode ? "#181816" : "#fff",
         border: isDarkMode ? "1px solid #2e2e2e" : "1px solid #eaeaea",
       }}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <img
         src={srcImage}
@@ -108,7 +111,7 @@ const BlogCard = ({
             }}
           >
             <IoCalendarNumber size={12} />
-            <p style={{ fontSize: 12 }}>{date}</p>
+            <p style={{ fontSize: 12, fontWeight: 400 }}>{date}</p>
           </div>
         </div>
 
@@ -131,25 +134,17 @@ const BlogCard = ({
             gap: 4,
             alignItems: "center",
             alignSelf: "flex-end",
+            fontSize: 12,
+            fontWeight: 500,
+            whiteSpace: "nowrap",
+            color: "white"
           }}
         >
-          <a
-            style={{
-              fontSize: 12,
-              fontWeight: 500,
-              whiteSpace: "nowrap",
-            }}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t("Button.Read_More")}
-          </a>
-
+          {t("Button.Read_More")}
           <FiExternalLink size={12} />
         </div>
       </div>
-    </div>
+    </a>
   )
 }
 

@@ -33,7 +33,7 @@ const JournalCard = ({
   const { t } = useTranslation()
 
   return (
-    <div
+    <a
       className="work-card-wrapper"
       style={{
         border: isDarkMode ? "1px solid #2e2e2e" : "1px solid #eaeaea",
@@ -46,6 +46,9 @@ const JournalCard = ({
         transition: "transform 0.2s ease",
         cursor: "pointer",
       }}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <div
         className="work-card-content"
@@ -98,7 +101,7 @@ const JournalCard = ({
               >
                 <MdOutlineWorkOutline size={14} />
 
-                <p style={{ fontSize: 14 }}>{workPosition}</p>
+                <p style={{ fontSize: 14, fontWeight: 400 }}>{workPosition}</p>
               </div>
 
               <div
@@ -110,7 +113,7 @@ const JournalCard = ({
                 }}
               >
                 <IoCalendarNumber size={14} />
-                <p style={{ fontSize: 14 }}>{date}</p>
+                <p style={{ fontSize: 14, fontWeight: 400 }}>{date}</p>
               </div>
             </div>
           </div>
@@ -124,6 +127,7 @@ const JournalCard = ({
               WebkitLineClamp: 2,
               WebkitBoxOrient: "vertical",
               overflow: "hidden",
+              fontWeight: 400,
             }}
           >
             {subtitle}
@@ -173,27 +177,19 @@ const JournalCard = ({
                 display: "flex",
                 gap: 4,
                 alignItems: "center",
+                fontSize: 12,
+                fontWeight: 500,
+                whiteSpace: "nowrap",
+                color: "white",
               }}
             >
-              <a
-                style={{
-                  fontSize: 12,
-                  fontWeight: 500,
-                  whiteSpace: "nowrap",
-                }}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t("Button.Read_More")}
-              </a>
-
+              {t("Button.Read_More")}
               <FiExternalLink size={12} />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </a>
   )
 }
 
