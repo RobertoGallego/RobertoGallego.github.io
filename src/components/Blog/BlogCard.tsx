@@ -32,8 +32,8 @@ const BlogCard = ({
     <a
       className="blog-card"
       style={{
-        backgroundColor: isDarkMode ? "#181816" : "#fff",
-        border: isDarkMode ? "1px solid #2e2e2e" : "1px solid #eaeaea",
+        backgroundColor: isDarkMode ? "#121026" : "#f8f8f8",
+        boxShadow: isDarkMode ? "0 4px 20px #121026" : "0 4px 20px #e9dad0",
       }}
       href={href}
       target="_blank"
@@ -47,7 +47,7 @@ const BlogCard = ({
           aspectRatio: "2 / 1",
           objectFit: "contain",
           borderRadius: 10,
-          backgroundColor: isDarkMode ? "#1a1a1a" : "#f9f9f9",
+          backgroundColor: isDarkMode ? "#1a1734" : "#eeeeee",
           minHeight: 80,
           height: "auto",
         }}
@@ -74,7 +74,7 @@ const BlogCard = ({
             style={{
               alignSelf: "center",
               fontSize: 12,
-              backgroundColor: isDarkMode ? "#383838" : "#eeeeee",
+              backgroundColor: isDarkMode ? "#1a1734" : "#eeeeee",
               paddingBlock: 2,
               paddingInline: 8,
               borderRadius: 8,
@@ -88,7 +88,7 @@ const BlogCard = ({
             style={{
               alignSelf: "center",
               fontSize: 12,
-              backgroundColor: isDarkMode ? "#383838" : "#eeeeee",
+              backgroundColor: isDarkMode ? "#1a1734" : "#eeeeee",
               paddingBlock: 2,
               paddingInline: 8,
               borderRadius: 8,
@@ -137,7 +137,7 @@ const BlogCard = ({
             fontSize: 12,
             fontWeight: 500,
             whiteSpace: "nowrap",
-            color: "white"
+            color: "white",
           }}
         >
           {t("Button.Read_More")}

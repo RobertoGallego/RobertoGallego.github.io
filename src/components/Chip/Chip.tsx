@@ -26,14 +26,14 @@ const Chip: React.FC<ChipProps> = ({
       style={{
         backgroundColor: isDarkMode
           ? status
-            ? "#333"
-            : "#0a0a0a"
+            ? "#1d1a35"
+            : "#181625"
           : status
           ? "#dbdbdb"
           : "#eeeeee",
         outline: status
           ? isDarkMode
-            ? "1px solid #ffffff"
+            ? "1px solid #8f8f8f"
             : "1px solid #bbbbbb"
           : "none",
       }}

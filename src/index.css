@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
 
 :root {
-  font-family: "Roboto", "Triodion", "Noto Serif", "Poppins", Inter,
-    system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Triodion", "Noto Serif", "Poppins", Inter, system-ui,
+    Avenir, Helvetica, Arial, sans-serif;
 
   color-scheme: light dark;
 
@@ -198,27 +198,31 @@ textarea:not([rows]) {
 @media (prefers-color-scheme: dark) {
   :root {
     color: #e2e2e2;
-    background-color: #1d1d1d;
-    background: linear-gradient(
-      -45deg,
-      #232236,
-      #1d1d1d,
-      #232236,
-      #1d1d1d,
-      #232236
+    background-color: #211f2e;
+    background: radial-gradient(
+      circle at 25% 35%,
+      #1f1d4b 0%,
+      #1d1a35 40%,
+      #16142a 75%,
+      #181625 100%
     );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   body {
-    background-color: #1d1d1d;
-    background: linear-gradient(
-      -45deg,
-      #232236,
-      #1d1d1d,
-      #232236,
-      #1d1d1d,
-      #232236
+    background-color: #211f2e;
+    background: radial-gradient(
+      circle at 25% 35%,
+      #1f1d4b 0%,
+      #1d1a35 40%,
+      #16142a 75%,
+      #181625 100%
     );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #e2e2e2;
   }
 
@@ -236,28 +240,35 @@ textarea:not([rows]) {
 [data-theme="dark"] {
   :root {
     color: #e2e2e2;
-    background-color: #1d1d1d;
-    background: linear-gradient(
-      -45deg,
-      #232236,
-      #1d1d1d,
-      #232236,
-      #1d1d1d,
-      #232236
+    background-color: #211f2e;
+
+    background: radial-gradient(
+      circle at 25% 35%,
+      #1f1d4b 0%,
+      #1d1a35 40%,
+      #16142a 75%,
+      #181625 100%
     );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   body {
-    background-color: #1d1d1d;
-    background: linear-gradient(
-      -45deg,
-      #232236,
-      #1d1d1d,
-      #232236,
-      #1d1d1d,
-      #232236
-    );
+    background-color: #211f2e;
+
     color: #e2e2e2;
+
+    background: radial-gradient(
+      circle at 25% 35%,
+      #1f1d4b 0%,
+      #1d1a35 40%,
+      #16142a 75%,
+      #181625 100%
+    );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   p,
@@ -275,27 +286,33 @@ textarea:not([rows]) {
   :root {
     color: #213547;
     background-color: #e2e2e2;
-    background: linear-gradient(
-      -45deg,
-      #e2e2e2,
-      #e2e2e2,
-      #f7d8c4,
-      #e2e2e2,
-      #e2e2e2
+
+    background: radial-gradient(
+      circle at 25% 35%,
+      #e2e2e2 0%,
+      #e7dbd3 40%,
+      #e9dad0 75%,
+      #f1cfb9 100%
     );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   body {
     background-color: #e2e2e2;
     color: #213547;
-    background: linear-gradient(
-      -45deg,
-      #e2e2e2,
-      #e2e2e2,
-      #f7d8c4,
-      #e2e2e2,
-      #e2e2e2
+
+    background: radial-gradient(
+      circle at 25% 35%,
+      #e2e2e2 0%,
+      #e7dbd3 40%,
+      #e9dad0 75%,
+      #f1cfb9 100%
     );
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   p,

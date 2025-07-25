@@ -411,7 +411,7 @@ const StackCategory = ({
         >
           <CategoryIcon
             style={{
-              backgroundColor: isDarkMode ? "#000000" : "#eeeeee",
+              backgroundColor: isDarkMode ? "#1d1a35" : "#eeeeee",
               borderRadius: 10,
               padding: 10,
             }}

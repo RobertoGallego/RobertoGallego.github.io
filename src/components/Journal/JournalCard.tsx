@@ -36,8 +36,8 @@ const JournalCard = ({
     <a
       className="work-card-wrapper"
       style={{
-        border: isDarkMode ? "1px solid #2e2e2e" : "1px solid #eaeaea",
-        backgroundColor: isDarkMode ? "#181816" : "#fff",
+        backgroundColor: isDarkMode ? "#121026" : "#f8f8f8",
+        boxShadow: isDarkMode ? "0 4px 20px #121026" : "0 4px 20px #e9dad0",
         display: "flex",
         justifyContent: "space-between",
         padding: 10,
@@ -155,7 +155,7 @@ const JournalCard = ({
                   style={{
                     alignSelf: "center",
                     fontSize: 12,
-                    backgroundColor: isDarkMode ? "#383838" : "#eeeeee",
+                    backgroundColor: isDarkMode ? "#1a1734" : "#eeeeee",
                     paddingBlock: 2,
                     paddingInline: 8,
                     borderRadius: 8,

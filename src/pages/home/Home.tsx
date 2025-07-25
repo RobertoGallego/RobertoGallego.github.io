@@ -5,6 +5,7 @@ import HeroSection from "../../components/HeroSection/HeroSection"
 import TechStack from "../../components/TechStack/TechStack"
 import Blog from "../../components/Blog/Blog"
 import Journal from "../../components/Journal/Journal"
+// import Portfolio from "../../components/Portfolio/Portfolio"
 
 const Home = () => {
   return (
@@ -12,6 +13,8 @@ const Home = () => {
       <HeroSection />
 
       <TechStack />
+
+      {/* <Portfolio /> */}
 
       <Journal />
 

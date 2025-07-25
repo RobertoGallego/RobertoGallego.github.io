@@ -21,7 +21,10 @@ const TechStack = () => {
     <div
       className="tech-stack"
       style={{
-        backgroundColor: isDarkMode ? "#181816" : "#f8f8f8",
+        backgroundColor: isDarkMode ? "#121026" : "#f8f8f8",
+        boxShadow: isDarkMode
+          ? "0 4px 20px #121026"
+          : "0 4px 20px #e9dad0",
       }}
     >
       <h1>{t("TechStack.Title")}</h1>

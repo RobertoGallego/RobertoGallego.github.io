@@ -23,7 +23,8 @@ const About = () => {
     <div
       className="about-wrapper"
       style={{
-        backgroundColor: isDarkMode ? "#181816" : "#f8f8f8",
+        backgroundColor: isDarkMode ? "#121026" : "#f8f8f8",
+        boxShadow: isDarkMode ? "0 4px 20px #121026" : "0 4px 20px #e9dad0",
       }}
     >
       <div
@@ -49,8 +50,8 @@ const About = () => {
               backgroundColor: "#3d3834",
               width: 120,
               height: 120,
-              border: isDarkMode ? "4px solid #0f0f0e" : "4px solid #f8f8f8",
-              outline: isDarkMode ? "2px solid #3d3834" : "2px solid #d7d7d7",
+              border: isDarkMode ? "4px solid #121026" : "4px solid #f8f8f8",
+              outline: isDarkMode ? "2px solid #1a1734" : "2px solid #e2e2e2",
             }}
           >
             <img src={Profile} alt="Profile" />
