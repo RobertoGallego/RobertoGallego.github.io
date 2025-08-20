@@ -3,15 +3,16 @@ import { FaArrowRight } from "react-icons/fa6"
 import useDarkMode from "../../hooks/useDarkMode"
 import coco from "../../assets/gif/30.gif"
 import "./HeroSection.css"
+import { useState } from "react"
 
 const HeroSection = () => {
   const { isDarkMode } = useDarkMode()
+  const [gifLoaded, setGifLoaded] = useState(false)
   const { t } = useTranslation()
 
   return (
     <div className="home-presentation">
       <div
-        className="home-presentation-image"
         style={{
           borderRadius: 100,
           overflow: "hidden",
@@ -22,7 +23,7 @@ const HeroSection = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#fff",
+          backgroundColor: isDarkMode ? "#1f1d4b" : "#762d20",
         }}
       >
         <div
@@ -38,13 +39,14 @@ const HeroSection = () => {
           }}
         >
           <img
+            onLoad={() => setGifLoaded(true)}
             src={coco}
-            alt="Profile"
             style={{
               width: "100%",
               height: "100%",
               borderRadius: 100,
               objectFit: "cover",
+              display: gifLoaded ? "block" : "none",
             }}
           />
         </div>
