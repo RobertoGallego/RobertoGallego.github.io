@@ -180,7 +180,7 @@ const JournalCard = ({
                 fontSize: 12,
                 fontWeight: 500,
                 whiteSpace: "nowrap",
-                color: "white",
+                color: isDarkMode ? "#eeeeee" : "#181818",
               }}
             >
               {t("Button.Read_More")}
