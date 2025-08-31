@@ -13,6 +13,7 @@ const HeroSection = () => {
   return (
     <div className="home-presentation">
       <div
+        className={!gifLoaded ? "skeleton-pulse" : ""}
         style={{
           borderRadius: 100,
           overflow: "hidden",
