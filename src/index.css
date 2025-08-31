@@ -12,28 +12,38 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(
-    -45deg,
-    #e2e2e2,
-    #e2e2e2,
-    #f7d8c4,
-    #e2e2e2,
-    #e2e2e2
+  color: #213547;
+  background-color: #e2e2e2;
+
+  background: radial-gradient(
+    circle at 25% 35%,
+    #e2e2e2 0%,
+    #e7dbd3 40%,
+    #e9dad0 75%,
+    #f1cfb9 100%
   );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
   background: #e2e2e2;
   background-size: 200% 200%;
   animation: moveBackground 10s linear infinite;
-  background: linear-gradient(
-    -45deg,
-    #e2e2e2,
-    #e2e2e2,
-    #f7d8c4,
-    #e2e2e2,
-    #e2e2e2
+  color: #213547;
+  background-color: #e2e2e2;
+
+  background: radial-gradient(
+    circle at 25% 35%,
+    #e2e2e2 0%,
+    #e7dbd3 40%,
+    #e9dad0 75%,
+    #f1cfb9 100%
   );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 p {
@@ -44,24 +54,24 @@ p {
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #000;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+  color: #000;
 }
 
 h1 {
   /* font-size: 3.2em; */
   line-height: 1.1;
-  color: #252525;
+  color: #000;
 }
 
 h2 {
   /* font-size: 2.4em; */
   line-height: 1.1;
-  color: #252525;
+  color: #000;
 }
 
 button {
@@ -83,10 +93,20 @@ button {
     color: #213547;
   }
   a:hover {
-    color: #747bff;
+    color: #000;
   }
   h2 {
     font-size: 1em;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #213547;
   }
 }
 
@@ -192,8 +212,6 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
-
-/* #45437a, */
 
 @media (prefers-color-scheme: dark) {
   :root {
