@@ -4,7 +4,7 @@
   object-fit: cover;
   border-radius: 10px;
   background-color: #1b1b1b;
-  min-height: 80px;
+  min-height: 100px;
   height: auto;
   max-height: 100px;
 }
