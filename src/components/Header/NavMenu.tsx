@@ -10,7 +10,7 @@ const NavMenu = () => {
     <ul className="navbar">
       <li className={`navbar-item-${isDarkMode ? "dark" : "light"}`}>
         <a
-          href="https://www.linkedin.com/in/roberto-gallego-905753190/"
+          href="https://www.linkedin.com/in/roberto-g-905753190"
           target="_blank"
           rel="noopener noreferrer"
         >
