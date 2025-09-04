@@ -9,10 +9,12 @@ const Dialog = ({
   buttonClassName,
   buttonContent,
   externalLink = "#",
+  style,
 }: {
   buttonClassName?: string
   buttonContent?: React.ReactNode
   externalLink: string
+  style?: React.CSSProperties
 }) => {
   const { t } = useTranslation()
   const { isDarkMode } = useDarkMode()
@@ -35,7 +37,7 @@ const Dialog = ({
 
   return (
     <>
-      <button className={buttonClassName} onClick={openDialog}>
+      <button className={buttonClassName} style={style} onClick={openDialog}>
         {buttonContent}
       </button>
 
