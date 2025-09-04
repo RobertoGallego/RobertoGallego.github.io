@@ -21,7 +21,7 @@
 .dialog-header {
   display: flex;
   gap: 6rem;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .dialog-header p {
