@@ -4,6 +4,7 @@ import useDarkMode from "../../hooks/useDarkMode"
 import coco from "../../assets/gif/30.gif"
 import "./HeroSection.css"
 import { useState } from "react"
+import Dialog from "../Dialog/Dialog"
 
 const HeroSection = () => {
   const { isDarkMode } = useDarkMode()
@@ -17,7 +18,7 @@ const HeroSection = () => {
         style={{
           borderRadius: 100,
           overflow: "hidden",
-          width: 150,
+          width: 250,
           height: 150,
           marginBottom: 20,
           textAlign: "center",
@@ -31,7 +32,7 @@ const HeroSection = () => {
           style={{
             borderRadius: 100,
             overflow: "hidden",
-            width: 140,
+            width: 240,
             height: 140,
             textAlign: "center",
             display: "flex",
@@ -77,27 +78,25 @@ const HeroSection = () => {
       </p>
 
       <div style={{ marginTop: 20, display: "flex" }}>
-        <a
-          href="https://www.linkedin.com/in/roberto-g-905753190/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`button-primary ${
+        <Dialog
+          buttonClassName={`button-primary ${
             isDarkMode ? "button-primary-dark" : "button-primary-light"
           }`}
-        >
-          {t("HeroSection.Button_Primary")} <FaArrowRight size={12} />
-        </a>
+          buttonContent={
+            <>
+              {t("HeroSection.Button_Primary")} <FaArrowRight size={12} />
+            </>
+          }
+          externalLink="https://www.linkedin.com/in/roberto-g-905753190/"
+        />
 
-        <a
-          className={`button-secondary ${
+        <Dialog
+          buttonClassName={`button-secondary ${
             isDarkMode ? "button-secondary-dark" : "button-secondary-light"
           }`}
-          href="https://www.linkedin.com/in/roberto-g-905753190/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {t("HeroSection.Button_Secondary")}
-        </a>
+          buttonContent={t("HeroSection.Button_Secondary")}
+          externalLink="https://www.linkedin.com/in/roberto-g-905753190/"
+        />
       </div>
     </div>
   )

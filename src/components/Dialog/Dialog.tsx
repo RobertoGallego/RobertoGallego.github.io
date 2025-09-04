@@ -1,99 +1,85 @@
 import { useRef } from "react"
-import { IoIosCloseCircleOutline } from "react-icons/io"
 import useDarkMode from "../../hooks/useDarkMode"
 import "./Dialog.css"
+import { FaRegCopy } from "react-icons/fa"
+import { IoMdCloseCircleOutline } from "react-icons/io"
+import { useTranslation } from "react-i18next"
 
-const Dialog = ({ buttonTitle }: { buttonTitle: string }) => {
+const Dialog = ({
+  buttonClassName,
+  buttonContent,
+  externalLink = "#",
+}: {
+  buttonClassName?: string
+  buttonContent?: React.ReactNode
+  externalLink: string
+}) => {
+  const { t } = useTranslation()
   const { isDarkMode } = useDarkMode()
   const dialogRef = useRef<HTMLDialogElement>(null)
 
-  const openDialog = () => {
-    dialogRef.current?.showModal()
-  }
-
-  const closeDialog = () => {
-    dialogRef.current?.close()
-  }
+  const openDialog = () => dialogRef.current?.showModal()
+  const closeDialog = () => dialogRef.current?.close()
 
   const copyLink = () => {
     navigator.clipboard.writeText(window.location.href)
-
     dialogRef.current?.close()
+  }
+
+  const handleBackdropClick = (e: React.MouseEvent<HTMLDialogElement>) => {
+    console.log(e.target, dialogRef.current)
+    if (e.target === dialogRef.current) {
+      closeDialog()
+    }
   }
 
   return (
     <>
-      <button onClick={openDialog}>{buttonTitle}</button>
+      <button className={buttonClassName} onClick={openDialog}>
+        {buttonContent}
+      </button>
 
       <dialog
+        onClick={handleBackdropClick}
         ref={dialogRef}
-        style={{
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          border: "1px solid #0f0e2a",
-          borderRadius: "10px",
-          paddingBlock: ".8rem",
-          paddingInline: ".8rem",
-          backgroundColor: isDarkMode ? "#1e1e2a" : "#ffffff",
-        }}
+        className={`dialog ${isDarkMode ? "dark" : "light"}`}
       >
-        <div
-          style={{
-            display: "flex",
-            gap: "6rem",
-            justifyContent: "flex-end",
-          }}
-        >
-          <p style={{}}>¿Seguro que quieres salir del sitio?</p>
-          <button
-            style={{
-              background: "none",
-              border: "none",
-              color: isDarkMode ? "#ffffff" : "#000000",
-              cursor: "pointer",
-            }}
-            onClick={closeDialog}
+        <div className="dialog-inner" onClick={(e) => e.stopPropagation()}>
+          <div className="dialog-header">
+            <p>{t("Dialog.Title")}</p>
+
+            <button
+              className={`dialog-close ${isDarkMode ? "dark" : "light"}`}
+              onClick={closeDialog}
+            >
+              <IoMdCloseCircleOutline size={20} />
+            </button>
+          </div>
+
+          <div
+            className={`dialog-link-container ${isDarkMode ? "dark" : "light"}`}
           >
-            <IoIosCloseCircleOutline size={20} />
-          </button>
-        </div>
-        <div
-          style={{
-            marginTop: "2rem",
-            display: "flex",
-            gap: "0.8rem",
-            justifyContent: "flex-end",
-          }}
-        >
-          <button
-            style={{
-              border: "1px solid",
-              padding: ".4rem .8rem",
-              borderRadius: "10px",
-              color: isDarkMode ? "#ffffff" : "#000000",
-              cursor: "pointer",
-            }}
-            onClick={copyLink}
-          >
-            Copy Link
-          </button>
-          
-          <a
-            style={{
-              background: "#ff6347",
-              padding: ".4rem .8rem",
-              borderRadius: "10px",
-              color: isDarkMode ? "#ffffff" : "#000000",
-              cursor: "pointer",
-            }}
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://google.com"
-            onClick={() => dialogRef.current?.close()}
-          >
-            Sí, salir
-          </a>
+            <p>{externalLink}</p>
+
+            <button
+              className={`dialog-copy ${isDarkMode ? "dark" : "light"}`}
+              onClick={copyLink}
+            >
+              <FaRegCopy />
+            </button>
+          </div>
+
+          <div className="dialog-actions">
+            <a
+              className={`dialog-exit ${isDarkMode ? "dark" : "light"}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={externalLink}
+              onClick={() => dialogRef.current?.close()}
+            >
+              {t("Dialog.Action")}
+            </a>
+          </div>
         </div>
       </dialog>
     </>

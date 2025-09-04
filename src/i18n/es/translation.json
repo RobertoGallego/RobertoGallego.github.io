@@ -186,5 +186,9 @@
   "Button": {
     "Back_To_Top": "Volver arriba",
     "Read_More": "Leer más"
+  },
+  "Dialog": {
+    "Title": "¿Seguro que quieres salir del sitio?",
+    "Action": "Continuar"
   }
 }

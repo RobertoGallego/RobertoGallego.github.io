@@ -180,5 +180,9 @@
   "Button": {
     "Back_To_Top": "Back To Top",
     "Read_More": "Read More"
+  },
+  "Dialog": {
+    "Title": "Are you sure you want to leave the site?",
+    "Action": "Continue"
   }
 }

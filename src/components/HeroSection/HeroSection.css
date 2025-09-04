@@ -1,6 +1,6 @@
 .button-primary {
   border-radius: 10px;
-  padding: 6px 12px;
+  padding: 8px 12px;
   cursor: pointer;
   margin: 0 10px;
   font-size: 14px;
@@ -21,7 +21,6 @@
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
@@ -31,7 +30,7 @@
 }
 
 .button-primary-light:hover {
-  background-color: #f0f0f0;
+  background-color: #e2e2e2;
   color: #333;
 }
 
@@ -42,7 +41,7 @@
 
 .button-primary-dark:hover {
   border: 1px solid #fff;
-  background-color: #272727;
+  background-color: #181625;
   color: #fff;
 }
 
@@ -58,12 +57,12 @@
 
 .button-secondary-dark {
   background-color: #ff6347;
-  color: #000;
+  color: #fff;
 }
 
 .button-secondary-dark:hover {
   background-color: #ff3f1d;
-  color: #000;
+  color: #fff;
 }
 
 .skeleton-pulse {
@@ -72,7 +71,13 @@
 }
 
 @keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }

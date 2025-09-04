@@ -1,3 +1,130 @@
+.dialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #0f0e2a;
+  border-radius: 10px;
+  padding-block: 0.8rem;
+  padding-inline: 0.8rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.dialog.light {
+  background-color: #ffffff;
+}
+
+.dialog.dark {
+  background-color: #1e1e2a;
+}
+
+.dialog-header {
+  display: flex;
+  gap: 6rem;
+  justify-content: flex-end;
+}
+
+.dialog-header p {
+  font-weight: 600;
+}
+
+.dialog-close {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.dialog-close.light {
+  color: #000000;
+}
+
+.dialog-close.dark {
+  color: #ffffff;
+}
+
+.dialog-close:hover {
+  opacity: 0.5;
+}
+
+.dialog-link-container {
+  margin-top: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dialog-link-container.light {
+  background-color: #f0f0f0;
+}
+
+.dialog-link-container.dark {
+  background-color: #111119;
+}
+
+.dialog-link-container p {
+  font-size: 12px;
+}
+
+.dialog-link-container.light p {
+  color: #000000;
+}
+
+.dialog-link-container.dark p {
+  color: #f1f1f1;
+}
+
+.dialog-copy {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.dialog-copy.light {
+  color: #000000;
+}
+
+.dialog-copy.dark {
+  color: #f1f1f1;
+}
+
+.dialog-copy:hover {
+  opacity: 0.5;
+}
+
+.dialog-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: flex-end;
+}
+
+.dialog-exit {
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.dialog-exit.light {
+  background: #762d20;
+  color: #fff;
+}
+
+.dialog-exit.dark {
+  background: #ff6347;
+  color: #fff;
+}
+
+.dialog-exit.light:hover {
+  background-color: #ff6347;
+  color: #fff;
+}
+
+.dialog-exit.dark:hover {
+  background-color: #ff3f1d;
+  color: #fff;
+}
+
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.6);
 }

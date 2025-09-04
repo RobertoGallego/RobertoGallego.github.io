@@ -182,5 +182,9 @@
   "Button": {
     "Back_To_Top": "Retour en haut",
     "Read_More": "En savoir plus"
+  },
+  "Dialog": {
+    "Title": "Êtes-vous sûr de vouloir quitter le site ?",
+    "Action": "Continuer"
   }
 }
