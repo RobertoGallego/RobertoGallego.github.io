@@ -48,6 +48,14 @@
   },
   "CategoryContent": {
     "Title": "Responsive and accessible interfaces modern web tech.",
+    "Main": {
+      "Title": "Main Stack",
+      "Description": "Core technologies I use frequently to build applications.",
+      "Description_A": "Modern and scalable development practices",
+      "Description_B": "Reliable and maintainable architecture",
+      "Description_C": "Efficient and high-performance solutions",
+      "Description_D": "Adaptable to different project needs"
+    },
     "Frontend": {
       "Title": "Frontend",
       "Description": "Responsive and accessible interfaces modern web tech.",

@@ -40,7 +40,7 @@
   },
   "TechStack": {
     "Title": "Habilidades & Tecnologías · 2025",
-    "Description": "Tecnologías que realmente disfruto usar—herramientas que me apasionan y en las que creo a largo plazo. También incluye frameworks y plataformas que he usado profesionalmente en proyectos.",
+    "Description": "Tecnologías que utilizo con frecuencia para desarrollar aplicaciones.",
     "Productivity": "Herramientas de productividad",
     "Design": "Diseño & UX",
     "Improving": "Actualmente mejorando",
@@ -48,6 +48,14 @@
   },
   "CategoryContent": {
     "Title": "Interfaces responsivas y accesibles con tecnología web moderna.",
+    "Main": {
+      "Title": "Stack Principal",
+      "Description": "Conjunto de tecnologías principales que utilizo con mayor frecuencia para desarrollar y mantener aplicaciones.",
+      "Description_A": "Prácticas de desarrollo modernas y escalables",
+      "Description_B": "Arquitectura confiable y mantenible",
+      "Description_C": "Soluciones eficientes y de alto rendimiento",
+      "Description_D": "Adaptable a diferentes necesidades de proyecto"
+    },
     "Frontend": {
       "Title": "Frontend",
       "Description": "Interfaces responsivas y accesibles con tecnología web moderna.",

@@ -11,6 +11,7 @@ import { useState } from "react"
 import useDarkMode from "../../hooks/useDarkMode"
 import { useTranslation } from "react-i18next"
 import "./TechStack.css"
+import { RiStackLine } from "react-icons/ri"
 
 const TechStack = () => {
   const { isDarkMode } = useDarkMode()
@@ -22,9 +23,7 @@ const TechStack = () => {
       className="tech-stack"
       style={{
         backgroundColor: isDarkMode ? "#121026" : "#f8f8f8",
-        boxShadow: isDarkMode
-          ? "0 4px 20px #121026"
-          : "0 4px 20px #e9dad0",
+        boxShadow: isDarkMode ? "0 4px 20px #121026" : "0 4px 20px #e9dad0",
       }}
     >
       <h1>{t("TechStack.Title")}</h1>
@@ -51,6 +50,16 @@ const TechStack = () => {
             marginTop: 15,
           }}
         >
+          {/* <Chip
+            Icon={RiStackLine}
+            label="Main"
+            iconColor="#DC143C"
+            status={categoryNumber === 0}
+            onClick={() => {
+              setCategory(0)
+            }}
+          /> */}
+
           <Chip
             Icon={TbDeviceDesktopCode}
             label="Frontend"

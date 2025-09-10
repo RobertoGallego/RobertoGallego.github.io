@@ -6,6 +6,8 @@ import { MdOutlineRoomService } from "react-icons/md"
 import { VscServerProcess, VscTools } from "react-icons/vsc"
 import { IoMdCloudOutline } from "react-icons/io"
 import { PiBinocularsFill } from "react-icons/pi"
+import { RiStackLine } from "react-icons/ri";
+
 import {
   AppleDark,
   AppleLight,
@@ -116,6 +118,27 @@ interface StackCategoryProps {
 }
 
 const StackCategoryData = [
+  {
+    id: 0,
+    CategoyIcon: RiStackLine,
+    categoryColor: "#DC143C",
+    CategoryTitle: "CategoryContent.Main.Title",
+    categoryDescription: "CategoryContent.Main.Description",
+    categoryKeys: [
+      "CategoryContent.Main.Description_A",
+      "CategoryContent.Main.Description_B",
+      "CategoryContent.Main.Description_C",
+      "CategoryContent.Main.Description_D",
+    ],
+    techStack: [
+      { src: TypeScript, label: "TypeScript" },
+      { src: React, label: "React" },
+      { src: ViteJS, label: "Vite" },
+      { src: Expo, label: "Expo" },
+
+  
+    ],
+  },
   {
     id: 1,
     CategoyIcon: TbDeviceDesktopCode,
@@ -378,8 +401,8 @@ const StackCategory = ({
   CategoryTitle,
   categoryColor,
   CategoryIcon,
-  categoryKeys,
   techStack = [],
+  categoryDescription,
 }: StackCategoryProps) => {
   const { t } = useTranslation()
   const { isDarkMode } = useDarkMode()
@@ -424,12 +447,10 @@ const StackCategory = ({
             <div
               style={{
                 display: "flex",
-                // gap: 4,
                 alignItems: "center",
               }}
             >
-              {/* <MdArrowOutward color={categoryColor} /> */}
-              <p>{t(categoryKeys[0])}</p>
+              <p>{t(categoryDescription)}</p>
             </div>
           </div>
         </div>

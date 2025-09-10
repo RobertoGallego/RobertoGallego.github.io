@@ -70,7 +70,7 @@ const HeroSection = () => {
         style={{
           maxWidth: 500,
           textAlign: "center",
-          marginTop: 5,
+          marginTop: 15,
           fontSize: 16,
         }}
       >

@@ -44,6 +44,14 @@
   },
   "CategoryContent": {
     "Title": "Interfaces modernes, accessibles et responsives.",
+    "Main": {
+      "Title": "Stack Principal",
+      "Description": "Technologies que j’utilise fréquemment pour développer des applications.",
+      "Description_A": "Pratiques de développement modernes et évolutives",
+      "Description_B": "Architecture fiable et maintenable",
+      "Description_C": "Solutions efficaces et performantes",
+      "Description_D": "Adaptable aux différents besoins du projet"
+    },
     "Frontend": {
       "Title": "Frontend",
       "Description": "Interfaces modernes, accessibles et responsives.",
