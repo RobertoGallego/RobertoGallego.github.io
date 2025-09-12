@@ -1,23 +1,14 @@
 import { useTranslation } from "react-i18next"
 import { FaArrowRight } from "react-icons/fa6"
 import useDarkMode from "../../hooks/useDarkMode"
-import coco from "../../assets/gif/35.gif"
 import "./HeroSection.css"
-import { useState } from "react"
 import Dialog from "../Dialog/Dialog"
 import { HiOutlineRocketLaunch } from "react-icons/hi2"
-import { BiNetworkChart } from "react-icons/bi"
-import { MdAutoGraph } from "react-icons/md"
-import { PiGraphDuotone } from "react-icons/pi"
-import { BiHappyBeaming } from "react-icons/bi"
-import { BsEmojiHeartEyes } from "react-icons/bs"
-import { MdOutlineEmojiEmotions } from "react-icons/md"
-import { HiOutlineEmojiHappy } from "react-icons/hi"
+
 import { Profile } from "../../assets"
 
 const HeroSection = () => {
   const { isDarkMode } = useDarkMode()
-  const [gifLoaded, setGifLoaded] = useState(false)
   const { t } = useTranslation()
 
   return (
@@ -122,28 +113,21 @@ const HeroSection = () => {
               marginTop: 2,
             }}
           />
-          Welcome to my portfolio
+          {t("HeroSection.Chip")}
         </p>
       </div>
 
       <h1 className="home-title" style={{}}>
-        Crafting scalable, and user-friendly apps
+        {t("HeroSection.Title_Primary")}
       </h1>
 
       <p
+        className="home-subtitle"
         style={{
-          marginTop: 15,
-          fontSize: 20,
-          textAlign: "center",
-          fontFamily: "Poppins",
           color: isDarkMode ? "#cfcfd1" : "#181818",
-          fontWeight: "500",
-          maxWidth: 600,
         }}
       >
-        Hi, I'm Roberto a software engineer focused on building responsive and
-        performant web applications.
-        {/* {t("HeroSection.Title")} */}
+        {t("HeroSection.Title_Secondary")}
       </p>
 
       <div style={{ marginTop: 30, display: "flex" }}>

@@ -34,6 +34,9 @@
   },
   "HeroSection": {
     "Title": "Bienvenido, explora mi trayectoria en ingeniería de aplicaciones",
+    "Chip": "Bienvenido a mi portfolio",
+    "Title_Primary": "Apps escalables, potentes e intuitivas",
+    "Title_Secondary": "Hola, soy Roberto, ingeniero de software enfocado en construir aplicaciones web responsivas y de alto rendimiento.",
     "Description": "Herramientas modernas, arquitectura escalable, diseño elegante.",
     "Button_Primary": "Disponible para trabajar",
     "Button_Secondary": "Contáctame"

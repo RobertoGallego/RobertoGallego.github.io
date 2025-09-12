@@ -35,6 +35,9 @@
   "HeroSection": {
     "Title": "Welcome explore my journey in app engineering",
     "Description": "Modern tools, scalable architecture, refined design.",
+    "Chip": "Welcome to my portfolio",
+    "Title_Primary": "Crafting scalable, and user-friendly apps",
+    "Title_Secondary": "Hi, I'm Roberto, a software engineer focused on building responsive and performant web applications.",
     "Button_Primary": "Available for work",
     "Button_Secondary": "Contact me"
   },
