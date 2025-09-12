@@ -11,7 +11,7 @@ import { useState } from "react"
 import useDarkMode from "../../hooks/useDarkMode"
 import { useTranslation } from "react-i18next"
 import "./TechStack.css"
-import { RiStackLine } from "react-icons/ri"
+// import { RiStackLine } from "react-icons/ri"
 
 const TechStack = () => {
   const { isDarkMode } = useDarkMode()
