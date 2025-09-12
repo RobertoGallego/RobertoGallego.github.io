@@ -61,7 +61,13 @@ const Dialog = ({
           <div
             className={`dialog-link-container ${isDarkMode ? "dark" : "light"}`}
           >
-            <p>{externalLink}</p>
+            <p>
+              {/* {externalLink.length > 30
+                ? externalLink.slice(0, 30) + "…"
+                : externalLink} */}
+
+              {externalLink}
+            </p>
 
             <button
               className={`dialog-copy ${isDarkMode ? "dark" : "light"}`}

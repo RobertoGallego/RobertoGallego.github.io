@@ -3,7 +3,7 @@ import { useTheme } from "../../useTheme"
 import useDarkMode from "../../hooks/useDarkMode"
 import logo42 from "../../assets/42logo.png"
 import logo42w from "../../assets/42logow.png"
-import { FranceFlag, Profile } from "../../assets"
+import { FranceFlag, Perfil } from "../../assets"
 import { useTranslation } from "react-i18next"
 import "./About.css"
 
@@ -54,7 +54,7 @@ const About = () => {
               outline: isDarkMode ? "2px solid #1a1734" : "2px solid #e2e2e2",
             }}
           >
-            <img src={Profile} alt="Profile" />
+            <img src={Perfil} alt="Perfil" />
           </div>
           <div>
             <h3>Roberto GALLEGO</h3>

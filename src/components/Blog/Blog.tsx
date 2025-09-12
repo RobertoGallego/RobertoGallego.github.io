@@ -59,7 +59,7 @@ const Blog = () => {
           chip={"Ecole 42"}
           srcFlag={FranceFlag}
           chipFlag={"Paris, France"}
-          href="https://42.fr/le-campus-de-paris/diplome-informatique/#:~:text=Le%20certificat%2042,un%20premier%20poste%20en%20CDI."
+          href="https://42.fr/le-campus-de-paris/diplome-informatique/"
         />
 
         <BlogCard

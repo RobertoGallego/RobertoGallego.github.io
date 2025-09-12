@@ -118,3 +118,4 @@ export { default as ChileFlag } from './chileflag.svg';
 export { default as Switzerlandflag } from './switzerlandflag.svg';
 export { default as React } from './react.svg';
 export { default as Profile } from "./profile.png"
+export { default as Perfil } from "./fotoperfil.jpg"
