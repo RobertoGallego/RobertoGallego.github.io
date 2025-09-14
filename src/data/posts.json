@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "srcImage": "wallo",
+    "title": "Bienvenido a mi blog",
+    "description": "Primer post donde explico de qué tratará este blog y qué puedes esperar.",
+    "date": "2025-09-01",
+    "ChipTitle": "Intro",
+    "ChipIcon": "rocket",
+    "content": "Este es el contenido completo del primer post. Aquí puedes escribir párrafos largos, dar la bienvenida a tus lectores y contar de qué se tratará tu blog."
+  },
+  {
+    "id": 2,
+    "srcImage": "wall",
+    "title": "Aprendiendo React paso a paso",
+    "description": "Guía sencilla para empezar con React y entender sus conceptos básicos.",
+    "date": "2025-09-03",
+    "ChipTitle": "React",
+    "ChipIcon": "react",
+    "content": "En este post explico qué es React, cómo crear componentes, qué son los hooks y cómo empezar un proyecto con Vite."
+  },
+  {
+    "id": 3,
+    "srcImage": "tech",
+    "title": "Cómo usar Vite en tus proyectos",
+    "description": "Explico cómo Vite hace que el desarrollo sea más rápido y eficiente.",
+    "date": "2025-09-05",
+    "ChipTitle": "Frontend",
+    "ChipIcon": "vite",
+    "content": "Vite es un bundler moderno que reemplaza a Webpack en muchos casos. Aquí enseño cómo instalarlo, configurarlo y las ventajas frente a CRA."
+  },
+  {
+    "id": 4,
+    "srcImage": "rob",
+    "title": "Tips de JavaScript",
+    "description": "Trucos útiles de JavaScript que me han salvado en proyectos reales.",
+    "date": "2025-09-07",
+    "ChipTitle": "JavaScript",
+    "ChipIcon": "js",
+    "content": "En este post comparto tips sobre arrays, objetos, destructuring, spread/rest y otras técnicas que facilitan la vida a cualquier dev frontend."
+  },
+  {
+    "id": 5,
+    "srcImage": "pexel",
+    "title": "Mi experiencia en la escuela 42",
+    "description": "Comparto cómo fue estudiar en la escuela 42 y qué aprendí en el proceso.",
+    "date": "2025-09-09",
+    "ChipTitle": "Experiencia",
+    "ChipIcon": "school",
+    "content": "En este post cuento cómo fue mi paso por la escuela 42: los retos, la metodología peer-to-peer, los proyectos y cómo me transformó como desarrollador."
+  },
+  {
+    "id": 6,
+    "srcImage": "night",
+    "title": "Roadmap Fullstack",
+    "description": "Las tecnologías clave que puedes aprender para crecer como fullstack.",
+    "date": "2025-09-12",
+    "ChipTitle": "Carrera",
+    "ChipIcon": "laptop",
+    "content": "Aquí explico qué aprender en frontend (React, TanStack, Vite), backend (Go, Fastify), bases de datos y buenas prácticas para convertirse en fullstack developer."
+  }
+]

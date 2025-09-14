@@ -12,9 +12,10 @@ const Home = () => {
     <div className="home">
       <HeroSection />
 
+      {/* <Portfolio /> */}
+
       <TechStack />
 
-      {/* <Portfolio /> */}
 
       <Journal />
 
