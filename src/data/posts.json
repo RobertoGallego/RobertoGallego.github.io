@@ -7,7 +7,7 @@
     "date": "2025-09-01",
     "ChipTitle": "Intro",
     "ChipIcon": "rocket",
-    "content": "Este es el contenido completo del primer post. Aquí puedes escribir párrafos largos, dar la bienvenida a tus lectores y contar de qué se tratará tu blog."
+    "content": "1.md"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "date": "2025-09-03",
     "ChipTitle": "React",
     "ChipIcon": "react",
-    "content": "En este post explico qué es React, cómo crear componentes, qué son los hooks y cómo empezar un proyecto con Vite."
+    "content": "2.md"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "date": "2025-09-05",
     "ChipTitle": "Frontend",
     "ChipIcon": "vite",
-    "content": "Vite es un bundler moderno que reemplaza a Webpack en muchos casos. Aquí enseño cómo instalarlo, configurarlo y las ventajas frente a CRA."
+    "content": "3.md"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "date": "2025-09-07",
     "ChipTitle": "JavaScript",
     "ChipIcon": "js",
-    "content": "En este post comparto tips sobre arrays, objetos, destructuring, spread/rest y otras técnicas que facilitan la vida a cualquier dev frontend."
+    "content": "4.md"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "date": "2025-09-09",
     "ChipTitle": "Experiencia",
     "ChipIcon": "school",
-    "content": "En este post cuento cómo fue mi paso por la escuela 42: los retos, la metodología peer-to-peer, los proyectos y cómo me transformó como desarrollador."
+    "content": "5.md"
   },
   {
     "id": 6,
@@ -57,6 +57,6 @@
     "date": "2025-09-12",
     "ChipTitle": "Carrera",
     "ChipIcon": "laptop",
-    "content": "Aquí explico qué aprender en frontend (React, TanStack, Vite), backend (Go, Fastify), bases de datos y buenas prácticas para convertirse en fullstack developer."
+    "content": "6.md"
   }
 ]

@@ -1,3 +1,16 @@
+.footer {
+  width: 100%;
+  min-height: 50px;
+  padding-inline: 10px;
+  padding-block: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #8d8d8d;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
 .social-button {
   padding: 0.1rem 0.5rem;
   cursor: pointer;
@@ -30,7 +43,8 @@
   display: flex;
   cursor: pointer;
   border: 0.8px solid transparent;
-  background-image: linear-gradient(#e7e4e4, #e7e4e4),
+  background-image:
+    linear-gradient(#e7e4e4, #e7e4e4),
     linear-gradient(
       45deg,
       rgb(95, 196, 112),
@@ -74,7 +88,8 @@
 
 @media (prefers-color-scheme: dark) {
   .gradient-border {
-    background-image: linear-gradient(black, black),
+    background-image:
+      linear-gradient(black, black),
       linear-gradient(
         45deg,
         rgb(57, 219, 84),
@@ -93,7 +108,8 @@
 
 [data-theme="dark"] {
   .gradient-border {
-    background-image: linear-gradient(black, black),
+    background-image:
+      linear-gradient(black, black),
       linear-gradient(
         45deg,
         rgb(57, 219, 84),
@@ -119,7 +135,8 @@
 
 [data-theme="light"] {
   .gradient-border {
-    background-image: linear-gradient(#e7e4e4, #e7e4e4),
+    background-image:
+      linear-gradient(#e7e4e4, #e7e4e4),
       linear-gradient(
         45deg,
         rgb(95, 196, 112),
@@ -162,7 +179,6 @@
   border: 1px solid #787878;
   transition: border 0.2s ease;
 }
-
 
 @media (prefers-color-scheme: dark) {
   .language-toggle-button:hover,

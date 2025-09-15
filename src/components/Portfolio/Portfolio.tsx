@@ -65,6 +65,7 @@ const Portfolio = () => {
       >
         {posts.map((post) => (
           <PortfolioCard
+            postId={post.id}
             key={post.id}
             srcImage={images[post.srcImage]}
             title={post.title}

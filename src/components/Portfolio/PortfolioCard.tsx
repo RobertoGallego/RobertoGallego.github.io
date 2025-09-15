@@ -3,8 +3,10 @@ import { HiOutlineRocketLaunch } from "react-icons/hi2"
 import { IoCalendarNumber } from "react-icons/io5"
 import useDarkMode from "../../hooks/useDarkMode"
 import Wallo from "../../assets/wallo.png"
+import { Link } from "@tanstack/react-router"
 
 interface PortfolioCardProps {
+  postId: number
   srcImage: string
   title?: string
   description?: string
@@ -14,6 +16,7 @@ interface PortfolioCardProps {
 }
 
 const PortfolioCard = ({
+  postId,
   srcImage = Wallo,
   title = "React Basics Start Here",
   description = "Learn the basics of React.js",
@@ -24,7 +27,9 @@ const PortfolioCard = ({
   const { isDarkMode } = useDarkMode()
 
   return (
-    <div
+    <Link
+      to="/posts/$postId"
+      params={{ postId: String(postId) }}
       style={{
         display: "flex",
         flexDirection: "column",
@@ -37,6 +42,7 @@ const PortfolioCard = ({
         flexShrink: 1,
         flexBasis: 250,
         boxSizing: "border-box",
+        cursor: "pointer",
       }}
     >
       <div style={{ position: "relative" }}>
@@ -128,7 +134,7 @@ const PortfolioCard = ({
           <FaArrowRight size={12} />
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

@@ -17,6 +17,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
+  min-height: 100vh;
 }
 
 @media (max-width: 768px) {
@@ -76,19 +77,6 @@
   width: 100%;
   flex-wrap: nowrap;
   -webkit-overflow-scrolling: touch;
-}
-
-.footer {
-  width: 100%;
-  min-height: 50px;
-  padding-inline: 10px;
-  padding-block: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #8d8d8d;
-  flex-wrap: wrap;
-  gap: 4px;
 }
 
 .footer-text {

@@ -201,5 +201,11 @@
   "Dialog": {
     "Title": "¿Seguro que quieres salir del sitio?",
     "Action": "Continuar"
+  },
+  "NotFound": {
+    "Title": "404",
+    "Subtitle": "Página no encontrada",
+    "Description": "Lo siento, la página que buscas no existe.",
+    "Button": "Ir al inicio"
   }
 }

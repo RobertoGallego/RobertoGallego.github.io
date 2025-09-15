@@ -197,5 +197,11 @@
   "Dialog": {
     "Title": "Êtes-vous sûr de vouloir quitter le site ?",
     "Action": "Continuer"
+  },
+  "NotFound": {
+    "Title": "404",
+    "Subtitle": "Page non trouvée",
+    "Description": "Désolé, la page que vous recherchez n'existe pas.",
+    "Button": "Aller à l'accueil"
   }
 }
