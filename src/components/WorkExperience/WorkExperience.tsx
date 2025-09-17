@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 
-import { flag, logo } from "@/assets"
+import { flag, logo, album } from "@/assets"
 
 import WorkExperienceCard from "./WorkExperienceCard"
 
@@ -48,7 +48,7 @@ const WorkExperience = () => {
       />
 
       <WorkExperienceCard
-        srcImage={logo.Tech}
+        srcImage={album.Tech}
         title={t("Works.Taste.Title")}
         subtitle={t("Works.Taste.Description")}
         date={"2015"}
