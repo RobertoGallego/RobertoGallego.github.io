@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 
-import { useDarkMode, useTheme } from "@/hooks"
+import { useDarkMode } from "@/hooks"
 import { flag, album, logo } from "@/assets"
 
 import { FaMapMarkerAlt } from "react-icons/fa"
@@ -9,13 +9,7 @@ import "./About.css"
 
 const About = () => {
   const { isDarkMode } = useDarkMode()
-  const { theme } = useTheme()
   const { t } = useTranslation()
-
-  const logoSrc =
-    theme === "dark" || (theme === "auto" && isDarkMode)
-      ? logo.Logo42w
-      : logo.Logo42
 
   return (
     <div className={`about-wrapper ${isDarkMode ? "dark" : "light"}`}>
@@ -49,7 +43,7 @@ const About = () => {
 
           <div className="about-ecole">
             <img
-              src={isDarkMode ? logoSrc : logo.Logo42}
+              src={isDarkMode ? logo.Logo42w : logo.Logo42}
               alt="42"
               className="about-ecole-logo"
             />

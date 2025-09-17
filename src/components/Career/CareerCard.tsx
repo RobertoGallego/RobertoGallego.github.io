@@ -8,7 +8,7 @@ import { IoCalendarNumber } from "react-icons/io5"
 
 import Dialog from "../Dialog/Dialog"
 
-import "./Career.css"
+import "./CareerCard.css"
 
 interface CareerCardProps {
   srcImage?: string
@@ -32,119 +32,44 @@ const CareerCard = ({
   const { isDarkMode } = useDarkMode()
   const { t } = useTranslation()
 
+  const theme = isDarkMode ? "dark" : "light"
+
   return (
     <Dialog
-      buttonClassName="career-card"
-      style={{
-        backgroundColor: isDarkMode ? "#121026" : "#f8f8f8",
-        boxShadow: isDarkMode ? "0 4px 20px #121026" : "0 4px 20px #e9dad0",
-        boxSizing: "border-box",
-      }}
+      buttonClassName={`career-card ${isDarkMode ? "dark" : "light"}`}
       externalLink={href}
       buttonContent={
         <>
           <img
             src={srcImage}
             alt="Ninjaco"
-            style={{
-              width: 150,
-              aspectRatio: "2 / 1",
-              objectFit: "contain",
-              borderRadius: 10,
-              backgroundColor: isDarkMode ? "#1a1734" : "#eeeeee",
-              minHeight: 90,
-              height: "auto",
-            }}
+            className={`career-card-img ${theme}`}
           />
 
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              gap: 4,
-              justifyContent: "space-between",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                gap: 4,
-                alignItems: "center",
-                flexWrap: "wrap-reverse",
-              }}
-            >
-              <p
-                style={{
-                  alignSelf: "center",
-                  fontSize: 12,
-                  backgroundColor: isDarkMode ? "#1a1734" : "#eeeeee",
-                  paddingBlock: 2,
-                  paddingInline: 8,
-                  borderRadius: 8,
-                  fontWeight: 500,
-                }}
-              >
-                {chip}
-              </p>
+          <div className={"career-card-content"}>
+            <div className="career-card-info">
+              <div className="career-card-top">
+                <p className={`career-card-chip ${theme}`}>{chip}</p>
 
-              <p
-                style={{
-                  alignSelf: "center",
-                  fontSize: 12,
-                  backgroundColor: isDarkMode ? "#1a1734" : "#eeeeee",
-                  paddingBlock: 2,
-                  paddingInline: 8,
-                  borderRadius: 8,
-                  fontWeight: 500,
-                  display: "flex",
-                  gap: 4,
-                }}
-              >
-                <img src={srcFlag} alt="Spanish" style={{ width: 12 }} />
+                <p className={`career-card-flag ${theme}`}>
+                  <img src={srcFlag} alt="Spanish" />
 
-                {chipFlag}
-              </p>
+                  {chipFlag}
+                </p>
 
-              <div
-                style={{
-                  display: "flex",
-                  gap: 4,
-                  alignItems: "center",
-                  color: isDarkMode ? "#eeeeee" : "#181818",
-                }}
-              >
-                <IoCalendarNumber size={12} />
-                <p style={{ fontSize: 12, fontWeight: 400 }}>{date}</p>
+                <div className={"career-card-date"}>
+                  <IoCalendarNumber size={12} />
+
+                  <p>{date}</p>
+                </div>
               </div>
+
+              <h3 className="career-card-title">{title}</h3>
             </div>
 
-            <h3
-              style={{
-                maxWidth: 350,
-                display: "-webkit-box",
-                WebkitLineClamp: 2,
-                WebkitBoxOrient: "vertical",
-                overflow: "hidden",
-              }}
-            >
-              {title}
-            </h3>
-
-            <div
-              className="career-card-read"
-              style={{
-                display: "flex",
-                gap: 4,
-                alignItems: "center",
-                alignSelf: "flex-end",
-                fontSize: 12,
-                fontWeight: 500,
-                whiteSpace: "nowrap",
-                color: isDarkMode ? "#eeeeee" : "#181818",
-              }}
-            >
+            <div className={`career-card-read ${theme}`}>
               {t("Button.Read_More")}
+
               <FiExternalLink size={12} />
             </div>
           </div>

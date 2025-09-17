@@ -4,34 +4,21 @@ import { useDarkMode } from "@/hooks"
 import { careerData } from "@/data"
 
 import CareerCard from "./CareerCard"
+import "./Career.css"
 
 const Career = () => {
   const { isDarkMode } = useDarkMode()
   const { t } = useTranslation()
 
   return (
-    <div style={{ width: "100%", marginTop: 100, paddingInline: 10 }}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          marginBottom: 20,
-        }}
-      >
+    <div className="career-container">
+      <div className="career-header">
         <h1>{t("Career.Title")}</h1>
-        <p style={{ maxWidth: 700, fontSize: 16, marginTop: 5 }}>
-          {t("Career.Description")}
-        </p>
+        
+        <p className="career-description">{t("Career.Description")}</p>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          marginTop: 20,
-          gap: 10,
-        }}
-      >
+      <div className="career-cards">
         {careerData.map((item) => (
           <CareerCard
             key={item.title}
