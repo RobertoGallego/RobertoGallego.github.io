@@ -1,11 +1,13 @@
-import rob from "../../assets/rob.jpg"
-import { SpainFlag } from "../../assets"
-import { FiExternalLink } from "react-icons/fi"
-import useDarkMode from "../../hooks/useDarkMode"
+import { flag, album } from "@/assets"
+import { useDarkMode } from "@/hooks"
+
 import { useTranslation } from "react-i18next"
-import "./Blog.css"
+
+import { FiExternalLink } from "react-icons/fi"
 import { IoCalendarNumber } from "react-icons/io5"
+
 import Dialog from "../Dialog/Dialog"
+import "./Blog.css"
 
 interface BlogCardProps {
   srcImage?: string
@@ -18,11 +20,11 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({
-  srcImage = rob,
+  srcImage = album.Rob,
   title = "Optimal line length for body text",
   date = "April 10, 2025",
   chip = "Social Media",
-  srcFlag = SpainFlag,
+  srcFlag = flag.SpainFlag,
   chipFlag = "Spanish",
   href = "",
 }: BlogCardProps) => {

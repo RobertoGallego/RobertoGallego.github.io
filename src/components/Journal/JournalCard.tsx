@@ -1,12 +1,11 @@
-import rob from "../../assets/rob.jpg"
+import { album } from "@/assets"
 import { IoCalendarNumber } from "react-icons/io5"
 import { FiExternalLink } from "react-icons/fi"
 import { MdOutlineWorkOutline } from "react-icons/md"
-import useDarkMode from "../../hooks/useDarkMode"
-import "./WorkCard.css"
+import { useDarkMode } from "@/hooks"
 import { useTranslation } from "react-i18next"
-import "./WorkCard.css"
 import Dialog from "../Dialog/Dialog"
+import "./WorkCard.css"
 
 type Flag = { src: string; label: string }
 
@@ -22,7 +21,7 @@ interface JournalCardProps {
 }
 
 const JournalCard = ({
-  srcImage = rob,
+  srcImage = album.Rob,
   title = "",
   subtitle = "",
   date = "",

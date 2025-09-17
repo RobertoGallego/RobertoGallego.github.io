@@ -1,0 +1,10 @@
+export { default as Abstract } from './bak.jpg';
+export { default as Night } from './night.jpg';
+export { default as Perfil } from './fotoperfil.jpg';
+export { default as Forge } from './forge.png';
+export { default as Ninjaco } from './ninjaco.png';
+export { default as Pexel } from './pexel.jpg';
+export { default as Profile } from './profile.png';
+export { default as Rob } from './rob.jpg';
+export { default as Wall } from './wall.png';
+export { default as Wallo } from './wallo.png';

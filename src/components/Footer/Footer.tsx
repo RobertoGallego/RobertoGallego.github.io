@@ -1,12 +1,12 @@
-import "./Footer.css"
 import { useTranslation } from "react-i18next"
-import useLanguage from "../../hooks/useLanguage"
+import { useLanguage } from "@/hooks"
 import { useTheme } from "../../useTheme"
 import { Theme } from "../../ThemeContext"
 import { IoMdArrowUp } from "react-icons/io"
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
 import { RiSettings2Line } from "react-icons/ri"
-import { FranceFlag, SpainFlag, UKFlag } from "../../assets"
+import { flag } from "@/assets"
+import "./Footer.css"
 
 const Footer = () => {
   const { theme, setTheme } = useTheme()
@@ -48,13 +48,13 @@ const Footer = () => {
           aria-label="toggle-language"
         >
           {language === "fr" && (
-            <img src={FranceFlag} alt="French" style={{ width: 12 }} />
+            <img src={flag.FranceFlag} alt="French" style={{ width: 12 }} />
           )}
           {language === "en" && (
-            <img src={UKFlag} alt="English" style={{ width: 12 }} />
+            <img src={flag.UKFlag} alt="English" style={{ width: 12 }} />
           )}
           {language === "es" && (
-            <img src={SpainFlag} alt="Spanish" style={{ width: 12 }} />
+            <img src={flag.SpainFlag} alt="Spanish" style={{ width: 12 }} />
           )}
 
           <p style={{ textTransform: "capitalize" }}>{language}</p>

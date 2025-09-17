@@ -1,0 +1,8 @@
+export { default as AusflagB } from "./aus-flag.svg"
+export { default as ChileFlag } from "./chileflag.svg"
+export { default as FranceFlagB } from "./france.png"
+export { default as FranceFlag } from "./france-flag-circular.svg"
+export { default as SwitzerlandFlag } from "./switzerlandflag.svg"
+export { default as UKFlag } from "./uk-flag-circular.svg"
+export { default as Ausflag } from "./aussie-flag.svg"
+export { default as SpainFlag } from "./spain-flag-circular.svg"

@@ -10,6 +10,84 @@
   border-radius: 10px;
 }
 
+.about-wrapper.light {
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 20px #e9dad0;
+}
+
+.about-wrapper.dark {
+  background-color: #121026;
+  box-shadow: 0 4px 20px #121026;
+}
+
+.about-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.about-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.about-avatar {
+  border-radius: 100px;
+  overflow: hidden;
+  background-color: #3d3834;
+  width: 120px;
+  height: 120px;
+}
+
+.about-avatar.light {
+  border: 4px solid #f8f8f8;
+  outline: 2px solid #e2e2e2;
+}
+
+.about-avatar.dark {
+  border: 4px solid #121026;
+  outline: 2px solid #1a1734;
+}
+
+.about-text {
+  max-width: 700px;
+  font-size: 16px;
+  text-align: justify;
+  hyphens: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.about-info {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-location {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-direction: row;
+}
+
+.about-flag {
+  width: 12px;
+}
+
+.about-ecole {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.about-ecole-logo {
+  width: 21px;
+}
+
 @media (max-width: 768px) {
   .about-wrapper {
     padding: 20px;

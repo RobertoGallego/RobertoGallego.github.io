@@ -1,14 +1,5 @@
 import JournalCard from "./JournalCard"
-import Tech from "../../assets/tech.jpg"
-import {
-  Noop,
-  Klarys,
-  Tecnostrike,
-  FranceFlag,
-  Ausflag,
-  ChileFlag,
-  Switzerlandflag,
-} from "../../assets"
+import { flag, logo } from "@/assets"
 import { useTranslation } from "react-i18next"
 
 const Journal = () => {
@@ -30,48 +21,48 @@ const Journal = () => {
       </div>
 
       <JournalCard
-        srcImage={Klarys}
+        srcImage={logo.Klarys}
         title={t("Works.Klarys.Title")}
         subtitle={t("Works.Klarys.Description")}
         date={"2021 - 2024"}
         chip={"React"}
         flags={[
-          { src: FranceFlag, label: "Rennes, France" },
-          { src: Switzerlandflag, label: "Lausanne, Switzerland" },
+          { src: flag.FranceFlag, label: "Rennes, France" },
+          { src: flag.SwitzerlandFlag, label: "Lausanne, Switzerland" },
         ]}
         workPosition={t("Works.Klarys.Role")}
         href="https://www.klarys.io"
       />
 
       <JournalCard
-        srcImage={Noop}
+        srcImage={logo.Noop}
         title={t("Works.Noop.Title")}
         subtitle={t("Works.Noop.Description")}
         date={"2020"}
         chip={"React Native"}
-        flags={[{ src: FranceFlag, label: "Rennes, France" }]}
+        flags={[{ src: flag.FranceFlag, label: "Rennes, France" }]}
         workPosition={t("Works.Noop.Role")}
         href="https://www.noop.fr"
       />
 
       <JournalCard
-        srcImage={Tech}
+        srcImage={logo.Tech}
         title={t("Works.Taste.Title")}
         subtitle={t("Works.Taste.Description")}
         date={"2015"}
         chip={"Restaurant"}
-        flags={[{ src: Ausflag, label: "Sydney, Australia" }]}
+        flags={[{ src: flag.Ausflag, label: "Sydney, Australia" }]}
         workPosition={t("Works.Taste.Role")}
         href="https://tastebaguette.com/"
       />
 
       <JournalCard
-        srcImage={Tecnostrike}
+        srcImage={logo.Tecnostrike}
         title={t("Works.Tecnostrike.Title")}
         subtitle={t("Works.Tecnostrike.Description")}
         date={"2010 - 2014"}
         chip={"IT Support"}
-        flags={[{ src: ChileFlag, label: "Santiago, Chile" }]}
+        flags={[{ src: flag.ChileFlag, label: "Santiago, Chile" }]}
         workPosition={t("Works.Tecnostrike.Role")}
         href="https://www.tecnostrike.cl"
       />

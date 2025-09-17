@@ -20,7 +20,18 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/styles/*": ["styles/*"],
+      "@/components/*": ["components/*"],
+      "@/lib/*": ["lib/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/hooks": ["hooks/index.ts"],
+      "@/types/*": ["types/*"],
+      "@/assets": ["assets/index.ts"],
+      "@/data": ["data/index.ts"],
+    }
   },
   "include": ["src"]
 }

@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next"
 import { FaArrowRight } from "react-icons/fa6"
-import useDarkMode from "../../hooks/useDarkMode"
-import "./HeroSection.css"
+import { useDarkMode } from "@/hooks"
 import Dialog from "../Dialog/Dialog"
 import { HiOutlineRocketLaunch } from "react-icons/hi2"
 
-import { Profile } from "../../assets"
+import { album } from "@/assets"
+import "./HeroSection.css"
 
 const HeroSection = () => {
   const { isDarkMode } = useDarkMode()
@@ -13,61 +13,6 @@ const HeroSection = () => {
 
   return (
     <div className="home-presentation">
-      {/* <div
-        className={!gifLoaded ? "skeleton-pulse" : ""}
-        style={{
-          borderRadius: 100,
-          overflow: "hidden",
-          width: 250,
-          height: 150,
-          marginBottom: 20,
-          textAlign: "center",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: isDarkMode ? "#1f1d4b" : "#762d20",
-        }}
-      >
-        <div
-          style={{
-            borderRadius: 100,
-            overflow: "hidden",
-            width: 240,
-            height: 140,
-            textAlign: "center",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img
-            onLoad={() => setGifLoaded(true)}
-            src={coco}
-            style={{
-              width: "100%",
-              height: "100%",
-              borderRadius: 100,
-              objectFit: "cover",
-              display: gifLoaded ? "block" : "none",
-            }}
-          />
-        </div>
-      </div> */}
-
-      {/* {t("HeroSection.Description")} */}
-
-      {/* <img
-        onLoad={() => setGifLoaded(true)}
-        src={coco}
-        style={{
-          width: 150,
-          height: 150,
-          borderRadius: 100,
-          objectFit: "cover",
-          display: gifLoaded ? "block" : "none",
-        }}
-      /> */}
-
       <div
         style={{
           borderRadius: 100,
@@ -80,7 +25,7 @@ const HeroSection = () => {
           outline: isDarkMode ? "2px solid #1a1734" : "2px solid #e2e2e2",
         }}
       >
-        <img src={Profile} alt="Profile" />
+        <img src={album.Profile} alt="Profile" />
       </div>
 
       <div

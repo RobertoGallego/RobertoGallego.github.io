@@ -1,11 +1,11 @@
-import Logo from "./Logo"
+import HeaderLogo from "./HeaderLogo"
 import NavMenu from "./NavMenu"
 import "./Header.css"
 
 const Header = () => {
   return (
     <div className="header">
-      <Logo />
+      <HeaderLogo />
 
       <NavMenu />
     </div>
