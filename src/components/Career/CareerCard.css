@@ -3,7 +3,7 @@
   gap: 10px;
   flex: 1 1 400px;
   border-radius: 14px;
-  padding: 8px;
+  padding: 10px;
   transition: transform 0.2s ease;
   cursor: pointer;
   box-sizing: border-box;
@@ -104,6 +104,7 @@
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
+  margin-top: 10px;
 }
 
 .dark {

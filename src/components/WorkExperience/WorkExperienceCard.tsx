@@ -82,7 +82,7 @@ const JournalCard = ({
                   overflow: "hidden",
                 }}
               >
-                {title}
+                {t(title)}
               </h3>
 
               <div
@@ -104,7 +104,7 @@ const JournalCard = ({
                   <MdOutlineWorkOutline size={14} />
 
                   <p style={{ fontSize: 14, fontWeight: 400 }}>
-                    {workPosition}
+                    {t(workPosition)}
                   </p>
                 </div>
 
@@ -134,7 +134,7 @@ const JournalCard = ({
                 fontWeight: 400,
               }}
             >
-              {subtitle}
+              {t(subtitle)}
             </p>
 
             <div

@@ -27,7 +27,7 @@ const Career = () => {
                 ? item.srcImageDark
                 : item.srcImage
             }
-            title={t(item.title)}
+            title={item.title}
             date={item.date}
             chip={item.chip}
             srcFlag={item.srcFlag}

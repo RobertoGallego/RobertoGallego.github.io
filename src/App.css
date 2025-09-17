@@ -20,12 +20,6 @@
   min-height: 100vh;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 0;
-  }
-}
-
 .home-icon {
   background-color: #ffc785;
   padding: 8px;

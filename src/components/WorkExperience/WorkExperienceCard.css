@@ -23,22 +23,3 @@
     height: 100px;
   }
 }
-
-.work-card-read-more {
-  transition: color 0.2s ease;
-}
-
-.work-card-read-more:hover {
-  color: #737373;
-}
-
-@media (prefers-color-scheme: light) {
-  .work-card-read-more:hover {
-    color: #737373;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .work-card-read-more:hover {
-    color: #737373;
-  }
-}

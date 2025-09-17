@@ -64,7 +64,7 @@ const CareerCard = ({
                 </div>
               </div>
 
-              <h3 className="career-card-title">{title}</h3>
+              <h3 className="career-card-title">{t(title)}</h3>
             </div>
 
             <div className={`career-card-read ${theme}`}>
