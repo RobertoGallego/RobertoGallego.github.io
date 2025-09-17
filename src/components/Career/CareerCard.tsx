@@ -1,15 +1,16 @@
+import { useTranslation } from "react-i18next"
+
 import { flag, album } from "@/assets"
 import { useDarkMode } from "@/hooks"
-
-import { useTranslation } from "react-i18next"
 
 import { FiExternalLink } from "react-icons/fi"
 import { IoCalendarNumber } from "react-icons/io5"
 
 import Dialog from "../Dialog/Dialog"
-import "./Blog.css"
 
-interface BlogCardProps {
+import "./Career.css"
+
+interface CareerCardProps {
   srcImage?: string
   title?: string
   date?: string
@@ -19,7 +20,7 @@ interface BlogCardProps {
   href?: string
 }
 
-const BlogCard = ({
+const CareerCard = ({
   srcImage = album.Rob,
   title = "Optimal line length for body text",
   date = "April 10, 2025",
@@ -27,13 +28,13 @@ const BlogCard = ({
   srcFlag = flag.SpainFlag,
   chipFlag = "Spanish",
   href = "",
-}: BlogCardProps) => {
+}: CareerCardProps) => {
   const { isDarkMode } = useDarkMode()
   const { t } = useTranslation()
 
   return (
     <Dialog
-      buttonClassName="blog-card"
+      buttonClassName="career-card"
       style={{
         backgroundColor: isDarkMode ? "#121026" : "#f8f8f8",
         boxShadow: isDarkMode ? "0 4px 20px #121026" : "0 4px 20px #e9dad0",
@@ -131,7 +132,7 @@ const BlogCard = ({
             </h3>
 
             <div
-              className="blog-card-read"
+              className="career-card-read"
               style={{
                 display: "flex",
                 gap: 4,
@@ -153,4 +154,4 @@ const BlogCard = ({
   )
 }
 
-export default BlogCard
+export default CareerCard

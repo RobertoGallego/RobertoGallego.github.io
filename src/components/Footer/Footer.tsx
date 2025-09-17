@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next"
-import { useLanguage } from "@/hooks"
-import { useTheme } from "../../useTheme"
-import { Theme } from "../../ThemeContext"
-import { IoMdArrowUp } from "react-icons/io"
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
-import { RiSettings2Line } from "react-icons/ri"
+
+import { useLanguage, useTheme } from "@/hooks"
 import { flag } from "@/assets"
+import { Theme } from "@/types"
+
+import { IoMdArrowUp } from "react-icons/io"
+import { RiSettings2Line } from "react-icons/ri"
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md"
+
 import "./Footer.css"
 
 const Footer = () => {

@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react"
-
-export type Theme = "light" | "dark" | "auto"
+import { Theme } from "@/types"
 
 interface ThemeContextType {
   theme: Theme

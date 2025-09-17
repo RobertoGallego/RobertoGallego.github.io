@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next"
+
+import { album } from "@/assets"
+
 import "./Card.css"
-import night from "./assets/night.jpg"
 
 interface CardProps {
   imageUrl?: string
@@ -12,7 +14,7 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({
-  imageUrl = night,
+  imageUrl = album.Night,
   width = 300,
   children,
   createdAt = "Jan 1988",

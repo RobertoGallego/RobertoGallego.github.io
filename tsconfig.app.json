@@ -28,7 +28,7 @@
       "@/lib/*": ["lib/*"],
       "@/hooks/*": ["hooks/*"],
       "@/hooks": ["hooks/index.ts"],
-      "@/types/*": ["types/*"],
+      "@/types": ["types/index.ts"],
       "@/assets": ["assets/index.ts"],
       "@/data": ["data/index.ts"],
     }

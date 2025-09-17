@@ -1,5 +1,6 @@
+import { useDarkMode } from "@/hooks"
+
 import "./TechCard.css"
-import useDarkMode from "../../hooks/useDarkMode"
 
 interface TechCardProps {
   label?: string
@@ -29,6 +30,7 @@ const TechCard = ({ label = "", src, empty = 0 }: TechCardProps) => {
     <div className="tech-card">
       <div className="tech-card-content">
         {src && <img src={srcImg} alt={label} className="tech-card-img" />}
+        
         <h5 className="tech-card-label">{label}</h5>
       </div>
     </div>

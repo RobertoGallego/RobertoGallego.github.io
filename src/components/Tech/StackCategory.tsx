@@ -1,16 +1,17 @@
-import TechCard from "./TechCard/TechCard"
+import { useTranslation } from "react-i18next"
+
+import { icon } from "@/assets"
+import { useDarkMode } from "@/hooks"
+
 import { TbDeviceDesktopCode } from "react-icons/tb"
 import { FaArrowTrendUp, FaMasksTheater } from "react-icons/fa6"
 import { MdOutlineRoomService } from "react-icons/md"
-
 import { VscServerProcess, VscTools } from "react-icons/vsc"
 import { IoMdCloudOutline } from "react-icons/io"
 import { PiBinocularsFill } from "react-icons/pi"
 import { RiStackLine } from "react-icons/ri"
 
-import { icon } from "@/assets"
-import { useDarkMode } from "@/hooks"
-import { useTranslation } from "react-i18next"
+import TechCard from "./TechCard/TechCard"
 
 interface TechStackProps {
   src?: string | { light: string; dark: string }

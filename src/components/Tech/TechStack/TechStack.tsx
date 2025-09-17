@@ -1,17 +1,20 @@
+import { useState } from "react"
+import { useTranslation } from "react-i18next"
+
+import { useDarkMode } from "@/hooks"
+
 import { TbDeviceDesktopCode } from "react-icons/tb"
-import Chip from "../Chip/Chip"
 import { VscServerProcess, VscTools } from "react-icons/vsc"
 import { FaMasksTheater } from "react-icons/fa6"
 import { IoMdCloudOutline } from "react-icons/io"
 import { LiaPenNibSolid } from "react-icons/lia"
 import { PiBinocularsFill } from "react-icons/pi"
 import { MdOutlineRoomService } from "react-icons/md"
+
 import StackCategoryContent from "../StackCategory"
-import { useState } from "react"
-import useDarkMode from "../../hooks/useDarkMode"
-import { useTranslation } from "react-i18next"
+import Chip from "../../Chip/Chip"
+
 import "./TechStack.css"
-// import { RiStackLine } from "react-icons/ri"
 
 const TechStack = () => {
   const { isDarkMode } = useDarkMode()
@@ -50,16 +53,6 @@ const TechStack = () => {
             marginTop: 15,
           }}
         >
-          {/* <Chip
-            Icon={RiStackLine}
-            label="Main"
-            iconColor="#DC143C"
-            status={categoryNumber === 0}
-            onClick={() => {
-              setCategory(0)
-            }}
-          /> */}
-
           <Chip
             Icon={TbDeviceDesktopCode}
             label="Frontend"

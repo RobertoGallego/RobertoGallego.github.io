@@ -1,11 +1,14 @@
 import { useTranslation } from "react-i18next"
-import { FaArrowRight } from "react-icons/fa6"
-import { useDarkMode } from "@/hooks"
-import Dialog from "../Dialog/Dialog"
-import { HiOutlineRocketLaunch } from "react-icons/hi2"
 
 import { album } from "@/assets"
+import { useDarkMode } from "@/hooks"
+
+import { FaArrowRight } from "react-icons/fa6"
+import { HiOutlineRocketLaunch } from "react-icons/hi2"
+
+import Dialog from "../Dialog/Dialog"
 import "./HeroSection.css"
+
 
 const HeroSection = () => {
   const { isDarkMode } = useDarkMode()

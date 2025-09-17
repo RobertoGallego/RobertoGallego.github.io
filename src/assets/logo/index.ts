@@ -26,5 +26,4 @@ export { default as Tecnostrike } from "./tecnostrike.png"
 export { default as Thp } from "./thp.png"
 export { default as ThpA } from "./thpa.png"
 export { default as ThpDark } from "./thpdark.png"
-export { default as Tech } from './tech.jpg';
 

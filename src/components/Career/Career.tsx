@@ -1,9 +1,11 @@
-import BlogCard from "./BlogCard"
-import { useDarkMode } from "@/hooks"
 import { useTranslation } from "react-i18next"
+
+import { useDarkMode } from "@/hooks"
 import { careerData } from "@/data"
 
-const Blog = () => {
+import CareerCard from "./CareerCard"
+
+const Career = () => {
   const { isDarkMode } = useDarkMode()
   const { t } = useTranslation()
 
@@ -31,7 +33,7 @@ const Blog = () => {
         }}
       >
         {careerData.map((item) => (
-          <BlogCard
+          <CareerCard
             key={item.title}
             srcImage={
               item.srcImageDark && isDarkMode
@@ -51,4 +53,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default Career

@@ -1,8 +1,10 @@
-import { FaMapMarkerAlt } from "react-icons/fa"
-import { useTheme } from "../../useTheme"
-import { useDarkMode } from "@/hooks"
-import { flag, album, logo } from "@/assets"
 import { useTranslation } from "react-i18next"
+
+import { useDarkMode, useTheme } from "@/hooks"
+import { flag, album, logo } from "@/assets"
+
+import { FaMapMarkerAlt } from "react-icons/fa"
+
 import "./About.css"
 
 const About = () => {

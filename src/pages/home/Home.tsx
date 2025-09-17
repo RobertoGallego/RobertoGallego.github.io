@@ -2,9 +2,9 @@ import "./Home.css"
 
 import About from "../../components/About/About"
 import HeroSection from "../../components/HeroSection/HeroSection"
-import TechStack from "../../components/TechStack/TechStack"
-import Blog from "../../components/Blog/Blog"
-import Journal from "../../components/Journal/Journal"
+import TechStack from "../../components/Tech/TechStack/TechStack"
+import Career from "../../components/Career/Career"
+import WorkExperience from "../../components/WorkExperience/WorkExperience"
 // import Portfolio from "../../components/Portfolio/Portfolio"
 
 const Home = () => {
@@ -16,9 +16,9 @@ const Home = () => {
 
       <TechStack />
 
-      <Journal />
+      <WorkExperience />
 
-      <Blog />
+      <Career />
 
       <About />
     </div>

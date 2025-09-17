@@ -1,8 +1,10 @@
-import JournalCard from "./JournalCard"
-import { flag, logo } from "@/assets"
 import { useTranslation } from "react-i18next"
 
-const Journal = () => {
+import { flag, logo } from "@/assets"
+
+import WorkExperienceCard from "./WorkExperienceCard"
+
+const WorkExperience = () => {
   const { t } = useTranslation()
 
   return (
@@ -20,7 +22,7 @@ const Journal = () => {
         </p>
       </div>
 
-      <JournalCard
+      <WorkExperienceCard
         srcImage={logo.Klarys}
         title={t("Works.Klarys.Title")}
         subtitle={t("Works.Klarys.Description")}
@@ -34,7 +36,7 @@ const Journal = () => {
         href="https://www.klarys.io"
       />
 
-      <JournalCard
+      <WorkExperienceCard
         srcImage={logo.Noop}
         title={t("Works.Noop.Title")}
         subtitle={t("Works.Noop.Description")}
@@ -45,7 +47,7 @@ const Journal = () => {
         href="https://www.noop.fr"
       />
 
-      <JournalCard
+      <WorkExperienceCard
         srcImage={logo.Tech}
         title={t("Works.Taste.Title")}
         subtitle={t("Works.Taste.Description")}
@@ -56,7 +58,7 @@ const Journal = () => {
         href="https://tastebaguette.com/"
       />
 
-      <JournalCard
+      <WorkExperienceCard
         srcImage={logo.Tecnostrike}
         title={t("Works.Tecnostrike.Title")}
         subtitle={t("Works.Tecnostrike.Description")}
@@ -70,4 +72,4 @@ const Journal = () => {
   )
 }
 
-export default Journal
+export default WorkExperience

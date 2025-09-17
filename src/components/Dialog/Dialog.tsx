@@ -1,21 +1,26 @@
 import { useRef } from "react"
-import useDarkMode from "../../hooks/useDarkMode"
-import "./Dialog.css"
+import { useTranslation } from "react-i18next"
+
+import { useDarkMode } from "@/hooks"
+
 import { FaRegCopy } from "react-icons/fa"
 import { IoMdCloseCircleOutline } from "react-icons/io"
-import { useTranslation } from "react-i18next"
+
+import "./Dialog.css"
+
+interface DialogProps {
+  buttonClassName?: string
+  buttonContent?: React.ReactNode
+  externalLink: string
+  style?: React.CSSProperties
+}
 
 const Dialog = ({
   buttonClassName,
   buttonContent,
   externalLink = "#",
   style,
-}: {
-  buttonClassName?: string
-  buttonContent?: React.ReactNode
-  externalLink: string
-  style?: React.CSSProperties
-}) => {
+}: DialogProps) => {
   const { t } = useTranslation()
   const { isDarkMode } = useDarkMode()
   const dialogRef = useRef<HTMLDialogElement>(null)
@@ -61,13 +66,7 @@ const Dialog = ({
           <div
             className={`dialog-link-container ${isDarkMode ? "dark" : "light"}`}
           >
-            <p>
-              {/* {externalLink.length > 30
-                ? externalLink.slice(0, 30) + "…"
-                : externalLink} */}
-
-              {externalLink}
-            </p>
+            <p>{externalLink}</p>
 
             <button
               className={`dialog-copy ${isDarkMode ? "dark" : "light"}`}

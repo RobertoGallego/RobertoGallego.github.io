@@ -1,9 +1,11 @@
+import { Link } from "@tanstack/react-router"
+
+import { useDarkMode } from "@/hooks"
+import { album } from "@/assets"
+
 import { FaArrowRight } from "react-icons/fa6"
 import { HiOutlineRocketLaunch } from "react-icons/hi2"
 import { IoCalendarNumber } from "react-icons/io5"
-import useDarkMode from "../../hooks/useDarkMode"
-import Wallo from "../../assets/wallo.png"
-import { Link } from "@tanstack/react-router"
 
 interface PortfolioCardProps {
   postId: number
@@ -17,7 +19,7 @@ interface PortfolioCardProps {
 
 const PortfolioCard = ({
   postId,
-  srcImage = Wallo,
+  srcImage = album.Wallo,
   title = "React Basics Start Here",
   description = "Learn the basics of React.js",
   date = "11-02-2023",

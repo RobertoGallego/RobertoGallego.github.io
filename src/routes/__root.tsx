@@ -1,13 +1,14 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router"
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools"
+
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
 
 import { ThemeProvider } from "../ThemeContext"
-import { useTheme } from "../useTheme"
+import { useTheme } from "@/hooks"
+
 import "../i18n/config"
 import "../App.css"
-
 
 export const Route = createRootRoute({
   component: RootComponent,

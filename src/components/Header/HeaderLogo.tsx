@@ -1,9 +1,11 @@
+import { Link } from "@tanstack/react-router"
+
 import { logo } from "@/assets"
 import { useDarkMode } from "@/hooks"
-import { Link } from "@tanstack/react-router"
 
 const HeaderLogo = () => {
   const { isDarkMode } = useDarkMode()
+
   const logoSrc = isDarkMode ? logo.LogoDark : logo.Logos
 
   return (

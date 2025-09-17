@@ -40,7 +40,7 @@ const careerData: CareerItem[] = [
     href: "https://42.fr/le-campus-de-paris/diplome-informatique/concepteur-developpeur-solutions-informatiques/",
   },
   {
-    srcImage: logo.Thp,
+    srcImage: logo.ThpA,
     srcImageDark: logo.ThpDark,
     title: "Career.Thp.Title",
     date: "2018",

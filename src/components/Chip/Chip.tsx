@@ -1,6 +1,8 @@
 import { ElementType } from "react"
+
+import { useDarkMode } from "@/hooks"
+
 import "./Chip.css"
-import useDarkMode from "../../hooks/useDarkMode"
 
 interface ChipProps {
   label: string
@@ -29,8 +31,8 @@ const Chip: React.FC<ChipProps> = ({
             ? "#1d1a35"
             : "#181625"
           : status
-          ? "#dbdbdb"
-          : "#eeeeee",
+            ? "#dbdbdb"
+            : "#eeeeee",
         outline: status
           ? isDarkMode
             ? "1px solid #8f8f8f"
@@ -41,9 +43,7 @@ const Chip: React.FC<ChipProps> = ({
     >
       <Icon color={iconColor} size={18} />
 
-      <p
-        className={`chip-label-${isDarkMode ? "dark" : "light"}`}
-      >{label}</p>
+      <p className={`chip-label-${isDarkMode ? "dark" : "light"}`}>{label}</p>
     </button>
   )
 }
