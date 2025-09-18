@@ -60,7 +60,7 @@ const CareerCard = ({
                 <div className={"career-card-date"}>
                   <IoCalendarNumber size={12} />
 
-                  <p>{date}</p>
+                  <p>{t(date)}</p>
                 </div>
               </div>
 

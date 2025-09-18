@@ -26,4 +26,5 @@ export { default as Tecnostrike } from "./tecnostrike.png"
 export { default as Thp } from "./thp.png"
 export { default as ThpA } from "./thpa.png"
 export { default as ThpDark } from "./thpdark.png"
-
+export { default as EpicReact } from "./epicreact.png"
+export { default as FrontendMaster } from "./frontendmaster.png"

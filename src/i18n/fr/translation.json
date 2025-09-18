@@ -182,6 +182,14 @@
     "Access": {
       "Title": "Diplôme d'anglais professionnel",
       "Duration": "2015"
+    },
+    "EpicReact": {
+      "Title": "Epic React atelier axé sur le code, React Avancé",
+      "Duration": "2025"
+    },
+    "FrontendMaster": {
+      "Title": "Frontend Master cours avancés, React Typescript Nextjs Vscode CSS",
+      "Duration": "2025 - Présent"
     }
   },
   "About": {

@@ -180,6 +180,13 @@
     },
     "Access": {
       "Title": "Diplome d'anglais professionnel"
+    },
+    "EpicReact": {
+      "Title": "Epic React code focused workshop, Advanced React"
+    },
+    "FrontendMaster": {
+      "Title": "Frontend Master advanced courses, React Typescript Nextjs Vscode CSS",
+      "Duration": "2025 - Present"
     }
   },
   "About": {

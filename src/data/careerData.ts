@@ -13,6 +13,24 @@ interface CareerItem {
 
 const careerData: CareerItem[] = [
   {
+    srcImage: logo.FrontendMaster,
+    title: "Career.FrontendMaster.Title",
+    date: "2025 - Present",
+    chip: "Frontend Master",
+    srcFlag: flag.FranceFlag,
+    chipFlag: "Online",
+    href: "https://frontendmasters.com/",
+  },
+  {
+    srcImage: logo.EpicReact,
+    title: "Career.EpicReact.Title",
+    date: "2024",
+    chip: "Epic React",
+    srcFlag: flag.FranceFlag,
+    chipFlag: "Online",
+    href: "https://www.epicreact.dev/",
+  },
+  {
     srcImage: logo.Rncp7A,
     title: "Career.Rncp7.Title",
     date: "2019 - 2023",
