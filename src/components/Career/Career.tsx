@@ -14,7 +14,7 @@ const Career = () => {
     <div className="career-container">
       <div className="career-header">
         <h1>{t("Career.Title")}</h1>
-        
+
         <p className="career-description">{t("Career.Description")}</p>
       </div>
 

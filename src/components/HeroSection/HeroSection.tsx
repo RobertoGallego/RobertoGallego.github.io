@@ -9,92 +9,49 @@ import { HiOutlineRocketLaunch } from "react-icons/hi2"
 import Dialog from "../Dialog/Dialog"
 import "./HeroSection.css"
 
-
 const HeroSection = () => {
   const { isDarkMode } = useDarkMode()
   const { t } = useTranslation()
 
+  const theme = isDarkMode ? "dark" : "light"
+
   return (
-    <div className="home-presentation">
-      <div
-        style={{
-          borderRadius: 100,
-          overflow: "hidden",
-          backgroundColor: "#3d3834",
-          width: 150,
-          height: 150,
-          marginBottom: 20,
-          border: isDarkMode ? "4px solid #403d62" : "4px solid #efe9e9",
-          outline: isDarkMode ? "2px solid #1a1734" : "2px solid #e2e2e2",
-        }}
-      >
+    <div className="hero-section-wrapper">
+      <div className={`hero-avatar ${theme}`}>
         <img src={album.Profile} alt="Profile" />
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          gap: 10,
-          flexWrap: "wrap",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <p
-          style={{
-            alignSelf: "center",
-            fontSize: 14,
-            backgroundColor: isDarkMode ? "#403d62" : "#efe9e9",
-            paddingBlock: 2,
-            paddingInline: 10,
-            borderRadius: 20,
-            marginBottom: 15,
-            fontWeight: 500,
-            display: "flex",
-            gap: 4,
-            whiteSpace: "nowrap",
-          }}
-        >
-          <HiOutlineRocketLaunch
-            size={16}
-            style={{
-              marginTop: 2,
-            }}
-          />
+      <div className="hero-chip">
+        <p className={`hero-chip-text ${theme}`}>
+          <HiOutlineRocketLaunch size={16} />
+
           {t("HeroSection.Chip")}
         </p>
       </div>
 
-      <h1 className="home-title" style={{}}>
+      <h1 className={`hero-title ${theme}`}>
         {t("HeroSection.Title_Primary")}
       </h1>
 
-      <p
-        className="home-subtitle"
-        style={{
-          color: isDarkMode ? "#cfcfd1" : "#181818",
-        }}
-      >
+      <p className={`hero-subtitle ${theme}`}>
         {t("HeroSection.Title_Secondary")}
       </p>
 
-      <div style={{ marginTop: 30, display: "flex" }}>
+      <div className="hero-buttons">
         <Dialog
-          buttonClassName={`button-primary ${
-            isDarkMode ? "button-primary-dark" : "button-primary-light"
-          }`}
+          buttonClassName={`button-primary ${theme}`}
           buttonContent={
             <>
-              {t("HeroSection.Button_Primary")} <FaArrowRight size={12} />
+              {t("HeroSection.Button_Primary")}
+
+              <FaArrowRight size={12} />
             </>
           }
           externalLink="https://www.linkedin.com/in/roberto-g-905753190/"
         />
 
         <Dialog
-          buttonClassName={`button-secondary ${
-            isDarkMode ? "button-secondary-dark" : "button-secondary-light"
-          }`}
+          buttonClassName={`button-secondary ${theme}`}
           buttonContent={t("HeroSection.Button_Secondary")}
           externalLink="https://www.linkedin.com/in/roberto-g-905753190/"
         />

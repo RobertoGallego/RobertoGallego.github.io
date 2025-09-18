@@ -36,7 +36,7 @@ const CareerCard = ({
 
   return (
     <Dialog
-      buttonClassName={`career-card ${isDarkMode ? "dark" : "light"}`}
+      buttonClassName={`career-card ${theme}`}
       externalLink={href}
       buttonContent={
         <>
