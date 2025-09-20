@@ -175,7 +175,7 @@
 .back-to-top-button {
   transition: color 0.2s ease;
   padding: 4px 8px;
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;

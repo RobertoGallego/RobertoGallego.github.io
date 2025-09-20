@@ -159,10 +159,10 @@ const JournalCard = ({
                     style={{
                       alignSelf: "center",
                       fontSize: 12,
-                      backgroundColor: isDarkMode ? "#1a1734" : "#eeeeee",
+                      backgroundColor: isDarkMode ? "#403d62" : "#efe9e9",
                       paddingBlock: 2,
                       paddingInline: 8,
-                      borderRadius: 8,
+                      borderRadius: 10,
                       fontWeight: 500,
                       display: "flex",
                       gap: 4,

@@ -62,17 +62,17 @@
   font-size: 12px;
   padding-block: 2px;
   padding-inline: 8px;
-  border-radius: 8px;
+  border-radius: 20px;
   font-weight: 500;
 }
 
 .career-card-chip.dark {
-  background-color: #1a1734;
+  background-color: #403d62;
   color: #eeeeee;
 }
 
 .career-card-chip.light {
-  background-color: #eeeeee;
+  background-color: #efe9e9;
   color: #181818;
 }
 
@@ -84,7 +84,7 @@
   font-size: 12px;
   padding-block: 2px;
   padding-inline: 8px;
-  border-radius: 8px;
+  border-radius: 20px;
   font-weight: 500;
 }
 
@@ -93,12 +93,12 @@
 }
 
 .career-card-flag.dark {
-  background-color: #1a1734;
+  background-color: #403d62;
   color: #eeeeee;
 }
 
 .career-card-flag.light {
-  background-color: #eeeeee;
+  background-color: #efe9e9;
   color: #181818;
 }
 
