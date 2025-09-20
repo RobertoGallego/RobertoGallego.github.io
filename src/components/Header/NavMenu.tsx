@@ -5,6 +5,7 @@ import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa6"
 
 import Dialog from "../Dialog/Dialog"
 import "./Header.css"
+import DarkmodeButton from "../DarkmodeButton/DarkmodeButton"
 
 const navItems = [
   {
@@ -34,6 +35,10 @@ const NavMenu = () => {
           <Dialog externalLink={item.href} buttonContent={item.icon} />
         </li>
       ))}
+
+      <li className={`navbar-item-${isDarkMode ? "dark" : "light"}`}>
+        <DarkmodeButton hideLabel />
+      </li>
     </ul>
   )
 }

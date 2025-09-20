@@ -1,0 +1,35 @@
+.language-toggle-button {
+  transition: color 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #787878;
+  transition: border 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .language-toggle-button:hover {
+    border: 1px solid #e2e2e2;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .language-toggle-button:hover {
+    border: 1px solid #000;
+  }
+}
+
+[data-theme="light"] {
+  .language-toggle-button:hover {
+    border: 1px solid #000;
+  }
+}
+
+[data-theme="dark"] {
+  .language-toggle-button:hover {
+    border: 1px solid #e2e2e2;
+  }
+}
