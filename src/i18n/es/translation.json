@@ -189,10 +189,11 @@
     },
     "EpicReact": {
       "Title": "Epic React taller enfocado en código, React Avanzado",
-      "FrontendMaster": {
-        "Title": "Frontend Master cursos avanzados, React Typescript Nextjs Vscode CSS",
-        "Duration": "2025 - Presente"
-      }
+      "Duration": "2025"
+    },
+    "FrontendMaster": {
+      "Title": "Frontend Master cursos avanzados, React Typescript Nextjs Vscode CSS",
+      "Duration": "2025 - Presente"
     }
   },
   "About": {
