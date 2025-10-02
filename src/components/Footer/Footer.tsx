@@ -5,9 +5,12 @@ import { IoMdArrowUp } from "react-icons/io"
 import LanguageButton from "../LanguagesButton/LanguagesButton"
 import "./Footer.css"
 import DarkmodeButton from "../DarkmodeButton/DarkmodeButton"
+import useDarkMode from "@/hooks/useDarkMode"
 
 const Footer = () => {
   const { t } = useTranslation()
+  const { isDarkMode } = useDarkMode()
+  const theme = isDarkMode ? "dark" : "light"
 
   const handleBackToTopClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -22,15 +25,13 @@ const Footer = () => {
       <div className="footer-buttons">
         <LanguageButton />
 
-        <DarkmodeButton className="theme-toggle-button" />
+        <DarkmodeButton className={`theme-toggle-button ${theme}`} />
 
         <button
-          className="back-to-top-button"
+          className={`back-to-top-button ${theme}`}
           onClick={handleBackToTopClick}
           aria-label="back-to-top"
         >
-          <p>{t("Button.Back_To_Top")}</p>
-
           <IoMdArrowUp size={18} />
         </button>
       </div>

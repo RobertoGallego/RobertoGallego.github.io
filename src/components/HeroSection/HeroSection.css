@@ -14,19 +14,19 @@
   border-radius: 100px;
   overflow: hidden;
   background-color: #3d3834;
-  width: 150px;
-  height: 150px;
+  width: 154px;
+  height: 154px;
   margin-bottom: 20px;
 }
 
 .hero-avatar.light {
-  border: 4px solid #efe9e9;
-  outline: 2px solid #e2e2e2;
+  border: 6px solid #efe9e9;
+  box-shadow: var(--shadow-m);
 }
 
 .hero-avatar.dark {
-  border: 4px solid #403d62;
-  outline: 2px solid #1a1734;
+  border: 6px solid #403d62;
+  box-shadow: var(--shadow-l);
 }
 
 .hero-chip {
@@ -52,10 +52,12 @@
 
 .hero-chip-text.light {
   background-color: #efe9e9;
+  box-shadow: var(--shadow-s);
 }
 
 .hero-chip-text.dark {
   background-color: #403d62;
+  box-shadow: var(--shadow-s);
 }
 
 .hero-title {
@@ -160,17 +162,19 @@
 
 .button-primary.light {
   color: #000;
-  border: 1px solid #000;
+  box-shadow: var(--shadow-s);
 }
 
 .button-primary.light:hover {
   background-color: #efe9e9;
   color: #333;
+  box-shadow: var(--shadow-m);
 }
 
 .button-secondary.light {
   background-color: #762d20;
   color: #fff;
+  box-shadow: var(--shadow-l);
 }
 
 .button-secondary.light:hover {
@@ -180,11 +184,10 @@
 
 .button-primary.dark {
   color: #fff;
-  border: 1px solid #fff;
+  box-shadow: var(--shadow-m);
 }
 
 .button-primary.dark:hover {
-  border: 1px solid #fff;
   background-color: #403d62;
   color: #fff;
 }
@@ -192,6 +195,7 @@
 .button-secondary.dark {
   background-color: #ff6347;
   color: #fff;
+  box-shadow: var(--shadow-l);
 }
 
 .button-secondary.dark:hover {

@@ -34,22 +34,11 @@ const JournalCard = ({
 }: JournalCardProps) => {
   const { isDarkMode } = useDarkMode()
   const { t } = useTranslation()
+  const theme = isDarkMode ? "dark" : "light"
 
   return (
     <Dialog
-      buttonClassName="work-card-wrapper"
-      style={{
-        backgroundColor: isDarkMode ? "#121026" : "#f8f8f8",
-        boxShadow: isDarkMode ? "0 4px 20px #121026" : "0 4px 20px #e9dad0",
-        display: "flex",
-        justifyContent: "space-between",
-        padding: 10,
-        borderRadius: 10,
-        marginBottom: 10,
-        transition: "transform 0.2s ease",
-        width: "100%",
-        boxSizing: "border-box",
-      }}
+      buttonClassName={`work-card-wrapper ${theme}`}
       externalLink={href}
       buttonContent={
         <div
@@ -132,6 +121,7 @@ const JournalCard = ({
                 WebkitBoxOrient: "vertical",
                 overflow: "hidden",
                 fontWeight: 400,
+                marginTop: -4,
               }}
             >
               {t(subtitle)}
@@ -145,30 +135,9 @@ const JournalCard = ({
                 justifyContent: "space-between",
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  gap: 6,
-                  alignItems: "center",
-                  flexWrap: "wrap",
-                }}
-              >
+              <div className="work-card-flags">
                 {flags.map(({ src, label }) => (
-                  <p
-                    key={label}
-                    style={{
-                      alignSelf: "center",
-                      fontSize: 12,
-                      backgroundColor: isDarkMode ? "#403d62" : "#efe9e9",
-                      paddingBlock: 2,
-                      paddingInline: 8,
-                      borderRadius: 10,
-                      fontWeight: 500,
-                      display: "flex",
-                      gap: 4,
-                      whiteSpace: "nowrap",
-                    }}
-                  >
+                  <p className={`work-card-flag ${theme}`} key={label}>
                     <img src={src} alt="Spanish" style={{ width: 12 }} />
                     {label}
                   </p>

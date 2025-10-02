@@ -12,6 +12,7 @@ import { PiBinocularsFill } from "react-icons/pi"
 import { RiStackLine } from "react-icons/ri"
 
 import TechCard from "./TechCard/TechCard"
+import "./StackCategory.css"
 
 interface TechStackProps {
   src?: string | { light: string; dark: string }
@@ -312,7 +313,6 @@ const StackCategoryContent = ({
     />
   )
 }
-
 const StackCategory = ({
   CategoryTitle,
   categoryColor,
@@ -324,61 +324,28 @@ const StackCategory = ({
   const { isDarkMode } = useDarkMode()
 
   return (
-    <div
-      style={{
-        width: "100%",
-        display: "flex",
-        justifyContent: "space-between",
-        marginTop: 40,
-        flexWrap: "wrap",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-          width: "100%",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            gap: 10,
-            alignItems: "center",
-          }}
-        >
+    <div className="stack-category">
+      <div className="stack-category-container">
+        <div className="stack-category-header">
           <CategoryIcon
+            className="stack-category-icon"
             style={{
               backgroundColor: isDarkMode ? "#1d1a35" : "#eeeeee",
-              borderRadius: 10,
-              padding: 10,
             }}
             color={categoryColor}
             size={50}
           />
 
-          <div>
+          <div className="stack-category-title">
             <h2>{t(CategoryTitle)}</h2>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <p>{t(categoryDescription)}</p>
-            </div>
+
+            <p className="stack-category-description">
+              {t(categoryDescription)}
+            </p>
           </div>
         </div>
 
-        <div
-          style={{
-            width: "100%",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            marginTop: 20,
-          }}
-        >
+        <div className="stack-category-grid">
           {techStack.map((tech) => (
             <TechCard
               key={tech.label}

@@ -10,12 +10,15 @@
   background-color: #0a0a0a;
   outline: none;
   transition: background-color 0.2s ease-in-out;
+  box-shadow: var(--shadow-s);
 }
 
 .chip-light:hover {
   background-color: #dbdbdb !important;
+  box-shadow: var(--shadow-s);
 }
 
 .chip-dark:hover {
   background-color: #1d1a35 !important;
+  box-shadow: var(--shadow-m);
 }

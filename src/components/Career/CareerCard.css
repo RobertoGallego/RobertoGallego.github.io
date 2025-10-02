@@ -15,12 +15,12 @@
 
 .career-card.dark {
   background-color: #121026;
-  box-shadow: 0 4px 20px #121026;
+  box-shadow: var(--shadow-s);
 }
 
 .career-card.light {
   background-color: #f8f8f8;
-  box-shadow: 0 4px 20px #e9dad0;
+  box-shadow: var(--shadow-s);
 }
 
 .career-card-img {
@@ -30,6 +30,7 @@
   border-radius: 10px;
   min-height: 90px;
   height: auto;
+  box-shadow: var(--shadow-s);
 }
 
 .career-card-img.dark {
@@ -69,11 +70,13 @@
 .career-card-chip.dark {
   background-color: #403d62;
   color: #eeeeee;
+  box-shadow: var(--shadow-s);
 }
 
 .career-card-chip.light {
   background-color: #efe9e9;
   color: #181818;
+  box-shadow: var(--shadow-s);
 }
 
 .career-card-flag {
@@ -86,6 +89,7 @@
   padding-inline: 8px;
   border-radius: 20px;
   font-weight: 500;
+  box-shadow: var(--shadow-s);
 }
 
 .career-card-flag img {
@@ -105,7 +109,7 @@
 .career-card-info {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
 .career-card-date {

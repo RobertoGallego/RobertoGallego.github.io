@@ -30,9 +30,9 @@ const CareerCard = ({
   href = "",
 }: CareerCardProps) => {
   const { isDarkMode } = useDarkMode()
-  const { t } = useTranslation()
-
   const theme = isDarkMode ? "dark" : "light"
+
+  const { t } = useTranslation()
 
   return (
     <Dialog

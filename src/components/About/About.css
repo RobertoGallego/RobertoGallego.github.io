@@ -12,12 +12,12 @@
 
 .about-wrapper.light {
   background-color: #f8f8f8;
-  box-shadow: 0 4px 20px #e9dad0;
+  box-shadow: var(--shadow-m);
 }
 
 .about-wrapper.dark {
   background-color: #121026;
-  box-shadow: 0 4px 20px #121026;
+  box-shadow: var(--shadow-m);
 }
 
 .about-container {
@@ -44,12 +44,12 @@
 
 .about-avatar.light {
   border: 4px solid #f8f8f8;
-  outline: 2px solid #e2e2e2;
+  box-shadow: var(--shadow-m);
 }
 
 .about-avatar.dark {
-  border: 4px solid #121026;
-  outline: 2px solid #1a1734;
+  border: 4px solid #403d62;
+  box-shadow: var(--shadow-l);
 }
 
 .about-text {

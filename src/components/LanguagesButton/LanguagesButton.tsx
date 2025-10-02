@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 
-import { useLanguage } from "@/hooks"
+import { useDarkMode, useLanguage } from "@/hooks"
 import { flag } from "@/assets"
 
 import "./LanguagesButton.css"
@@ -14,6 +14,8 @@ const LanguageButton = ({ disabledLabel = false }: LanguageButtonProps) => {
   const {
     i18n: { changeLanguage },
   } = useTranslation()
+  const { isDarkMode } = useDarkMode()
+  const theme = isDarkMode ? "dark" : "light"
 
   const flags: Record<string, { src: string; alt: string }> = {
     fr: { src: flag.FranceFlag, alt: "French" },
@@ -31,7 +33,7 @@ const LanguageButton = ({ disabledLabel = false }: LanguageButtonProps) => {
 
   return (
     <button
-      className="language-toggle-button"
+      className={`language-toggle-button ${theme}`}
       onClick={handleLanguageToggle}
       aria-label="toggle-language"
     >

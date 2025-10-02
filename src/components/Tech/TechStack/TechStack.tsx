@@ -20,18 +20,13 @@ const TechStack = () => {
   const { isDarkMode } = useDarkMode()
   const [categoryNumber, setCategory] = useState(1)
   const { t } = useTranslation()
+  const theme = isDarkMode ? "dark" : "light"
 
   return (
-    <div
-      className="tech-stack"
-      style={{
-        backgroundColor: isDarkMode ? "#121026" : "#f8f8f8",
-        boxShadow: isDarkMode ? "0 4px 20px #121026" : "0 4px 20px #e9dad0",
-      }}
-    >
+    <div className={`tech-stack ${theme}`}>
       <h1>{t("TechStack.Title")}</h1>
 
-      <p style={{ maxWidth: 700, fontSize: 16, marginTop: 5, color: "grey" }}>
+      <p className={`tech-stack-description ${theme}`}>
         {t("TechStack.Description")}
       </p>
 

@@ -3,8 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
 
 :root {
-  font-family: "Roboto", "Triodion", "Noto Serif", "Poppins", Inter, system-ui,
-    Avenir, Helvetica, Arial, sans-serif;
+  font-family:
+    "Roboto", "Triodion", "Noto Serif", "Poppins", Inter, system-ui, Avenir,
+    Helvetica, Arial, sans-serif;
 
   color-scheme: light dark;
 
@@ -25,6 +26,13 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+
+  --shadow-s:
+    inset 0 1px 2px #ffffff30, 0 1px 2px #00000030, 0 2px 4px #00000015;
+  --shadow-m:
+    inset 0 1px 2px #ffffff50, 0 2px 4px #00000030, 0 4px 8px #00000015;
+  --shadow-l:
+    inset 0 1px 2px #ffffff70, 0 4px 6px #00000030, 0 6px 10px #00000015;
 }
 
 body {

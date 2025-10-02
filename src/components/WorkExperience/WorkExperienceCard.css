@@ -7,10 +7,61 @@
   min-height: 100px;
   height: auto;
   max-height: 100px;
+  box-shadow: var(--shadow-s);
+}
+
+.work-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.work-card-wrapper.light {
+  background-color: #f8f8f8;
+  box-shadow: var(--shadow-s);
+}
+
+.work-card-wrapper.dark {
+  background-color: #121026;
+  box-shadow: var(--shadow-s);
 }
 
 .work-card-wrapper:hover {
   transform: scale(1.01);
+}
+
+.work-card-flags {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.work-card-flag {
+  align-self: center;
+  font-size: 12px;
+  padding-block: 2px;
+  padding-inline: 8px;
+  border-radius: 10px;
+  font-weight: 500;
+  display: flex;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.work-card-flag.light {
+  background-color: #efe9e9;
+  box-shadow: var(--shadow-s);
+}
+
+.work-card-flag.dark {
+  background-color: #403d62;
+  box-shadow: var(--shadow-s);
 }
 
 @media (max-width: 500px) {
