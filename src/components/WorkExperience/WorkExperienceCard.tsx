@@ -55,77 +55,78 @@ const JournalCard = ({
               width: "100%",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "flex-start",
-                flexWrap: "wrap-reverse",
-                gap: 6,
-              }}
-            >
-              <h3
-                style={{
-                  display: "-webkit-box",
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
-                }}
-              >
-                {t(title)}
-              </h3>
-
+            <div>
               <div
                 style={{
                   display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "flex-start",
+                  flexWrap: "wrap-reverse",
                   gap: 6,
-                  alignItems: "center",
-                  flexWrap: "wrap",
                 }}
               >
-                <div
+                <h3
                   style={{
-                    display: "flex",
-                    gap: 6,
-                    alignItems: "center",
-                    color: isDarkMode ? "#eeeeee" : "#181818",
+                    display: "-webkit-box",
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
                   }}
                 >
-                  <MdOutlineWorkOutline size={14} />
-
-                  <p style={{ fontSize: 14, fontWeight: 400 }}>
-                    {t(workPosition)}
-                  </p>
-                </div>
+                  {t(title)}
+                </h3>
 
                 <div
                   style={{
                     display: "flex",
                     gap: 6,
                     alignItems: "center",
-                    color: isDarkMode ? "#eeeeee" : "#181818",
+                    flexWrap: "wrap",
                   }}
                 >
-                  <IoCalendarNumber size={14} />
-                  <p style={{ fontSize: 14, fontWeight: 400 }}>{date}</p>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: 6,
+                      alignItems: "center",
+                      color: isDarkMode ? "#eeeeee" : "#181818",
+                    }}
+                  >
+                    <MdOutlineWorkOutline size={12} />
+
+                    <p style={{ fontSize: 13, fontWeight: 400 }}>
+                      {t(workPosition)}
+                    </p>
+                  </div>
+
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: 6,
+                      alignItems: "center",
+                      color: isDarkMode ? "#eeeeee" : "#181818",
+                    }}
+                  >
+                    <IoCalendarNumber size={12} />
+                    <p style={{ fontSize: 12, fontWeight: 400 }}>{date}</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <p
-              style={{
-                color: "gray",
-                maxWidth: 700,
-                marginBlock: 4,
-                display: "-webkit-box",
-                WebkitLineClamp: 2,
-                WebkitBoxOrient: "vertical",
-                overflow: "hidden",
-                fontWeight: 400,
-                marginTop: -4,
-              }}
-            >
-              {t(subtitle)}
-            </p>
+              <p
+                style={{
+                  color: "gray",
+                  maxWidth: 700,
+                  marginBlock: 4,
+                  display: "-webkit-box",
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                  fontWeight: 400,
+                }}
+              >
+                {t(subtitle)}
+              </p>
+            </div>
 
             <div
               style={{
