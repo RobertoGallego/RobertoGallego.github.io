@@ -12,10 +12,12 @@
 
 .dialog.light {
   background-color: #ffffff;
+  box-shadow: var(--shadow-l);
 }
 
 .dialog.dark {
   background-color: #1e1e2a;
+  box-shadow: var(--shadow-m);
 }
 
 .dialog-header {
@@ -102,17 +104,23 @@
   color: #fff;
   font-weight: 600;
   font-size: 14px;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 
 .dialog-exit.light {
   background: #762d20;
   color: #fff;
+  box-shadow: var(--shadow-m);
+
 }
 
 .dialog-exit.dark {
   background: #ff6347;
   color: #fff;
+  box-shadow: var(--shadow-l);
+
 }
 
 .dialog-exit.light:hover {
