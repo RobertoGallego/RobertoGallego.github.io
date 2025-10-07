@@ -29,12 +29,11 @@ const Dialog = ({
   const closeDialog = () => dialogRef.current?.close()
 
   const copyLink = () => {
-    navigator.clipboard.writeText(window.location.href)
+    navigator.clipboard.writeText(externalLink)
     dialogRef.current?.close()
   }
 
   const handleBackdropClick = (e: React.MouseEvent<HTMLDialogElement>) => {
-    console.log(e.target, dialogRef.current)
     if (e.target === dialogRef.current) {
       closeDialog()
     }
