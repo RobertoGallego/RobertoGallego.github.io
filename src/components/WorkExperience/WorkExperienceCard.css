@@ -4,9 +4,7 @@
   object-fit: cover;
   border-radius: 10px;
   background-color: #1b1b1b;
-  min-height: 100px;
-  height: auto;
-  max-height: 100px;
+  height: 100px;
   box-shadow: var(--shadow-s);
 }
 
@@ -19,6 +17,8 @@
   transition: transform 0.2s ease;
   width: 100%;
   box-sizing: border-box;
+  height: auto;
+
 }
 
 .work-card-wrapper.light {
@@ -71,6 +71,6 @@
 
   .work-card-image {
     width: 100%;
-    height: 100px;
+    /* height: 100px; */
   }
 }

@@ -135,29 +135,47 @@
   "Works": {
     "Title": "Work Experience",
     "Description": "Here are some highlights of my last work experiences, showcasing the projects and roles I've been a part of.",
-    "Klarys": {
-      "Title": "Klarys fresh food platform",
-      "Description": "The first e-procurement platform adapted to the specific challenges of fresh food.",
-      "Role": "Frontend Engineer",
-      "Duration": "2021 - 2024"
-    },
-    "Noop": {
-      "Title": "Noop solution vod plug and play",
-      "Description": "Specializes in video on demand solutions, developing customizable platforms for streaming and content management.",
-      "Role": "Mobile Developer",
-      "Duration": "2020"
-    },
     "Taste": {
       "Title": "Taste and baguette",
       "Role": "Bartender & Barista",
       "Duration": "2015",
       "Description": "Focused on delivering exceptional customer service, managing orders, and ensuring a smooth experience while gaining international experience in Australia."
     },
+    "Bensimon": {
+      "Title": "Bensimon - web administration and stock management",
+      "Description": "Online sales, inventory and e-commerce site operations using a CMS.",
+      "Role": "Web Administrator & Stock Manager",
+      "Duration": "2017 - 2018"
+    },
+    "MaisonGenerale": {
+      "Title": "La Maison Générale - web administration and stock management",
+      "Description": "Work performed while learning French, handling the site and stock via CMS.",
+      "Role": "Web Administrator",
+      "Duration": "2015 - 2017"
+    },
+    "Marchem": {
+      "Title": "Marchem Australasia - website design",
+      "Description": "Website design using WordPress, HTML, CSS, and JavaScript — international experience in Australia.",
+      "Role": "Web Developer",
+      "Duration": "2014 - 2015"
+    },
     "Tecnostrike": {
-      "Title": "Tecnostrike tecnogps",
-      "Role": "Co Founder",
-      "Duration": "2010 - 2014",
-      "Description": "GPS fleet management platform using real-time tracking, route control, and device sales."
+      "Title": "Tecnostrike / TecnoGPS - tech products and GPS services",
+      "Description": "Sales of technological products and GPS services. Administration, marketing, and website creation using CMS, HTML, and CSS.",
+      "Role": "Commercial Associate",
+      "Duration": "2010 - 2014"
+    },
+    "Noop": {
+      "Title": "Noop - customizable video-on-demand streaming app",
+      "Description": "Development of a customizable VOD streaming application using React Native and Java.",
+      "Role": "Fullstack Developer (Internship)",
+      "Duration": "2020"
+    },
+    "Klarys": {
+      "Title": "Klarys - SaaS e-procurement platform for fresh products",
+      "Description": "Frontend development in React and TypeScript for a B2B platform dedicated to fresh product management and ordering.",
+      "Role": "Frontend Developer",
+      "Duration": "Oct 2021 - Nov 2024"
     }
   },
   "Career": {

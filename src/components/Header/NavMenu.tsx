@@ -24,19 +24,17 @@ const navItems = [
 
 const NavMenu = () => {
   const { isDarkMode } = useDarkMode()
+  const theme = isDarkMode ? "dark" : "light"
 
   return (
-    <ul className="navbar">
+    <ul className={`navbar ${theme}`}>
       {navItems.map((item) => (
-        <li
-          key={item.href}
-          className={`navbar-item-${isDarkMode ? "dark" : "light"}`}
-        >
+        <li key={item.href} className={`navbar-item-${theme}`}>
           <Dialog externalLink={item.href} buttonContent={item.icon} />
         </li>
       ))}
 
-      <li className={`navbar-item-${isDarkMode ? "dark" : "light"}`}>
+      <li className={`navbar-item-${theme}`}>
         <DarkmodeButton hideLabel />
       </li>
     </ul>

@@ -135,17 +135,23 @@
   "Works": {
     "Title": "Experiencia laboral",
     "Description": "Aquí hay algunos destacados de mis últimas experiencias laborales, mostrando los proyectos y roles en los que he participado.",
-    "Klarys": {
-      "Title": "Klarys plataforma comida fresca",
-      "Description": "La primera plataforma de e-procurement adaptada a los desafíos específicos de la comida fresca.",
-      "Role": "Ing Frontend",
-      "Duration": "2021 - 2024"
+    "Tecnostrike": {
+      "Title": "Tecnostrike / TecnoGPS - productos tecnológicos y servicios GPS",
+      "Description": "Venta de productos tecnológicos y servicios de GPS. Administración, marketing y creación de sitios web con CMS, HTML y CSS.",
+      "Role": "Asociado Comercial",
+      "Duration": "2010 - 2014"
     },
     "Noop": {
-      "Title": "Noop solución vod plug and play",
-      "Description": "Especializada en soluciones de video bajo demanda, desarrollando plataformas personalizables para streaming y gestión de contenido.",
-      "Role": "Desarrollador Mobile",
+      "Title": "Noop - aplicación de streaming de video bajo demanda",
+      "Description": "Desarrollo de una aplicación personalizable de streaming VOD utilizando React Native y Java.",
+      "Role": "Desarrollador Fullstack (Práctica)",
       "Duration": "2020"
+    },
+    "Klarys": {
+      "Title": "Klarys - plataforma SaaS de e-procurement para productos frescos",
+      "Description": "Desarrollo frontend con React y TypeScript para una plataforma B2B dedicada a la compra y gestión de productos frescos.",
+      "Role": "Desarrollador Frontend",
+      "Duration": "Oct 2021 - Nov 2024"
     },
     "Taste": {
       "Title": "Taste and baguette",
@@ -153,11 +159,23 @@
       "Duration": "2015",
       "Description": "Enfocado en ofrecer un servicio excepcional al cliente, gestionando pedidos y asegurando una experiencia fluida mientras ganaba experiencia internacional en Australia."
     },
-    "Tecnostrike": {
-      "Title": "Tecnostrike tecnogps",
-      "Role": "Co Fundador",
-      "Duration": "2010 - 2014",
-      "Description": "Plataforma de gestión de flotas con GPS usando seguimiento en tiempo real, control de rutas y venta de dispositivos."
+    "Bensimon": {
+      "Title": "Bensimon - administración web y gestión de stock",
+      "Description": "Ventas online, inventario y operaciones de e-commerce mediante CMS.",
+      "Role": "Administrador Web y Gestor de Inventario",
+      "Duration": "2017 - 2018"
+    },
+    "MaisonGenerale": {
+      "Title": "La Maison Générale - administración web y gestión de stock",
+      "Description": "Trabajo realizado mientras aprendía francés, gestión del sitio y del stock mediante CMS.",
+      "Role": "Administrador Web",
+      "Duration": "2015 - 2017"
+    },
+    "Marchem": {
+      "Title": "Marchem Australasia - diseño de sitio web",
+      "Description": "Diseño de sitios web con WordPress, HTML, CSS y JavaScript — experiencia internacional en Australia.",
+      "Role": "Desarrollador Web",
+      "Duration": "2014 - 2015"
     }
   },
   "Career": {
