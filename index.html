@@ -1,12 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <title>Reve Studio</title>
-    <script type="module" crossorigin src="/assets/index-DOplAI1m.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DpFanZAX.css">
+
+    <script>
+      ;(function () {
+        const theme = localStorage.getItem("theme") || "light"
+        let finalTheme = theme
+
+        if (theme === "auto") {
+          finalTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light"
+        }
+
+        if (finalTheme !== "dark" && finalTheme !== "light") {
+          finalTheme = "light"
+        }
+
+        const backgrounds = {
+          light:
+            "radial-gradient(circle at 25% 35%, #e2e2e2 0%, #e7dbd3 40%, #e9dad0 75%, #f1cfb9 100%)",
+          dark: "radial-gradient(circle at 25% 35%, #1f1d4b 0%, #1d1a35 40%, #16142a 75%, #181625 100%)",
+        }
+
+        document.documentElement.setAttribute("data-theme", finalTheme)
+        document.documentElement.style.background = backgrounds[finalTheme]
+        document.documentElement.style.backgroundAttachment = "fixed"
+      })()
+    </script>
+    <script type="module" crossorigin src="/assets/index-upThVJsF.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-t04cConM.css">
   </head>
   <body>
     <div id="root"></div>
