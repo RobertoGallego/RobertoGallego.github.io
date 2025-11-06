@@ -14,15 +14,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #213547;
-  background-color: #e2e2e2;
 
-  background: radial-gradient(
-    circle at 25% 35%,
-    #e2e2e2 0%,
-    #e7dbd3 40%,
-    #e9dad0 75%,
-    #f1cfb9 100%
-  );
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;

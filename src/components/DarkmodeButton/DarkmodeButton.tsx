@@ -8,6 +8,7 @@ import { MdOutlineDarkMode } from "react-icons/md"
 import { ImSun } from "react-icons/im"
 
 import "./DarkmodeButton.css"
+import Tooltip from "../Tooltip/Tooltip"
 
 interface DarkmodeButtonProps {
   hideLabel?: boolean
@@ -26,6 +27,12 @@ const DarkmodeButton = ({
     setTheme(nextTheme)
   }
 
+  const getThemeLabel = () => {
+    if (theme === "light") return "Light"
+    if (theme === "dark") return "Dark"
+    return "Auto"
+  }
+
   const themeIcons: Record<string, JSX.Element> = {
     light: <ImSun size={16} />,
     dark: <MdOutlineDarkMode size={16} />,
@@ -33,15 +40,17 @@ const DarkmodeButton = ({
   }
 
   return (
-    <button
-      className={className}
-      onClick={handleThemeToggle}
-      aria-label="toggle-theme"
-    >
-      {themeIcons[theme]}
+    <Tooltip text={getThemeLabel()} position="auto">
+      <button
+        className={className}
+        onClick={handleThemeToggle}
+        aria-label="toggle-theme"
+      >
+        {themeIcons[theme]}
 
-      {!hideLabel && <p className="theme-label">{theme}</p>}
-    </button>
+        {!hideLabel && <p className="theme-label">{theme}</p>}
+      </button>
+    </Tooltip>
   )
 }
 

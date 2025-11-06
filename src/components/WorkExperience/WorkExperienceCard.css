@@ -4,21 +4,20 @@
   object-fit: cover;
   border-radius: 10px;
   background-color: #1b1b1b;
-  height: 100px;
+  height: 105px;
   box-shadow: var(--shadow-s);
 }
 
 .work-card-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
   margin-bottom: 10px;
   transition: transform 0.2s ease;
   width: 100%;
   box-sizing: border-box;
   height: auto;
-
 }
 
 .work-card-wrapper.light {

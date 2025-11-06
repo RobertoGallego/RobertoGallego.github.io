@@ -43,7 +43,7 @@ const JournalCard = ({
       buttonContent={
         <div
           className="work-card-content"
-          style={{ display: "flex", gap: 10, flex: 1 }}
+          style={{ display: "flex", gap: 15, flex: 1 }}
         >
           <img className="work-card-image" src={srcImage} alt="Ninjaco" />
 
