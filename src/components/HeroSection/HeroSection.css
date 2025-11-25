@@ -5,9 +5,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: moveBackground 15s ease infinite;
   width: 100%;
   color: #fff;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(234, 93, 67, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 99, 71, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black, transparent);
+  -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black, transparent);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-avatar {
@@ -17,6 +37,25 @@
   width: 154px;
   height: 154px;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: slideUp 0.6s ease-out 0.1s both;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-avatar:hover {
+  transform: scale(1.08) translateY(-4px);
 }
 
 .hero-avatar.light {
@@ -35,6 +74,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  animation: slideUp 0.6s ease-out 0.2s both;
 }
 
 .hero-chip-text {
@@ -48,6 +88,10 @@
   font-weight: 500;
   gap: 4px;
   white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .hero-chip-text.light {
@@ -67,6 +111,10 @@
   font-weight: 900;
   text-align: center;
   color: #ff6347;
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.02em;
+  animation: slideUp 0.6s ease-out 0.3s both;
 }
 
 .hero-title.light {
@@ -84,6 +132,9 @@
   font-family: "Poppins";
   font-weight: 500;
   max-width: 600px;
+  position: relative;
+  z-index: 1;
+  animation: slideUp 0.6s ease-out 0.4s both;
 }
 
 .hero-subtitle.light {
@@ -128,36 +179,33 @@
   margin-top: 20px;
   display: flex;
   white-space: nowrap;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+  animation: slideUp 0.6s ease-out 0.5s both;
 }
 
 .button-primary {
   border-radius: 20px;
-  padding: 8px 12px;
+  padding: 10px 16px;
   cursor: pointer;
-  margin-inline: 4px;
   font-size: 14px;
   font-weight: 500;
   display: flex;
   align-items: center;
   gap: 6px;
   text-decoration: none;
-  transition:
-    border 0.2s ease,
-    background-color 0.2s ease,
-    color 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-secondary {
   border-radius: 20px;
-  padding: 6px 12px;
+  padding: 10px 16px;
   cursor: pointer;
-  margin-inline: 4px;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
-  transition:
-    background-color 0.2s ease-in-out,
-    color 0.2s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-primary.light {
@@ -169,6 +217,7 @@
   background-color: #efe9e9;
   color: #333;
   box-shadow: var(--shadow-m);
+  transform: translateY(-2px);
 }
 
 .button-secondary.light {
@@ -180,6 +229,7 @@
 .button-secondary.light:hover {
   background: #b02107;
   color: #fff;
+  transform: translateY(-2px);
 }
 
 .button-primary.dark {
@@ -190,6 +240,7 @@
 .button-primary.dark:hover {
   background-color: #403d62;
   color: #fff;
+  transform: translateY(-2px);
 }
 
 .button-secondary.dark {
@@ -201,4 +252,5 @@
 .button-secondary.dark:hover {
   background-color: #ff3f1d;
   color: #fff;
+  transform: translateY(-2px);
 }
