@@ -16,7 +16,13 @@ const About = () => {
       <div className="about-container">
         <div className="about-header">
           <div className={`about-avatar ${isDarkMode ? "dark" : "light"}`}>
-            <img src={album.Profile} alt="Perfil" />
+            <img
+              src={album.Perf}
+              alt="Perfil"
+              style={{
+                marginTop: "-10px",
+              }}
+            />
           </div>
 
           <div>
