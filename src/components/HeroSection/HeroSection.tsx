@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next"
 
-import { album } from "@/assets"
+import { logo } from "@/assets"
 import { useDarkMode } from "@/hooks"
 
-import { FaArrowRight } from "react-icons/fa6"
 import { HiOutlineRocketLaunch } from "react-icons/hi2"
+
+import { FaAward, FaCode, FaPaperPlane } from "react-icons/fa"
 
 import Dialog from "../Dialog/Dialog"
 import "./HeroSection.css"
@@ -17,10 +18,6 @@ const HeroSection = () => {
   return (
     <div className="hero-section-wrapper">
       <div className="hero-grid" aria-hidden="true" />
-
-      <div className={`hero-avatar ${theme}`}>
-        <img src={album.Profile} alt="Profile" />
-      </div>
 
       <div className="hero-chip">
         <p className={`hero-chip-text ${theme}`}>
@@ -37,21 +34,47 @@ const HeroSection = () => {
         {t("HeroSection.Title_Secondary")}
       </p>
 
-      <div className="hero-buttons">
-        <Dialog
-          buttonClassName={`button-primary ${theme}`}
-          buttonContent={
-            <>
-              {t("HeroSection.Button_Primary")}
-              <FaArrowRight size={12} />
-            </>
-          }
-          externalLink="https://www.linkedin.com/in/roberto-g-905753190/"
-        />
+      <div className={`hero-stats ${theme}`}>
+        <div className="stat-item">
+          <FaAward size={20} />
+          <div>
+            <strong>5+</strong>
+            <span>Years Experience</span>
+          </div>
+        </div>
+
+        <div className="stat-item">
+          <FaCode size={20} />
+          <div>
+            <strong>10+</strong>
+            <span>Tech Stack</span>
+          </div>
+        </div>
+
+        <div className="stat-item">
+          <img
+            src={isDarkMode ? logo.Logo42w : logo.Logo42}
+            alt="42"
+            className="about-ecole-logo"
+          />
+
+          <div>
+            <strong>École 42</strong>
+            <span>Alumni</span>
+          </div>
+        </div>
 
         <Dialog
-          buttonClassName={`button-secondary ${theme}`}
-          buttonContent={t("HeroSection.Button_Secondary")}
+          buttonClassName="stat-item"
+          buttonContent={
+            <>
+              <FaPaperPlane size={18} />
+              <div>
+                <strong>Available to Work</strong>
+                <span>Contact Me</span>
+              </div>
+            </>
+          }
           externalLink="https://www.linkedin.com/in/roberto-g-905753190/"
         />
       </div>
