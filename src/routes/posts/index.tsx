@@ -1,29 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import PortfolioCard from '@/components/Portfolio/PortfolioCard'
 import Title from '@/components/Title/Title'
-import { posts } from '@/data'
-import { album } from '@/assets'
-import { HiOutlineRocketLaunch } from 'react-icons/hi2'
-import { FaJs, FaLaptopCode, FaReact, FaSchool } from 'react-icons/fa6'
-import { SiVite } from 'react-icons/si'
-
-const icons: Record<string, React.ComponentType<{ size?: number }>> = {
-  rocket: HiOutlineRocketLaunch,
-  react: FaReact,
-  vite: SiVite,
-  js: FaJs,
-  school: FaSchool,
-  laptop: FaLaptopCode,
-}
-
-const images: Record<string, string> = {
-  wallo: album.Wallo,
-  wall: album.Wall,
-  tech: album.Tech,
-  rob: album.Rob,
-  pexel: album.Pexel,
-  night: album.Night,
-}
+import { posts, postIcons } from "@/data"
 
 export const Route = createFileRoute('/posts/')({
   component: RouteComponent,
@@ -56,11 +34,11 @@ function RouteComponent() {
           <PortfolioCard
             postId={post.id}
             key={post.id}
-            srcImage={images[post.srcImage]}
+            srcImage={post.srcImage}
             title={post.title}
             description={post.description}
             date={post.date}
-            ChipIcon={icons[post.ChipIcon]}
+            ChipIcon={postIcons[post.ChipIcon]}
             ChipTitle={post.ChipTitle}
           />
         ))}

@@ -195,6 +195,7 @@
   color: #ff6347;
   position: relative;
   z-index: 1;
+  max-width: 800px;
   letter-spacing: -0.02em;
   margin-bottom: 10px;
   animation: slideUp 0.6s ease-out 0.3s both;
@@ -345,6 +346,18 @@
 @media (min-height: 1300px) {
   .hero-title {
     font-size: 30px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .hero-title {
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .hero-title {
+    font-size: 110px;
   }
 }
 

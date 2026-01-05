@@ -1,1 +1,8 @@
 export { default as useStateWp } from "./useStateWp.png"
+export { default as useCallbackWp } from "./useCallbackWp.png"
+export { default as useRefWp } from "./useRefWp.png"
+export { default as useActionStateWp } from "./useActionStateWp.png"
+export { default as useDeferredValueWp } from "./useDeferredValueWp.png"
+export { default as useContextWp } from "./useContextWp.png"
+export { default as useDebugValueWp } from "./useDebugValueWp.png"
+export { default as useEffectWp } from "./useEffectWp.png"

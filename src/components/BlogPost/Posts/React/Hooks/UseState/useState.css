@@ -16,7 +16,6 @@
 }
 
 .useState-header {
-  text-align: center;
   margin-bottom: 4rem;
   margin-top: 2rem;
 }
@@ -42,7 +41,6 @@
 .subtitle {
   font-size: 1.25rem;
   max-width: 700px;
-  margin: 0 auto;
   line-height: 1.6;
 }
 

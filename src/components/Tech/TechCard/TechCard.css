@@ -14,14 +14,6 @@
   overflow: hidden;
 }
 
-.tech-card.dark {
-  background: rgba(30, 30, 46, 0.4);
-}
-
-.tech-card.light {
-  background: rgba(249, 250, 251, 0.6);
-}
-
 .tech-card-empty {
   width: 20px;
   height: 20px;

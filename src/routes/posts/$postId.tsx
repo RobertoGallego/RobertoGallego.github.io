@@ -1,5 +1,5 @@
+import { posts } from "@/data"
 import { createFileRoute, notFound } from "@tanstack/react-router"
-import posts from "../../data/posts.json"
 import { JSX, Suspense, lazy } from "react"
 
 const postComponents: Record<

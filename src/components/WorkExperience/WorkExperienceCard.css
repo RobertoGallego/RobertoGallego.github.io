@@ -11,9 +11,9 @@
 .work-card-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 0.75rem;
+  padding: 1rem;
   border-radius: 10px;
-  margin-bottom: .75rem;
+  margin-bottom: 1rem;
   transition: transform 0.2s ease;
   width: 100%;
   box-sizing: border-box;
@@ -36,7 +36,7 @@
 
 .work-card-flags {
   display: flex;
-  gap: 6px;
+  gap: .5rem;
   align-items: center;
   flex-wrap: wrap;
 }

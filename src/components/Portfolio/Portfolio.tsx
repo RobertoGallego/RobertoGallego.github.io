@@ -1,7 +1,7 @@
 import PortfolioCard from "./PortfolioCard"
 import "./Portfolio.css"
 
-import { posts, postIcons, postImages } from "@/data"
+import { posts, postIcons } from "@/data"
 import Title from "../Title/Title"
 import { Link } from "@tanstack/react-router"
 
@@ -30,11 +30,11 @@ const Portfolio = () => (
     </div>
 
     <div className="portfolio-grid">
-      {posts.map((post) => (
+      {posts.slice(0, 6).map((post) => (
         <PortfolioCard
           postId={post.id}
           key={post.id}
-          srcImage={postImages[post.srcImage]}
+          srcImage={post.srcImage}
           title={post.title}
           description={post.description}
           date={post.date}

@@ -106,7 +106,7 @@ const UseState = () => {
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`}>
       <header className={`useState-header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>🪝 useState Hook</h1>
+        <h1>useState hook</h1>
         <p className="subtitle">
           El hook fundamental para manejar estado en componentes funcionales de
           React, podemos llamar useState múltiples veces para diferentes
