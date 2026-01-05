@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound"
 const router = createRouter({
   routeTree,
   defaultNotFoundComponent: () => <NotFound />,
+  scrollRestoration: true,
 })
 
 declare module "@tanstack/react-router" {

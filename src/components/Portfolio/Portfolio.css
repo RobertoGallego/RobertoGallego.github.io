@@ -1,0 +1,38 @@
+.portfolio-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-header {
+  padding-left: 4px;
+}
+
+.portfolio-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+.portfolio-description {
+  max-width: 700px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.portfolio-description.dark {
+  color: #fff;
+}
+
+.portfolio-description.light {
+  color: #1a1a1a;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: .75rem;
+}

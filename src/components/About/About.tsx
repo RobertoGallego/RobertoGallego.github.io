@@ -20,23 +20,48 @@ const About = () => {
               src={album.Perf}
               alt="Perfil"
               style={{
-                marginTop: "-10px",
+                marginTop: "-18px",
               }}
             />
           </div>
 
           <div>
-            <h3>Roberto GALLEGO</h3>
+            <h1
+              style={{
+                fontSize: "0.875rem",
+                fontWeight: 600,
+                textTransform: "uppercase",
+                letterSpacing: "0.1em",
+                opacity: 0.6,
+              }}
+            >
+              ABOUT ME
+            </h1>
 
-            <p>{t("About.Title")}</p>
+            <p
+              style={{
+                maxWidth: 700,
+                fontSize: "1.5rem",
+                fontWeight: 500,
+                lineHeight: 1.5,
+              }}
+            >
+              Roberto Gallego
+            </p>
 
-            <p>{t("About.Subtitle")}</p>
+            <p
+              style={{
+                fontWeight: "500",
+              }}
+            >
+              {t("About.Title")} | Craftsman
+            </p>
           </div>
         </div>
 
         <p className="about-text">{t("About.Description_A")}</p>
 
-        <p className="about-text">{t("About.Description_B")}</p>
+        {/* <p className="about-text">{t("About.Description_B")}</p> */}
 
         <div className="about-info">
           <div className="about-location">

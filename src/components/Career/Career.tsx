@@ -5,6 +5,7 @@ import { careerData } from "@/data"
 
 import CareerCard from "./CareerCard"
 import "./Career.css"
+import Title from "../Title/Title"
 
 const Career = () => {
   const { isDarkMode } = useDarkMode()
@@ -12,11 +13,7 @@ const Career = () => {
 
   return (
     <div className="career-container">
-      <div className="career-header">
-        <h1>{t("Career.Title")}</h1>
-
-        <p className="career-description">{t("Career.Description")}</p>
-      </div>
+      <Title title={t("Career.Title")} subtitle={t("My Professional Career")} />
 
       <div className="career-cards">
         {careerData.map((item) => (

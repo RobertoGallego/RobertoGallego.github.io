@@ -1,12 +1,12 @@
 .chip-dark,
 .chip-light {
-  border-radius: 20px;
-  padding: 4px 10px;
+  border-radius: 0.75rem;
+  padding: 0.25rem 0.5rem;
   cursor: pointer;
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   background-color: #0a0a0a;
   outline: none;
   transition: background-color 0.2s ease-in-out;

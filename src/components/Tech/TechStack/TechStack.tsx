@@ -15,6 +15,7 @@ import StackCategoryContent from "../StackCategory"
 import Chip from "../../Chip/Chip"
 
 import "./TechStack.css"
+import Title from "@/components/Title/Title"
 
 const TechStack = () => {
   const { isDarkMode } = useDarkMode()
@@ -24,11 +25,7 @@ const TechStack = () => {
 
   return (
     <div className={`tech-stack ${theme}`}>
-      <h1>{t("TechStack.Title")}</h1>
-
-      <p className={`tech-stack-description ${theme}`}>
-        {t("TechStack.Description")}
-      </p>
+      <Title title="TECH STACK 2026" subtitle="Technologies I’ve worked with and trust long-term" />
 
       <div
         style={{
@@ -43,9 +40,8 @@ const TechStack = () => {
         <div
           style={{
             display: "flex",
-            gap: 4,
+            gap: ".5rem",
             flexWrap: "wrap",
-            marginTop: 15,
           }}
         >
           <Chip
@@ -126,6 +122,11 @@ const TechStack = () => {
             }}
           />
         </div>
+
+        <div style={{ height: 16, width: "100%", 
+        borderBottom: `1px solid ${isDarkMode ? "#333" : "#ddd"}`,
+        }}
+        />
 
         <StackCategoryContent categoryNumber={categoryNumber} />
       </div>

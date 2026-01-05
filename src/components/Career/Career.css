@@ -1,6 +1,6 @@
 .career-container {
   width: 100%;
-  margin-top: 100px;
+  margin-block: 100px;
 }
 
 .career-header {
@@ -20,6 +20,5 @@
 .career-cards {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
-  gap: 10px;
+  gap: .75rem;
 }

@@ -49,18 +49,20 @@ const CareerCard = ({
           <div className={"career-card-content"}>
             <div className="career-card-info">
               <div className="career-card-top">
-                <p className={`career-card-chip ${theme}`}>{chip}</p>
+                <div className="career-card-meta">
+                  <p className={`career-card-chip ${theme}`}>{chip}</p>
 
-                <p className={`career-card-flag ${theme}`}>
-                  <img src={srcFlag} alt="Spanish" />
+                  <p className={`career-card-flag ${theme}`}>
+                    <img src={srcFlag} alt="Spanish" />
 
-                  {chipFlag}
-                </p>
+                    {chipFlag}
+                  </p>
+                </div>
 
                 <div className={"career-card-date"}>
                   <IoCalendarNumber size={12} />
 
-                  <p>{t(date)}</p>
+                  <p style={{ fontSize: 12, fontWeight: 400 }}>{t(date)}</p>
                 </div>
               </div>
 

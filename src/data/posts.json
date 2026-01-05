@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "srcImage": "wallo",
+    "srcImage": "useStateWp",
     "title": "Bienvenido a mi blog",
     "description": "Primer post donde explico de qué tratará este blog y qué puedes esperar.",
     "date": "2025-09-01",
-    "ChipTitle": "Intro",
-    "ChipIcon": "rocket",
-    "content": "1.md"
+    "ChipTitle": "React Hooks",
+    "ChipIcon": "react",
+    "content": "UseState"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "date": "2025-09-03",
     "ChipTitle": "React",
     "ChipIcon": "react",
-    "content": "2.md"
+    "content": "UseRef"
   },
   {
     "id": 3,

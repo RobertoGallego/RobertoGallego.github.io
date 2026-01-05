@@ -4,17 +4,14 @@ import { workExperienceData } from "@/data"
 
 import WorkExperienceCard from "./WorkExperienceCard"
 import "./WorkExperience.css"
+import Title from "../Title/Title"
 
 const WorkExperience = () => {
   const { t } = useTranslation()
 
   return (
     <div className="work-experience-container">
-      <div className="work-experience-header">
-        <h1>{t("Works.Title")}</h1>
-
-        <p className="work-experience-description">{t("Works.Description")}</p>
-      </div>
+      <Title title={t("Works.Title")} subtitle={t("Last work experiences")} />
 
       {workExperienceData.map((item) => (
         <WorkExperienceCard

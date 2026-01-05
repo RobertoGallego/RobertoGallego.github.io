@@ -5,15 +5,15 @@
   border-radius: 10px;
   background-color: #1b1b1b;
   height: 105px;
-  box-shadow: var(--shadow-s);
+  box-shadow: var(--shadow-m);
 }
 
 .work-card-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  padding: 0.75rem;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: .75rem;
   transition: transform 0.2s ease;
   width: 100%;
   box-sizing: border-box;
@@ -70,6 +70,5 @@
 
   .work-card-image {
     width: 100%;
-    /* height: 100px; */
   }
 }

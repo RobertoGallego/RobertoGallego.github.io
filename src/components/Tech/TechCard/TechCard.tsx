@@ -27,10 +27,14 @@ const TechCard = ({ label = "", src, empty = 0 }: TechCardProps) => {
   }
 
   return (
-    <div className="tech-card">
+    <div className={`tech-card ${isDarkMode ? "dark" : "light"}`}>
       <div className="tech-card-content">
-        {src && <img src={srcImg} alt={label} className="tech-card-img" />}
-        
+        {src && (
+          <div className="tech-card-icon-wrapper">
+            <img src={srcImg} alt={label} className="tech-card-img" />
+          </div>
+        )}
+
         <h5 className="tech-card-label">{label}</h5>
       </div>
     </div>

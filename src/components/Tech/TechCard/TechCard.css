@@ -7,8 +7,19 @@
   flex: 1;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 100px;
+  flex-basis: 140px;
   flex-wrap: wrap;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.tech-card.dark {
+  background: rgba(30, 30, 46, 0.4);
+}
+
+.tech-card.light {
+  background: rgba(249, 250, 251, 0.6);
 }
 
 .tech-card-empty {
@@ -25,17 +36,66 @@
 .tech-card-content {
   display: flex;
   align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.tech-card-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.tech-card.dark .tech-card-icon-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tech-card.light .tech-card-icon-wrapper {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.tech-card:hover .tech-card-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .tech-card-label {
-  font-size: 12px;
-  font-weight: 500;
-  text-align: center;
-  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+  letter-spacing: 0.01em;
 }
 
 .tech-card-img {
   width: 20px;
   height: 20px;
-  margin-left: 10px;
+  object-fit: contain;
 }
+
+/* Animation - Scale and Fade */
+.tech-card {
+  animation: scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Stagger animation - wave effect */
+.tech-card:nth-child(6n+1) { animation-delay: 0.05s; }
+.tech-card:nth-child(6n+2) { animation-delay: 0.1s; }
+.tech-card:nth-child(6n+3) { animation-delay: 0.15s; }
+.tech-card:nth-child(6n+4) { animation-delay: 0.2s; }
+.tech-card:nth-child(6n+5) { animation-delay: 0.25s; }
+.tech-card:nth-child(6n+6) { animation-delay: 0.3s; }
