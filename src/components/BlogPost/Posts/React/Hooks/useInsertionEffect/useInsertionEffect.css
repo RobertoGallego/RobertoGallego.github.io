@@ -1,0 +1,21 @@
+@import url("../useState/useState.css");
+
+.demo-card button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+
+.demo-card button:hover {
+  opacity: 0.8;
+}
+
+.demo-card small {
+  display: block;
+  margin-top: 1rem;
+  color: #666;
+}

@@ -178,9 +178,9 @@ const [age, setAge] = useState(28)
 
       <section className="section">
         <h2>⚠️ Estado Inmutable</h2>
-        <div className="warning-card">
+        <div className={"warning-card"}>
           <h3>🚫 Nunca mutes el estado directamente</h3>
-          <div className="code-block error">
+          <div className={`code-block error ${isDarkMode ? "dark" : "light"}`}>
             <CodeBlock
               language="javascript"
               code={`// ❌ MAL - Mutación directa
@@ -192,9 +192,9 @@ items[0] = 'changed'`}
           </div>
         </div>
 
-        <div className="success-card">
+        <div className={"success-card"}>
           <h3>✅ Siempre crea nuevos valores</h3>
-          <div className="code-block success">
+          <div className={`code-block success ${isDarkMode ? "dark" : "light"}`}>
             <CodeBlock
               language="javascript"
               code={`// ✅ BIEN - Reemplazar con nuevo valor
@@ -275,10 +275,10 @@ setNumber(number + 1)
           </button>
 
           {logs.length > 0 && (
-            <div className="console-output">
+            <div className={`console-output ${isDarkMode ? "dark" : "light"}`}>
               <div className="console-header">📺 Console Output:</div>
               {logs.map((log, i) => (
-                <div key={i} className="log-line">
+                <div key={i} className={`log-line ${isDarkMode ? "dark" : "light"}`}>
                   → {log}
                 </div>
               ))}
@@ -418,7 +418,7 @@ setItems(sorted)`}
           </p>
         </div>
         <div className="comparison">
-          <div className="code-block error">
+          <div className={`code-block error ${isDarkMode ? "dark" : "light"}`}>
             <div className="code-label">❌ Se ejecuta en cada render</div>
             <CodeBlock
               language="javascript"
@@ -428,7 +428,7 @@ setItems(sorted)`}
             />
           </div>
 
-          <div className="code-block success">
+          <div className={`code-block success ${isDarkMode ? "dark" : "light"}`}>
             <div className="code-label">✅ Se ejecuta solo una vez</div>
             <CodeBlock
               language="javascript"

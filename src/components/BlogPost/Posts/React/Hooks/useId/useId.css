@@ -1,0 +1,25 @@
+@import url("../useState/useState.css");
+
+.demo-card h2 {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.demo-card label {
+  display: block;
+  font-weight: 500;
+}
+
+.demo-card input {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.demo-card p {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.25rem;
+}

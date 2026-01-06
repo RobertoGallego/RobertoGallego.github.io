@@ -1,0 +1,4 @@
+/* Reutilizamos los mismos estilos de useState.css */
+@import url("../useState/useState.css");
+
+/* Si necesitas estilos específicos para useImperativeHandle, agrégalos aquí */

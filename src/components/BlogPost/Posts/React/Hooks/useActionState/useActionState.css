@@ -1,0 +1,41 @@
+/* Reutilizamos los mismos estilos de useState.css */
+@import url("../useState/useState.css");
+
+/* Estilos específicos para useActionState */
+.toast {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  color: #4ade80;
+  font-size: 0.9rem;
+}
+
+.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+  color: #f87171;
+  font-size: 0.9rem;
+}
+
+.form-demo {
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-demo h3 {
+  color: #667eea;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.form-demo input[type="hidden"] {
+  display: none;
+}

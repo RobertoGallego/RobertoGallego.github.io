@@ -7,7 +7,21 @@ const postComponents: Record<
   React.LazyExoticComponent<() => JSX.Element>
 > = {
   UseState: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/UseState/UseState")),
-  UseRef: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/UseRef")),
+  UseRef: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useRef/UseRef")),
+  UseContext: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useContext/UseContext")),
+  UseCallback: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useCallback/UseCallback")),
+  UseEffect: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useEffect/UseEffect")),
+  UseEffectEvent: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useEffectEvent/UseEffectEvent")),
+  UseId: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useId/UseId")),
+  UseImperativeHandle: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useImperativeHandle/UseImperativeHandle")),
+  UseInsertionEffect: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useInsertionEffect/UseInsertionEffect")),
+  UseLayoutEffect: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useLayoutEffect/UseLayoutEffect")),
+  UseMemo: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useMemo/UseMemo")),
+  UseReducer: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useReducer/UseReducer")),
+  UseSyncExternalStore: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useSyncExternalStore/UseSyncExternalStore")),
+  UseSyncExternalStoreWithSelector: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useSyncExternalStore/UseSyncExternalStore")),
+  UseTransition: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useTransition/UseTransition")),
+  UseActionState: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useActionState/UseActionState")),
 }
 
 export const Route = createFileRoute("/posts/$postId")({
