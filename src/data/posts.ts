@@ -25,9 +25,9 @@ const posts = [
   {
     id: 3,
     srcImage: blog.useEffectWp,
-    title: "Cómo usar Vite en tus proyectos",
+    title: "useEffect: Efectos secundarios en React",
     description:
-      "Explico cómo Vite hace que el desarrollo sea más rápido y eficiente.",
+      "Aprende a manejar efectos secundarios y el ciclo de vida con useEffect.",
     date: "2025-09-05",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
@@ -36,9 +36,9 @@ const posts = [
   {
     id: 4,
     srcImage: blog.useContextWp,
-    title: "Tips de JavaScript",
+    title: "Gestión global con useContext",
     description:
-      "Trucos útiles de JavaScript que me han salvado en proyectos reales.",
+      "Comparte datos entre componentes sin prop drilling usando useContext.",
     date: "2025-09-07",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
@@ -47,9 +47,9 @@ const posts = [
   {
     id: 5,
     srcImage: blog.useRefWp,
-    title: "Mi experiencia en la escuela 42",
+    title: "Referencias con useRef",
     description:
-      "Comparto cómo fue estudiar en la escuela 42 y qué aprendí en el proceso.",
+      "Accede al DOM y mantén valores mutables sin causar re-renders con useRef.",
     date: "2025-09-09",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
@@ -58,9 +58,9 @@ const posts = [
   {
     id: 6,
     srcImage: blog.useActionStateWp,
-    title: "Roadmap Fullstack",
+    title: "useActionState para formularios",
     description:
-      "Las tecnologías clave que puedes aprender para crecer como fullstack.",
+      "Maneja el estado de acciones asíncronas en formularios con useActionState.",
     date: "2025-09-12",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
@@ -69,10 +69,10 @@ const posts = [
   {
     id: 7,
     srcImage: blog.useDebugValueWp,
-    title: "Roadmap Fullstack",
+    title: "Debug hooks personalizados",
     description:
-      "Las tecnologías clave que puedes aprender para crecer como fullstack.",
-    date: "2025-09-12",
+      "Facilita la depuración de custom hooks usando useDebugValue.",
+    date: "2025-09-14",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseDebugValue",
@@ -80,10 +80,10 @@ const posts = [
   {
     id: 8,
     srcImage: blog.useDeferredValueWp,
-    title: "Roadmap Fullstack",
+    title: "Optimiza con useDeferredValue",
     description:
-      "Las tecnologías clave que puedes aprender para crecer como fullstack.",
-    date: "2025-09-12",
+      "Mejora el rendimiento diferiendo actualizaciones no urgentes con useDeferredValue.",
+    date: "2025-09-16",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseDeferredValue",
