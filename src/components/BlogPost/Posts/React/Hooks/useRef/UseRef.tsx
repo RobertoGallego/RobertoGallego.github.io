@@ -36,7 +36,7 @@ const CodeBlock = ({
 const UseRef = () => {
   const { isDarkMode } = useDarkMode()
   const inputRef = useRef<HTMLInputElement>(null)
-  const intervalRef = useRef<number | null>(null)
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [count, setCount] = useState(0)
   const [isRunning, setIsRunning] = useState(false)
 

@@ -1,4 +1,4 @@
-import { useInsertionEffect, useState } from "react"
+import { useState } from "react"
 import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
 import "./useInsertionEffect.css"
@@ -10,7 +10,7 @@ const CodeBlock = ({
 }: {
   code: string
   language?: string
-  isDarkMode: boolean
+  isDarkMode?: boolean
 }) => (
   <Highlight
     theme={isDarkMode ? themes.nightOwl : themes.github}
@@ -210,35 +210,8 @@ function useCSS(rule) {
   )
 }
 
-// Demo Component - Simulación simple de CSS-in-JS
-const isInserted = new Set<string>()
-
-function useCSS(rule: string) {
-  useInsertionEffect(() => {
-    if (!isInserted.has(rule)) {
-      isInserted.add(rule)
-      const styleElement = document.createElement("style")
-      styleElement.textContent = rule
-      document.head.appendChild(styleElement)
-    }
-  })
-  return rule.match(/\.([a-zA-Z0-9_-]+)/)?.[1] || "button"
-}
-
 function DemoButton() {
   const [color, setColor] = useState("blue")
-
-  const className = useCSS(`
-    .demo-button-${color} {
-      background-color: ${color};
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin: 5px;
-    }
-  `)
 
   return (
     <div className="demo-card">

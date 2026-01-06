@@ -10,7 +10,7 @@ const CodeBlock = ({
 }: {
   code: string
   language?: string
-  isDarkMode: boolean
+  isDarkMode?: boolean
 }) => (
   <Highlight
     theme={isDarkMode ? themes.nightOwl : themes.github}
