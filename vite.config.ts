@@ -11,7 +11,7 @@ export default defineConfig({
     react(),
     tanstackRouter({
       target: "react",
-      autoCodeSplitting: true,
+      autoCodeSplitting: false,
     }),
   ],
    resolve: {
