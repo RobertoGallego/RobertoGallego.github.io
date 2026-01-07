@@ -1,27 +1,39 @@
 import { posts } from "@/data"
 import { createFileRoute, notFound } from "@tanstack/react-router"
-import { JSX, Suspense, lazy } from "react"
+import { JSX } from "react"
+import UseState from "@/components/BlogPost/Posts/React/Hooks/UseState/UseState"
+import UseRef from "@/components/BlogPost/Posts/React/Hooks/useRef/UseRef"
+import UseContext from "@/components/BlogPost/Posts/React/Hooks/useContext/UseContext"
+import UseCallback from "@/components/BlogPost/Posts/React/Hooks/useCallback/UseCallback"
+import UseEffect from "@/components/BlogPost/Posts/React/Hooks/useEffect/UseEffect"
+import UseEffectEvent from "@/components/BlogPost/Posts/React/Hooks/useEffectEvent/UseEffectEvent"
+import UseId from "@/components/BlogPost/Posts/React/Hooks/useId/UseId"
+import UseImperativeHandle from "@/components/BlogPost/Posts/React/Hooks/useImperativeHandle/UseImperativeHandle"
+import UseInsertionEffect from "@/components/BlogPost/Posts/React/Hooks/useInsertionEffect/UseInsertionEffect"
+import UseLayoutEffect from "@/components/BlogPost/Posts/React/Hooks/useLayoutEffect/UseLayoutEffect"
+import UseMemo from "@/components/BlogPost/Posts/React/Hooks/useMemo/UseMemo"
+import UseReducer from "@/components/BlogPost/Posts/React/Hooks/useReducer/UseReducer"
+import UseSyncExternalStore from "@/components/BlogPost/Posts/React/Hooks/useSyncExternalStore/UseSyncExternalStore"
+import UseTransition from "@/components/BlogPost/Posts/React/Hooks/useTransition/UseTransition"
+import UseActionState from "@/components/BlogPost/Posts/React/Hooks/useActionState/UseActionState"
 
-const postComponents: Record<
-  string,
-  React.LazyExoticComponent<() => JSX.Element>
-> = {
-  UseState: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/UseState/UseState")),
-  UseRef: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useRef/UseRef")),
-  UseContext: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useContext/UseContext")),
-  UseCallback: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useCallback/UseCallback")),
-  UseEffect: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useEffect/UseEffect")),
-  UseEffectEvent: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useEffectEvent/UseEffectEvent")),
-  UseId: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useId/UseId")),
-  UseImperativeHandle: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useImperativeHandle/UseImperativeHandle")),
-  UseInsertionEffect: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useInsertionEffect/UseInsertionEffect")),
-  UseLayoutEffect: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useLayoutEffect/UseLayoutEffect")),
-  UseMemo: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useMemo/UseMemo")),
-  UseReducer: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useReducer/UseReducer")),
-  UseSyncExternalStore: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useSyncExternalStore/UseSyncExternalStore")),
-  UseSyncExternalStoreWithSelector: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useSyncExternalStore/UseSyncExternalStore")),
-  UseTransition: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useTransition/UseTransition")),
-  UseActionState: lazy(() => import("@/components/BlogPost/Posts/React/Hooks/useActionState/UseActionState")),
+const postComponents: Record<string, () => JSX.Element> = {
+  UseState,
+  UseRef,
+  UseContext,
+  UseCallback,
+  UseEffect,
+  UseEffectEvent,
+  UseId,
+  UseImperativeHandle,
+  UseInsertionEffect,
+  UseLayoutEffect,
+  UseMemo,
+  UseReducer,
+  UseSyncExternalStore,
+  UseSyncExternalStoreWithSelector: UseSyncExternalStore,
+  UseTransition,
+  UseActionState,
 }
 
 export const Route = createFileRoute("/posts/$postId")({
@@ -53,9 +65,7 @@ function RouteComponent() {
         justifyContent: "center",
       }}
     >
-      <Suspense fallback={<div style={{ height: "100vh" }} />}>
-        <PostComponent />
-      </Suspense>
+      <PostComponent />
     </div>
   )
 }

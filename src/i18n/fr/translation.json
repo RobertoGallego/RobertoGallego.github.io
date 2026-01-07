@@ -29,17 +29,19 @@
     "part2": "et c'est un plaisir de vous avoir ici."
   },
   "HeroSection": {
-    "Title": "Bienvenue, explorez mon parcours en ingénierie applicative",
-    "Description": "outils modernes, architecture scalable, design soigné.",
-    "Chip": "Bienvenue sur mon portfolio",
-    "Title_Primary": "Apps scalables, performantes et intuitives",
-    "Title_Secondary": "Bonjour, je suis Roberto, ingénieur logiciel spécialisé dans la création d'applications web responsives et performantes.",
+    "Title": "Bienvenue, explorez mon parcours en ingénierie d'applications",
+    "Description": "Outils modernes, architecture évolutive, design raffiné.",
+    "Chip": "Création d'apps",
+    "Title_Primary": "Blog et portfolio de développement web",
+    "Title_Secondary": "Bonjour, je suis Roberto, ingénieur logiciel spécialisé dans la création d'applications web réactives et performantes",
     "Button_Primary": "Disponible pour travailler",
-    "Button_Secondary": "Contactez-moi"
+    "Button_Secondary": "Contactez-moi",
+    "Button_Tertiary": "Années d'exp"
+
   },
   "TechStack": {
     "Title": "Compétences & Technologies · 2025",
-    "Description": "Technologies avec lesquelles j'aime vraiment travailler—des outils qui me passionnent et en lesquels je crois à long terme. Elle inclut aussi des frameworks et plateformes utilisés dans un cadre professionnel ou personnel.",
+    "Description": "Technologies que j’utilise, apprécie et en lesquelles j’ai confiance",
     "Productivity": "Outils de productivité",
     "Design": "Design & UX",
     "Improving": "En amélioration",
@@ -130,7 +132,7 @@
   },
   "Works": {
     "Title": "Expérience professionnelle",
-    "Description": "Voici quelques temps forts de mes expériences récentes, mettant en valeur les projets et rôles que j'ai occupés.",
+    "Description": "Dernières expériences professionnelles",
     "Tecnostrike": {
       "Title": "Tecnostrike / TecnoGPS - solutions technologiques et services GPS",
       "Description": "Vente de produits technologiques et services GPS. Administration, marketing et création de sites web avec CMS, HTML et CSS.",
@@ -176,7 +178,7 @@
   },
   "Career": {
     "Title": "Diplômes & Certificats",
-    "Description": "Réalisations professionnelles et certifications, démontrant mon engagement envers l'excellence et le développement continu.",
+    "Description": "Mon parcours professionnel",
     "Rncp7": {
       "Title": "RNCP 7, Expert en architecture informatique",
       "Duration": "2019 - 2023"
@@ -213,8 +215,13 @@
   "About": {
     "Title": "Ingénieur logiciel",
     "Subtitle": "Artisan numérique",
-    "Description_A": "Je suis un ingénieur logiciel spécialisé en développement frontend et en expérience utilisateur. Mon parcours a été façonné par une expérience pratique, un apprentissage constant et une vraie passion pour les solutions numériques réfléchies. J'attache de l'importance à un code propre, efficace, et à des interfaces fonctionnelles, élégantes et performantes.",
+    "Description_A": "Je suis passionné par la création d’applications web modernes et performantes, alliant interfaces élégantes et architecture solide. J’aime concevoir des solutions frontend évolutives et performantes, en écrivant un code propre, facile à maintenir et à faire évoluer, tout en explorant de nouvelles technologies, en relevant des défis et en apportant de la valeur à chaque projet.",
     "Description_B": "Après avoir étudié à l'École 42 à Paris, j'ai approfondi mes compétences techniques et collaboratives à travers des projets exigeants. Aujourd'hui, j'aime travailler avec des technologies modernes, améliorer les architectures UI et contribuer à des produits offrant une expérience de haute qualité."
+  },
+  "Blog": {
+    "Title": "BLOG POSTS",
+    "Subtitle": "Articles sur le développement web",
+    "Read_More": "Tout voir"
   },
   "Button": {
     "Back_To_Top": "Retour en haut",

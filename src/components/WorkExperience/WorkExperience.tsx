@@ -11,7 +11,7 @@ const WorkExperience = () => {
 
   return (
     <div className="work-experience-container">
-      <Title title={t("Works.Title")} subtitle={t("Last work experiences")} />
+      <Title title={t("Works.Title")} subtitle={t("Works.Description")} />
 
       {workExperienceData.map((item) => (
         <WorkExperienceCard

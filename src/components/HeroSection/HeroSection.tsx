@@ -39,7 +39,7 @@ const HeroSection = () => {
           <FaAward size={20} />
           <div>
             <strong>5+</strong>
-            <span>Years Experience</span>
+            <span>{t("HeroSection.Button_Tertiary")}</span>
           </div>
         </div>
 
@@ -70,8 +70,8 @@ const HeroSection = () => {
             <>
               <FaPaperPlane size={18} />
               <div>
-                <strong>Available to Work</strong>
-                <span>Contact Me</span>
+                <strong>{t("HeroSection.Button_Primary")}</strong>
+                <span>{t("HeroSection.Button_Secondary")}</span>
               </div>
             </>
           }

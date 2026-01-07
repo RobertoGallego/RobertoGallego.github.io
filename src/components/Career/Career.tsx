@@ -13,7 +13,7 @@ const Career = () => {
 
   return (
     <div className="career-container">
-      <Title title={t("Career.Title")} subtitle={t("My Professional Career")} />
+      <Title title={t("Career.Title")} subtitle={t("Career.Description")} />
 
       <div className="career-cards">
         {careerData.map((item) => (

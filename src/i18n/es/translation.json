@@ -34,16 +34,17 @@
   },
   "HeroSection": {
     "Title": "Bienvenido, explora mi trayectoria en ingeniería de aplicaciones",
-    "Chip": "Bienvenido a mi portfolio",
-    "Title_Primary": "Apps escalables, potentes e intuitivas",
-    "Title_Secondary": "Hola, soy Roberto, ingeniero de software enfocado en construir aplicaciones web responsivas y de alto rendimiento.",
-    "Description": "Herramientas modernas, arquitectura escalable, diseño elegante.",
+    "Description": "Herramientas modernas, arquitectura escalable, diseño refinado.",
+    "Chip": "Creando apps",
+    "Title_Primary": "Blog y portafolio de desarrollo web",
+    "Title_Secondary": "Hola, soy Roberto, ingeniero de software enfocado en construir aplicaciones web responsivas y de alto rendimiento",
     "Button_Primary": "Disponible para trabajar",
-    "Button_Secondary": "Contáctame"
-  },
+    "Button_Secondary": "Contáctame",
+    "Button_Tertiary": "Años Exp"
+    },
   "TechStack": {
     "Title": "Habilidades & Tecnologías · 2025",
-    "Description": "Tecnologías que utilizo con frecuencia para desarrollar aplicaciones.",
+    "Description": "Tecnologías que uso, disfruto y considero confiables",
     "Productivity": "Herramientas de productividad",
     "Design": "Diseño & UX",
     "Improving": "Actualmente mejorando",
@@ -134,7 +135,7 @@
   },
   "Works": {
     "Title": "Experiencia laboral",
-    "Description": "Aquí hay algunos destacados de mis últimas experiencias laborales, mostrando los proyectos y roles en los que he participado.",
+    "Description": "Últimas experiencias laborales",
     "Tecnostrike": {
       "Title": "Tecnostrike / TecnoGPS - productos tecnológicos y servicios GPS",
       "Description": "Venta de productos tecnológicos y servicios de GPS. Administración, marketing y creación de sitios web con CMS, HTML y CSS.",
@@ -180,7 +181,7 @@
   },
   "Career": {
     "Title": "Diplomas & Certificados",
-    "Description": "logros profesionales y certificaciones, demostrando mi compromiso con la excelencia y el desarrollo continuo.",
+    "Description": "Mi carrera profesional",
     "Rncp7": {
       "Title": "RNCP 7, Experto IT en arquitectura informática",
       "Duration": "2019 - 2023"
@@ -217,8 +218,13 @@
   "About": {
     "Title": "Ingeniero de Software",
     "Subtitle": "Artesano Digital",
-    "Description_A": "Soy un ingeniero de software con un fuerte enfoque en desarrollo frontend. Mi carrera ha sido moldeada por una combinación de experiencia práctica, aprendizaje continuo y una genuina pasión por crear soluciones digitales bien pensadas. Me importa escribir código limpio y eficiente, y construir interfaces que sean funcionales, elegantes y orientadas al rendimiento.",
+    "Description_A": "Me apasiona crear aplicaciones web modernas y eficientes, combinando interfaces elegantes con arquitectura sólida. Disfruto diseñar soluciones frontend escalables y de alto rendimiento, escribiendo código limpio que facilita mantenimiento y evolución, explorando nuevas tecnologías, enfrentando desafíos y aportando valor en cada proyecto.",
     "Description_B": "Después de estudiar en École 42 en París, profundicé mis habilidades técnicas y colaborativas mediante proyectos desafiantes. Hoy disfruto trabajando con tecnologías modernas, mejorando arquitecturas UI y contribuyendo a productos que ofrecen experiencias de usuario de alta calidad."
+  },
+  "Blog": {
+    "Title": "BLOG POSTS",
+    "Subtitle": "Artículos sobre desarrollo web",
+    "Read_More": "Ver todo"
   },
   "Button": {
     "Back_To_Top": "Volver arriba",

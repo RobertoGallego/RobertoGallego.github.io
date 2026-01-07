@@ -54,7 +54,7 @@ const About = () => {
                 fontWeight: "500",
               }}
             >
-              {t("About.Title")} | Craftsman
+              {t("About.Title")}
             </p>
           </div>
         </div>

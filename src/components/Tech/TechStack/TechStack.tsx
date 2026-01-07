@@ -25,7 +25,7 @@ const TechStack = () => {
 
   return (
     <div className={`tech-stack ${theme}`}>
-      <Title title="TECH STACK 2026" subtitle="Technologies I’ve worked with and trust long-term" />
+      <Title title="TECH STACK 2026" subtitle={t("TechStack.Description")} />
 
       <div
         style={{

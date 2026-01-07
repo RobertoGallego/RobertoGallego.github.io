@@ -194,8 +194,8 @@ const ShippingForm = memo(function ShippingForm({ onSubmit }) {
 
   console.log("[ARTIFICIALLY SLOW] Rendering <ShippingForm />")
   let startTime = performance.now()
-  while (performance.now() - startTime < 500) {
-    // No hace nada por 500 ms para emular un componente lento
+  while (performance.now() - startTime < 1) {
+    // No hace nada por 1 ms para emular un componente lento
   }
 
   function handleSubmit(e) {
@@ -331,8 +331,8 @@ const ShippingForm = memo(function ShippingForm({ onSubmit }) {
 
   console.log("[ARTIFICIALLY SLOW] Rendering <ShippingForm />")
   let startTime = performance.now()
-  while (performance.now() - startTime < 500) {
-    // No hace nada por 500 ms para emular un componente lento
+  while (performance.now() - startTime < 1) {
+    // No hace nada por 1 ms para emular un componente lento
   }
 
   function handleSubmit(e) {
@@ -653,8 +653,8 @@ const ShippingFormMemo = memo(function ShippingForm({
 
   console.log("[ARTIFICIALLY SLOW] Rendering <ShippingForm />")
   const startTime = performance.now()
-  while (performance.now() - startTime < 500) {
-    // No hace nada por 500 ms para emular un componente lento
+  while (performance.now() - startTime < 1) {
+    // No hace nada por 1 ms para emular un componente lento
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -758,8 +758,8 @@ const ShippingFormNoMemo = memo(function ShippingForm({
 
   console.log("[ARTIFICIALLY SLOW] Rendering <ShippingForm />")
   const startTime = performance.now()
-  while (performance.now() - startTime < 500) {
-    // No hace nada por 500 ms para emular un componente lento
+  while (performance.now() - startTime < 1) {
+    // No hace nada por 1 ms para emular un componente lento
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {

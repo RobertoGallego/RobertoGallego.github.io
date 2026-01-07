@@ -39,11 +39,12 @@
     "Title_Primary": "Web Development Blog & Portfolio",
     "Title_Secondary": "Hi, I'm Roberto, a software engineer focused on building responsive and performant web applications",
     "Button_Primary": "Available for work",
-    "Button_Secondary": "Contact me"
+    "Button_Secondary": "Contact me",
+    "Button_Tertiary": "Years Exp"
   },
   "TechStack": {
     "Title": "Skills & Technologies · 2025",
-    "Description": "Technologies I truly enjoy working with—tools I'm passionate about, that I believe in long-term. It also features frameworks and platforms I've used professionally and projects.",
+    "Description": "Technologies I use, enjoy, and trust",
     "Productivity": "Productivity Tools",
     "Design": "Design & UX",
     "Improving": "Currently Improving",
@@ -134,7 +135,7 @@
   },
   "Works": {
     "Title": "Work Experience",
-    "Description": "Here are some highlights of my last work experiences, showcasing the projects and roles I've been a part of.",
+    "Description": "Last work experiences",
     "Taste": {
       "Title": "Taste and baguette",
       "Role": "Bartender & Barista",
@@ -180,7 +181,7 @@
   },
   "Career": {
     "Title": "Diplome & Certificate",
-    "Description": "professional achievements and certifications, demonstrating my commitment to excellence and continuous development.",
+    "Description": "My Professional Career",
     "Rncp7": {
       "Title": "RNCP 7, It expert en architecture informatique"
     },
@@ -210,8 +211,13 @@
   "About": {
     "Title": "Software Engineer",
     "Subtitle": "Digital Craftsman",
-    "Description_A": "I'm a software engineer with a strong focus on frontend development and user experience. My career has been shaped by a mix of hands-on experience, continuous learning, and a genuine passion for creating thoughtful digital solutions. I care about writing clean, efficient code and building interfaces that are both functional, elegant, and performance-oriented.",
+    "Description_A": "I’m passionate about building modern, efficient web applications, combining elegant interfaces with solid architecture. I enjoy designing scalable, high-performance frontend solutions, writing clean code that’s easy to maintain and evolve, while exploring new technologies, tackling challenges, and contributing value in every project.",
     "Description_B": "After studying at École 42 in Paris, I deepened my technical and collaborative skills through intensive, project-based learning. Today, I enjoy working on modern web technologies, improving UI architecture, and contributing to products that deliver high-quality user experiences."
+  },
+  "Blog": {
+    "Title": "BLOG POSTS",
+    "Subtitle": "Articles on web development",
+    "Read_More": "Read all posts"
   },
   "Button": {
     "Back_To_Top": "Back To Top",
