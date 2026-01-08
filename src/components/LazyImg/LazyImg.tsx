@@ -21,7 +21,7 @@ const LazyImg = ({ src, alt = '', className = '', style = {}, borderRadius = 0 }
 
   return (
     <div className="lazy-img-wrapper">
-      {loaded && (
+      {!loaded && (
         <div className={`lazy-img-skeleton ${isDarkMode ? 'dark' : 'light'}`} style={{ borderRadius }} />
       )}
 
