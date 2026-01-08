@@ -17,3 +17,5 @@ export { default as useOptimistic } from "./useOptimistic.png"
 export { default as useReducer } from "./useReducer.png"
 export { default as useSyncExternalStore } from "./useSyncExternalStore.png"
 export { default as useTransition } from "./useTransition.png"
+
+export { default as ReactHookForm } from "./ReactHookForm.png"

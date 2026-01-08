@@ -88,6 +88,16 @@ const posts = [
     ChipIcon: "react",
     content: "UseDeferredValue",
   },
+  // {
+  //   id: 9,
+  //   srcImage: blog.ReactHookForm,
+  //   title: "React Hook Form: Formularios sin esfuerzo",
+  //   description: "Construye y valida formularios fácilmente.",
+  //   date: "08-01-2026",
+  //   ChipTitle: "React Hook Form",
+  //   ChipIcon: "react",
+  //   content: "ReactHookForm",
+  // }
 ]
 
 export default posts
