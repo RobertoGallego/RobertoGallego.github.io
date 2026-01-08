@@ -12,7 +12,7 @@ export { default as useLayoutEffect } from "@/components/BlogPost/Posts/React/Ho
 export { default as useMemo } from "@/components/BlogPost/Posts/React/Hooks/useMemo/UseMemo"
 export { default as useReducer } from "@/components/BlogPost/Posts/React/Hooks/useReducer/UseReducer"
 export { default as UseRef } from "@/components/BlogPost/Posts/React/Hooks/useRef/UseRef"
-export { default as UseState } from "@/components/BlogPost/Posts/React/Hooks/UseState/UseState"
+export { default as UseState } from "@/components/BlogPost/Posts/React/Hooks/useState/UseState"
 export { default as useSyncExternalStore } from "@/components/BlogPost/Posts/React/Hooks/useSyncExternalStore/UseSyncExternalStore"
 export { default as useSyncExternalStoreWithSelector } from "@/components/BlogPost/Posts/React/Hooks/useSyncExternalStore/UseSyncExternalStore"
 export { default as useTransition } from "@/components/BlogPost/Posts/React/Hooks/useTransition/UseTransition"
