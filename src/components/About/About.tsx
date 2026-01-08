@@ -6,6 +6,7 @@ import { flag, album, logo } from "@/assets"
 import { FaMapMarkerAlt } from "react-icons/fa"
 
 import "./About.css"
+import LazyImg from "../LazyImg/LazyImg"
 
 const About = () => {
   const { isDarkMode } = useDarkMode()
@@ -16,13 +17,7 @@ const About = () => {
       <div className="about-container">
         <div className="about-header">
           <div className={`about-avatar ${isDarkMode ? "dark" : "light"}`}>
-            <img
-              src={album.Perf}
-              alt="Perfil"
-              style={{
-                marginTop: "-18px",
-              }}
-            />
+            <LazyImg src={album.Perf} alt="Perfil" style={{ marginTop: "-18px" }} borderRadius={100} />
           </div>
 
           <div>
@@ -61,15 +56,13 @@ const About = () => {
 
         <p className="about-text">{t("About.Description_A")}</p>
 
-        {/* <p className="about-text">{t("About.Description_B")}</p> */}
-
         <div className="about-info">
           <div className="about-location">
             <FaMapMarkerAlt />
 
             <p>Rennes, France</p>
 
-            <img src={flag.FranceFlag} alt="Spanish" className="about-flag" />
+            <img src={flag.FranceFlag} alt="French" className="about-flag" />
           </div>
 
           <div className="about-ecole">

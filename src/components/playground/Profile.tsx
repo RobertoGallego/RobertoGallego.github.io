@@ -2,12 +2,13 @@ import "./Profile.css"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
 import pilot from "./assets/pilot.svg"
+import LazyImg from "../LazyImg/LazyImg"
 
 const Profile = () => {
   return (
     <div className="profile--card">
       <div className="profile--image-container">
-        <img className="profile--image" src={pilot} alt="profile" />
+        <LazyImg className="profile--image" src={pilot} alt="profile" />
       </div>
 
       <div className="profile--text">

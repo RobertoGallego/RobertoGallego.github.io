@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next"
 import { album } from "@/assets"
 
 import "./Card.css"
+import LazyImg from "../LazyImg/LazyImg"
 
 interface CardProps {
   imageUrl?: string
@@ -30,7 +31,7 @@ const Card: React.FC<CardProps> = ({
       style={{ minWidth: width, transform: `rotate(${0}deg)`, zIndex }}
     >
       <div className="blog-card">
-        <img className="blog-img" src={imageUrl} alt="Card img" />
+        <LazyImg className="blog-img" src={imageUrl} alt="Card img" borderRadius={10} />
 
         <div className="blog-text" style={{ width: "100%" }}>
           {children}

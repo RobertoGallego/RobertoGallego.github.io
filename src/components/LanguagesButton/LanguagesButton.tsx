@@ -4,6 +4,7 @@ import { useDarkMode, useLanguage } from "@/hooks"
 import { flag } from "@/assets"
 
 import "./LanguagesButton.css"
+import LazyImg from "../LazyImg/LazyImg"
 
 interface LanguageButtonProps {
   disabledLabel?: boolean
@@ -37,10 +38,11 @@ const LanguageButton = ({ disabledLabel = false }: LanguageButtonProps) => {
       onClick={handleLanguageToggle}
       aria-label="toggle-language"
     >
-      <img
+      <LazyImg
         src={flags[language].src}
         alt={flags[language].alt}
         style={{ width: 12 }}
+        borderRadius={4}
       />
 
       {!disabledLabel && (

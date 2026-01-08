@@ -9,6 +9,7 @@ import { IoCalendarNumber } from "react-icons/io5"
 import Dialog from "../Dialog/Dialog"
 
 import "./CareerCard.css"
+import LazyImg from "../LazyImg/LazyImg"
 
 interface CareerCardProps {
   srcImage?: string
@@ -40,10 +41,11 @@ const CareerCard = ({
       externalLink={href}
       buttonContent={
         <>
-          <img
+          <LazyImg
             src={srcImage}
             alt="Ninjaco"
             className={`career-card-img ${theme}`}
+            borderRadius={10}
           />
 
           <div className={"career-card-content"}>
@@ -52,11 +54,13 @@ const CareerCard = ({
                 <div className="career-card-meta">
                   <p className={`career-card-chip ${theme}`}>{chip}</p>
 
-                  <p className={`career-card-flag ${theme}`}>
-                    <img src={srcFlag} alt="Spanish" />
+                  <div className={`career-card-flag ${theme}`}>
+                    <LazyImg src={srcFlag} alt="Spanish" borderRadius={10} />
 
-                    {chipFlag}
-                  </p>
+                    <p>
+                      {chipFlag}
+                    </p>
+                  </div>
                 </div>
 
                 <div className={"career-card-date"}>

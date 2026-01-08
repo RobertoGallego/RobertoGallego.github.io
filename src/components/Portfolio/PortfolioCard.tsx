@@ -6,6 +6,7 @@ import { album } from "@/assets"
 
 import { HiOutlineRocketLaunch } from "react-icons/hi2"
 import { IoCalendarNumber } from "react-icons/io5"
+import LazyImg from "../LazyImg/LazyImg"
 
 interface PortfolioCardProps {
   postId: number
@@ -35,7 +36,7 @@ const PortfolioCard = ({
       className={`portfolio-card ${isDarkMode ? "dark" : "light"}`}
     >
       <div className="portfolio-card-image-container">
-        <img src={srcImage} className="portfolio-card-image" />
+        <LazyImg src={srcImage} className="portfolio-card-image" borderRadius={".4rem"} />
 
         <div className="portfolio-card-gradient" />
 

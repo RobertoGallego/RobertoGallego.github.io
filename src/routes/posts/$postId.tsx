@@ -1,7 +1,7 @@
 import { posts } from "@/data"
 import { createFileRoute, notFound } from "@tanstack/react-router"
 import { JSX } from "react"
-import UseState from "@/components/BlogPost/Posts/React/Hooks/UseState/UseState"
+import UseState from "@/components/BlogPost/Posts/React/Hooks/useState/UseState"
 import UseRef from "@/components/BlogPost/Posts/React/Hooks/useRef/UseRef"
 import UseContext from "@/components/BlogPost/Posts/React/Hooks/useContext/UseContext"
 import UseCallback from "@/components/BlogPost/Posts/React/Hooks/useCallback/UseCallback"

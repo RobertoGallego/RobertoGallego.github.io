@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router"
 
 import { logo } from "@/assets"
 import { useDarkMode } from "@/hooks"
+import LazyImg from "../LazyImg/LazyImg"
 
 const HeaderLogo = () => {
   const { isDarkMode } = useDarkMode()
@@ -10,7 +11,7 @@ const HeaderLogo = () => {
 
   return (
     <Link to="/">
-      <img src={logoSrc} alt="reve logo" />
+      <LazyImg src={logoSrc} alt="reve logo" borderRadius={4} />
     </Link>
   )
 }

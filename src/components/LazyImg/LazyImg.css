@@ -1,0 +1,39 @@
+.lazy-img-wrapper {
+  position: relative;
+}
+
+.lazy-img-skeleton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #cecece;
+  background-image: linear-gradient(90deg, #cecece, #bebebe, #cecece);
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  animation: skeleton-animation 2s ease-in-out infinite;
+  z-index: 100;
+}
+
+.lazy-img-skeleton.dark {
+  background-color: #1f1d38;
+  background-image: linear-gradient(90deg, #1f1d38, #25213f, #1f1d38);
+}
+
+.lazy-img-skeleton.light {
+  background-color: #e9dad0;
+  background-image: linear-gradient(90deg, #e9dad0, #dfd0c6, #e9dad0);
+}
+
+@keyframes skeleton-animation {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}

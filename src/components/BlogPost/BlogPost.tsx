@@ -1,6 +1,7 @@
 import { ReactNode, ElementType } from "react"
 import "./BlogPost.css"
 import { useDarkMode } from "@/hooks"
+import LazyImg from "../LazyImg/LazyImg"
 
 interface BlogPostProps {
   children: ReactNode
@@ -108,7 +109,7 @@ interface ImageProps {
 
 export const Image = ({ src, alt, caption }: ImageProps) => (
   <figure className="blog-image-wrapper">
-    <img src={src} alt={alt} className="blog-image" />
+    <LazyImg src={src} alt={alt} className="blog-image" />
     {caption && (
       <figcaption className="blog-image-caption">{caption}</figcaption>
     )}

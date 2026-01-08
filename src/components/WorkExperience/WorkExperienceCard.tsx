@@ -9,6 +9,7 @@ import { MdOutlineWorkOutline } from "react-icons/md"
 
 import Dialog from "../Dialog/Dialog"
 import "./WorkExperienceCard.css"
+import LazyImg from "../LazyImg/LazyImg"
 
 type Flag = { src: string; label: string }
 
@@ -45,7 +46,7 @@ const JournalCard = ({
           className="work-card-content"
           style={{ display: "flex", gap: 15, flex: 1 }}
         >
-          <img className="work-card-image" src={srcImage} alt="Ninjaco" />
+          <LazyImg className="work-card-image" src={srcImage} alt="Ninjaco" borderRadius={8} />
 
           <div
             style={{
@@ -138,10 +139,13 @@ const JournalCard = ({
             >
               <div className="work-card-flags">
                 {flags.map(({ src, label }) => (
-                  <p className={`work-card-flag ${theme}`} key={label}>
-                    <img src={src} alt="Spanish" style={{ width: 12 }} />
-                    {label}
-                  </p>
+                  <div key={label} className={`work-card-flag ${theme}`}>
+                    <LazyImg src={src} alt={label} style={{ width: 12 }} />
+                    
+                    <p>
+                      {label}
+                    </p>
+                  </div>
                 ))}
               </div>
 

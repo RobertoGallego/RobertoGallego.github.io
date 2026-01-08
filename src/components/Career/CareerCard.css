@@ -98,6 +98,12 @@
   border-radius: 20px;
   font-weight: 500;
   box-shadow: var(--shadow-s);
+    align-self: center;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  white-space: nowrap;
+
 }
 
 .career-card-flag img {

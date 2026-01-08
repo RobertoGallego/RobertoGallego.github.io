@@ -177,13 +177,13 @@
 }
 
 .hero-chip-text.light {
-  background-color: rgba(239, 233, 233, 0.8);
-  box-shadow: var(--shadow-s);
+  background-color: #f8f8f8;
+  box-shadow: var(--shadow-m);
 }
 
 .hero-chip-text.dark {
-  background-color: rgba(155, 135, 245, 0.12);
-  box-shadow: var(--shadow-s);
+  background-color: #121026;
+  box-shadow: var(--shadow-m);
 }
 
 .hero-title {
@@ -297,17 +297,17 @@
 }
 
 .hero-stats.light .stat-item {
-  background-color: rgba(239, 233, 233, 0.8);
+  background-color: #f8f8f8;
   color: #181818;
-  box-shadow: var(--shadow-s);
+  box-shadow: var(--shadow-m);
   transition: all 0.3s ease;
   border: 1px solid rgba(118, 45, 32, 0.1);
 }
 
 .hero-stats.dark .stat-item {
-  background-color: rgba(155, 135, 245, 0.12);
+  background-color: #121026;
   color: #cfcfd1;
-  box-shadow: var(--shadow-s);
+  box-shadow: var(--shadow-m);
   transition: all 0.3s ease;
 }
 

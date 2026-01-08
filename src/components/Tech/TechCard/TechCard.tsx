@@ -1,6 +1,7 @@
 import { useDarkMode } from "@/hooks"
 
 import "./TechCard.css"
+import LazyImg from "@/components/LazyImg/LazyImg";
 
 interface TechCardProps {
   label?: string
@@ -31,7 +32,7 @@ const TechCard = ({ label = "", src, empty = 0 }: TechCardProps) => {
       <div className="tech-card-content">
         {src && (
           <div className="tech-card-icon-wrapper">
-            <img src={srcImg} alt={label} className="tech-card-img" />
+            <LazyImg src={srcImg ?? ""} alt={label} className="tech-card-img" />
           </div>
         )}
 

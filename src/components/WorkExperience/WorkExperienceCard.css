@@ -42,14 +42,20 @@
 }
 
 .work-card-flag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   align-self: center;
   font-size: 12px;
   padding-block: 2px;
   padding-inline: 8px;
-  border-radius: 10px;
+  border-radius: 20px;
   font-weight: 500;
-  display: flex;
-  gap: 4px;
+  box-shadow: var(--shadow-s);
+    align-self: center;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
   white-space: nowrap;
 }
 
