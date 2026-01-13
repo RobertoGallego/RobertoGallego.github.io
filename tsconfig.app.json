@@ -31,6 +31,7 @@
       "@/types": ["types/index.ts"],
       "@/assets": ["assets/index.ts"],
       "@/data": ["data/index.ts"],
+      "@blog-components": ["components/BlogPost/Posts/Components"]
     }
   },
   "include": ["src"]

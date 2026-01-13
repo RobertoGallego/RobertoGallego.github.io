@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./useState.css"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
+import { BlogHeader, CodeBlock, TipCard } from "@/blog-components"
 
 const codeSyntax = `
 const [state, setState] = useState(initialState)
@@ -12,56 +12,6 @@ const [name, setName] = useState("Taylor")
 const [isOpen, setIsOpen] = useState(false)
 const [todos, setTodos] = useState(() => handleExpensiveFunction())
 `
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-}: {
-  code: string
-  language?: string
-}) => {
-  const { isDarkMode } = useDarkMode()
-
-  return (
-    <Highlight
-      theme={isDarkMode ? themes.nightOwl : themes.github}
-      code={code}
-      language={language}
-    >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={style}>
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line })}>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token })} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
-  )
-}
-
-const TipCard = ({
-  icon,
-  title,
-  description,
-  isDarkMode,
-}: {
-  icon: string
-  title: string
-  description: string
-  isDarkMode: boolean
-}) => {
-  return (
-    <div className={`tip-card ${isDarkMode ? "dark" : "light"}`}>
-      <span className="tip-icon">{icon}</span>
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  )
-}
 
 const UseState = () => {
   const { isDarkMode } = useDarkMode()
@@ -105,14 +55,10 @@ const UseState = () => {
 
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`}>
-      <header className={`useState-header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>useState hook</h1>
-        <p className="subtitle">
-          El hook fundamental para manejar estado en componentes funcionales de
-          React, podemos llamar useState múltiples veces para diferentes
-          estados.
-        </p>
-      </header>
+      <BlogHeader
+        title="useState hook"
+        subtitle="El hook fundamental para manejar estado en componentes funcionales de React, podemos llamar useState múltiples veces para diferentes estados."
+      />
 
       <section className="section">
         <h2>📚 ¿Qué es useState?</h2>
@@ -194,7 +140,9 @@ items[0] = 'changed'`}
 
         <div className={"success-card"}>
           <h3>✅ Siempre crea nuevos valores</h3>
-          <div className={`code-block success ${isDarkMode ? "dark" : "light"}`}>
+          <div
+            className={`code-block success ${isDarkMode ? "dark" : "light"}`}
+          >
             <CodeBlock
               language="javascript"
               code={`// ✅ BIEN - Reemplazar con nuevo valor
@@ -278,7 +226,10 @@ setNumber(number + 1)
             <div className={`console-output ${isDarkMode ? "dark" : "light"}`}>
               <div className="console-header">📺 Console Output:</div>
               {logs.map((log, i) => (
-                <div key={i} className={`log-line ${isDarkMode ? "dark" : "light"}`}>
+                <div
+                  key={i}
+                  className={`log-line ${isDarkMode ? "dark" : "light"}`}
+                >
                   → {log}
                 </div>
               ))}
@@ -428,7 +379,9 @@ setItems(sorted)`}
             />
           </div>
 
-          <div className={`code-block success ${isDarkMode ? "dark" : "light"}`}>
+          <div
+            className={`code-block success ${isDarkMode ? "dark" : "light"}`}
+          >
             <div className="code-label">✅ Se ejecuta solo una vez</div>
             <CodeBlock
               language="javascript"
@@ -444,42 +397,36 @@ setItems(sorted)`}
         <h2>💡 Tips y Best Practices</h2>
         <div className="tips-grid">
           <TipCard
-            isDarkMode={isDarkMode}
             icon="🔢"
             title="Múltiples Estados"
             description="Puedes llamar useState múltiples veces en un componente"
           />
 
           <TipCard
-            isDarkMode={isDarkMode}
             icon="🔒"
             title="Inmutabilidad"
             description="Siempre crea nuevos valores, nunca modifiques directamente"
           />
 
           <TipCard
-            isDarkMode={isDarkMode}
             icon="⚡"
             title="Updater Functions"
             description="Úsalas cuando dependas del estado anterior"
           />
 
           <TipCard
-            isDarkMode={isDarkMode}
             icon="🔄"
             title="useReducer"
             description="Si tienes muchos setState relacionados, considera useReducer"
           />
 
           <TipCard
-            isDarkMode={isDarkMode}
             icon="⏰"
             title="Actualización Asíncrona"
             description="El estado no se actualiza inmediatamente después de setState"
           />
 
           <TipCard
-            isDarkMode={isDarkMode}
             icon="🎯"
             title="Un Estado, Un Propósito"
             description="Divide estados complejos en múltiples estados simples"
