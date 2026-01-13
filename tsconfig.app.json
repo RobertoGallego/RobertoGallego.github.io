@@ -31,8 +31,8 @@
       "@/types": ["types/index.ts"],
       "@/assets": ["assets/index.ts"],
       "@/data": ["data/index.ts"],
-      "@blog-components": ["components/BlogPost/Posts/Components"]
+      "@/blog-components": ["components/BlogPost/Components/index.ts"]
     }
   },
   "include": ["src"]
-}
+}   

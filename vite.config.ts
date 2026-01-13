@@ -16,6 +16,7 @@ export default defineConfig({
   ],
    resolve: {
     alias: {
+      "@/blog-components": path.resolve(__dirname, "./src/components/BlogPost/Components"),
       "@": path.resolve(__dirname, "./src"),
       "@/hooks": path.resolve(__dirname, "./src/hooks"),
       "@/components": path.resolve(__dirname, "./src/components"),
