@@ -1,7 +1,7 @@
 import { useOptimistic, useState, useRef, startTransition } from "react"
 import { useDarkMode } from "@/hooks"
 import "./useOptimistic.css"
-import { BlogHeader, CodeBlock } from "@blog-components"
+import { BlogHeader, CodeBlock } from "@/blog-components"
 
 const UseOptimistic = () => {
   const { isDarkMode } = useDarkMode()
