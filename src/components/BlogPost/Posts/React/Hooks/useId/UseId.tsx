@@ -1,48 +1,17 @@
 import { useId } from "react"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
+import { BlogHeader, CodeBlock } from "@/blog-components"
 import "./useId.css"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-  isDarkMode,
-}: {
-  code: string
-  language?: string
-  isDarkMode?: boolean
-}) => (
-  <Highlight
-    theme={isDarkMode ? themes.nightOwl : themes.github}
-    code={code}
-    language={language}
-  >
-    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre className={className} style={style}>
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line })}>
-            {line.map((token, key) => (
-              <span key={key} {...getTokenProps({ token })} />
-            ))}
-          </div>
-        ))}
-      </pre>
-    )}
-  </Highlight>
-)
 
 const UseId = () => {
   const { isDarkMode } = useDarkMode()
   
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`} id="useId">
-      <header className={`header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>🆔 useId Hook</h1>
-        <p className="subtitle">
-          generar IDs únicos que se pueden pasar a los atributos de
-          accesibilidad.
-        </p>
-      </header>
+      <BlogHeader
+        title="🆔 useId Hook"
+        subtitle="generar IDs únicos que se pueden pasar a los atributos de accesibilidad."
+      />
 
       <section className="section">
         <h2>🎯 Sintaxis</h2>

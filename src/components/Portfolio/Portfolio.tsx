@@ -17,7 +17,11 @@ const Portfolio = () => {
           justifyContent: "space-between",
         }}
       >
-        <Title title={t("Blog.Title")} subtitle={t("Blog.Subtitle")} />
+        <Title
+          chip
+          title={t("Blog.Title")}
+          subtitle={t("Blog.Subtitle")}
+        />
 
         <Link
           to="/posts"

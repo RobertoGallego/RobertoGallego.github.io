@@ -1,37 +1,7 @@
 import { createContext, useState } from "react"
 import "./useContext.css"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-}: {
-  code: string
-  language?: string
-}) => {
-  const { isDarkMode } = useDarkMode()
-
-  return (
-    <Highlight
-      theme={isDarkMode ? themes.nightOwl : themes.github}
-      code={code}
-      language={language}
-    >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={style}>
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line })}>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token })} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
-  )
-}
+import { BlogHeader, CodeBlock, TipCard } from "@/blog-components"
 
 // Demo contexts
 const ThemeContext = createContext("dark")
@@ -47,12 +17,10 @@ const UseContext = () => {
 
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`}>
-      <header className={`useState-header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>🌐 useContext Hook</h1>
-        <p className="subtitle">
-          Te permite leer y suscribirte a un contexto desde tu componente.
-        </p>
-      </header>
+      <BlogHeader
+        title="🌐 useContext Hook"
+        subtitle="Te permite leer y suscribirte a un contexto desde tu componente."
+      />
 
       <section className="section">
         <h2>📚 ¿Qué es useContext?</h2>
@@ -529,43 +497,41 @@ switch (level) {
       <section className="section">
         <h2>💡 Tips y Best Practices</h2>
         <div className="tips-grid">
-          <div className={`tip-card ${isDarkMode ? "dark" : "light"}`}>
-            <span className="tip-icon">🎯</span>
-            <h3>Cuándo Usar</h3>
-            <p>
-              Para compartir datos entre muchos componentes sin pasar props
-            </p>
-          </div>
+          <TipCard
+            icon="🎯"
+            title="Cuándo Usar"
+            description="Para compartir datos entre muchos componentes sin pasar props"
+          />
 
-          <div className={`tip-card ${isDarkMode ? "dark" : "light"}`}>
-            <span className="tip-icon">🌳</span>
-            <h3>Provider Arriba</h3>
-            <p>El Provider debe estar por encima del componente que lo consume</p>
-          </div>
+          <TipCard
+            icon="🌳"
+            title="Provider Arriba"
+            description="El Provider debe estar por encima del componente que lo consume"
+          />
 
-          <div className={`tip-card ${isDarkMode ? "dark" : "light"}`}>
-            <span className="tip-icon">🔄</span>
-            <h3>Auto Rerender</h3>
-            <p>React rerenderiza automáticamente cuando el contexto cambia</p>
-          </div>
+          <TipCard
+            icon="🔄"
+            title="Auto Rerender"
+            description="React rerenderiza automáticamente cuando el contexto cambia"
+          />
 
-          <div className={`tip-card ${isDarkMode ? "dark" : "light"}`}>
-            <span className="tip-icon">📦</span>
-            <h3>Múltiples Contextos</h3>
-            <p>Puedes usar varios contextos diferentes en una app</p>
-          </div>
+          <TipCard
+            icon="📦"
+            title="Múltiples Contextos"
+            description="Puedes usar varios contextos diferentes en una app"
+          />
 
-          <div className={`tip-card ${isDarkMode ? "dark" : "light"}`}>
-            <span className="tip-icon">⚡</span>
-            <h3>Optimización</h3>
-            <p>Usa useMemo/useCallback para valores complejos</p>
-          </div>
+          <TipCard
+            icon="⚡"
+            title="Optimización"
+            description="Usa useMemo/useCallback para valores complejos"
+          />
 
-          <div className={`tip-card ${isDarkMode ? "dark" : "light"}`}>
-            <span className="tip-icon">🎛️</span>
-            <h3>Con Reducer</h3>
-            <p>Combina con useReducer para lógica de estado compleja</p>
-          </div>
+          <TipCard
+            icon="🎛️"
+            title="Con Reducer"
+            description="Combina con useReducer para lógica de estado compleja"
+          />
         </div>
       </section>
     </div>

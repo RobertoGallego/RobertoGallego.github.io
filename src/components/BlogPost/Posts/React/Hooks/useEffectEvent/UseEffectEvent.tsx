@@ -1,4 +1,5 @@
 import { useDarkMode } from "@/hooks"
+import { BlogHeader } from "@/blog-components"
 import "./useEffectEvent.css"
 
 const UseEffectEvent = () => {
@@ -6,12 +7,10 @@ const UseEffectEvent = () => {
   
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`}>
-      <header className={`header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>🎯 useEffectEvent Hook</h1>
-        <p className="subtitle">
-          Extrae lógica no reactiva de tus efectos en una función reutilizable.
-        </p>
-      </header>
+      <BlogHeader
+        title="🎯 useEffectEvent Hook"
+        subtitle="Extrae lógica no reactiva de tus efectos en una función reutilizable."
+      />
       
       <section className="section">
         <div className="info-box">

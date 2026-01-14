@@ -1,35 +1,7 @@
 import { useRef, useImperativeHandle, forwardRef } from "react"
 import "./useImperativeHandle.css"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-  isDarkMode,
-}: {
-  code: string
-  language?: string
-  isDarkMode?: boolean
-}) => (
-  <Highlight
-    theme={isDarkMode ? themes.nightOwl : themes.github}
-    code={code}
-    language={language}
-  >
-    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre className={className} style={style}>
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line })}>
-            {line.map((token, key) => (
-              <span key={key} {...getTokenProps({ token })} />
-            ))}
-          </div>
-        ))}
-      </pre>
-    )}
-  </Highlight>
-)
+import { BlogHeader, CodeBlock, TipCard } from "@/blog-components"
 
 // Componente MyInput personalizado
 type MyInputHandle = {
@@ -76,12 +48,10 @@ const UseImperativeHandle = () => {
 
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`}>
-      <header className={`header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>🎯 useImperativeHandle Hook</h1>
-        <p className="subtitle">
-          Te permite personalizar el identificador expuesto como una ref.
-        </p>
-      </header>
+      <BlogHeader
+        title="🎯 useImperativeHandle Hook"
+        subtitle="Te permite personalizar el identificador expuesto como una ref."
+      />
 
       <section className="section">
         <h2>📚 ¿Qué es useImperativeHandle?</h2>
@@ -103,7 +73,7 @@ const UseImperativeHandle = () => {
       <section className="section">
         <h2>🎯 Sintaxis</h2>
         <div className="code-block">
-          <CodeBlock isDarkMode={isDarkMode}
+          <CodeBlock
             language="typescript"
             code={`useImperativeHandle(ref, createHandle, dependencies?)
 
@@ -125,7 +95,7 @@ const UseImperativeHandle = () => {
         </div>
 
         <div className="code-block">
-          <CodeBlock isDarkMode={isDarkMode}
+          <CodeBlock
             language="typescript"
             code={`import { useRef, useImperativeHandle } from "react"
 
@@ -189,7 +159,7 @@ export default MyInput`}
       <section className="section">
         <h2>📝 Ejemplo Completo</h2>
         <div className="code-block">
-          <CodeBlock isDarkMode={isDarkMode}
+          <CodeBlock
             language="typescript"
             code={`import { useRef, useImperativeHandle } from "react"
 
@@ -243,7 +213,7 @@ function MyInput({ ref }) {
         <div className="comparison">
           <div className="code-block error">
             <div className="code-label">❌ Mal: Usar ref para estado</div>
-            <CodeBlock isDarkMode={isDarkMode}
+            <CodeBlock
               language="typescript"
               code={`// No hagas esto:
 <Modal ref={modalRef} />
@@ -256,7 +226,7 @@ modalRef.current.close()`}
 
           <div className="code-block success">
             <div className="code-label">✅ Bien: Usar props</div>
-            <CodeBlock isDarkMode={isDarkMode}
+            <CodeBlock
               language="typescript"
               code={`// Mejor:
 <Modal isOpen={isOpen} />
@@ -279,50 +249,38 @@ const [isOpen, setIsOpen] = useState(false)`}
       <section className="section">
         <h2>💡 Tips y Best Practices</h2>
         <div className="tips-grid">
-          <div className="tip-card">
-            <span className="tip-icon">🎯</span>
-            <h3>Comportamientos Imperativos</h3>
-            <p>Usa solo para acciones que no se pueden expresar como props</p>
-          </div>
-
-          <div className="tip-card">
-            <span className="tip-icon">🔒</span>
-            <h3>Encapsulación</h3>
-            <p>Expón solo los métodos necesarios, no todo el DOM</p>
-          </div>
-
-          <div className="tip-card">
-            <span className="tip-icon">📦</span>
-            <h3>Dependencies</h3>
-            <p>Pasa array de dependencias para optimizar</p>
-          </div>
-
-          <div className="tip-card">
-            <span className="tip-icon">🚫</span>
-            <h3>Evita Sobreuso</h3>
-            <p>Prefiere props sobre refs siempre que sea posible</p>
-          </div>
-
-          <div className="tip-card">
-            <span className="tip-icon">🔄</span>
-            <h3>forwardRef</h3>
-            <p>Necesario para pasar refs a componentes personalizados</p>
-          </div>
-
-          <div className="tip-card">
-            <span className="tip-icon">⚡</span>
-            <h3>Casos de Uso</h3>
-            <p>Focus, scroll, animaciones, selección de texto</p>
-          </div>
+          <TipCard
+            icon="🎯"
+            title="Comportamientos Imperativos"
+            description="Usa solo para acciones que no se pueden expresar como props"
+          />
+          <TipCard
+            icon="🔒"
+            title="Encapsulación"
+            description="Expón solo los métodos necesarios, no todo el DOM"
+          />
+          <TipCard
+            icon="📦"
+            title="Dependencies"
+            description="Pasa array de dependencias para optimizar"
+          />
+          <TipCard
+            icon="🚫"
+            title="Evita Sobreuso"
+            description="Prefiere props sobre refs siempre que sea posible"
+          />
+          <TipCard
+            icon="🔄"
+            title="forwardRef"
+            description="Necesario para pasar refs a componentes personalizados"
+          />
+          <TipCard
+            icon="⚡"
+            title="Casos de Uso"
+            description="Focus, scroll, animaciones, selección de texto"
+          />
         </div>
       </section>
-
-      <footer className="footer">
-        <p>
-          📚 Curso de React 2025 | Creado con ❤️ para la comunidad
-          hispanohablante
-        </p>
-      </footer>
     </div>
   )
 }

@@ -1,37 +1,7 @@
 import { useMemo, useState } from "react"
 import "./useMemo.css"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-}: {
-  code: string
-  language?: string
-}) => {
-  const { isDarkMode } = useDarkMode()
-
-  return (
-    <Highlight
-      theme={isDarkMode ? themes.nightOwl : themes.github}
-      code={code}
-      language={language}
-    >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={style}>
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line })}>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token })} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
-  )
-}
+import { BlogHeader, CodeBlock } from "@/blog-components"
 
 // Simulated expensive calculation
 const filterTodos = (todos: string[], tab: string) => {
@@ -53,12 +23,10 @@ const UseMemo = () => {
 
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`}>
-      <header className={`useState-header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>💾 useMemo Hook</h1>
-        <p className="subtitle">
-          Guardar en caché el resultado de un cálculo entre renderizados.
-        </p>
-      </header>
+      <BlogHeader
+        title="💾 useMemo Hook"
+        subtitle="Guardar en caché el resultado de un cálculo entre renderizados."
+      />
 
       <section className="section">
         <h2>📚 ¿Qué es useMemo?</h2>

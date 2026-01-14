@@ -3,6 +3,18 @@
   margin-bottom: 10px;
 }
 
+.title-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.title-flag {
+  width: 12px;
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+
 .title-title {
   font-size: 0.875rem;
   font-weight: 600;

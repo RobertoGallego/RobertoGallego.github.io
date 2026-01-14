@@ -36,8 +36,8 @@
     "Title": "Welcome explore my journey in app engineering",
     "Description": "Modern tools, scalable architecture, refined design.",
     "Chip": "Crafting apps",
-    "Title_Primary": "Web Development Blog & Portfolio",
-    "Title_Secondary": "Hi, I'm Roberto, a software engineer focused on building responsive and performant web applications",
+    "Title_Primary": "Fullstack Engineer Web Development",
+    "Title_Secondary": "Welcome to my digital space, where I share my journey, my projects, and my passion for tech",
     "Button_Primary": "Available for work",
     "Button_Secondary": "Contact me",
     "Button_Tertiary": "Years Exp"
@@ -215,7 +215,7 @@
     "Description_B": "After studying at École 42 in Paris, I deepened my technical and collaborative skills through intensive, project-based learning. Today, I enjoy working on modern web technologies, improving UI architecture, and contributing to products that deliver high-quality user experiences."
   },
   "Blog": {
-    "Title": "BLOG POSTS",
+    "Title": "Spanish-speaking Blog posts",
     "Subtitle": "Articles on web development",
     "Read_More": "Read all posts"
   },

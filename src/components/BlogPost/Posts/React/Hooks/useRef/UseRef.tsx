@@ -1,37 +1,7 @@
 import { useRef, useState } from "react"
 import "./useRef.css"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-}: {
-  code: string
-  language?: string
-}) => {
-  const { isDarkMode } = useDarkMode()
-
-  return (
-    <Highlight
-      theme={isDarkMode ? themes.nightOwl : themes.github}
-      code={code}
-      language={language}
-    >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={style}>
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line })}>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token })} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
-  )
-}
+import { BlogHeader, CodeBlock, TipCard } from "@/blog-components"
 
 const UseRef = () => {
   const { isDarkMode } = useDarkMode()
@@ -69,13 +39,10 @@ const UseRef = () => {
 
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`}>
-      <header className={`useState-header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>🔗 useRef Hook</h1>
-        <p className="subtitle">
-          Permite a un componente conservar información que no se usa para el
-          renderizado, y referenciar valores del DOM.
-        </p>
-      </header>
+      <BlogHeader
+        title="🔗 useRef Hook"
+        subtitle="Permite a un componente conservar información que no se usa para el renderizado, y referenciar valores del DOM."
+      />
 
       <section className="section">
         <h2>📚 ¿Qué es useRef?</h2>
@@ -206,7 +173,9 @@ function handleStopClick() {
 
         <div className={"success-card"}>
           <h3>✅ Correcto: Usar en efectos o event handlers</h3>
-          <div className={`code-block success ${isDarkMode ? "dark" : "light"}`}>
+          <div
+            className={`code-block success ${isDarkMode ? "dark" : "light"}`}
+          >
             <CodeBlock
               language="typescript"
               code={`function MyComponent() {
@@ -304,7 +273,9 @@ export default function Form() {
             />
           </div>
 
-          <div className={`code-block success ${isDarkMode ? "dark" : "light"}`}>
+          <div
+            className={`code-block success ${isDarkMode ? "dark" : "light"}`}
+          >
             <div className="code-label">✅ Se ejecuta solo una vez</div>
             <CodeBlock
               language="typescript"
@@ -390,7 +361,9 @@ return <MyInput ref={inputRef} />
 
         <div className="success-card">
           <h4>✅ Solución: Pasar como prop normal</h4>
-          <div className={`code-block success ${isDarkMode ? "dark" : "light"}`}>
+          <div
+            className={`code-block success ${isDarkMode ? "dark" : "light"}`}
+          >
             <CodeBlock
               language="typescript"
               code={`// En el padre:
@@ -414,52 +387,49 @@ export default function MyInput({ value, onChange, inputRef }) {
       <section className="section">
         <h2>💡 Tips y Best Practices</h2>
         <div className="tips-grid">
-          <div className={`tip-card ${isDarkMode ? "dark" : "light"}`}>
-            <span className="tip-icon">🎯</span>
-            <h3>Cuándo Usar</h3>
-            <p>Para valores que NO afectan la UI: timers, IDs, elementos DOM</p>
-          </div>
+          <TipCard
+            icon="🎯"
+            title="Cuándo Usar"
+            description="Para valores que NO afectan la UI: timers, IDs, elementos DOM"
+          />
 
-          <div className={`tip-card ${isDarkMode ? "dark" : "light"}`}>
-            <span className="tip-icon">🚫</span>
-            <h3>No en Renderizado</h3>
-            <p>No leas ni escribas ref.current durante el renderizado</p>
-          </div>
+          <TipCard
+            icon="🛑"
+            title="Evita Re-renderizados"
+            description="No uses refs para datos que deberían estar en el estado"
+          />
 
-          <div className={`tip-card ${isDarkMode ? "dark" : "light"}`}>
-            <span className="tip-icon">🔄</span>
-            <h3>Persistencia</h3>
-            <p>
-              Los valores se mantienen entre renderizados sin causar cambios
-            </p>
-          </div>
+          <TipCard
+            icon="🚫"
+            title="No en Renderizado"
+            description="No leas ni escribas ref.current durante el renderizado"
+          />
 
-          <div className={`tip-card ${isDarkMode ? "dark" : "light"}`}>
-            <span className="tip-icon">✏️</span>
-            <h3>Mutable</h3>
-            <p>Puedes cambiar .current directamente sin setState</p>
-          </div>
+          <TipCard
+            icon="🔄"
+            title="Persistencia"
+            description="Los valores se mantienen entre renderizados sin causar cambios"
+          />
 
-          <div className={`tip-card ${isDarkMode ? "dark" : "light"}`}>
-            <span className="tip-icon">🎨</span>
-            <h3>DOM Manipulation</h3>
-            <p>Ideal para focus(), scroll(), mediciones, animaciones</p>
-          </div>
+          <TipCard
+            icon="✏️"
+            title="Mutable"
+            description="Puedes cambiar .current directamente sin setState"
+          />
 
-          <div className={`tip-card ${isDarkMode ? "dark" : "light"}`}>
-            <span className="tip-icon">⚡</span>
-            <h3>Inicialización Lazy</h3>
-            <p>Usa verificación null para objetos costosos</p>
-          </div>
+          <TipCard
+            icon="🎨"
+            title="DOM Manipulation"
+            description="Ideal para focus(), scroll(), mediciones, animaciones"
+          />
+
+          <TipCard
+            icon="⚡"
+            title="Inicialización Lazy"
+            description="Usa verificación null para objetos costosos"
+          />
         </div>
       </section>
-
-      <footer className="footer">
-        <p>
-          📚 Curso de React 2025 | Creado con ❤️ para la comunidad
-          hispanohablante
-        </p>
-      </footer>
     </div>
   )
 }

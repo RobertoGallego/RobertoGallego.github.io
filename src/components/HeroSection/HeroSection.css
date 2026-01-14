@@ -353,7 +353,7 @@
   line-height: 1;
 }
 
-@media (min-width: 1300px) {
+@media (min-height: 1300px) {
   .hero-title {
     font-size: 30px;
   }

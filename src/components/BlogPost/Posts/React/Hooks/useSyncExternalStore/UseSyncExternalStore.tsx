@@ -1,4 +1,5 @@
 import { useDarkMode } from "@/hooks"
+import { BlogHeader } from "@/blog-components"
 import "./useSyncExternalStore.css"
 
 const UseSyncExternalStore = () => {
@@ -6,12 +7,10 @@ const UseSyncExternalStore = () => {
   
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`}>
-      <header className={`header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>🔄 useSyncExternalStore Hook</h1>
-        <p className="subtitle">
-          Te permite suscribirte a una fuente de almacenamiento de datos (store) externa.
-        </p>
-      </header>
+      <BlogHeader
+        title="🔄 useSyncExternalStore Hook"
+        subtitle="Te permite suscribirte a una fuente de almacenamiento de datos (store) externa."
+      />
       
       <section className="section">
         <div className="card">

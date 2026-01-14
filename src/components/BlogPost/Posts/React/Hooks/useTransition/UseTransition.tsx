@@ -1,47 +1,17 @@
 import { useState, useTransition } from "react"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
 import "./useTransition.css"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-  isDarkMode,
-}: {
-  code: string
-  language?: string
-  isDarkMode?: boolean
-}) => (
-  <Highlight
-    theme={isDarkMode ? themes.nightOwl : themes.github}
-    code={code}
-    language={language}
-  >
-    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre className={className} style={style}>
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line })}>
-            {line.map((token, key) => (
-              <span key={key} {...getTokenProps({ token })} />
-            ))}
-          </div>
-        ))}
-      </pre>
-    )}
-  </Highlight>
-)
+import { BlogHeader, CodeBlock } from "@/blog-components"
 
 const UseTransition = () => {
   const { isDarkMode } = useDarkMode()
   
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`} id="useTransition">
-      <header className={`header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>⚡ useTransition Hook</h1>
-        <p className="subtitle">
-          renderizar una parte de la interfaz de usuario en segundo plano.
-        </p>
-      </header>
+      <BlogHeader
+        title="React useTransition Hook"
+        subtitle="El hook useTransition de React permite marcar actualizaciones de estado como 'transiciones', lo que ayuda a mejorar la experiencia del usuario al diferenciar entre actualizaciones urgentes y no urgentes."
+      />
 
       <section className="section">
         <h2>🎯 Sintaxis</h2>

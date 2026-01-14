@@ -1,47 +1,17 @@
 import { useState, useDeferredValue, memo } from "react"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
 import "./useDeferredValue.css"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-  isDarkMode,
-}: {
-  code: string
-  language?: string
-  isDarkMode?: boolean
-}) => (
-  <Highlight
-    theme={isDarkMode ? themes.nightOwl : themes.github}
-    code={code}
-    language={language}
-  >
-    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre className={className} style={style}>
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line })}>
-            {line.map((token, key) => (
-              <span key={key} {...getTokenProps({ token })} />
-            ))}
-          </div>
-        ))}
-      </pre>
-    )}
-  </Highlight>
-)
+import { BlogHeader, CodeBlock } from "@/blog-components"
 
 const UseDeferredValue = () => {
   const { isDarkMode } = useDarkMode()
   
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`} id="useDeferredValue">
-      <header className={`header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>⏱️ useDeferredValue Hook</h1>
-        <p className="subtitle">
-          permite realizar una actualización en diferido de una parte de la UI
-        </p>
-      </header>
+      <BlogHeader
+        title="⏱️ useDeferredValue Hook"
+        subtitle="permite realizar una actualización en diferido de una parte de la UI"
+      />
 
       <section className="section">
         <h2>🎯 Sintaxis</h2>

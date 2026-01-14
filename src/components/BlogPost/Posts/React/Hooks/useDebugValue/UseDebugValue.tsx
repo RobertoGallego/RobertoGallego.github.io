@@ -1,48 +1,17 @@
 import { useState, useEffect, useDebugValue } from "react"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
 import "./useDebugValue.css"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-  isDarkMode,
-}: {
-  code: string
-  language?: string
-  isDarkMode?: boolean
-}) => (
-  <Highlight
-    theme={isDarkMode ? themes.nightOwl : themes.github}
-    code={code}
-    language={language}
-  >
-    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre className={className} style={style}>
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line })}>
-            {line.map((token, key) => (
-              <span key={key} {...getTokenProps({ token })} />
-            ))}
-          </div>
-        ))}
-      </pre>
-    )}
-  </Highlight>
-)
+import { BlogHeader, CodeBlock } from "@/blog-components"
 
 const UseDebugValue = () => {
   const { isDarkMode } = useDarkMode()
   
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`} id="useDebugValue">
-      <header className={`header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>🔍 useDebugValue Hook</h1>
-        <p className="subtitle">
-          Te permite añadir una etiqueta a un Hook personalizado en las
-          herramientas de desarrollo de React.
-        </p>
-      </header>
+      <BlogHeader
+        title="🔍 useDebugValue Hook"
+        subtitle="Te permite añadir una etiqueta a un Hook personalizado en las herramientas de desarrollo de React."
+      />
 
       <section className="section">
         <h2>🎯 Sintaxis</h2>

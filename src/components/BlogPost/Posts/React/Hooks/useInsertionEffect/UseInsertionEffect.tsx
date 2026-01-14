@@ -1,51 +1,17 @@
 import { useState } from "react"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
 import "./useInsertionEffect.css"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-  isDarkMode,
-}: {
-  code: string
-  language?: string
-  isDarkMode?: boolean
-}) => (
-  <Highlight
-    theme={isDarkMode ? themes.nightOwl : themes.github}
-    code={code}
-    language={language}
-  >
-    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre className={className} style={style}>
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line })}>
-            {line.map((token, key) => (
-              <span key={key} {...getTokenProps({ token })} />
-            ))}
-          </div>
-        ))}
-      </pre>
-    )}
-  </Highlight>
-)
+import { BlogHeader, CodeBlock } from "@/blog-components"
 
 const UseInsertionEffect = () => {
   const { isDarkMode } = useDarkMode()
   
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`} id="useInsertionEffect">
-      <header className={`header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>💉 useInsertionEffect Hook</h1>
-        <p className="subtitle">
-          ⚠️ Hook especializado para bibliotecas CSS-en-JS
-        </p>
-        <p className="subtitle">
-          permite insertar elementos en el DOM antes de que se dispare cualquier
-          Efecto de diseño (layout).
-        </p>
-      </header>
+      <BlogHeader
+        title="💉 useInsertionEffect Hook"
+        subtitle="⚠️ Hook especializado para bibliotecas CSS-en-JS. permite insertar elementos en el DOM antes de que se dispare cualquier Efecto de diseño (layout)."
+      />
 
       <section className="section">
         <h2>🎯 Sintaxis</h2>

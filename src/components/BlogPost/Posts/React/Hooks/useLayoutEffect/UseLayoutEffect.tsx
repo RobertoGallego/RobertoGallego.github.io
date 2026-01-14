@@ -1,49 +1,18 @@
 import { useState, useRef, useLayoutEffect } from "react"
 import { createPortal } from "react-dom"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
 import "./useLayoutEffect.css"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-  isDarkMode,
-}: {
-  code: string
-  language?: string
-  isDarkMode: boolean
-}) => (
-  <Highlight
-    theme={isDarkMode ? themes.nightOwl : themes.github}
-    code={code}
-    language={language}
-  >
-    {({ className, style, tokens, getLineProps, getTokenProps}) => (
-      <pre className={className} style={style}>
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line })}>
-            {line.map((token, key) => (
-              <span key={key} {...getTokenProps({ token })} />
-            ))}
-          </div>
-        ))}
-      </pre>
-    )}
-  </Highlight>
-)
+import { BlogHeader, CodeBlock } from "@/blog-components"
 
 const UseLayoutEffect = () => {
   const { isDarkMode } = useDarkMode()
   
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`} id="useLayoutEffect">
-      <header className={`header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>📐 useLayoutEffect Hook</h1>
-        <p className="subtitle">
-          Este se acciona antes que el navegador vuelva a pintar la pantalla
-          para ejecutar las medidas del layout.
-        </p>
-      </header>
+      <BlogHeader
+        title="📐 useLayoutEffect Hook"
+        subtitle="Este se acciona antes que el navegador vuelva a pintar la pantalla para ejecutar las medidas del layout."
+      />
 
       <section className="section">
         <div className="info-box">
@@ -55,14 +24,14 @@ const UseLayoutEffect = () => {
       <section className="section">
         <h2>🎯 Sintaxis</h2>
         <div className="code-block">
-          <CodeBlock isDarkMode={isDarkMode}
+          <CodeBlock
             language="typescript"
             code={`useLayoutEffect(setup, dependencies?)`}
           />
         </div>
 
         <div className="code-block">
-          <CodeBlock isDarkMode={isDarkMode}
+          <CodeBlock
             language="typescript"
             code={`import { useState, useRef, useLayoutEffect } from 'react';
 
@@ -108,7 +77,7 @@ function Tooltip() {
         <h2>💡 Ejemplo claro</h2>
 
         <div className="code-block">
-          <CodeBlock isDarkMode={isDarkMode}
+          <CodeBlock
             language="typescript"
             code={`import ButtonWithTooltip from "./ButtonWithTooltip.js"
 
@@ -145,7 +114,7 @@ export default function App() {
         </div>
 
         <div className="code-block">
-          <CodeBlock isDarkMode={isDarkMode}
+          <CodeBlock
             language="typescript"
             code={`import { useState, useRef } from "react"
 import Tooltip from "./Tooltip.js"
@@ -181,7 +150,7 @@ export default function ButtonWithTooltip({ tooltipContent, ...rest }) {
         </div>
 
         <div className="code-block">
-          <CodeBlock isDarkMode={isDarkMode}
+          <CodeBlock
             language="typescript"
             code={`import { useRef, useLayoutEffect, useState } from "react"
 import { createPortal } from "react-dom"
@@ -219,7 +188,7 @@ export default function Tooltip({ children, targetRect }) {
         </div>
 
         <div className="code-block">
-          <CodeBlock isDarkMode={isDarkMode}
+          <CodeBlock
             language="typescript"
             code={`export default function TooltipContainer({ children, x, y, contentRef }) {
   return (

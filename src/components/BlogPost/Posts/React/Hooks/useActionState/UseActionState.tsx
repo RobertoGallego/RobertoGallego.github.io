@@ -1,35 +1,11 @@
 import { useActionState } from "react"
 import "./useActionState.css"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-  isDarkMode,
-}: {
-  code: string
-  language?: string
-  isDarkMode?: boolean
-}) => (
-  <Highlight
-    theme={isDarkMode ? themes.nightOwl : themes.github}
-    code={code}
-    language={language}
-  >
-    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre className={className} style={style}>
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line })}>
-            {line.map((token, key) => (
-              <span key={key} {...getTokenProps({ token })} />
-            ))}
-          </div>
-        ))}
-      </pre>
-    )}
-  </Highlight>
-)
+import {
+  BlogHeader,
+  CodeBlock,
+  TipCard,
+} from "@/components/BlogPost/Components"
 
 // Tipo para el estado del formulario
 type FormState = {
@@ -62,7 +38,13 @@ async function addToCart(
 }
 
 // Componente de formulario individual
-function AddToCartForm({ itemID, itemTitle }: { itemID: string; itemTitle: string }) {
+function AddToCartForm({
+  itemID,
+  itemTitle,
+}: {
+  itemID: string
+  itemTitle: string
+}) {
   const [formState, formAction, isPending] = useActionState(addToCart, {})
 
   return (
@@ -86,29 +68,26 @@ function AddToCartForm({ itemID, itemTitle }: { itemID: string; itemTitle: strin
 
 const UseActionState = () => {
   const { isDarkMode } = useDarkMode()
-  
+
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`}>
-      <header className={`header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>📋 useActionState Hook</h1>
-        <p className="subtitle">
-          Permite actualizar el estado basado en el resultado de un formulario en
-          action.
-        </p>
-      </header>
+      <BlogHeader
+        title="📋 useActionState Hook"
+        subtitle="Maneja el estado de acciones asíncronas en formularios con useActionState."
+      />
 
       <section className="section">
         <h2>📚 ¿Qué es useActionState?</h2>
         <div className="card">
           <p>
-            <code>useActionState</code> permite manejar el estado de un formulario
-            de forma automática. Devuelve una función para enviar el formulario
-            (formAction), el estado actual (state) y si la acción está pendiente
-            (isPending).
+            <code>useActionState</code> permite manejar el estado de un
+            formulario de forma automática. Devuelve una función para enviar el
+            formulario (formAction), el estado actual (state) y si la acción
+            está pendiente (isPending).
           </p>
           <div className="highlight-box">
-            <strong>✨ Importante:</strong> Se usa en el cliente y puede mostrar la
-            respuesta del servidor incluso antes de que la página termine de
+            <strong>✨ Importante:</strong> Se usa en el cliente y puede mostrar
+            la respuesta del servidor incluso antes de que la página termine de
             hidratarse.
           </div>
         </div>
@@ -171,7 +150,8 @@ const UseActionState = () => {
                 </td>
                 <td>Cliente (navegador)</td>
                 <td>
-                  Login/Registro con validaciones, formularios complejos con React Hook Form
+                  Login/Registro con validaciones, formularios complejos con
+                  React Hook Form
                 </td>
               </tr>
               <tr>
@@ -189,7 +169,8 @@ const UseActionState = () => {
                 </td>
                 <td>Servidor</td>
                 <td>
-                  Crear posts en blog, guardar en DB, checkout/pagos, upload de archivos
+                  Crear posts en blog, guardar en DB, checkout/pagos, upload de
+                  archivos
                 </td>
               </tr>
             </tbody>
@@ -372,13 +353,16 @@ function CreatePostForm() {
           <strong>💡 Resumen de casos reales:</strong>
           <ul style={{ marginTop: "0.5rem", paddingLeft: "1.5rem" }}>
             <li>
-              <strong>onSubmit</strong> → Login, registro, formularios con validaciones complejas (React Hook Form)
+              <strong>onSubmit</strong> → Login, registro, formularios con
+              validaciones complejas (React Hook Form)
             </li>
             <li>
-              <strong>action (cliente)</strong> → Filtrar/buscar datos ya cargados, toggle favoritos sin servidor
+              <strong>action (cliente)</strong> → Filtrar/buscar datos ya
+              cargados, toggle favoritos sin servidor
             </li>
             <li>
-              <strong>action (servidor)</strong> → Crear posts, guardar en DB, checkout, upload archivos (Next.js)
+              <strong>action (servidor)</strong> → Crear posts, guardar en DB,
+              checkout, upload archivos (Next.js)
             </li>
           </ul>
         </div>
@@ -394,7 +378,10 @@ function CreatePostForm() {
           </p>
         </div>
 
-        <AddToCartForm itemID="1" itemTitle="JavaScript: The Definitive Guide" />
+        <AddToCartForm
+          itemID="1"
+          itemTitle="JavaScript: The Definitive Guide"
+        />
         <AddToCartForm itemID="2" itemTitle="JavaScript: The Good Parts" />
       </section>
 
@@ -505,51 +492,45 @@ export async function addToCart(prevState, queryData) {
 
       <section className="section">
         <h2>💡 Tips y Best Practices</h2>
+
         <div className="tips-grid">
-          <div className="tip-card">
-            <span className="tip-icon">🔄</span>
-            <h3>Estado Automático</h3>
-            <p>Maneja estado del formulario sin useState manual</p>
-          </div>
+          <TipCard
+            title="Estado Automático"
+            icon="🔄"
+            description="Maneja estado del formulario sin useState manual"
+          />
 
-          <div className="tip-card">
-            <span className="tip-icon">⏳</span>
-            <h3>isPending</h3>
-            <p>Indica visualmente cuando la acción está en progreso</p>
-          </div>
+          <TipCard
+            title="isPending"
+            icon="⏳"
+            description="Indica visualmente cuando la acción está en progreso"
+          />
 
-          <div className="tip-card">
-            <span className="tip-icon">🌐</span>
-            <h3>Server Actions</h3>
-            <p>Funciona perfectamente con acciones del servidor</p>
-          </div>
+          <TipCard
+            title="Server Actions"
+            icon="🌐"
+            description="Funciona perfectamente con acciones del servidor"
+          />
 
-          <div className="tip-card">
-            <span className="tip-icon">⚡</span>
-            <h3>Pre-hidratación</h3>
-            <p>Muestra respuestas antes de que cargue el JavaScript</p>
-          </div>
+          <TipCard
+            title="Pre-hidratación"
+            icon="⚡"
+            description="Muestra respuestas antes de que cargue el JavaScript"
+          />
 
-          <div className="tip-card">
-            <span className="tip-icon">📋</span>
-            <h3>FormData</h3>
-            <p>Recibe automáticamente los datos del formulario</p>
-          </div>
+          <TipCard
+            title="FormData"
+            icon="📋"
+            description="Recibe automáticamente los datos del formulario"
+          />
 
-          <div className="tip-card">
-            <span className="tip-icon">🎯</span>
-            <h3>Estado Previo</h3>
-            <p>Accede al estado anterior en cada invocación</p>
-          </div>
+          <TipCard
+            title="Estado Previo"
+            icon="🎯"
+            description="Accede al estado anterior en cada invocación"
+          />
         </div>
       </section>
-
-      <footer className="footer">
-        <p>
-          📚 Curso de React 2025 | Creado con ❤️ para la comunidad
-          hispanohablante
-        </p>
-      </footer>
     </div>
   )
 }

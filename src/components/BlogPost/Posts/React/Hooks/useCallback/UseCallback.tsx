@@ -1,35 +1,7 @@
 import { useState, useCallback, memo } from "react"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
 import "./useCallback.css"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-  isDarkMode,
-}: {
-  code: string
-  language?: string
-  isDarkMode?: boolean
-}) => (
-  <Highlight
-    theme={isDarkMode ? themes.nightOwl : themes.github}
-    code={code}
-    language={language}
-  >
-    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre className={className} style={style}>
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line })}>
-            {line.map((token, key) => (
-              <span key={key} {...getTokenProps({ token })} />
-            ))}
-          </div>
-        ))}
-      </pre>
-    )}
-  </Highlight>
-)
+import { BlogHeader, CodeBlock } from "@/blog-components"
 
 const UseCallback = () => {
   const { isDarkMode } = useDarkMode()
@@ -39,20 +11,16 @@ const UseCallback = () => {
       className={`useState-container ${isDarkMode ? "dark" : "light"}`}
       id="useCallback"
     >
-      <header className={`useState-header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>⚡ useCallback Hook</h1>
-        <p className="subtitle">
-          permite almacenar la definición de una función entre renderizados
-          subsecuentes. optimización de rendimiento.
-        </p>
-      </header>
+      <BlogHeader
+        title="⚡ useCallback Hook"
+        subtitle="Permite almacenar la definición de una función entre renderizados subsecuentes. Optimización de rendimiento."
+      />
 
       <section className="section">
         <h2>🎯 Sintaxis</h2>
         <div className="code-block">
           <CodeBlock
             language="typescript"
-            isDarkMode={isDarkMode}
             code={`const cachedFn = useCallback(fn, dependencies)`}
           />
         </div>
@@ -60,7 +28,6 @@ const UseCallback = () => {
         <div className="code-block">
           <CodeBlock
             language="typescript"
-            isDarkMode={isDarkMode}
             code={`import { useCallback } from 'react';
 
 export default function ProductPage({ productId, referrer, theme }) {
@@ -121,7 +88,6 @@ export default function ProductPage({ productId, referrer, theme }) {
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`import { useState } from "react"
 import ProductPage from "./ProductPage.js"
@@ -152,7 +118,6 @@ export default function App() {
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`import { useCallback } from "react"
 import ShippingForm from "./ShippingForm.js"
@@ -185,7 +150,6 @@ function post(url, data) {
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`import { memo, useState } from "react"
 
@@ -262,7 +226,6 @@ export default ShippingForm`}
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`import { useState } from "react"
 import ProductPage from "./ProductPage.js"
@@ -293,7 +256,6 @@ export default function App() {
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`import ShippingForm from "./ShippingForm.js"
 
@@ -322,7 +284,6 @@ function post(url, data) {
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`import { memo, useState } from "react"
 
@@ -397,7 +358,6 @@ export default ShippingForm`}
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -419,7 +379,6 @@ export default ShippingForm`}
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -438,7 +397,6 @@ export default ShippingForm`}
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`function ChatRoom({ roomId }) {
   const [message, setMessage] = useState('');
@@ -466,7 +424,6 @@ export default ShippingForm`}
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`function ChatRoom({ roomId }) {
   const [message, setMessage] = useState('');
@@ -497,7 +454,6 @@ export default ShippingForm`}
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`function ChatRoom({ roomId }) {
   const [message, setMessage] = useState('');
@@ -534,7 +490,6 @@ export default ShippingForm`}
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`function useRouter() {
   const { dispatch } = useContext(RouterStateContext)
@@ -565,7 +520,6 @@ export default ShippingForm`}
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`function ProductPage({ productId, referrer }) {
   const handleSubmit = useCallback((orderDetails) => {
@@ -583,7 +537,6 @@ export default ShippingForm`}
 
         <div className="code-block">
           <CodeBlock
-            isDarkMode={isDarkMode}
             language="typescript"
             code={`console.log([productId, referrer])`}
           />

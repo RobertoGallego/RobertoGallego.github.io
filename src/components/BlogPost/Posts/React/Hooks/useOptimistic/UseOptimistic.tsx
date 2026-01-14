@@ -1,48 +1,17 @@
 import { useOptimistic, useState, useRef, startTransition } from "react"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
 import "./useOptimistic.css"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-  isDarkMode,
-}: {
-  code: string
-  language?: string
-  isDarkMode?: boolean
-}) => (
-  <Highlight
-    theme={isDarkMode ? themes.nightOwl : themes.github}
-    code={code}
-    language={language}
-  >
-    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre className={className} style={style}>
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line })}>
-            {line.map((token, key) => (
-              <span key={key} {...getTokenProps({ token })} />
-            ))}
-          </div>
-        ))}
-      </pre>
-    )}
-  </Highlight>
-)
+import { BlogHeader, CodeBlock } from "@blog-components"
 
 const UseOptimistic = () => {
   const { isDarkMode } = useDarkMode()
   
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`} id="useOptimistic">
-      <header className={`header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>⚡ useOptimistic Hook</h1>
-        <p className="subtitle">
-          permite actualizar la interfaz de usuario / UI de manera optimista de
-          formularios.
-        </p>
-      </header>
+      <BlogHeader
+        title="⚡ useOptimistic Hook"
+        subtitle="permite actualizar la interfaz de usuario / UI de manera optimista de formularios."
+      />
 
       <section className="section">
         <h2>🎯 Sintaxis</h2>

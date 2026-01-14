@@ -32,12 +32,11 @@
     "Title": "Bienvenue, explorez mon parcours en ingénierie d'applications",
     "Description": "Outils modernes, architecture évolutive, design raffiné.",
     "Chip": "Création d'apps",
-    "Title_Primary": "Blog et portfolio de développement web",
-    "Title_Secondary": "Bonjour, je suis Roberto, ingénieur logiciel spécialisé dans la création d'applications web réactives et performantes",
+    "Title_Primary": "Ingénieur Fullstack développement web",
+    "Title_Secondary": "Bienvenue sur mon espace digital, où je partage mon parcours, mes projets et ma passion pour la tech.",
     "Button_Primary": "Disponible pour travailler",
     "Button_Secondary": "Contactez-moi",
     "Button_Tertiary": "Années d'exp"
-
   },
   "TechStack": {
     "Title": "Compétences & Technologies · 2025",
@@ -219,7 +218,7 @@
     "Description_B": "Après avoir étudié à l'École 42 à Paris, j'ai approfondi mes compétences techniques et collaboratives à travers des projets exigeants. Aujourd'hui, j'aime travailler avec des technologies modernes, améliorer les architectures UI et contribuer à des produits offrant une expérience de haute qualité."
   },
   "Blog": {
-    "Title": "BLOG POSTS",
+    "Title": "Blog posts hispanophone",
     "Subtitle": "Articles sur le développement web",
     "Read_More": "Tout voir"
   },

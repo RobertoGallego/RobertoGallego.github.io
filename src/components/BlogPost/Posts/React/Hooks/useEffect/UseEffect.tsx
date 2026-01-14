@@ -1,49 +1,17 @@
 import { useState, useEffect } from "react"
-import { Highlight, themes } from "prism-react-renderer"
 import "./useEffect.css"
 import { useDarkMode } from "@/hooks"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-}: {
-  code: string
-  language?: string
-}) => {
-  const { isDarkMode } = useDarkMode()
-
-  return (
-    <Highlight
-      theme={isDarkMode ? themes.nightOwl : themes.github}
-      code={code}
-      language={language}
-    >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={style}>
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line })}>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token })} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
-  )
-}
+import { BlogHeader, CodeBlock } from "@/blog-components"
 
 const UseEffect = () => {
   const { isDarkMode } = useDarkMode()
   
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`} id="useEffect">
-      <header className={`useState-header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>🔄 useEffect Hook</h1>
-        <p className="subtitle">
-          permite sincronizar un componente con un sistema externo.
-        </p>
-      </header>
+      <BlogHeader
+        title="🔄 useEffect Hook"
+        subtitle="permite sincronizar un componente con un sistema externo."
+      />
 
       <section className="section">
         <h2>🎯 Sintaxis</h2>

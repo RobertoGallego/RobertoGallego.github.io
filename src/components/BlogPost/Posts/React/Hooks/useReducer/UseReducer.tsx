@@ -1,35 +1,7 @@
 import { useReducer, useState } from "react"
 import "./useReducer.css"
-import { Highlight, themes } from "prism-react-renderer"
 import { useDarkMode } from "@/hooks"
-
-const CodeBlock = ({
-  code,
-  language = "typescript",
-  isDarkMode,
-}: {
-  code: string
-  language?: string
-  isDarkMode: boolean
-}) => (
-  <Highlight
-    theme={isDarkMode ? themes.nightOwl : themes.github}
-    code={code}
-    language={language}
-  >
-    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre className={className} style={style}>
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line })}>
-            {line.map((token, key) => (
-              <span key={key} {...getTokenProps({ token })} />
-            ))}
-          </div>
-        ))}
-      </pre>
-    )}
-  </Highlight>
-)
+import { BlogHeader, CodeBlock, TipCard } from "@/blog-components"
 
 // Tipos para nuestro reducer
 type Task = {
@@ -89,15 +61,22 @@ const UseReducer = () => {
   const [logs, setLogs] = useState<string[]>([])
 
   function handleAddTask() {
-    const newTask = { type: "added" as const, id: nextId++, text: "Nueva tarea de ejemplo" }
-    
+    const newTask = {
+      type: "added" as const,
+      id: nextId++,
+      text: "Nueva tarea de ejemplo",
+    }
+
     setLogs([])
     setLogs([`✅ Despachando acción: ${JSON.stringify(newTask)}`])
-    
+
     dispatch(newTask)
-    
+
     setTimeout(() => {
-      setLogs(prev => [...prev, `📦 Estado actualizado con ${tasks.length + 1} tareas`])
+      setLogs((prev) => [
+        ...prev,
+        `📦 Estado actualizado con ${tasks.length + 1} tareas`,
+      ])
     }, 100)
   }
 
@@ -117,13 +96,10 @@ const UseReducer = () => {
 
   return (
     <div className={`useState-container ${isDarkMode ? "dark" : "light"}`}>
-      <header className={`header ${isDarkMode ? "dark" : "light"}`}>
-        <h1>🔄 useReducer Hook</h1>
-        <p className="subtitle">
-          Para componentes con muchas actualizaciones de estado, consolida toda
-          la lógica en una única función reducer.
-        </p>
-      </header>
+      <BlogHeader
+        title="🔄 useReducer Hook"
+        subtitle="Para componentes con muchas actualizaciones de estado, consolida toda la lógica en una única función reducer."
+      />
 
       <section className="section">
         <h2>📚 ¿Qué es useReducer?</h2>
@@ -144,7 +120,7 @@ const UseReducer = () => {
       <section className="section">
         <h2>🎯 Sintaxis</h2>
         <div className="code-block">
-          <CodeBlock isDarkMode={isDarkMode}
+          <CodeBlock
             language="typescript"
             code={`const [state, dispatch] = useReducer(reducer, initialState)
 
@@ -164,7 +140,7 @@ const UseReducer = () => {
         <div className="comparison">
           <div className="code-block error">
             <div className="code-label">❌ Antes: múltiples useState</div>
-            <CodeBlock isDarkMode={isDarkMode}
+            <CodeBlock
               language="typescript"
               code={`const [tasks, setTasks] = useState(initialTasks)
 
@@ -190,7 +166,7 @@ function handleDeleteTask(taskId) {
 
           <div className="code-block success">
             <div className="code-label">✅ Después: un useReducer</div>
-            <CodeBlock isDarkMode={isDarkMode}
+            <CodeBlock
               language="typescript"
               code={`const [tasks, dispatch] = useReducer(tasksReducer, initialTasks)
 
@@ -230,7 +206,7 @@ function handleDeleteTask(taskId) {
           </p>
         </div>
         <div className="code-block">
-          <CodeBlock isDarkMode={isDarkMode}
+          <CodeBlock
             language="typescript"
             code={`function tasksReducer(tasks, action) {
   switch (action.type) {
@@ -273,7 +249,13 @@ function handleDeleteTask(taskId) {
               <h3 style={{ color: "#667eea", marginBottom: "1rem" }}>
                 📋 Tareas ({tasks.length})
               </h3>
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.75rem",
+                }}
+              >
                 {tasks.map((task) => (
                   <div
                     key={task.id}
@@ -291,7 +273,11 @@ function handleDeleteTask(taskId) {
                       type="checkbox"
                       checked={task.done}
                       onChange={() => handleToggleTask(task)}
-                      style={{ cursor: "pointer", width: "18px", height: "18px" }}
+                      style={{
+                        cursor: "pointer",
+                        width: "18px",
+                        height: "18px",
+                      }}
                     />
                     <span
                       style={{
@@ -337,7 +323,7 @@ function handleDeleteTask(taskId) {
         <div className="warning-card">
           <h3>🚫 No mutes el estado directamente</h3>
           <div className="code-block error">
-            <CodeBlock isDarkMode={isDarkMode}
+            <CodeBlock
               language="typescript"
               code={`function reducer(state, action) {
   switch (action.type) {
@@ -355,7 +341,7 @@ function handleDeleteTask(taskId) {
         <div className="success-card">
           <h3>✅ Siempre devuelve nuevos objetos</h3>
           <div className="code-block success">
-            <CodeBlock isDarkMode={isDarkMode}
+            <CodeBlock
               language="typescript"
               code={`function reducer(state, action) {
   switch (action.type) {
@@ -387,7 +373,7 @@ function handleDeleteTask(taskId) {
             <div className="code-label">
               ❌ Se ejecuta en cada render (ineficiente)
             </div>
-            <CodeBlock isDarkMode={isDarkMode}
+            <CodeBlock
               language="typescript"
               code={`function TodoList({ username }) {
   const [state, dispatch] = useReducer(
@@ -401,7 +387,7 @@ function handleDeleteTask(taskId) {
 
           <div className="code-block success">
             <div className="code-label">✅ Se ejecuta solo una vez</div>
-            <CodeBlock isDarkMode={isDarkMode}
+            <CodeBlock
               language="typescript"
               code={`function TodoList({ username }) {
   const [state, dispatch] = useReducer(
@@ -428,7 +414,7 @@ function handleDeleteTask(taskId) {
         </div>
 
         <div className="code-block">
-          <CodeBlock isDarkMode={isDarkMode}
+          <CodeBlock
             language="typescript"
             code={`function handleClick() {
   console.log(state.age)  // 42
@@ -465,7 +451,7 @@ console.log(nextState) // { age: 43 }`}
         <div className="warning-card">
           <h4>🚫 Objeto mutado</h4>
           <div className="code-block error">
-            <CodeBlock isDarkMode={isDarkMode}
+            <CodeBlock
               language="typescript"
               code={`function reducer(state, action) {
   switch (action.type) {
@@ -488,7 +474,7 @@ console.log(nextState) // { age: 43 }`}
         <div className="success-card">
           <h4>✅ Nuevo objeto creado</h4>
           <div className="code-block success">
-            <CodeBlock isDarkMode={isDarkMode}
+            <CodeBlock
               language="typescript"
               code={`function reducer(state, action) {
   switch (action.type) {
@@ -522,7 +508,7 @@ console.log(nextState) // { age: 43 }`}
         <div className="warning-card">
           <h4>🚫 Array mutado con push</h4>
           <div className="code-block error">
-            <CodeBlock isDarkMode={isDarkMode}
+            <CodeBlock
               language="typescript"
               code={`function reducer(state, action) {
   switch (action.type) {
@@ -543,7 +529,7 @@ console.log(nextState) // { age: 43 }`}
         <div className="success-card">
           <h4>✅ Nuevo array creado</h4>
           <div className="code-block success">
-            <CodeBlock isDarkMode={isDarkMode}
+            <CodeBlock
               language="typescript"
               code={`function reducer(state, action) {
   switch (action.type) {
@@ -567,55 +553,43 @@ console.log(nextState) // { age: 43 }`}
       <section className="section">
         <h2>💡 Tips y Best Practices</h2>
         <div className="tips-grid">
-          <div className="tip-card">
-            <span className="tip-icon">🎯</span>
-            <h3>Cuándo Usar</h3>
-            <p>
-              Ideal cuando tienes múltiples actualizaciones de estado
-              relacionadas
-            </p>
-          </div>
+          <TipCard
+            icon="🎯"
+            title="Cuándo Usar"
+            description="Ideal cuando tienes múltiples actualizaciones de estado relacionadas"
+          />
 
-          <div className="tip-card">
-            <span className="tip-icon">🔒</span>
-            <h3>Inmutabilidad</h3>
-            <p>Siempre devuelve nuevos objetos/arrays, nunca mutes</p>
-          </div>
+          <TipCard
+            icon="🔒"
+            title="Inmutabilidad"
+            description="Siempre devuelve nuevos objetos/arrays, nunca mutes"
+          />
 
-          <div className="tip-card">
-            <span className="tip-icon">📦</span>
-            <h3>Acciones Descriptivas</h3>
-            <p>Usa nombres claros para los tipos de acción</p>
-          </div>
+          <TipCard
+            icon="📦"
+            title="Acciones Descriptivas"
+            description="Usa nombres claros para los tipos de acción"
+          />
 
-          <div className="tip-card">
-            <span className="tip-icon">🧪</span>
-            <h3>Fácil de Testear</h3>
-            <p>Los reducers son funciones puras, fáciles de testear</p>
-          </div>
+          <TipCard
+            icon="🧪"
+            title="Fácil de Testear"
+            description="Los reducers son funciones puras, fáciles de testear"
+          />
 
-          <div className="tip-card">
-            <span className="tip-icon">⚡</span>
-            <h3>Estado Inicial Lazy</h3>
-            <p>Pasa la función, no el resultado de llamarla</p>
-          </div>
+          <TipCard
+            icon="⚡"
+            title="Estado Inicial Lazy"
+            description="Pasa la función, no el resultado de llamarla"
+          />
 
-          <div className="tip-card">
-            <span className="tip-icon">🔄</span>
-            <h3>De useState a useReducer</h3>
-            <p>
-              Si useState se vuelve complejo, considera migrar a useReducer
-            </p>
-          </div>
+          <TipCard
+            icon="🔄"
+            title="De useState a useReducer"
+            description="Si useState se vuelve complejo, considera migrar a useReducer"
+          />
         </div>
       </section>
-
-      <footer className="footer">
-        <p>
-          📚 Curso de React 2025 | Creado con ❤️ para la comunidad
-          hispanohablante
-        </p>
-      </footer>
     </div>
   )
 }
