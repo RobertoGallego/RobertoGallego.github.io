@@ -6,7 +6,7 @@ const posts = [
     srcImage: blog.useStateWp,
     title: "Domina useState hoy",
     description: "El primer paso para entender los hooks de React.",
-    date: "2025-09-01",
+    date: "01-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseState",
@@ -17,7 +17,7 @@ const posts = [
     title: "Optimiza con useCallback",
     description:
       "Aprende a usar useCallback para optimizar tus componentes de React.",
-    date: "2025-09-03",
+    date: "03-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseCallback",
@@ -28,7 +28,7 @@ const posts = [
     title: "useEffect: Efectos secundarios en React",
     description:
       "Aprende a manejar efectos secundarios y el ciclo de vida con useEffect.",
-    date: "2025-09-05",
+    date: "05-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseEffect",
@@ -39,7 +39,7 @@ const posts = [
     title: "Gestión global con useContext",
     description:
       "Comparte datos entre componentes sin prop drilling usando useContext.",
-    date: "2025-09-07",
+    date: "07-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseContext",
@@ -50,7 +50,7 @@ const posts = [
     title: "Referencias con useRef",
     description:
       "Accede al DOM y mantén valores mutables sin causar re-renders con useRef.",
-    date: "2025-09-09",
+    date: "09-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseRef",
@@ -61,7 +61,7 @@ const posts = [
     title: "useActionState para formularios",
     description:
       "Maneja el estado de acciones asíncronas en formularios con useActionState.",
-    date: "2025-09-12",
+    date: "12-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseActionState",
@@ -71,7 +71,7 @@ const posts = [
     srcImage: blog.useDebugValueWp,
     title: "Debug hooks personalizados",
     description: "Facilita la depuración de custom hooks usando useDebugValue.",
-    date: "2025-09-14",
+    date: "14-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseDebugValue",
@@ -82,7 +82,7 @@ const posts = [
     title: "Optimiza con useDeferredValue",
     description:
       "Mejora el rendimiento diferiendo actualizaciones no urgentes con useDeferredValue.",
-    date: "2025-09-16",
+    date: "16-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseDeferredValue",
@@ -93,7 +93,7 @@ const posts = [
     title: "useEffectEvent: Eventos estables",
     description:
       "Extrae lógica de eventos desde effects sin dependencias adicionales.",
-    date: "2025-09-18",
+    date: "18-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseEffectEvent",
@@ -103,7 +103,7 @@ const posts = [
     srcImage: blog.useImperativeHandle,
     title: "useImperativeHandle: Control de refs",
     description: "Personaliza el valor de ref expuesto a componentes padres.",
-    date: "2025-09-20",
+    date: "20-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseImperativeHandle",
@@ -113,7 +113,7 @@ const posts = [
     srcImage: blog.useInsertionEffect,
     title: "useInsertionEffect: Inyección de estilos",
     description: "Inserta estilos dinámicos antes de cualquier layout effect.",
-    date: "2025-09-22",
+    date: "22-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseInsertionEffect",
@@ -124,7 +124,7 @@ const posts = [
     title: "useLayoutEffect: Mediciones síncronas",
     description:
       "Ejecuta efectos de forma síncrona antes del repintado del navegador.",
-    date: "2025-09-24",
+    date: "24-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseLayoutEffect",
@@ -135,7 +135,7 @@ const posts = [
     title: "useMemo: Memorización de cálculos",
     description:
       "Optimiza cálculos costosos memorizando resultados entre renders.",
-    date: "2025-09-26",
+    date: "26-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseMemo",
@@ -146,7 +146,7 @@ const posts = [
     title: "useOptimistic: Actualizaciones optimistas",
     description:
       "Muestra actualizaciones optimistas mientras esperas respuestas del servidor.",
-    date: "2025-09-28",
+    date: "28-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseOptimistic",
@@ -157,7 +157,7 @@ const posts = [
     title: "useReducer: Gestión de estado compleja",
     description:
       "Maneja estado complejo con lógica de actualización centralizada.",
-    date: "2025-09-30",
+    date: "30-09-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseReducer",
@@ -168,7 +168,7 @@ const posts = [
     title: "useSyncExternalStore: Sincroniza stores externos",
     description:
       "Suscríbete a stores externos de forma segura y compatible con Concurrent.",
-    date: "2025-10-02",
+    date: "02-10-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseSyncExternalStore",
@@ -179,32 +179,32 @@ const posts = [
     title: "useTransition: Transiciones no bloqueantes",
     description:
       "Marca actualizaciones como transiciones para mantener la UI responsive.",
-    date: "2025-10-04",
+    date: "04-10-2025",
     ChipTitle: "React Hooks",
     ChipIcon: "react",
     content: "UseTransition",
   },
+  {
+    id: 18,
+    srcImage: blog.ReactHookForm,
+    title: "React Hook Form: Formularios sin esfuerzo",
+    description: "Construye y valida formularios fácilmente.",
+    date: "14-01-2026",
+    ChipTitle: "React Hook Form",
+    ChipIcon: "react",
+    content: "ReactHookForm",
+  }
   // {
   //   id: 18,
   //   srcImage: null,
   //   title: "useId: IDs únicos para accesibilidad",
   //   description:
   //     "Genera IDs únicos estables para accesibilidad y asociaciones de etiquetas.",
-  //   date: "2025-10-06",
+  //   date: "06-10-2025",
   //   ChipTitle: "React Hooks",
   //   ChipIcon: "react",
   //   content: "UseId",
   // },
-  // {
-  //   id: forlatedontdelete,
-  //   srcImage: blog.ReactHookForm,
-  //   title: "React Hook Form: Formularios sin esfuerzo",
-  //   description: "Construye y valida formularios fácilmente.",
-  //   date: "08-01-2026",
-  //   ChipTitle: "React Hook Form",
-  //   ChipIcon: "react",
-  //   content: "ReactHookForm",
-  // }
 ]
 
 export default posts

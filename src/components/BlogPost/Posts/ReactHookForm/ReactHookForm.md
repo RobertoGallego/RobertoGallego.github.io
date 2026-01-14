@@ -100,6 +100,42 @@ HTMLSelectElement,
 
 <Select label="Age" {...register("Age")} /> -->
 
+Sí — forwardRef ya no se usa en la nueva recomendación de React + React Hook Form para este caso. La forma moderna es pasar el ref desde register directamente al componente sin forwardRef, y usar props ya tipadas.
+
+Aquí tienes una versión actualizada y correcta sin forwardRef:
+
+```tsx
+import React from "react"
+import { UseFormRegister, FieldValues, Path } from "react-hook-form"
+
+interface SelectProps<T extends FieldValues> {
+  label: string
+  name: Path<T>
+  register: UseFormRegister<T>
+  options: { value: string; label: string }[]
+}
+
+export function Select<T extends FieldValues>({
+  label,
+  name,
+  register,
+  options,
+}: SelectProps<T>) {
+  return (
+    <div>
+      <label htmlFor={name}>{label}</label>
+      <select id={name} {...register(name)}>
+        {options.map((opt) => (
+          <option key={opt.value} value={opt.value}>
+            {opt.label}
+          </option>
+        ))}
+      </select>
+    </div>
+  )
+}
+```
+
 Integrating with UI libraries
 
 React Hook Form ha facilitado la integración con librerías externas de componentes UI.
