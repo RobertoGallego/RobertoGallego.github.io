@@ -22,32 +22,6 @@
   }
 }
 
-.hero-grid {
-  position: absolute;
-  inset: 0;
-  background-size: 40px 40px;
-  mask-image: radial-gradient(ellipse 90% 70% at 50% 50%, black, transparent);
-  -webkit-mask-image: radial-gradient(
-    ellipse 90% 70% at 50% 50%,
-    black,
-    transparent
-  );
-  z-index: -1;
-  pointer-events: none;
-}
-
-.hero-section-wrapper:has(.hero-chip-text.light) .hero-grid {
-  background-image:
-    linear-gradient(rgba(118, 45, 32, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(118, 45, 32, 0.08) 1px, transparent 1px);
-}
-
-.hero-section-wrapper:has(.hero-chip-text.dark) .hero-grid {
-  background-image:
-    linear-gradient(rgba(255, 99, 71, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 99, 71, 0.12) 1px, transparent 1px);
-}
-
 .hero-avatar {
   border-radius: 100px;
   overflow: hidden;
