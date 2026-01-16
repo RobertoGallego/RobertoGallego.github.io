@@ -17,12 +17,16 @@
 }
 
 .portfolio-card.dark {
-  background-color: #121026;
+  background-color: var(--bg-dark-glass);
+  backdrop-filter: var(--blur-effect);
+  -webkit-backdrop-filter: var(--blur-effect);
   box-shadow: var(--shadow-s);
 }
 
 .portfolio-card.light {
-  background-color: #f8f8f8;
+  background-color: var(--bg-light-glass);
+  backdrop-filter: var(--blur-effect);
+  -webkit-backdrop-filter: var(--blur-effect);
   box-shadow: var(--shadow-m);
 }
 
@@ -62,12 +66,13 @@
   top: 4px;
   right: 4px;
   box-shadow: var(--shadow-l);
+  border-radius: 20px;
 }
 
 .portfolio-card-chip {
   align-self: center;
   font-size: 14px;
-  padding-block: 0.25rem;
+  padding-block: 0.2rem;
   padding-inline: 0.5rem;
   border-radius: 20px;
   font-weight: 500;
@@ -78,11 +83,13 @@
 }
 
 .portfolio-card-chip.dark {
-  background-color: #403d62;
+  background-color: #1a1734;
+  box-shadow: var(--shadow-s);
 }
 
 .portfolio-card-chip.light {
-  background-color: #efe9e9;
+  background-color: rgb(243, 224, 213);
+  box-shadow: var(--shadow-s);
 }
 
 .portfolio-card-date-container {
@@ -124,5 +131,5 @@
 }
 
 .portfolio-card-description.light {
-  color: #a1a1a1;
+  color: #6b6262;
 }

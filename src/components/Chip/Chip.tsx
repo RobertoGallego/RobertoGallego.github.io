@@ -28,16 +28,11 @@ const Chip: React.FC<ChipProps> = ({
       style={{
         backgroundColor: isDarkMode
           ? status
-            ? "#1d1a35"
+            ? "#292542"
             : "#181625"
           : status
-            ? "#dbdbdb"
-            : "#eeeeee",
-        outline: status
-          ? isDarkMode
-            ? "1px solid #8f8f8f"
-            : "1px solid #bbbbbb"
-          : "none",
+            ? "rgba(234, 206, 188, 0.6)"
+            : "rgba(234, 206, 188, 0.2)",
       }}
       onClick={onClick}
     >

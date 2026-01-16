@@ -11,12 +11,16 @@
 }
 
 .about-wrapper.light {
-  background-color: #f8f8f8;
+  background-color: var(--bg-light-glass);
+  backdrop-filter: var(--blur-effect);
+  -webkit-backdrop-filter: var(--blur-effect);
   box-shadow: var(--shadow-m);
 }
 
 .about-wrapper.dark {
-  background-color: #121026;
+  background-color: var(--bg-dark-glass);
+  backdrop-filter: var(--blur-effect);
+  -webkit-backdrop-filter: var(--blur-effect);
   box-shadow: var(--shadow-m);
 }
 
@@ -37,18 +41,19 @@
 .about-avatar {
   border-radius: 100px;
   overflow: hidden;
-  background-color: #3d3834;
   width: 120px;
   height: 120px;
 }
 
 .about-avatar.light {
-  border: 4px solid #f8f8f8;
+  background-color: rgba(234, 206, 188, 0.4);
+  border: 2px solid #d1bfa8;
   box-shadow: var(--shadow-m);
 }
 
 .about-avatar.dark {
-  border: 4px solid #403d62;
+  border: 2px solid #1a1734;
+  background-color: #1a1734;
   box-shadow: var(--shadow-l);
 }
 

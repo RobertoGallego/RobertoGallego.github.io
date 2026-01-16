@@ -129,7 +129,7 @@
 }
 
 .hero-avatar.dark {
-  border: 6px solid #403d62;
+  border: 6px solid #1a1734;
   box-shadow: var(--shadow-l);
 }
 
@@ -155,17 +155,17 @@
   white-space: nowrap;
   position: relative;
   z-index: 1;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: var(--blur-effect);
+  -webkit-backdrop-filter: var(--blur-effect);
 }
 
 .hero-chip-text.light {
-  background-color: #f8f8f8;
+  background-color: var(--bg-light-glass);
   box-shadow: var(--shadow-m);
 }
 
 .hero-chip-text.dark {
-  background-color: #121026;
+  background-color: var(--bg-dark-glass);
   box-shadow: var(--shadow-m);
 }
 
@@ -224,7 +224,7 @@
 }
 
 .hero-tech-badges.dark .tech-badge {
-  background-color: #403d62;
+  background-color: #1a1734;
   color: #ff6347;
   box-shadow: var(--shadow-s);
 }
@@ -274,14 +274,14 @@
   align-items: center;
   gap: 12px;
   padding: 12px 18px;
-  border-radius: 14px;
+  border-radius: var(--border-radius);
   transition: all 0.3s ease;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: var(--blur-effect);
+  -webkit-backdrop-filter: var(--blur-effect);
 }
 
 .hero-stats.light .stat-item {
-  background-color: #f8f8f8;
+  background-color: var(--bg-light-glass);
   color: #181818;
   box-shadow: var(--shadow-m);
   transition: all 0.3s ease;
@@ -289,7 +289,7 @@
 }
 
 .hero-stats.dark .stat-item {
-  background-color: #121026;
+  background-color: var(--bg-dark-glass);
   color: #cfcfd1;
   box-shadow: var(--shadow-m);
   transition: all 0.3s ease;
@@ -457,7 +457,7 @@
 }
 
 .button-primary.dark:hover {
-  background-color: #403d62;
+  background-color: #1a1734;
   color: #fff;
   transform: translateY(-2px);
 }

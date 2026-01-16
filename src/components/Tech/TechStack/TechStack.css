@@ -12,13 +12,17 @@
 
 .tech-stack.light {
   color: #762d20;
-  background-color: #f8f8f8;
+  background-color: var(--bg-light-glass);
+  backdrop-filter: var(--blur-effect);
+  -webkit-backdrop-filter: var(--blur-effect);
   box-shadow: var(--shadow-m);
 }
 
 .tech-stack.dark {
   color: #ff6347;
-  background-color: #121026;
+  background-color: var(--bg-dark-glass);
+  backdrop-filter: var(--blur-effect);
+  -webkit-backdrop-filter: var(--blur-effect);
   box-shadow: var(--shadow-s);
 }
 

@@ -14,7 +14,7 @@
 }
 
 .chip-light:hover {
-  background-color: #dbdbdb !important;
+  background-color: rgba(234, 206, 188, 0.8) !important;
   box-shadow: var(--shadow-s);
 }
 

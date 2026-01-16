@@ -17,7 +17,7 @@ const About = () => {
       <div className="about-container">
         <div className="about-header">
           <div className={`about-avatar ${isDarkMode ? "dark" : "light"}`}>
-            <LazyImg src={album.Perf} alt="Perfil" style={{ marginTop: "-18px" }} borderRadius={100} />
+            <LazyImg src={album.Perf} alt="Perfil" style={{ marginTop: "-18px", marginLeft: "1px" }} borderRadius={100} />
           </div>
 
           <div>

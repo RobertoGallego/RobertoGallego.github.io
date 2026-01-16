@@ -47,7 +47,7 @@
 }
 
 .tech-card.light .tech-card-icon-wrapper {
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(234, 206, 188, 0.4)
 }
 
 .tech-card:hover .tech-card-icon-wrapper {
