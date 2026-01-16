@@ -123,6 +123,8 @@ body {
   line-height: 1.5;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /* Set shorter line heights on headings and interactive elements */
