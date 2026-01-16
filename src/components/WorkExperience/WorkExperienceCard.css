@@ -2,7 +2,7 @@
   min-width: 100px;
   aspect-ratio: 2 / 1;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: #1b1b1b;
   height: 105px;
   box-shadow: var(--shadow-m);
@@ -48,7 +48,7 @@
 .work-card-flag {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   align-self: center;
   font-size: 12px;
   padding-block: 2px;
@@ -75,10 +75,15 @@
 
 @media (max-width: 500px) {
   .work-card-content {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .work-card-image {
     width: 100%;
+    height: 120px;
+  }
+
+  .work-card-title {
+    font-size: 16px;
   }
 }

@@ -46,7 +46,7 @@ const JournalCard = ({
           className="work-card-content"
           style={{ display: "flex", gap: 15, flex: 1 }}
         >
-          <LazyImg className="work-card-image" src={srcImage} alt="Ninjaco" borderRadius={8} />
+          <LazyImg className="work-card-image" src={srcImage} alt="Ninjaco" />
 
           <div
             style={{
@@ -61,16 +61,16 @@ const JournalCard = ({
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
-                  alignItems: "flex-start",
                   flexWrap: "wrap-reverse",
-                  gap: 6,
+                  gap: 10,
                 }}
               >
                 <h3
+                  className="work-card-title"
                   style={{
-                    display: "-webkit-box",
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
+                    width: "100%",
+                    fontWeight: 600,
+                    marginBottom: 4,
                   }}
                 >
                   {t(title)}
@@ -117,7 +117,7 @@ const JournalCard = ({
                 style={{
                   color: "gray",
                   maxWidth: 700,
-                  marginBlock: 4,
+                  margin: "6px 0px 15px 0px",
                   display: "-webkit-box",
                   WebkitLineClamp: 2,
                   WebkitBoxOrient: "vertical",
@@ -133,7 +133,7 @@ const JournalCard = ({
               style={{
                 display: "flex",
                 gap: 6,
-                alignItems: "flex-end",
+                alignItems: "center",
                 justifyContent: "space-between",
               }}
             >
@@ -141,7 +141,7 @@ const JournalCard = ({
                 {flags.map(({ src, label }) => (
                   <div key={label} className={`work-card-flag ${theme}`}>
                     <LazyImg src={src} alt={label} style={{ width: 12 }} />
-                    
+
                     <p>
                       {label}
                     </p>
