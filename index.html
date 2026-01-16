@@ -22,14 +22,21 @@
         }
 
         const backgrounds = {
-          light:
-            "radial-gradient(circle at 25% 35%, #e2e2e2 0%, #e7dbd3 40%, #e9dad0 75%, #f1cfb9 100%)",
-          dark: "radial-gradient(circle at 25% 35%, #1f1d4b 0%, #1d1a35 40%, #16142a 75%, #181625 100%)",
+          light: "#EACEBC",
+          dark: "#090c21",
         }
 
         document.documentElement.setAttribute("data-theme", finalTheme)
         document.documentElement.style.background = backgrounds[finalTheme]
-        document.documentElement.style.backgroundAttachment = "fixed"
+
+        const preloadLight = document.getElementById("preload-light")
+        const preloadDark = document.getElementById("preload-dark")
+
+        if (finalTheme === "light" && preloadDark) {
+          preloadDark.remove()
+        } else if (finalTheme === "dark" && preloadLight) {
+          preloadLight.remove()
+        }
       })()
     </script>
   </head>
