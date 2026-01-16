@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link
+      rel="preload"
+      as="image"
+      href="/bg-light.svg"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/bg-dark.svg"
+      media="(prefers-color-scheme: dark)"
+    />
+
     <title>Reve Studio</title>
 
     <script>
@@ -27,20 +40,11 @@
         }
 
         document.documentElement.setAttribute("data-theme", finalTheme)
-        document.documentElement.style.background = backgrounds[finalTheme]
-
-        const preloadLight = document.getElementById("preload-light")
-        const preloadDark = document.getElementById("preload-dark")
-
-        if (finalTheme === "light" && preloadDark) {
-          preloadDark.remove()
-        } else if (finalTheme === "dark" && preloadLight) {
-          preloadLight.remove()
-        }
+        document.documentElement.style.backgroundColor = backgrounds[finalTheme]
       })()
     </script>
-    <script type="module" crossorigin src="/assets/index-idnVB5Lo.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CQZ879L9.css">
+    <script type="module" crossorigin src="/assets/index-BXeOxaEY.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-HazBIku7.css">
   </head>
   <body>
     <div id="root"></div>
