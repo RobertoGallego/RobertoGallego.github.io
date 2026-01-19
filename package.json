@@ -12,6 +12,8 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@hookform/error-message": "^2.0.1",
+    "@hookform/resolvers": "^5.2.2",
     "@tanstack/react-router": "^1.131.41",
     "@tanstack/react-router-devtools": "^1.131.42",
     "framer-motion": "^12.23.24",
@@ -22,10 +24,11 @@
     "react-hook-form": "^7.71.0",
     "react-i18next": "^15.4.1",
     "react-icons": "^5.4.0",
-    "react-markdown": "^10.1.0"
+    "react-markdown": "^10.1.0",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@eslint/js": "^9.19.0",
+    "@eslint/js": "^9.20.0",
     "@tanstack/router-plugin": "^1.131.43",
     "@types/node": "^24.5.1",
     "@types/react": "^19.0.8",
