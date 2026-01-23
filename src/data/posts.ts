@@ -2,7 +2,27 @@ import { blog } from "@/assets"
 
 const posts = [
   {
+    id: 19,
+    srcImage: blog.ArrayMethods, 
+    title: "Métodos de Array en JavaScript",
+    description: "Guía visual completa de todos los métodos de arrays, Object helpers y operadores útiles con ejemplos interactivos.",
+    date: "23-01-2026",
+    ChipTitle: "JavaScript",
+    ChipIcon: "javascript", 
+    content: "Arrays",
+  },
+  {
     id: 1,
+    srcImage: blog.ReactHookForm,
+    title: "React Hook Form: Formularios sin esfuerzo",
+    description: "Construye y valida formularios fácilmente.",
+    date: "14-01-2026",
+    ChipTitle: "React Hook Form",
+    ChipIcon: "react",
+    content: "ReactHookForm",
+  },
+  {
+    id: 18,
     srcImage: blog.useStateWp,
     title: "Domina useState hoy",
     description: "El primer paso para entender los hooks de React.",
@@ -12,7 +32,7 @@ const posts = [
     content: "UseState",
   },
   {
-    id: 2,
+    id: 17,
     srcImage: blog.useCallbackWp,
     title: "Optimiza con useCallback",
     description:
@@ -23,7 +43,7 @@ const posts = [
     content: "UseCallback",
   },
   {
-    id: 3,
+    id: 16,
     srcImage: blog.useEffectWp,
     title: "useEffect: Efectos secundarios en React",
     description:
@@ -34,7 +54,7 @@ const posts = [
     content: "UseEffect",
   },
   {
-    id: 4,
+    id: 15,
     srcImage: blog.useContextWp,
     title: "Gestión global con useContext",
     description:
@@ -45,7 +65,7 @@ const posts = [
     content: "UseContext",
   },
   {
-    id: 5,
+    id: 14,
     srcImage: blog.useRefWp,
     title: "Referencias con useRef",
     description:
@@ -56,7 +76,7 @@ const posts = [
     content: "UseRef",
   },
   {
-    id: 6,
+    id: 13,
     srcImage: blog.useActionStateWp,
     title: "useActionState para formularios",
     description:
@@ -67,7 +87,7 @@ const posts = [
     content: "UseActionState",
   },
   {
-    id: 7,
+    id: 12,
     srcImage: blog.useDebugValueWp,
     title: "Debug hooks personalizados",
     description: "Facilita la depuración de custom hooks usando useDebugValue.",
@@ -77,7 +97,7 @@ const posts = [
     content: "UseDebugValue",
   },
   {
-    id: 8,
+    id: 11,
     srcImage: blog.useDeferredValueWp,
     title: "Optimiza con useDeferredValue",
     description:
@@ -88,7 +108,7 @@ const posts = [
     content: "UseDeferredValue",
   },
   {
-    id: 9,
+    id: 10,
     srcImage: blog.useEffectEvent,
     title: "useEffectEvent: Eventos estables",
     description:
@@ -99,7 +119,7 @@ const posts = [
     content: "UseEffectEvent",
   },
   {
-    id: 10,
+    id: 9,
     srcImage: blog.useImperativeHandle,
     title: "useImperativeHandle: Control de refs",
     description: "Personaliza el valor de ref expuesto a componentes padres.",
@@ -109,7 +129,7 @@ const posts = [
     content: "UseImperativeHandle",
   },
   {
-    id: 11,
+    id: 8,
     srcImage: blog.useInsertionEffect,
     title: "useInsertionEffect: Inyección de estilos",
     description: "Inserta estilos dinámicos antes de cualquier layout effect.",
@@ -119,7 +139,7 @@ const posts = [
     content: "UseInsertionEffect",
   },
   {
-    id: 12,
+    id: 7,
     srcImage: blog.useLayoutEffect,
     title: "useLayoutEffect: Mediciones síncronas",
     description:
@@ -130,7 +150,7 @@ const posts = [
     content: "UseLayoutEffect",
   },
   {
-    id: 13,
+    id: 6,
     srcImage: blog.useMemo,
     title: "useMemo: Memorización de cálculos",
     description:
@@ -141,7 +161,7 @@ const posts = [
     content: "UseMemo",
   },
   {
-    id: 14,
+    id: 5,
     srcImage: blog.useOptimistic,
     title: "useOptimistic: Actualizaciones optimistas",
     description:
@@ -152,7 +172,7 @@ const posts = [
     content: "UseOptimistic",
   },
   {
-    id: 15,
+    id: 4,
     srcImage: blog.useReducer,
     title: "useReducer: Gestión de estado compleja",
     description:
@@ -163,7 +183,7 @@ const posts = [
     content: "UseReducer",
   },
   {
-    id: 16,
+    id: 3,
     srcImage: blog.useSyncExternalStore,
     title: "useSyncExternalStore: Sincroniza stores externos",
     description:
@@ -174,7 +194,7 @@ const posts = [
     content: "UseSyncExternalStore",
   },
   {
-    id: 17,
+    id: 2,
     srcImage: blog.useTransition,
     title: "useTransition: Transiciones no bloqueantes",
     description:
@@ -184,16 +204,6 @@ const posts = [
     ChipIcon: "react",
     content: "UseTransition",
   },
-  {
-    id: 18,
-    srcImage: blog.ReactHookForm,
-    title: "React Hook Form: Formularios sin esfuerzo",
-    description: "Construye y valida formularios fácilmente.",
-    date: "14-01-2026",
-    ChipTitle: "React Hook Form",
-    ChipIcon: "react",
-    content: "ReactHookForm",
-  }
   // {
   //   id: 18,
   //   srcImage: null,

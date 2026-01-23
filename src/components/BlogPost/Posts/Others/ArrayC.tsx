@@ -21,7 +21,7 @@ const ArrayC = ({
         padding: "16px",
         margin: "16px 0",
         background: "#1d2028",
-        maxWidth: "420px",
+        // maxWidth: "420px",
       }}
     >
       <div style={{ fontWeight: "bold" }}>
@@ -59,6 +59,7 @@ const ArrayC = ({
         ))}
         ]
       </div>
+
       <div
         style={{
           background: "#fff",
@@ -72,7 +73,7 @@ const ArrayC = ({
       >
         {`${title}(2) `}
         <span style={{ color: "#888" }}>
-          // Devuelve: <b>{return}</b>
+          // Devuelve: <b>{JSON.stringify(array.at(2))}</b>
         </span>
       </div>
       <div

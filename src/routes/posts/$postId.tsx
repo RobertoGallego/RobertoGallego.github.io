@@ -17,6 +17,7 @@ import UseSyncExternalStore from "@/components/BlogPost/Posts/React/Hooks/useSyn
 import UseTransition from "@/components/BlogPost/Posts/React/Hooks/useTransition/UseTransition"
 import UseActionState from "@/components/BlogPost/Posts/React/Hooks/useActionState/UseActionState"
 import { ReactHookForm } from "@/components/BlogPost/Posts"
+import Arrays from "@/components/BlogPost/Posts/Others/Arrays"
 
 const postComponents: Record<string, () => JSX.Element> = {
   UseState,
@@ -35,7 +36,8 @@ const postComponents: Record<string, () => JSX.Element> = {
   UseSyncExternalStoreWithSelector: UseSyncExternalStore,
   UseTransition,
   UseActionState,
-  ReactHookForm
+  ReactHookForm,
+  Arrays,
 }
 
 export const Route = createFileRoute("/posts/$postId")({
