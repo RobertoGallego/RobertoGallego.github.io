@@ -1,6 +1,7 @@
 import { useDarkMode } from "@/hooks"
 import { BlogHeader, CodeBlock, TipCard } from "@/blog-components"
 import "./ReactHookForm.css"
+// import ReactHookPerform from "./ReactHookPerform"
 
 function ReactHookForm() {
   const { isDarkMode } = useDarkMode()
@@ -11,6 +12,8 @@ function ReactHookForm() {
         title="React Hook Form - Guía Completa"
         subtitle="Biblioteca de formularios performante, flexible y extensible con validación fácil de usar"
       />
+
+      {/* <ReactHookPerform /> */}
 
       <section className="section">
         <h2>📚 Introducción</h2>
