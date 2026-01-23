@@ -171,7 +171,7 @@ const Arrays = () => {
             },
             {
               code: "array.filter((e, i) => i % 2 === 0)",
-              result: JSON.stringify(array.filter((e, i) => i % 2 === 0)),
+              result: JSON.stringify(array.filter((_, i) => i % 2 === 0)),
               comment: "(índices pares)",
             },
           ]}
